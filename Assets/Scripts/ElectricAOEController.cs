@@ -81,11 +81,9 @@ public class ElectricAOEController : MonoBehaviour {
 		if (go_target) {
 			Constants.Global.Color crystalColor = go_target.GetComponent<CrystalController>().Color;
 			if (crystalColor != e_color) {
-				go_target.GetComponent<CrystalController>().UpdateCrystalHealth(Constants.SpellStats.C_SpellCrystalDamagePercent / 5);
+				go_target.GetComponent<CrystalController>().UpdateCrystalHealth(Constants.SpellStats.C_SpellCrystalDamageElementSpells / 5);
 			}
-			else if (crystalColor == e_color) {
-				go_target.GetComponent<CrystalController>().UpdateCrystalHealth(Constants.SpellStats.C_SpellCrystalHealPercent / 5);
-			}
+
 			yield return new WaitForSeconds(0.5f);
 			StartCoroutine("ApplyCrystalDamage", go_target);
 		}
@@ -109,10 +107,13 @@ public class ElectricAOEController : MonoBehaviour {
 
     // applies AOE damage to enemy every .5s until dissipation or triggerexit
     IEnumerator ApplyEnemyDamage(GameObject go_target) {
-		if(go_target){  //Make sure it's not already dead.
+		if(go_target && go_target.activeSelf){  //Make sure it's not already dead.
 			go_target.GetComponent<EnemyController>().TakeDamage(f_electricDamage);
 			yield return new WaitForSeconds(0.5f);
 			StartCoroutine("ApplyEnemyDamage", go_target);
+		}
+		else {
+			NegateEffect(go_target);
 		}
 	}
 

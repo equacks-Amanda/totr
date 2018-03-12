@@ -19,6 +19,7 @@ public class NecromancerController : EnemyController {
 		f_health = Constants.EnemyStats.C_NecromancerHealth;
 		InvokeRepeating("DropRune", 10.0f, Constants.EnemyStats.C_RuneTimer);
 		InvokeRepeating("Summon", 16.0f, Constants.EnemyStats.C_SummonTimer);
+		maestro.PlayNecromancerSpawn();
 	}
 
 	protected override void Update() {
@@ -139,8 +140,14 @@ public class NecromancerController : EnemyController {
 		//Reset f_timer
 		f_timer = f_timeLimit;
 	}
+	
+	protected override void EnterStateDie() {
+		base.EnterStateDie();
+		maestro.PlayNecromancerDie();
+    }
 
 	protected override void UpdateDie() {
+		CancelInvoke();		 
 		riftController.DecreaseNecromancers(e_side);
 		base.UpdateDie();
 	}

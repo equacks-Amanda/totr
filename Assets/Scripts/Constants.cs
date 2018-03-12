@@ -51,7 +51,7 @@ public static class Constants {
         public static float C_MagicMissileLiveTime = 0.35f;
 		public static float C_MagicMissileSpeed = 10.0f;
         public static float C_MagicMissileDamage = 25.0f;
-        public static float C_MagicMissileCooldown = 0.34f;
+        public static float C_MagicMissileCooldown = 1.0f;
         public static float C_MagicMissileChargeTime = C_SpellChargeTime;
         public static float C_MagicMissileChargeCooldown = 0.5f;
         public static float C_MagicMissileHeal = 10.0f;
@@ -64,7 +64,7 @@ public static class Constants {
         public static float C_WindChargeTime = C_SpellChargeTime;
         public static float C_WindRiftDamageMultiplier = C_RiftDamageMultiplier;
         public static float C_WindPlayerDamageMultiplier = 0.5f;
-        public static float C_WindForce = 6000.0f; // 4m worth of distance - we need to do our own 
+        public static float C_WindForce = 1000.0f; // 4m worth of distance - we need to do our own 
 
         // Ice Stats
         // TODO: UHHHHH....? (live time vs. charge time... FIGHT)
@@ -91,10 +91,8 @@ public static class Constants {
 
         // Crystal based percentages Stats
         // TODO: uhh... why is it percent for this? make it real damage instead
-        public static float C_SpellCrystalDamagePercent = -0.1f;
-        public static float C_SpellCrystalHealPercent = 0.05f;
-        public static float C_MagicMissileCrystalDamagePercent = -0.01f;
-        public static float C_MagicMissileCrystalHealPercent = 0.005f;
+        public static float C_SpellCrystalDamageElementSpells = -25.0f;
+        public static float C_MagicMissileCrystalDamage = -5.0f;
     }
 
     // Objective Stats
@@ -106,11 +104,11 @@ public static class Constants {
         //public static Vector3 C_GenericBlueObjectiveGoalSpawn = new Vector3(4.5f, .01f, 0f);
 
         // Potato Stats
-        public static Vector3 C_RedPotatoSpawn = new Vector3(-3.5f, 0.5f, 0f);
-        public static Vector3 C_BluePotatoSpawn = new Vector3(3.5f, 0.5f, 0f);
+        public static Vector3 C_RedPotatoSpawn = new Vector3(-7.5f, 0.5f, 0f);
+        public static Vector3 C_BluePotatoSpawn = new Vector3(7.5f, 0.5f, 0f);
         public static int C_PotatoCompletionTimer = 30;
         public static int C_PotatoSelfDestructTimer = 15;
-        public static int C_EnemySpawnAmount = 3;
+        public static int C_EnemySpawnAmount = 2;
 
         // CTF Stats
         public static Vector3 C_RedFlagSpawn = new Vector3(-16.0f, 0.5f, 0f);
@@ -123,6 +121,10 @@ public static class Constants {
         //public static Vector3 C_RedCrystalSpawn = C_GenericBlueObjectiveTargetSpawn;
         //public static Vector3 C_BlueCrystalSpawn = C_GenericRedObjectiveTargetSpawn;
         public static float C_CrystalMaxHealth = 500.0f;
+        public static float C_CrystalRegenHeal = 5.0f;
+        public static float C_CrystalHealRate = 1.0f;
+        public static float C_CrystalHealDelay = 3.0f;
+
 
         // Ice Hockey Stats
         public static Vector3 C_RedPuckSpawn = new Vector3(-5.0f, 0.5f, 0f);
@@ -136,6 +138,7 @@ public static class Constants {
         public static float C_PuckSpeedDecreaseAmount = 2.0f;   // speed decrease amount at each interval
         public static float C_PuckSpeedHitIncrease = 5.0f;      // speed increase every time puck is hit
         public static float C_PuckBaseSpeed = 10.0f;
+        public static float C_PuckMaxSpeed = 25.0f;
 
         // Rift Boss Stats
         //public static Vector3 C_RedRiftBossSpawn = new Vector3(-5.0f, 0.5f, 0f);
@@ -165,7 +168,7 @@ public static class Constants {
         public static float C_EnemyHealth = 75.0f;
         public static float C_EnemyDamage = 15.0f;
 		public static float C_RuneDamage = 75.0f;
-        public static float C_SpawnRadius = 1.5f;
+        public static float C_SpawnRadius = 2.5f;
         public static float C_MapBoundryXAxis = 14.5f;
         public static float C_MapBoundryZAxis = 9.5f;
     }
@@ -177,7 +180,7 @@ public static class Constants {
         public static Vector3 C_RiftTeleportOffset = new Vector3(-2, 0, 0);
         public static float C_PortalTeleportOffset = 0.75f;
 
-        public static float C_VolatilityResetTime = 5.0f;
+        public static float C_VolatilityResetTime = 0.0f;
         //public static float C_Volatility_CameraFlipTime = 5.0f;
         public static float C_VolatilityEnemySpawnTimer = 7.0f;
         public static float C_VolatilityDeathboltLiveTimer = 12.0f;
@@ -199,14 +202,14 @@ public static class Constants {
 
     //Text descriptions for Objectives.
     public static class ObjectiveText {
-        public static string C_CTFTitle = "Capture The Flag";
-        public static string C_CTFDescription = "Pick up the opponent's flag with [Interact] and drag it back to your goal!";
+        public static string C_CTFTitle = "Capture The Gem";
+        public static string C_CTFDescription = "Pick up the opponent's gem with [Interact] and drag it back to your goal!";
         public static string C_CrystalDestructTitle = "Crystal Destruction";
         public static string C_CrystalDestructDescription = "Cast spells at the enemy team's crystal to destroy it! Heal your own crystal with your own spells!";
         public static string C_HockeyTitle = "Hockey";
         public static string C_HockeyDescription = "Shoot and parry your puck into the enemy's goal! Careful, you can't score from behind!";
         public static string C_PotatoTitle = "Keep Away";
-        public static string C_PotatoDescription = "Shove your flag onto the opponent's side and keep it there. Be careful, if you leave yours on your side for too long, bad things will happen!";
+        public static string C_PotatoDescription = "Shove your object onto the opponent's side and keep it there. Be careful! If you leave yours on your side for too long, bad things will happen!";
         public static string C_BossTitle = "The Final Trial";
         public static string C_BossDescription = "Use all your prowess and spells to defeat the Rift!";
     }
@@ -220,4 +223,18 @@ public static class Constants {
     }
 
 	//public static GameObject[] C_Players = GameObject.FindGameObjectsWithTag("Player");
+}
+
+static class RandomExtensions
+{
+    public static void Shuffle<T>(this System.Random rng, T[] array)
+    {
+        int n = array.Length;
+        while (n > 1) {
+            int k = rng.Next(n--);
+            T temp = array[n];
+            array[n] = array[k];
+            array[k] = temp;
+        }
+    }
 }

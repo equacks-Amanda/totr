@@ -12,22 +12,15 @@ using UnityEngine;
 using UnityEngine.AI;
 
 public sealed class RiftController : MonoBehaviour {
-
+    #region Variables and Declarations
     [SerializeField] private GameObject go_riftDeathBolt;
     public GameObject[] go_playerReferences;
-    
-    //public GameObject go_PocketRift;
-    //public Vector3[] v3_PocketRiftLocations;
-    //public Camera mainCamera;
 
     // enemies
 	[SerializeField] private GameObject[] go_skeletons;
 	[SerializeField] private GameObject[] go_necromancers;
 	[SerializeField] private GameObject[] go_runes;
-
-    //[SerializeField] private GameObject go_enemyPrefab;
-	//[SerializeField] private GameObject go_necromancerPrefab;
-	//[SerializeField] private GameObject go_runePrefab;
+    
     [SerializeField] private GameObject go_enemyIndiPrefab;
     [SerializeField] private Camera cam_camera;
 
@@ -40,6 +33,11 @@ public sealed class RiftController : MonoBehaviour {
     private int i_leftEnemies = 0;
     private int i_rightEnemies = 0;
 
+    private int i_redObjectivesComplete = 0;
+    private int i_blueObjectivesComplete = 0;
+
+	private int i_nextEnemySpawnIndex = 0;
+	private int i_nextNecromancerSpawnIndex = 0;
     private GameObject[] go_rightEnemySpawners;
     private GameObject[] go_leftEnemySpawners;
 
@@ -50,6 +48,7 @@ public sealed class RiftController : MonoBehaviour {
     private float f_volatilityMultiplier;
     private Constants.RiftStats.Volatility e_currentVolatilityLevel;
     private Maestro maestro;     // reference to audio singleton
+    private Animator animator;
 	
 	private System.Random r_random = new System.Random();
 
@@ -75,9 +74,10 @@ public sealed class RiftController : MonoBehaviour {
     public GameObject[] LeftEnemySpawners {
         set { go_leftEnemySpawners = value; }
     }
+    #endregion
 
-    /*/////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
-
+    #region RiftController Functions
+    #region Volatility
     public void IncreaseVolatility(float volatilityUp) {
         Debug.Log("Volatility increased!");
 		maestro.PlayAnnouncementVolatilityUp();
@@ -87,47 +87,54 @@ public sealed class RiftController : MonoBehaviour {
         if (f_volatility >= 100.0f && e_currentVolatilityLevel != Constants.RiftStats.Volatility.ONEHUNDRED) {
             e_currentVolatilityLevel = Constants.RiftStats.Volatility.ONEHUNDRED;
             Invoke("ResetVolatility", Constants.RiftStats.C_VolatilityResetTime);
+            animator.SetTrigger("rawrTrigger");
             BoardClear();
-            //InvertScreen();
         }
         else if (f_volatility >= 75.0f && e_currentVolatilityLevel != Constants.RiftStats.Volatility.SEVENTYFIVE) {
             e_currentVolatilityLevel = Constants.RiftStats.Volatility.SEVENTYFIVE;
 			i_volatilityLevel = 4;
             EnterNewVolatilityLevel();
-            //InvertControls();
 			InvokeRepeating("SpawnNecromancers", 0.0f, Constants.RiftStats.C_VolatilityNecromancerSpawnTimer);
+            animator.SetTrigger("rawrTrigger");
+            animator.SetInteger("volatility", 4);
         }
         else if (f_volatility >= 65.0f && e_currentVolatilityLevel != Constants.RiftStats.Volatility.SIXTYFIVE) {
             e_currentVolatilityLevel = Constants.RiftStats.Volatility.SIXTYFIVE;
 			i_volatilityLevel = 3;
+            animator.SetTrigger("rawrTrigger");
             EnterNewVolatilityLevel();
             for (int i = 0; i < 5; i++) {
                 SpawnEnemies();
             }
-            //SpawnPocketRifts();
         }
         else if (f_volatility >= 50.0f && e_currentVolatilityLevel != Constants.RiftStats.Volatility.FIFTY) {
             e_currentVolatilityLevel = Constants.RiftStats.Volatility.FIFTY;
 			i_volatilityLevel = 3;
+            animator.SetTrigger("rawrTrigger");
+            animator.SetInteger("volatility", 3);
             EnterNewVolatilityLevel();
-            //SpawnNecromancers();
         }
         else if (f_volatility >= 35.0f && e_currentVolatilityLevel != Constants.RiftStats.Volatility.THIRTYFIVE) {
             e_currentVolatilityLevel = Constants.RiftStats.Volatility.THIRTYFIVE;
 			i_volatilityLevel = 2;
+            animator.SetTrigger("rawrTrigger");
             EnterNewVolatilityLevel();
             f_enemySpeed += 1.0f;
         }
         else if (f_volatility >= 25.0f && e_currentVolatilityLevel != Constants.RiftStats.Volatility.TWENTYFIVE) {
             e_currentVolatilityLevel = Constants.RiftStats.Volatility.TWENTYFIVE;
 			i_volatilityLevel = 2;
+            animator.SetTrigger("rawrTrigger");
+            animator.SetInteger("volatility", 2);
             EnterNewVolatilityLevel();
-            FireDeathBolts(Constants.Global.Color.RED);
-            FireDeathBolts(Constants.Global.Color.BLUE);
+            Constants.Global.Color colorToAttack = DetermineWinningTeam();
+            FireDeathBolts(colorToAttack);
         }
         else if (f_volatility >= 5.0f && e_currentVolatilityLevel != Constants.RiftStats.Volatility.FIVE) {
             e_currentVolatilityLevel = Constants.RiftStats.Volatility.FIVE;
 			i_volatilityLevel = 1;
+            animator.SetTrigger("rawrTrigger");
+            animator.SetInteger("volatility", 1);
             EnterNewVolatilityLevel();
             InvokeRepeating("SpawnEnemies", 0.0f, Constants.RiftStats.C_VolatilityEnemySpawnTimer);
         }
@@ -139,6 +146,7 @@ public sealed class RiftController : MonoBehaviour {
 
     private void EnterNewVolatilityLevel() {
         maestro.PlayVolatilityAmbience(i_volatilityLevel);
+        maestro.ChangeBGM(i_volatilityLevel);
         switch (i_volatilityLevel) {
             case 0:
                 // Change rift visual to L0
@@ -172,16 +180,14 @@ public sealed class RiftController : MonoBehaviour {
 		i_volatilityLevel = 0;
         EnterNewVolatilityLevel();
     }
-
-    //----------------------------
-    // Rift Effects
+    #endregion
+    
+    #region Rift Volatility Attacks and Effects
     private void BoardClear() {
+		maestro.PlayAnnouncementBoardClear();
         foreach (GameObject player in go_playerReferences) {
             player.GetComponent<PlayerController>().TakeDamage(Constants.PlayerStats.C_MaxHealth,Constants.Global.DamageType.RIFT);
         }
-
-        /* Do shit with the runes once I get Jeff and Dana's shit in
-        */
 
         //TODO: kill all enemies
         for (int i = 0; i < go_skeletons.Length; i++) {
@@ -202,53 +208,41 @@ public sealed class RiftController : MonoBehaviour {
 
     //TODO: revisit enemy spawn with pooling
 	public void ActivateEnemy(Vector3 position) {
-	    for (int i = 0; i < go_skeletons.Length; i++) {
-			if (!(go_skeletons[i].activeSelf)) {
+		GameObject enemyIndi = Instantiate(go_enemyIndiPrefab, position, Quaternion.identity);
+		CameraFacingBillboard cfb_this = enemyIndi.GetComponent<CameraFacingBillboard>();
+		cfb_this.cam_Camera = cam_camera;
+		GameObject go_skelly = go_skeletons[i_nextEnemySpawnIndex];
 
-				GameObject enemyIndi = Instantiate(go_enemyIndiPrefab, position, Quaternion.identity);
-				CameraFacingBillboard cfb_this = enemyIndi.GetComponent<CameraFacingBillboard>();
-				cfb_this.cam_Camera = cam_camera;
+		if (position.x < 0f) {
+			go_skelly.GetComponent<SkeletonController>().Init(Constants.Global.Side.LEFT);
+		}
+		else {
+			go_skelly.GetComponent<SkeletonController>().Init(Constants.Global.Side.RIGHT);
+		}
 
-				if (position.x < 0f) {
-					go_skeletons[i].transform.position = position;
-					go_skeletons[i].GetComponent<SkeletonController>().Init(Constants.Global.Side.LEFT);
-					go_skeletons[i].SetActive(true);
-				}
-				else {
-					go_skeletons[i].transform.position = position;
-					go_skeletons[i].GetComponent<SkeletonController>().Init(Constants.Global.Side.RIGHT);
-					go_skeletons[i].SetActive(true);
-				}
-
-				cfb_this.go_trackedObject = go_skeletons[i];
-				break;
-			}
-        }
+		go_skelly.transform.position = position;
+		go_skelly.SetActive(true);
+		cfb_this.go_trackedObject = go_skelly;
+		i_nextEnemySpawnIndex = (i_nextEnemySpawnIndex+1)%go_skeletons.Length;
 	}
 
 	public void ActivateNecromancer(Vector3 position) {
-	    for (int i = 0; i < go_necromancers.Length; i++) {
-			if (!(go_necromancers[i].activeSelf)) {
+		GameObject enemyIndi = Instantiate(go_enemyIndiPrefab, position, Quaternion.identity);
+		CameraFacingBillboard cfb_this = enemyIndi.GetComponent<CameraFacingBillboard>();
+		cfb_this.cam_Camera = cam_camera;
+		GameObject go_necro = go_necromancers[i_nextNecromancerSpawnIndex];
 
-				GameObject enemyIndi = Instantiate(go_enemyIndiPrefab, position, Quaternion.identity);
-				CameraFacingBillboard cfb_this = enemyIndi.GetComponent<CameraFacingBillboard>();
-				cfb_this.cam_Camera = cam_camera;
+		if (position.x < 0f) {
+			go_necro.GetComponent<NecromancerController>().Init(Constants.Global.Side.LEFT);
+		}
+		else {
+			go_necro.GetComponent<NecromancerController>().Init(Constants.Global.Side.RIGHT);
+		}
 
-				if (position.x < 0f) {
-					go_necromancers[i].transform.position = position;
-					go_necromancers[i].GetComponent<NecromancerController>().Init(Constants.Global.Side.LEFT);
-					go_necromancers[i].SetActive(true);
-				}
-				else {
-					go_necromancers[i].transform.position = position;
-					go_necromancers[i].GetComponent<NecromancerController>().Init(Constants.Global.Side.RIGHT);
-					go_necromancers[i].SetActive(true);
-				}
-
-				cfb_this.go_trackedObject = go_necromancers[i];
-				break;
-			}
-        }
+		go_necro.transform.position = position;
+		go_necro.SetActive(true);
+		cfb_this.go_trackedObject = go_necro;
+		i_nextNecromancerSpawnIndex = (i_nextNecromancerSpawnIndex+1)%go_necromancers.Length;
 	}
 
 	public void ActivateRune(Vector3 position) {
@@ -283,23 +277,6 @@ public sealed class RiftController : MonoBehaviour {
         }
     }
 
-    // Spawns one enemy on either side of the Rift, randomly chosen position
-    public void SpawnRunes() {
-        int randLeft = UnityEngine.Random.Range(0, go_leftEnemySpawners.Length);
-        int randRight = UnityEngine.Random.Range(0, go_rightEnemySpawners.Length);
-
-        if (i_leftRunes < Constants.RiftStats.C_RuneSpawnCapPerSide) {
-            //GameObject leftEnemy = Instantiate(go_runePrefab, v3_leftEnemySpawnPositions[randLeft], Quaternion.identity);
-            ActivateRune(go_leftEnemySpawners[randLeft].transform.position);
-			i_leftRunes++;
-        }
-        if (i_rightRunes < Constants.RiftStats.C_RuneSpawnCapPerSide) {
-            //GameObject rightEnemy = Instantiate(go_runePrefab, v3_rightEnemySpawnPositions[randRight], Quaternion.identity);
-            ActivateRune(go_rightEnemySpawners[randRight].transform.position);
-			i_rightRunes++;
-        }
-    }
-
     // Spawns one necromancers on either side of the Rift, randomly chosen position
     public void SpawnNecromancers() {
         int randLeft = UnityEngine.Random.Range(0, go_leftEnemySpawners.Length);
@@ -308,15 +285,6 @@ public sealed class RiftController : MonoBehaviour {
         if (i_leftNecromancers < Constants.EnemyStats.C_NecromancerSpawnCapPerSide) {
             Vector3 pos = go_leftEnemySpawners[randLeft].transform.position;
             pos = new Vector3(pos.x - 1.0f, pos.y, pos.z);
-            //GameObject leftEnemy = Instantiate(go_necromancerPrefab, pos, Quaternion.identity);
-            //leftEnemy.GetComponent<EnemyController>().e_Side = Constants.Global.Side.LEFT;  //TODO: is there a better way to set-up enemies?
-            //leftEnemy.GetComponent<NavMeshAgent>().speed = f_enemySpeed;
-            //leftEnemy.GetComponent<NecromancerController>().SetHealth(Constants.EnemyStats.C_EnemyHealth);
-
-            //GameObject enemyIndi = Instantiate(go_enemyIndiPrefab, pos, Quaternion.identity);
-            //CameraFacingBillboard cfb_this = enemyIndi.GetComponent<CameraFacingBillboard>();
-            //cfb_this.cam_Camera = cam_camera;
-            //cfb_this.go_trackedObject = leftEnemy;
 
 			ActivateNecromancer(pos);
 			i_leftNecromancers++;
@@ -324,16 +292,6 @@ public sealed class RiftController : MonoBehaviour {
         if (i_rightNecromancers < Constants.EnemyStats.C_NecromancerSpawnCapPerSide) {
             Vector3 pos = go_rightEnemySpawners[randRight].transform.position;
             pos = new Vector3(pos.x + 1.0f, pos.y, pos.z);
-            //GameObject rightEnemy = Instantiate(go_necromancerPrefab, pos, Quaternion.identity);
-            //rightEnemy.GetComponent<EnemyController>().e_Side = Constants.Global.Side.RIGHT;
-            //rightEnemy.GetComponent<NavMeshAgent>().speed = f_enemySpeed;
-            //rightEnemy.GetComponent<NecromancerController>().SetHealth(Constants.EnemyStats.C_EnemyHealth);
-
-
-            //GameObject enemyIndi = Instantiate(go_enemyIndiPrefab, pos, Quaternion.identity);
-            //CameraFacingBillboard cfb_this = enemyIndi.GetComponent<CameraFacingBillboard>();
-            //cfb_this.cam_Camera = cam_camera;
-            //cfb_this.go_trackedObject = rightEnemy;
 
             ActivateNecromancer(pos);
 			i_rightNecromancers++;
@@ -344,29 +302,10 @@ public sealed class RiftController : MonoBehaviour {
     public void SpawnEnemy(Vector3 position, Constants.Global.Side side) {
         // only spawn if below enemy side cap TODO: is this expected behavior?
         if (side == Constants.Global.Side.LEFT && i_leftEnemies < Constants.EnemyStats.C_EnemySpawnCapPerSide) {
-            //GameObject enemy = Instantiate(go_enemyPrefab, position, Quaternion.identity);
-            //enemy.GetComponent<EnemyController>().e_Side = side;        //TODO: is there a better way to set-up enemies?
-            //enemy.GetComponent<NavMeshAgent>().speed = f_enemySpeed;
-            //enemy.GetComponent<MeleeController>().SetHealth(Constants.EnemyStats.C_EnemyHealth);
-
-            //GameObject enemyIndi = Instantiate(go_enemyIndiPrefab, position, Quaternion.identity);
-            //CameraFacingBillboard cfb_this = enemyIndi.GetComponent<CameraFacingBillboard>();
-            //cfb_this.cam_Camera = cam_camera;
-            //cfb_this.go_trackedObject = enemy;
-
 			ActivateEnemy(position);
             i_leftEnemies++;
-        } else if (side == Constants.Global.Side.RIGHT && i_rightEnemies < Constants.EnemyStats.C_EnemySpawnCapPerSide) {
-            //GameObject enemy = Instantiate(go_enemyPrefab, position, Quaternion.identity);
-            //enemy.GetComponent<EnemyController>().e_Side = side;        //TODO: is there a better way to set-up enemies?
-            //enemy.GetComponent<NavMeshAgent>().speed = f_enemySpeed;
-            //enemy.GetComponent<MeleeController>().SetHealth(Constants.EnemyStats.C_EnemyHealth);
-
-            //GameObject enemyIndi = Instantiate(go_enemyIndiPrefab, position, Quaternion.identity);
-            //CameraFacingBillboard cfb_this = enemyIndi.GetComponent<CameraFacingBillboard>();
-            //cfb_this.cam_Camera = cam_camera;
-            //cfb_this.go_trackedObject = enemy;
-
+        }
+        else if (side == Constants.Global.Side.RIGHT && i_rightEnemies < Constants.EnemyStats.C_EnemySpawnCapPerSide) {
 			ActivateEnemy(position);
             i_rightEnemies++;
         }
@@ -391,7 +330,8 @@ public sealed class RiftController : MonoBehaviour {
     // Decrease enemy count per side on enemy death
     public void DecreaseEnemies(Constants.Global.Side side) {
         if (side == Constants.Global.Side.LEFT) {
-            i_leftEnemies--; }
+            i_leftEnemies--;
+        }
         else {
             i_rightEnemies--;
         }
@@ -399,7 +339,8 @@ public sealed class RiftController : MonoBehaviour {
 
     public void DecreaseNecromancers(Constants.Global.Side side) {
         if (side == Constants.Global.Side.LEFT) {
-            i_leftNecromancers--; }
+            i_leftNecromancers--;
+        }
         else {
             i_rightNecromancers--;
         }
@@ -445,48 +386,59 @@ public sealed class RiftController : MonoBehaviour {
 
         float f_projectileSize = Constants.SpellStats.C_PlayerProjectileSize;
         List<GameObject> go_riftSpells = new List<GameObject>();
+        
+        var array = new int[] { 0, 1, 2, 3 };
+        new System.Random().Shuffle(array);
 
         for (int i = 0; i < 4; i++) {
-            if (go_playerReferences[i].GetComponent<PlayerController>().GetColor() == c) {
+            if (go_playerReferences[array[i]].GetComponent<PlayerController>().GetColor() == c) {
                 GameObject go_spell = Instantiate(go_riftDeathBolt, gameObject.transform.position, gameObject.transform.rotation);
                 go_spell.transform.localScale = new Vector3(f_projectileSize, f_projectileSize, f_projectileSize);
-                go_spell.GetComponent<Rigidbody>().velocity = go_playerReferences[i].transform.position.normalized * Constants.RiftStats.C_VolatilityDeathboltSpeed;
+                go_spell.GetComponent<Rigidbody>().velocity = go_playerReferences[array[i]].transform.position.normalized * Constants.RiftStats.C_VolatilityDeathboltSpeed;
+                break;
             }
         }
     }
+    #endregion
 
-    /*public void SpawnNecromancers() {
-        Debug.Log("Spawn necromancers when we have them");
-    }
-    
-    public void InvertControls() {
-
-    }
-
-    void ReverseInvertControls() {
-
-    }
-
-    public void SpawnPocketRifts() {
-
+    #region FireDeathbolt() Helper Functions
+    public void IncrementObjectiveCount(Constants.Global.Color e_colorIn) {
+        if (e_colorIn == Constants.Global.Color.BLUE) {
+            i_blueObjectivesComplete++;
+        }
+        else if (e_colorIn == Constants.Global.Color.RED) {
+            i_redObjectivesComplete++;
+        }
     }
 
-    public void InvertScreen() {
-        mainCamera.transform.Rotate(0.0f, 0.0f, 180.0f);
-        Invoke("ReverseInvertScreen", Constants.RiftStats.C_Volatility_CameraFlipTime);
+    private Constants.Global.Color DetermineWinningTeam() {
+        if (i_blueObjectivesComplete > i_redObjectivesComplete) {
+            return Constants.Global.Color.BLUE;
+        }
+        else if (i_redObjectivesComplete > i_blueObjectivesComplete) {
+            return Constants.Global.Color.RED;
+        }
+        else {
+            System.Random rand = new System.Random();
+            int team = Convert.ToInt32(rand.Next(1, 2));
+
+            if (team == 1) {
+                return Constants.Global.Color.BLUE;
+            }
+            else {
+                return Constants.Global.Color.RED;
+            }
+        }
     }
+#endregion
 
-    void ReverseInvertScreen() {
-        mainCamera.transform.Rotate(0.0f, 0.0f, 180.0f);
-    }*/
-
-    /*/////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
-	
-	void PlayNoise(){
+    void PlayNoise() {
 		maestro.PlayVolatilityNoise(i_volatilityLevel);
-		Invoke("PlayNoise", r_random.Next(0,10));
+		Invoke("PlayNoise", r_random.Next(5,10));
 	}
+    #endregion
 
+    #region Unity Function Overrides
     void Awake() {
         instance = this;
     }
@@ -495,5 +447,8 @@ public sealed class RiftController : MonoBehaviour {
 		maestro = Maestro.Instance;
         ResetVolatility();
 		Invoke("PlayNoise", r_random.Next(0,10));
+        animator = GetComponentInChildren <Animator> ();
+
     }
+#endregion
 }
