@@ -72,6 +72,11 @@ public class PlayerController : MonoBehaviour{
 		anim.SetFloat ("runSpeed", v3_moveDir.magnitude);
 		anim.SetFloat ("lookDirection", v3_aimDir.magnitude);
 
+		anim.SetFloat ("runSpeedX", f_inputX);
+		anim.SetFloat ("runSpeedZ", f_inputZ);
+		anim.SetFloat ("aimDirectionX", f_aimInputX);
+		anim.SetFloat ("aimDirectionZ", f_aimInputZ);
+
 
 		if (v3_aimDir.magnitude > 0) {
 			transform.rotation = Quaternion.LookRotation(v3_aimDir);
@@ -276,6 +281,7 @@ public class PlayerController : MonoBehaviour{
         if (p_player.GetButtonUp("IceSpell")) {
             b_iceboltMode = false;
             Destroy(go_icebolt);
+			anim.SetBool ("iceSpellBool", false);
         }
 		
 		if (!go_flagObj && !isWisp) {
@@ -348,6 +354,7 @@ public class PlayerController : MonoBehaviour{
                 if (p_player.GetButtonDown("IceSpell")) {
 					maestro.PlaySpellCharge();
 					maestro.PlayIceShoot();
+					anim.SetBool ("iceSpellBool", true);
                     b_iceboltMode = true;
                     f_nextIce = 0;
                     f_nextCast = 0;
