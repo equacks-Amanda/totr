@@ -204,6 +204,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4953679122915050}
   - component: {fileID: 137462288785229124}
+  - component: {fileID: 114353277141148064}
   m_Layer: 0
   m_Name: Apprentice 1
   m_TagString: Untagged
@@ -1813,6 +1814,7 @@ GameObject:
   - component: {fileID: 4653350094774488}
   - component: {fileID: 33360355551244542}
   - component: {fileID: 23330316889276162}
+  - component: {fileID: 114108904516352796}
   m_Layer: 15
   m_Name: Wisp
   m_TagString: Untagged
@@ -3869,28 +3871,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   go_playerCapsule: {fileID: 1204098368484264}
   go_playerWisp: {fileID: 1959526875299128}
-  i_playerNumber: 2
-  e_Color: 1
-  e_Side: 1
+  i_playerNumber: 0
+  e_Color: 0
+  e_Side: 0
   t_flagPos: {fileID: 4382892597350090}
   go_flagObj: {fileID: 0}
   go_interactCollider: {fileID: 1834358145786194}
   go_parryShield: {fileID: 1553478322380244}
   t_spellSpawn: {fileID: 4152086257867096}
   f_canMove: 0
-  go_magicMissileShot: {fileID: 1169542914423560, guid: 00247cb350ec7a848b7c7ce622e7cb56,
-    type: 2}
-  go_windShot: {fileID: 1884951099791360, guid: e14bef9b01064274f8f8dea8bca54e4c,
-    type: 2}
-  go_iceShot: {fileID: 1457177119730324, guid: 8290d2fdc293f02499be170cbb2eaf80, type: 2}
-  go_electricShot: {fileID: 1399049070116990, guid: a6ec5ad0254870244b463e157e59b407,
-    type: 2}
+  go_magicMissileShot: {fileID: 0}
+  go_windShot: {fileID: 0}
+  go_iceShot: {fileID: 0}
+  go_electricShot: {fileID: 0}
   pauc_pause: {fileID: 0}
   go_deathOrbPrefab: {fileID: 0}
   isWisp: 0
   b_iceboltMode: 0
   f_projectileSize: 0
   anim: {fileID: 95501530416164560}
+  playerDissolve: {fileID: 114353277141148064}
+  wispFade: {fileID: 114108904516352796}
 --- !u!114 &114081840245364588
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3907,6 +3908,23 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &114108904516352796
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1959526875299128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97f34f47d5ae346ceabd5d33d65aa799, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EffectSource: {fileID: 0}
+  EffectSound: {fileID: 0}
+  SourceRenderer: {fileID: 23330316889276162}
+  EffectLength: 0
+  isFinished: 0
+  currentParamValue: 0
 --- !u!114 &114145950528841872
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3976,6 +3994,23 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &114353277141148064
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1114122659312418}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97f34f47d5ae346ceabd5d33d65aa799, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EffectSource: {fileID: 0}
+  EffectSound: {fileID: 0}
+  SourceRenderer: {fileID: 137462288785229124}
+  EffectLength: 0
+  isFinished: 0
+  currentParamValue: 0
 --- !u!114 &114561086288472644
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3988,8 +4023,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam_Camera: {fileID: 0}
-  go_trackedObject: {fileID: 1379909744417984}
-  v3_offset: {x: 0, y: 1, z: 1.6}
+  go_trackedObject: {fileID: 0}
+  v3_offset: {x: 0, y: 0, z: 0}
 --- !u!114 &114561478412381456
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4092,14 +4127,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e75da56c068a8943831cd068d78f443, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playc_trackedPlayer: {fileID: 114070834417397376}
-  sshk_shaker: {fileID: 114251957186550180}
-  img_healthbar: {fileID: 114044081356953962}
-  img_windbar: {fileID: 114673811379051070}
-  img_icebar: {fileID: 114561478412381456}
-  img_electricbar: {fileID: 114945753544231932}
-  rt_hpBar: {fileID: 224928347328595092}
-  f_shakeAmt: 5
+  playc_trackedPlayer: {fileID: 0}
+  sshk_shaker: {fileID: 0}
+  img_healthbar: {fileID: 0}
+  img_windbar: {fileID: 0}
+  img_icebar: {fileID: 0}
+  img_electricbar: {fileID: 0}
+  rt_hpBar: {fileID: 0}
+  f_shakeAmt: 0
 --- !u!114 &114877921469740020
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4193,8 +4228,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam_Camera: {fileID: 0}
-  go_trackedObject: {fileID: 1379909744417984}
-  v3_offset: {x: -0.1, y: 0.2, z: -0.55}
+  go_trackedObject: {fileID: 0}
+  v3_offset: {x: 0, y: 0, z: 0}
 --- !u!136 &136330709978145836
 CapsuleCollider:
   m_ObjectHideFlags: 1
@@ -4234,7 +4269,7 @@ SkinnedMeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: b3cf43bd79f3d434ab6a5cb1c5883741, type: 2}
+  - {fileID: 2100000, guid: 92bea2936a25b6c45a971d16ecf5f7bd, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

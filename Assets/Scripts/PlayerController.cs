@@ -49,8 +49,11 @@ public class PlayerController : MonoBehaviour{
 	private Maestro maestro;				// Reference to Maestro singleton.
 
 	[SerializeField] private Animator anim;
+    [SerializeField] private ShaderEffect playerDissolve;
+    [SerializeField] private ShaderEffect wispFade;
 
-	private bool b_stepOk;
+
+    private bool b_stepOk;
 	private float f_stepDelay = 0.4f;
 
     // Getters
@@ -145,22 +148,60 @@ public class PlayerController : MonoBehaviour{
             RiftController.Instance.IncreaseVolatility(Constants.RiftStats.C_VolatilityIncrease_PlayerDeath);
         } 
 		maestro.PlayPlayerDie();
-        go_playerCapsule.SetActive(false);
-		go_playerWisp.SetActive(true);
+
+        dissolvePlayer();
+
 		f_nextWind = Time.time + (Constants.PlayerStats.C_RespawnTimer + 3.0f);
         f_nextIce = Time.time + (Constants.PlayerStats.C_RespawnTimer + 3.0f);
         //go_playerCapsule.GetComponent<MeshRenderer>().material.color = col_originalColor;
         Invoke("PlayerRespawn", Constants.PlayerStats.C_RespawnTimer);
     }
 
+    private void dissolvePlayer( ) {
+        StartCoroutine(doDissolvePlayer());
+        StartCoroutine(doWispFadeIn());
+    }
+
+    private IEnumerator doWispFadeIn() {
+        go_playerWisp.SetActive(true);
+        yield return new WaitUntil(() => playerDissolve.currentParamValue >= .6f);
+        wispFade.paramIncrease(3f,  false, "_Brightness");
+    }
+
+    private IEnumerator doDissolvePlayer() {
+        playerDissolve.paramIncrease(5f, false, "_DisintegrateAmount");
+        yield return new WaitUntil(() => playerDissolve.isFinished);
+        playerDissolve.isFinished = false;
+        go_playerCapsule.SetActive(false);
+    }
+
     private void PlayerRespawn() {
 		isWisp = false;
 		maestro.PlayPlayerSpawn();
-        go_playerCapsule.SetActive(true);
-        go_playerWisp.SetActive(false);
+
+        reconstructPlayer();
+
         f_playerHealth = Constants.PlayerStats.C_MaxHealth;
         f_nextWind = Time.time;
         f_nextIce = Time.time;
+    }
+
+    private void reconstructPlayer() {
+        StartCoroutine(doWispFadeOut());
+        StartCoroutine(doConstructPlayer());
+    }
+
+    private IEnumerator doWispFadeOut() {
+        wispFade.paramDecrease(5f, false, "_Brightness");
+        yield return new WaitUntil(() => wispFade.isFinished);
+        wispFade.isFinished = false;
+        go_playerWisp.SetActive(false);
+    }
+
+    private IEnumerator doConstructPlayer() {
+        yield return new WaitUntil(() => wispFade.currentParamValue <= .7f);
+        go_playerCapsule.SetActive(true);
+        playerDissolve.paramDecrease(3f, false, "_DisintegrateAmount");
     }
 
 	public void TakeDamage(float damage, Constants.Global.DamageType d) {
@@ -472,4 +513,16 @@ public class PlayerController : MonoBehaviour{
 	private void StepDelay(){
 		b_stepOk = true;
 	}
+
+    [ContextMenu("DIEDIEDIE")]
+    public void TEST_PDeath()
+    {
+        dissolvePlayer();
+    }
+
+    [ContextMenu("HEROESNEVERDIE")]
+    public void TEST_PConstruct()
+    {
+        reconstructPlayer();
+    }
 }

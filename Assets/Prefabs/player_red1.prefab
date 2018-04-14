@@ -813,6 +813,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4993903443658034}
   - component: {fileID: 137230318809463416}
+  - component: {fileID: 114955139259303364}
   m_Layer: 0
   m_Name: Apprentice 1
   m_TagString: Untagged
@@ -1261,6 +1262,7 @@ GameObject:
   - component: {fileID: 4070774053132832}
   - component: {fileID: 33280972782109250}
   - component: {fileID: 23375034317121080}
+  - component: {fileID: 114996417307585898}
   m_Layer: 15
   m_Name: Wisp
   m_TagString: Untagged
@@ -3874,26 +3876,25 @@ MonoBehaviour:
   go_playerWisp: {fileID: 1658023384692944}
   i_playerNumber: 0
   e_Color: 0
-  e_Side: -1
+  e_Side: 0
   t_flagPos: {fileID: 4248048075916044}
   go_flagObj: {fileID: 0}
   go_interactCollider: {fileID: 1598308523195176}
   go_parryShield: {fileID: 1105442287791804}
   t_spellSpawn: {fileID: 4270904483795318}
   f_canMove: 0
-  go_magicMissileShot: {fileID: 1169542914423560, guid: 00247cb350ec7a848b7c7ce622e7cb56,
-    type: 2}
-  go_windShot: {fileID: 1884951099791360, guid: e14bef9b01064274f8f8dea8bca54e4c,
-    type: 2}
-  go_iceShot: {fileID: 1457177119730324, guid: 8290d2fdc293f02499be170cbb2eaf80, type: 2}
-  go_electricShot: {fileID: 1399049070116990, guid: a6ec5ad0254870244b463e157e59b407,
-    type: 2}
+  go_magicMissileShot: {fileID: 0}
+  go_windShot: {fileID: 0}
+  go_iceShot: {fileID: 0}
+  go_electricShot: {fileID: 0}
   pauc_pause: {fileID: 0}
   go_deathOrbPrefab: {fileID: 0}
   isWisp: 0
   b_iceboltMode: 0
   f_projectileSize: 0
   anim: {fileID: 95595520305175288}
+  playerDissolve: {fileID: 114955139259303364}
+  wispFade: {fileID: 114996417307585898}
 --- !u!114 &114297498478486748
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4141,6 +4142,23 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114955139259303364
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1408945807714344}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97f34f47d5ae346ceabd5d33d65aa799, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EffectSource: {fileID: 0}
+  EffectSound: {fileID: 0}
+  SourceRenderer: {fileID: 137230318809463416}
+  EffectLength: 0
+  isFinished: 0
+  currentParamValue: 0
 --- !u!114 &114982016105960252
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4195,6 +4213,23 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114996417307585898
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1658023384692944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97f34f47d5ae346ceabd5d33d65aa799, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EffectSource: {fileID: 0}
+  EffectSound: {fileID: 0}
+  SourceRenderer: {fileID: 23375034317121080}
+  EffectLength: 0
+  isFinished: 0
+  currentParamValue: 0
 --- !u!136 &136237133599627620
 CapsuleCollider:
   m_ObjectHideFlags: 1
@@ -4234,7 +4269,7 @@ SkinnedMeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: b3cf43bd79f3d434ab6a5cb1c5883741, type: 2}
+  - {fileID: 2100000, guid: 92bea2936a25b6c45a971d16ecf5f7bd, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
