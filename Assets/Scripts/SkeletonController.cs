@@ -15,8 +15,8 @@ public class SkeletonController : EnemyController {
 
 	public override void Init(Constants.Global.Side side) {
 		base.Init(side);
-		nma_agent.speed = Constants.EnemyStats.C_EnemyBaseSpeed;
-		f_health = Constants.EnemyStats.C_EnemyHealth;
+		nma_agent.speed = riftController.EnemySpeed;
+        f_health = Constants.EnemyStats.C_EnemyHealth;
 		maestro.PlaySkeletonSpawn();
 	}
 
@@ -25,10 +25,11 @@ public class SkeletonController : EnemyController {
 		base.UpdateChase();
 		go_closestTarget = null;
 		float f_minDistance = 9999f;
-		float f_currentDistance;
-		for(int i = 0; i < riftController.go_playerReferences.Length; i++){	
-			f_currentDistance = Vector3.Distance(riftController.go_playerReferences[i].transform.position,transform.position);
-			if(riftController.go_playerReferences[i].GetComponent<PlayerController>().e_Side == e_side && f_currentDistance < f_minDistance && riftController.go_playerReferences[i].GetComponent<PlayerController>().isWisp == false){
+		float f_currentDistance = 0;
+		for(int i = 0; i < riftController.go_playerReferences.Length; i++){
+			if(riftController.go_playerReferences[i])
+				f_currentDistance = Vector3.Distance(riftController.go_playerReferences[i].transform.position,transform.position);
+			if(riftController.go_playerReferences[i].GetComponent<PlayerController>().Side == e_startSide && f_currentDistance < f_minDistance && riftController.go_playerReferences[i].GetComponent<PlayerController>().Wisp == false){
 				go_closestTarget = riftController.go_playerReferences[i];
 				f_minDistance = f_currentDistance;
 			}
@@ -86,7 +87,7 @@ public class SkeletonController : EnemyController {
 		bool b_playersAvailable = false;
 
 		for(int i = 0; i < riftController.go_playerReferences.Length; i++){	
-			if(riftController.go_playerReferences[i].GetComponent<PlayerController>().e_Side == e_side && riftController.go_playerReferences[i].GetComponent<PlayerController>().isWisp == false){
+			if(riftController.go_playerReferences[i].GetComponent<PlayerController>().Side == e_startSide && riftController.go_playerReferences[i].GetComponent<PlayerController>().Wisp == false){
 				b_playersAvailable = true;
 				break;
 			}
@@ -103,13 +104,13 @@ public class SkeletonController : EnemyController {
 		}
 	}
 	
-	protected override void EnterStateDie() {
-		base.EnterStateDie();
+	protected override void EnterStateDie(Constants.Global.Color color) {
+		riftController.DecreaseEnemies(e_startSide);									  
+		base.EnterStateDie(color);
 		maestro.PlaySkeletonDie();
     }
 
 	protected override void UpdateDie() {
-		riftController.DecreaseEnemies(e_side);
 		base.UpdateDie();
 	}
 
@@ -128,7 +129,9 @@ public class SkeletonController : EnemyController {
 
     protected override void DoAttack() {
 		base.DoAttack();
-		go_closestTarget.GetComponent<PlayerController>().TakeDamage(Constants.EnemyStats.C_EnemyDamage,Constants.Global.DamageType.ENEMY);
+		if (go_closestTarget) {
+			go_closestTarget.GetComponent<PlayerController>().TakeDamage(Constants.EnemyStats.C_EnemyDamage,Constants.Global.DamageType.ENEMY);
+		}
     }
 	
 	protected override void UpdateSlowed() {
@@ -148,4 +151,7 @@ public class SkeletonController : EnemyController {
 		}
 	}
 
+    void OnEnable() {
+        // do nothing; need to override the InvokeRepeating in SpellTarget
+    }
 }

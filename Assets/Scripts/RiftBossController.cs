@@ -4,76 +4,112 @@
  * 
  */
 
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class RiftBossController : MonoBehaviour {
+public class RiftBossController : SpellTarget {
+#region Variables and Declarations
+    [SerializeField] private RiftBossObjective rbo_owner;  // identifies objective rift boss is a part of
+    [SerializeField] private GameObject go_ForceField;
+    [SerializeField] private GameObject[] go_runes;
+    [SerializeField] private GameObject[] go_skeletons;
+	private bool b_firstShield, b_secondShield = false;
+#endregion
 
-    public RiftBossObjective rbo_owner;  // identifies objective crystal is a part of
-    public GameObject go_ForceField;
-    public GameObject[] go_runes;
-    [SerializeField]
-    private Constants.Global.Color e_color;     // identifies owning team
-    private float f_health;    // indicates how much health the boss has
-    private RiftController rc_riftController;
-
-    // Getters
-    public Constants.Global.Color Color {
-        get { return e_color; }
-    }
-    public float Health {
-        get { return f_health; }
-        set { f_health = value; }
-    }
-    private Animator animator;
-
-    /*/////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
-
-    public void TakeDamage(float damage) { //TODO: rename this in_variable when we decide percentage or no
+#region RiftBossController Methods
+    public void TakeDamage(float damage) {
         if (!go_ForceField.activeSelf) {
             f_health -= damage;
             rbo_owner.UpdateRiftBossHealth(f_health);
+            CancelInvoke("Notify");
+            InvokeRepeating("Notify", Constants.ObjectiveStats.C_NotificationTimer, Constants.ObjectiveStats.C_NotificationTimer);
         }
     }
 
-    /*/////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
-
-    void Start() {
-        f_health = Constants.ObjectiveStats.C_RiftBossMaxHealth;     // cannot read from Constants.cs in initialization at top
-        rc_riftController = RiftController.Instance;
-
-        InvokeRepeating("FireDeathBolts", Constants.ObjectiveStats.C_DeathBoltCooldown, 
-            Constants.ObjectiveStats.C_DeathBoltCooldown + Constants.ObjectiveStats.C_ForceFieldCooldown);
-
-        InvokeRepeating("SpawnRunes", Constants.ObjectiveStats.C_RuneSpawnInterval, Constants.ObjectiveStats.C_RuneSpawnInterval);
-        animator = GetComponentInChildren <Animator> ();
+    override public void ApplySpellEffect(Constants.SpellStats.SpellType spell, Constants.Global.Color color, float damage, Vector3 direction) {
+        if (color == e_color) {
+            TakeDamage(damage);
+        }
     }
-
-    /*/////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
-
-    //responsible for activating and deactivating runes based on the rune spawn interval
+    
     private void SpawnRunes() {
         foreach (GameObject runes in go_runes) {
             if (!runes.activeSelf) {
                 runes.SetActive(true);
             }
-            else {
-                runes.SetActive(false);
-            }
         }
-        animator.SetTrigger ("runeTrigger");
+        anim.SetTrigger("runeTrigger");
     }
 
     private void FireDeathBolts() {
-        rc_riftController.FireDeathBolts(e_color);
-        go_ForceField.SetActive(false);
-        Invoke("TurnOnForceField", Constants.ObjectiveStats.C_ForceFieldCooldown);
-        animator.SetTrigger ("deathboltTrigger");
+        riftController.FireDeathBolts(gameObject.transform, e_color);
+        //go_ForceField.SetActive(false);
+        //Invoke("TurnOnForceField", Constants.ObjectiveStats.C_ForceFieldCooldown);
+        anim.SetTrigger("deathboltTrigger");
     }
 
     private void TurnOnForceField() {
         go_ForceField.SetActive(true);
+
+        if (e_color == riftController.GetRiftBossWinningTeamColor())
+        {
+            ActivateEnemies(Constants.ObjectiveStats.C_RiftBossEnemies);
+        }
+        else
+        {
+            ActivateEnemies(Constants.ObjectiveStats.C_RiftBossEnemies-1);
+        }
     }
-    
+	
+	private void ActivateEnemies(float skeletonSpawnCount){
+        for (int i = 0; i < skeletonSpawnCount; i++) {
+            // move skeleton into position - must happen before Init() is called
+            go_skeletons[i].transform.position = go_runes[i].transform.position;
+            go_skeletons[i].GetComponent<SkeletonController>().Init(e_startSide);
+            go_skeletons[i].SetActive(true);
+        }
+    }
+#endregion
+
+#region Unity Overrides
+    void Start() {
+        riftController = RiftController.Instance;
+        if (e_color == Constants.Global.Color.RED) {
+            f_health = (Constants.ObjectiveStats.C_RiftBossMaxHealth - (Constants.ObjectiveStats.C_RiftBossHealthReductionMultiplier * Constants.TeamStats.C_RedTeamScore));     // cannot read from Constants.cs in initialization at top
+            rbo_owner.UpdateRiftBossHealth(f_health);
+        }
+        else if (e_color == Constants.Global.Color.BLUE) {
+            f_health = (Constants.ObjectiveStats.C_RiftBossMaxHealth - (Constants.ObjectiveStats.C_RiftBossHealthReductionMultiplier * Constants.TeamStats.C_BlueTeamScore));     // cannot read from Constants.cs in initialization at top
+            rbo_owner.UpdateRiftBossHealth(f_health);
+        }
+
+        InvokeRepeating("FireDeathBolts", Constants.ObjectiveStats.C_DeathBoltCooldown, Constants.ObjectiveStats.C_DeathBoltCooldown + Constants.ObjectiveStats.C_ForceFieldCooldown);
+        InvokeRepeating("SpawnRunes", Constants.ObjectiveStats.C_RuneSpawnInterval, Constants.ObjectiveStats.C_RuneSpawnInterval);
+		TurnOnForceField();
+    }
+
+    private void Update() {
+        if ((f_health <= (Constants.ObjectiveStats.C_RiftBossMaxHealth * 0.6667)) && !b_firstShield) {
+			b_firstShield = true;
+            TurnOnForceField();
+        }
+		else if ((f_health <= (Constants.ObjectiveStats.C_RiftBossMaxHealth * 0.3334)) && !b_secondShield) {
+			b_secondShield = true;
+            TurnOnForceField();
+        }
+
+        if (go_ForceField.activeSelf) {
+            int inactiveSkeletonCount = 0;
+
+            for (int i = 0; i < 3; i++) {
+                if (!go_skeletons[i].activeSelf) {
+                    inactiveSkeletonCount++;
+                }
+            }
+
+            if (inactiveSkeletonCount == 3) {
+                go_ForceField.SetActive(false);
+            }
+        }
+    }
+    #endregion
 }

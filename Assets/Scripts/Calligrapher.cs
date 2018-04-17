@@ -6,6 +6,7 @@
 
 using System.Collections;
 using System.Collections.Generic;
+using System.Timers;
 using UnityEngine.UI;
 using UnityEngine;
 
@@ -14,16 +15,10 @@ public sealed class Calligrapher : MonoBehaviour {
     [SerializeField] private Text txt_redScoreText, txt_blueScoreText;
     [SerializeField] private Image img_redCTFIcon, img_blueCTFIcon;
     [SerializeField] private Image img_redHockeyIcon, img_blueHockeyIcon;
-
-    [SerializeField] private Text txt_redCrystalHealthText, txt_blueCrystalHealthText;
-    [SerializeField] private Image img_redCrystalDestructIcon, img_blueCrystalDestructIcon;
+    [SerializeField] private Image img_redNecroIcon, img_blueNecroIcon;
 
     [SerializeField] private Text txt_redRiftBossHealthText, txt_blueRiftBossHealthText;
     [SerializeField] private Image img_redBossIcon, img_blueBossIcon;
-
-    [SerializeField] private Text txt_redCompletionTimer, txt_blueCompletionTimer;
-    [SerializeField] private Text txt_redDestructionTimer, txt_blueDestructionTimer;
-    [SerializeField] private Image img_redKeepAwayIcon, img_blueKeepAwayIcon;
 
     [SerializeField] private Text txt_redObjvTitle, txt_blueObjvTitle;
     [SerializeField] private Text txt_redObjvDescription, txt_blueObjvDescription;
@@ -37,14 +32,18 @@ public sealed class Calligrapher : MonoBehaviour {
     private float f_redStartTime, f_blueStartTime;  // controls UI pop-up fading
     private float f_redFlashTime, f_blueFlashTime;  // separate timers for flash to avoid overwriting, since both animations play at roughly the same time.
 
+
+    #region Singletons
     // Singleton
     private static Calligrapher instance;
     public static Calligrapher Instance {
         get { return instance; }
     }
+    #endregion
 
     /*/////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 
+    #region UI Initialization and Updating Methods
     // update score (CTF and Ice Hockey)
     public void UpdateScoreUI(Constants.Global.Color colorIn, int scoreIn) {
         if (colorIn == Constants.Global.Color.RED) {
@@ -55,46 +54,17 @@ public sealed class Calligrapher : MonoBehaviour {
         }
     }
 
-    // update health (Crystal Destruction)
-	public void UpdateCrystalHealthUI(Constants.Global.Color colorIn, float healthIn) {
-        if (colorIn == Constants.Global.Color.RED) {
-            txt_redCrystalHealthText.text = Mathf.CeilToInt(healthIn).ToString();
-        }
-        else if (colorIn == Constants.Global.Color.BLUE) {
-            txt_blueCrystalHealthText.text = Mathf.CeilToInt(healthIn).ToString();
-        }
-    }
-
     // update health (Rift Boss)
 	public void UpdateRiftBossHealthUI(Constants.Global.Color colorIn, float healthIn) {
+        if (healthIn <= 0) {
+            healthIn = 0;
+        }
+        
         if (colorIn == Constants.Global.Color.RED) {
-            if (healthIn <= 0) {
-                healthIn = 0;
-            }
             txt_redRiftBossHealthText.text = Mathf.CeilToInt(healthIn).ToString();  //TODO: new ui txt objects
         }
         else if (colorIn == Constants.Global.Color.BLUE) {
             txt_blueRiftBossHealthText.text = Mathf.CeilToInt(healthIn).ToString();
-        }
-    }
-
-    // update completion timer (Hot Potato)
-    public void UpdateCompletionTimerUI(Constants.Global.Color colorIn, int timeIn) {
-        if (colorIn == Constants.Global.Color.RED) {
-            txt_redCompletionTimer.text = timeIn.ToString();
-        }
-        else if (colorIn == Constants.Global.Color.BLUE) {
-            txt_blueCompletionTimer.text = timeIn.ToString();
-        }
-    }
-
-    // update destruction timer (Hot Potato)
-    public void UpdateDestructionTimerUI(Constants.Global.Color colorIn, int timeIn) {
-        if (colorIn == Constants.Global.Color.RED) {
-            txt_redDestructionTimer.text = timeIn.ToString();
-        }
-        else if (colorIn == Constants.Global.Color.BLUE) {
-            txt_blueDestructionTimer.text = timeIn.ToString();
         }
     }
 
@@ -138,46 +108,22 @@ public sealed class Calligrapher : MonoBehaviour {
         PopupFadeIn(colorIn);
     }
 
-    public void CrystalDestructionInit(Constants.Global.Color colorIn) {
-        // colorIn will be crystal color, not objective/team color
+    public void DefeatNecromancersInit(Constants.Global.Color colorIn) {
         if (colorIn == Constants.Global.Color.RED) {
-            txt_redCrystalHealthText.transform.parent.gameObject.SetActive(true);
-            img_blueCrystalDestructIcon.gameObject.SetActive(true);
+            txt_redScoreText.transform.parent.gameObject.SetActive(true);
+            img_redNecroIcon.gameObject.SetActive(true);
 
-            txt_blueObjvTitle.text = txt_bluePauseObjvTitle.text = Constants.ObjectiveText.C_CrystalDestructTitle;
-            txt_blueObjvDescription.text = txt_bluePauseObjvDescription.text = Constants.ObjectiveText.C_CrystalDestructDescription;
-            PopupFadeIn(Constants.Global.Color.BLUE);
+            txt_redObjvTitle.text = txt_redPauseObjvTitle.text = Constants.ObjectiveText.C_DefeatNecromancersTitle;
+            txt_redObjvDescription.text = txt_redPauseObjvDescription.text = Constants.ObjectiveText.C_DefeatNecromancersDescription;
         }
         else {
-            txt_blueCrystalHealthText.transform.parent.gameObject.SetActive(true);
-            img_redCrystalDestructIcon.gameObject.SetActive(true);
+            txt_blueScoreText.transform.parent.gameObject.SetActive(true);
+            img_blueNecroIcon.gameObject.SetActive(true);
 
-            txt_redObjvTitle.text = txt_redPauseObjvTitle.text = Constants.ObjectiveText.C_CrystalDestructTitle;
-            txt_redObjvDescription.text = txt_redPauseObjvDescription.text = Constants.ObjectiveText.C_CrystalDestructDescription;
-            PopupFadeIn(Constants.Global.Color.RED);
+            txt_blueObjvTitle.text = txt_bluePauseObjvTitle.text = Constants.ObjectiveText.C_DefeatNecromancersTitle;
+            txt_blueObjvDescription.text = txt_bluePauseObjvDescription.text = Constants.ObjectiveText.C_DefeatNecromancersDescription;
         }
-        UpdateCrystalHealthUI(colorIn, Constants.ObjectiveStats.C_CrystalMaxHealth);
-    }
-
-    public void HotPotatoInit(Constants.Global.Color colorIn) {
-        if (colorIn == Constants.Global.Color.RED) {
-            txt_redCompletionTimer.transform.parent.gameObject.SetActive(true);
-            txt_redDestructionTimer.transform.parent.gameObject.SetActive(true);
-            img_redKeepAwayIcon.gameObject.SetActive(true);
-
-            txt_redObjvTitle.text = txt_redPauseObjvTitle.text = Constants.ObjectiveText.C_PotatoTitle;
-            txt_redObjvDescription.text = txt_redPauseObjvDescription.text = Constants.ObjectiveText.C_PotatoDescription;
-        }
-        else {
-            txt_blueCompletionTimer.transform.parent.gameObject.SetActive(true);
-            txt_blueDestructionTimer.transform.parent.gameObject.SetActive(true);
-            img_blueKeepAwayIcon.gameObject.SetActive(true);
-
-            txt_blueObjvTitle.text = txt_bluePauseObjvTitle.text = Constants.ObjectiveText.C_PotatoTitle;
-            txt_blueObjvDescription.text = txt_bluePauseObjvDescription.text = Constants.ObjectiveText.C_PotatoDescription;
-        }
-        UpdateCompletionTimerUI(colorIn, Constants.ObjectiveStats.C_PotatoCompletionTimer);
-        UpdateDestructionTimerUI(colorIn, Constants.ObjectiveStats.C_PotatoSelfDestructTimer);
+        UpdateScoreUI(colorIn, 0);
         PopupFadeIn(colorIn);
     }
 
@@ -206,11 +152,11 @@ public sealed class Calligrapher : MonoBehaviour {
 
     public void Flash(Constants.Global.Color colorIn) {
         if (colorIn == Constants.Global.Color.RED) {
-            f_redFlashTime = Time.time;
-            InvokeRepeating("RedFlash", 0.05f, 0.075f);
+            f_redFlashTime = Time.realtimeSinceStartup;
+            StartCoroutine(RedFlash());
         } else {
-            f_blueFlashTime = Time.time;
-            InvokeRepeating("BlueFlash", 0.05f, 0.075f);
+            f_blueFlashTime = Time.realtimeSinceStartup;
+            StartCoroutine(BlueFlash());
         }
     }
 
@@ -230,35 +176,13 @@ public sealed class Calligrapher : MonoBehaviour {
             txt_redScoreText.transform.parent.gameObject.SetActive(false);
             img_redHockeyIcon.gameObject.SetActive(false);
             img_redCTFIcon.gameObject.SetActive(false);
+            img_redNecroIcon.gameObject.SetActive(false);
         }
         else {
             txt_blueScoreText.transform.parent.gameObject.SetActive(false);
             img_blueHockeyIcon.gameObject.SetActive(false);
             img_blueCTFIcon.gameObject.SetActive(false);
-        }
-    }
-
-    public void CrystalDestructionReset(Constants.Global.Color colorIn) {
-        if (colorIn == Constants.Global.Color.RED) {
-            txt_redCrystalHealthText.transform.parent.gameObject.SetActive(false);
-            img_blueCrystalDestructIcon.gameObject.SetActive(false);
-        }
-        else {
-            txt_blueCrystalHealthText.transform.parent.gameObject.SetActive(false);            
-            img_redCrystalDestructIcon.gameObject.SetActive(false);
-        }
-    }
-
-    public void HotPotatoReset(Constants.Global.Color colorIn) {
-        if (colorIn == Constants.Global.Color.RED) {
-            txt_redCompletionTimer.transform.parent.gameObject.SetActive(false);
-            txt_redDestructionTimer.transform.parent.gameObject.SetActive(false);
-            img_redKeepAwayIcon.gameObject.SetActive(false);
-        }
-        else {
-            txt_blueCompletionTimer.transform.parent.gameObject.SetActive(false);
-            txt_blueDestructionTimer.transform.parent.gameObject.SetActive(false);
-            img_blueKeepAwayIcon.gameObject.SetActive(false);
+            img_blueNecroIcon.gameObject.SetActive(false);
         }
     }
 
@@ -272,22 +196,25 @@ public sealed class Calligrapher : MonoBehaviour {
             img_blueBossIcon.gameObject.SetActive(false);
         }
     }
+    #endregion
 
+    #region UI Fade In/Out Methods
     //----------------------------
     // Fade in/out objective description UI at the start of each objective
     private void PopupFadeIn(Constants.Global.Color colorIn) {
+        Time.timeScale = 0;
         if (colorIn == Constants.Global.Color.RED) {
-            f_redStartTime = Time.time;
+            f_redStartTime = Time.realtimeSinceStartup;
             img_redFlashBacking.color = Color.white;
-            InvokeRepeating("FadeInRed", 0.1f, 0.075f);
+            StartCoroutine(FadeInRed());
         } else {
-            f_blueStartTime = Time.time;
+            f_blueStartTime = Time.realtimeSinceStartup;
             img_blueFlashBacking.color = Color.white;
-            InvokeRepeating("FadeInBlue", 0.1f, 0.075f);
+            StartCoroutine(FadeInBlue());
         }
     }
 
-    private void PopupFadeOut(Constants.Global.Color colorIn) {
+/*    private void PopupFadeOut(Constants.Global.Color colorIn) {
         if (colorIn == Constants.Global.Color.RED) {
             f_redStartTime = Time.time;
             InvokeRepeating("FadeOutRed", 0.1f, 0.075f);
@@ -295,75 +222,99 @@ public sealed class Calligrapher : MonoBehaviour {
             f_blueStartTime = Time.time;
             InvokeRepeating("FadeOutBlue", 0.1f, 0.075f);
         }
-    }
+    } */
 
-    private void FadeInRed() {
-        float timer = (Time.time - f_redStartTime);
+    private IEnumerator FadeInRed() {
+        float timer = (Time.realtimeSinceStartup - f_redStartTime);
         float fracJourney = timer / 1f;
         img_redPopupBacking.color = Color.Lerp(img_redPopupBacking.color, new Color(0,0,0,0.2f), fracJourney);
         txt_redObjvTitle.color = Color.Lerp(txt_redObjvTitle.color, new Color(1,1,1,1), fracJourney);
         txt_redObjvDescription.color = Color.Lerp(txt_redObjvDescription.color, new Color(1,1,1,1), fracJourney);
         if (timer > 5f) {
-            CancelInvoke("FadeInRed");
-            PopupFadeOut(Constants.Global.Color.RED);
+            StopCoroutine(FadeInRed());
+            StartCoroutine(FadeOutRed());
+            yield break;
         }
+        yield return new WaitForSecondsRealtime(0.075f);
+        StartCoroutine(FadeInRed());  
     }
 
-    private void FadeInBlue() {
-        float timer = (Time.time - f_blueStartTime);
+    private IEnumerator FadeInBlue() {
+        float timer = (Time.realtimeSinceStartup - f_blueStartTime);
         float fracJourney = timer / 1f;
         img_bluePopupBacking.color = Color.Lerp(img_bluePopupBacking.color, new Color(0,0,0,0.2f), fracJourney);
         txt_blueObjvTitle.color = Color.Lerp(txt_blueObjvTitle.color, new Color(1,1,1,1), fracJourney);
         txt_blueObjvDescription.color = Color.Lerp(txt_blueObjvDescription.color, new Color(1,1,1,1), fracJourney);
         if (timer > 5f) {
-            CancelInvoke("FadeInBlue");
-            PopupFadeOut(Constants.Global.Color.BLUE);
+            StopCoroutine(FadeInBlue());
+            StartCoroutine(FadeOutBlue());
+            yield break;
         }
+        yield return new WaitForSecondsRealtime(0.075f);
+        StartCoroutine(FadeInBlue());    
+
     }
 
-    private void FadeOutRed() {
-        float timer = (Time.time - f_redStartTime);
+    private IEnumerator FadeOutRed() {
+        float timer = (Time.realtimeSinceStartup - f_redStartTime);
         float fracJourney = timer / 1f;
         img_redPopupBacking.color = Color.Lerp(img_redPopupBacking.color, new Color(0,0,0,0), fracJourney);
         txt_redObjvTitle.color = Color.Lerp(txt_redObjvTitle.color, new Color(1,1,1,0), fracJourney);
         txt_redObjvDescription.color = Color.Lerp(txt_redObjvDescription.color, new Color(1,1,1,0), fracJourney);
         if (timer > 2f) {
-            CancelInvoke("FadeOutRed");
+            Time.timeScale = 1;
+            StopCoroutine(FadeOutRed());
+            yield break;
         }
+        yield return new WaitForSecondsRealtime(0.075f);
+        StartCoroutine(FadeOutRed());
     }
 
-    private void FadeOutBlue() {
-        float timer = (Time.time - f_blueStartTime);
+    private IEnumerator FadeOutBlue() {
+        float timer = (Time.realtimeSinceStartup - f_blueStartTime);
         float fracJourney = timer / 1f;
         img_bluePopupBacking.color = Color.Lerp(img_bluePopupBacking.color, new Color(0,0,0,0), fracJourney);
         txt_blueObjvTitle.color = Color.Lerp(txt_blueObjvTitle.color, new Color(1,1,1,0), fracJourney);
         txt_blueObjvDescription.color = Color.Lerp(txt_blueObjvDescription.color, new Color(1,1,1,0), fracJourney);
         if (timer > 2f) {
-            CancelInvoke("FadeOutBlue");
+            Time.timeScale = 1;
+            StopCoroutine(FadeOutBlue());
+            yield break;
         }
+        yield return new WaitForSecondsRealtime(0.075f);
+        StartCoroutine(FadeOutBlue());
     }
 
-    private void BlueFlash() {
-        float timer = (Time.time - f_blueFlashTime);
+    private IEnumerator BlueFlash() {
+        float timer = (Time.realtimeSinceStartup - f_blueFlashTime);
         float fracJourney = timer / 0.4f;
         img_blueFlashBacking.color = Color.Lerp(img_blueFlashBacking.color, new Color(1,1,1,0), fracJourney);
         if (timer > 0.4f) {
-            CancelInvoke("BlueFlash");
+            StopCoroutine(BlueFlash());
+            yield break;
         }
+        yield return new WaitForSecondsRealtime(0.075f);
+        StartCoroutine(BlueFlash());
     }
 
-    private void RedFlash() {
-        float timer = (Time.time - f_redFlashTime);
+    private IEnumerator RedFlash() {
+        float timer = (Time.realtimeSinceStartup - f_redFlashTime);
         float fracJourney = timer / 0.4f;
         img_redFlashBacking.color = Color.Lerp(img_redFlashBacking.color, new Color(1,1,1,0), fracJourney);
         if (timer > 0.4f) {
-            CancelInvoke("RedFlash");
+            StopCoroutine(RedFlash());
+            yield break;
         }
+        yield return new WaitForSecondsRealtime(0.075f);
+        StartCoroutine(RedFlash());
     }
+    #endregion
 
     /*/////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 
+    #region Unity Overrides
     void Awake() {
         instance = this;
     }
+    #endregion
 }

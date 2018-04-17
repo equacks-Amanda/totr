@@ -1,8 +1,8 @@
-﻿
-/* PauseController.cs - Sam C
+﻿/*  Debug Parameters Controller - Sam Caulker
  * 
- * Desc: Facilitates pausing the game and limiting it to only one user.
- */
+ *  Desc:   Facilitates pausing the game and limiting it to only one user
+ * 
+*/
 
 using System.Collections;
 using System.Collections.Generic;
@@ -20,6 +20,7 @@ public class PauseController : MonoBehaviour {
     [SerializeField] GameObject go_options;
     [SerializeField] GameObject go_pause;
 
+    [SerializeField]Text txt_buildLabel;
     [SerializeField]Button butt_select;
     [SerializeField]Button butt_optSelect;
     //private Player p_player;
@@ -31,10 +32,10 @@ public class PauseController : MonoBehaviour {
     public void Pause(PlayerController pc_in) {
         if (pc_owner == null) {
             pc_owner = pc_in;
-            txt_pauseIndicator.text = "P" + (pc_owner.i_playerNumber + 1) + " Pause.";
+            txt_pauseIndicator.text = "P" + (pc_owner.Num + 1) + " Pause.";
             img_pauseBacking.SetActive(true);
 
-            rsim.RewiredPlayerIds = new int[] { pc_owner.i_playerNumber };
+            rsim.RewiredPlayerIds = new int[] { pc_owner.Num };
 
             //Properly highlight the button.
             butt_select.Select();
@@ -73,5 +74,9 @@ public class PauseController : MonoBehaviour {
     public void MatchRestart() {
 		Time.timeScale = 1;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    private void Start() {
+        txt_buildLabel.text = "Build: v" + Constants.Global.C_BuildNumber;
     }
 }

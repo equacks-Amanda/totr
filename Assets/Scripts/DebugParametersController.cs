@@ -16,128 +16,113 @@ public class DebugParametersController : MonoBehaviour {
     [SerializeField] PlayerSelectController psc_master;
 
     // Menu buttons
-    public Button butt_playerSelect;
-    public Button butt_spellSelect;
-    public Button butt_enemySelect;
-    public Button butt_objectiveSelect;
+    [SerializeField] private Button butt_playerSelect;
+    [SerializeField] private Button butt_spellSelect;
+    [SerializeField] private Button butt_enemySelect;
+    [SerializeField] private Button butt_objectiveSelect;
     private Button[] butt_buttonArray = new Button[4];
     
     //Other button references (for navigation)
     [SerializeField]private Button butt_go;
 
     // Menu organization
-    public GameObject go_topMenu;
-    public GameObject go_select;
-    public GameObject go_regController;
+    [SerializeField] private GameObject go_topMenu;
+    [SerializeField] private GameObject go_select;
+    [SerializeField] private GameObject go_regController;
 
-    public GameObject go_playerMenu;
-    public GameObject go_spellMenu;
-    public GameObject go_enemyMenu;
-    public GameObject go_objectiveMenu;
+    [SerializeField] private GameObject go_playerMenu;
+    [SerializeField] private GameObject go_spellMenu;
+    [SerializeField] private GameObject go_enemyMenu;
+    [SerializeField] private GameObject go_objectiveMenu;
     private GameObject[] go_menuArray = new GameObject[4];
 
     // UI sliders (set in editor)
-    public Slider slider_playerMoveSpeed;
-    public Slider slider_windSpeed;
-    public Slider slider_iceSpeed;
-    public Slider slider_electricSpeed;
-    public Slider slider_windCooldown;
-    public Slider slider_iceCooldown;
-    public Slider slider_electricCooldown;
-    public Slider slider_magicMissileSpeed;
-    public Slider slider_magicMissileHeal;
-    public Slider slider_projSize;
-    public Slider slider_projLife;
-    public Slider slider_windForce;
-    public Slider slider_iceFreeze;
-    public Slider slider_electricLiveTime;
-    public Slider slider_enemySpawn;
-    public Slider slider_enemySpeed;
-    public Slider slider_enemyHealth;
-    public Slider slider_enemyDamage;
-    public Slider slider_respawnTime;
-    public Slider slider_wispMoveSpeed;
-    public Slider slider_playerHealth;
-    public Slider slider_crystalHealth;
-    public Slider slider_crystalHealthRegen;
-    public Slider slider_crystalHealthRegenRate;
-    public Slider slider_crystalHealthRegenDelay;
-    public Slider slider_CTFScore;
-    public Slider slider_completionTimer;
-    public Slider slider_selfDestructTimer;
-    public Slider slider_enemySpawnCap;
-    public Slider slider_icePlayerDamage;
-    public Slider slider_windPlayerDamage;
-    public Slider slider_electricPlayerDamage;
-    public Slider slider_hockeyMaxScore;
-    public Slider slider_puckDamage;
-    public Slider slider_puckSpeedDecayRate;
-    public Slider slider_puckSpeedDecreaseRate;
-    public Slider slider_puckBaseSpeed;
-    public Slider slider_puckHitIncreaseSpeed;
-    public Slider slider_riftBossHealth;
-    public Slider slider_runeSpawnInterval;
-    public Slider slider_deathBoltCooldown;
-    public Slider slider_forceFieldCooldown;
+    [SerializeField] private Slider slider_playerMoveSpeed;
+    [SerializeField] private Slider slider_windSpeed;
+    [SerializeField] private Slider slider_iceSpeed;
+    [SerializeField] private Slider slider_electricSpeed;
+    [SerializeField] private Slider slider_windCooldown;
+    [SerializeField] private Slider slider_iceCooldown;
+    [SerializeField] private Slider slider_electricCooldown;
+    [SerializeField] private Slider slider_magicMissileSpeed;
+    [SerializeField] private Slider slider_magicMissileHeal;
+    [SerializeField] private Slider slider_projSize;
+    [SerializeField] private Slider slider_projLife;
+    [SerializeField] private Slider slider_windForce;
+    [SerializeField] private Slider slider_iceFreeze;
+    [SerializeField] private Slider slider_electricLiveTime;
+    [SerializeField] private Slider slider_enemySpawn;
+    [SerializeField] private Slider slider_enemySpeed;
+    [SerializeField] private Slider slider_enemyHealth;
+    [SerializeField] private Slider slider_enemyDamage;
+    [SerializeField] private Slider slider_respawnTime;
+    [SerializeField] private Slider slider_wispMoveSpeed;
+    [SerializeField] private Slider slider_playerHealth;
+    [SerializeField] private Slider slider_crystalHealth;
+    [SerializeField] private Slider slider_crystalHealthRegen;
+    [SerializeField] private Slider slider_crystalHealthRegenRate;
+    [SerializeField] private Slider slider_crystalHealthRegenDelay;
+    [SerializeField] private Slider slider_CTFScore;
+    [SerializeField] private Slider slider_completionTimer;
+    [SerializeField] private Slider slider_selfDestructTimer;
+    [SerializeField] private Slider slider_enemySpawnCap;
+    [SerializeField] private Slider slider_hockeyMaxScore;
+    [SerializeField] private Slider slider_puckDamage;
+    [SerializeField] private Slider slider_puckSpeedDecayRate;
+    [SerializeField] private Slider slider_puckSpeedDecreaseRate;
+    [SerializeField] private Slider slider_puckBaseSpeed;
+    [SerializeField] private Slider slider_puckMaxSpeed;
+    [SerializeField] private Slider slider_puckHitIncreaseSpeed;
+    [SerializeField] private Slider slider_necroMaxScore;
+    [SerializeField] private Slider slider_riftBossHealth;
+    [SerializeField] private Slider slider_runeSpawnInterval;
+    [SerializeField] private Slider slider_deathBoltCooldown;
+    [SerializeField] private Slider slider_forceFieldCooldown;
 
     // UI text (set in editor)
-    public Text txt_playerMoveSpeed;
-    public Text txt_windSpeed;
-    public Text txt_iceSpeed;
-    public Text txt_electricSpeed;
-    public Text txt_windCooldown;
-    public Text txt_iceCooldown;
-    public Text txt_electricCooldown;
-    public Text txt_magicMissileSpeed;
-    public Text txt_magicMissileHeal;
-    public Text txt_projSize;
-    public Text txt_projLife;
-    public Text txt_windForce;
-    public Text txt_iceFreeze;
-    public Text txt_electricLiveTime;
-    public Text txt_enemySpawn;
-    public Text txt_enemySpeed;
-    public Text txt_enemyHealth;
-    public Text txt_enemyDamage;
-    public Text txt_respawnTime;
-    public Text txt_wispMoveSpeed;
-    public Text txt_playerHealth;
-    public Text txt_crystalHealth;
-    public Text txt_crystalHealthRegen;
-    public Text txt_crystalHealthRegenRate;
-    public Text txt_crystalHealthRegenDelay;
-    public Text txt_CTFScore;
-    public Text txt_completionTimer;
-    public Text txt_selfDestructTimer;
-    public Text txt_enemySpawnCap;
-    public Text txt_icePlayerDamage;
-    public Text txt_windPlayerDamage;
-    public Text txt_electricPlayerDamage;
-    public Text txt_hockeyMaxScore;
-    public Text txt_puckDamage;
-    public Text txt_puckSpeedDecayRate;
-    public Text txt_puckSpeedDecreaseRate;
-    public Text txt_puckBaseSpeed;
-    public Text txt_puckHitIncreaseSpeed;
-    public Text txt_riftBossHealth;
-    public Text txt_runeSpawnInterval;
-    public Text txt_deathBoltCooldown;
-    public Text txt_forceFieldCooldown;
+    [SerializeField] private Text txt_playerMoveSpeed;
+    [SerializeField] private Text txt_windSpeed;
+    [SerializeField] private Text txt_iceSpeed;
+    [SerializeField] private Text txt_electricSpeed;
+    [SerializeField] private Text txt_windCooldown;
+    [SerializeField] private Text txt_iceCooldown;
+    [SerializeField] private Text txt_electricCooldown;
+    [SerializeField] private Text txt_magicMissileSpeed;
+    [SerializeField] private Text txt_magicMissileHeal;
+    [SerializeField] private Text txt_projSize;
+    [SerializeField] private Text txt_projLife;
+    [SerializeField] private Text txt_windForce;
+    [SerializeField] private Text txt_iceFreeze;
+    [SerializeField] private Text txt_electricLiveTime;
+    [SerializeField] private Text txt_enemySpawn;
+    [SerializeField] private Text txt_enemySpeed;
+    [SerializeField] private Text txt_enemyHealth;
+    [SerializeField] private Text txt_enemyDamage;
+    [SerializeField] private Text txt_respawnTime;
+    [SerializeField] private Text txt_wispMoveSpeed;
+    [SerializeField] private Text txt_playerHealth;
+    [SerializeField] private Text txt_crystalHealth;
+    [SerializeField] private Text txt_crystalHealthRegen;
+    [SerializeField] private Text txt_crystalHealthRegenRate;
+    [SerializeField] private Text txt_crystalHealthRegenDelay;
+    [SerializeField] private Text txt_CTFScore;
+    [SerializeField] private Text txt_completionTimer;
+    [SerializeField] private Text txt_selfDestructTimer;
+    [SerializeField] private Text txt_enemySpawnCap;
+    [SerializeField] private Text txt_hockeyMaxScore;
+    [SerializeField] private Text txt_puckDamage;
+    [SerializeField] private Text txt_puckSpeedDecayRate;
+    [SerializeField] private Text txt_puckSpeedDecreaseRate;
+    [SerializeField] private Text txt_puckBaseSpeed;
+    [SerializeField] private Text txt_puckMaxSpeed;
+    [SerializeField] private Text txt_puckHitIncreaseSpeed;
+    [SerializeField] private Text txt_necroMaxScore;
+    [SerializeField] private Text txt_riftBossHealth;
+    [SerializeField] private Text txt_runeSpawnInterval;
+    [SerializeField] private Text txt_deathBoltCooldown;
+    [SerializeField] private Text txt_forceFieldCooldown;
 
     /*/////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
-
-    // Public Helper Methods
-    // currently unused - GC set in inspector
-    //public void SetGameController(GameController game_controllerIn)
-    //{
-    //    GC = game_controllerIn;
-    //}
-
-    //// currently unused - players set in inspector
-    //public void AddPlayerController(PlayerController play_controllerIn)
-    //{
-    //    l_playerControllers.Add(play_controllerIn);
-    //}
 
     // Slider change callbacks
     public void ChangePlayerSpeed(float f_playerSpeedIn) {
@@ -299,28 +284,13 @@ public class DebugParametersController : MonoBehaviour {
         Constants.EnemyStats.C_EnemySpawnCapPerSide = (int)(f_capIn - 1);
     }
 
-    public void ChangeIcePlayerDamage(float f_damageIn) {
-        txt_icePlayerDamage.text = slider_icePlayerDamage.value.ToString();
-        Constants.SpellStats.C_IcePlayerDamageMultiplier = f_damageIn;
-    }
-
-    public void ChangeWindPlayerDamage(float f_damageIn) {
-        txt_windPlayerDamage.text = slider_windPlayerDamage.value.ToString();
-        Constants.SpellStats.C_WindPlayerDamageMultiplier = f_damageIn;
-    }
-
-    public void ChangeElectricPlayerDamage(float f_damageIn) {
-        txt_electricPlayerDamage.text = slider_electricPlayerDamage.value.ToString();
-        Constants.SpellStats.C_ElectricPlayerDamageMultiplier = f_damageIn;
-    }
-
     public void ChangeHockeyMaxScore(float f_score) {
         txt_hockeyMaxScore.text = slider_hockeyMaxScore.value.ToString();
         Constants.ObjectiveStats.C_HockeyMaxScore = (int)f_score;
     }
 
     public void ChangePuckDamage(float f_damage) {
-        float value = f_damage * 10.0f;
+        float value = f_damage * 5.0f;
         txt_puckDamage.text = value.ToString();
         Constants.ObjectiveStats.C_PuckDamage = (int)value;
     }
@@ -340,9 +310,20 @@ public class DebugParametersController : MonoBehaviour {
         Constants.ObjectiveStats.C_PuckBaseSpeed = (int)f_speed;
     }
 
+    public void ChangePuckMaxSpeed(float f_speed)
+    {
+        txt_puckMaxSpeed.text = slider_puckMaxSpeed.value.ToString();
+        Constants.ObjectiveStats.C_PuckMaxSpeed = (int)f_speed;
+    }
+
     public void ChangePuckHitIncreaseSpeed(float f_hit) {
         txt_puckHitIncreaseSpeed.text = slider_puckHitIncreaseSpeed.value.ToString();
         Constants.ObjectiveStats.C_PuckSpeedHitIncrease = (int)f_hit;
+    }
+
+    public void ChangeNecroMaxScore(float f_score) {
+        txt_necroMaxScore.text = slider_necroMaxScore.value.ToString();
+        Constants.ObjectiveStats.C_NecromancersMaxScore = (int)f_score;
     }
 
     public void ChangeRiftBossHealth(float f_riftBossHealthIn) {
@@ -395,8 +376,8 @@ public class DebugParametersController : MonoBehaviour {
                         nav_goNav.selectOnRight = slider_respawnTime;
                         break;
                     case 1:
-                        nav_goNav.selectOnUp = slider_icePlayerDamage;
-                        nav_goNav.selectOnRight = slider_electricPlayerDamage;
+                        nav_goNav.selectOnUp = slider_electricCooldown;
+                        nav_goNav.selectOnRight = slider_electricLiveTime;
                         break;
                     case 2:
                         nav_goNav.selectOnUp = slider_enemyHealth;
@@ -518,18 +499,6 @@ public class DebugParametersController : MonoBehaviour {
         txt_electricLiveTime.text = Constants.SpellStats.C_ElectricAOELiveTime.ToString();
         slider_electricLiveTime.value = Constants.SpellStats.C_ElectricAOELiveTime;
 
-        // Ice Player-Damage Multiplier
-        txt_icePlayerDamage.text = Constants.SpellStats.C_IcePlayerDamageMultiplier.ToString();
-        slider_icePlayerDamage.value = Constants.SpellStats.C_IcePlayerDamageMultiplier;
-
-        // Wind Player-Damage Multiplier
-        txt_windPlayerDamage.text = Constants.SpellStats.C_WindPlayerDamageMultiplier.ToString();
-        slider_windPlayerDamage.value = Constants.SpellStats.C_WindPlayerDamageMultiplier;
-
-        // Electric Player-Damage Multiplier
-        txt_electricPlayerDamage.text = Constants.SpellStats.C_ElectricPlayerDamageMultiplier.ToString();
-        slider_electricPlayerDamage.value = Constants.SpellStats.C_ElectricPlayerDamageMultiplier;
-
 
         //----------------------------
         // Objective
@@ -568,11 +537,15 @@ public class DebugParametersController : MonoBehaviour {
 
         // Hockey Puck Damage
         txt_puckDamage.text = Constants.ObjectiveStats.C_PuckDamage.ToString();
-        slider_puckDamage.value = Constants.ObjectiveStats.C_PuckDamage / 10;
+        slider_puckDamage.value = Constants.ObjectiveStats.C_PuckDamage / 5;
 
         // Hockey Puck Base Speed
         txt_puckBaseSpeed.text = Constants.ObjectiveStats.C_PuckBaseSpeed.ToString();
         slider_puckBaseSpeed.value = Constants.ObjectiveStats.C_PuckBaseSpeed;
+
+        // Hockey Puck Max Speed
+        txt_puckMaxSpeed.text = Constants.ObjectiveStats.C_PuckMaxSpeed.ToString();
+        slider_puckMaxSpeed.value = Constants.ObjectiveStats.C_PuckMaxSpeed;
 
         // Hockey Puck Hit Increase Speed
         txt_hockeyMaxScore.text = Constants.ObjectiveStats.C_PuckSpeedHitIncrease.ToString();
@@ -585,6 +558,10 @@ public class DebugParametersController : MonoBehaviour {
         // Hockey Puck Speed Decrease Amount
         txt_puckSpeedDecreaseRate.text = Constants.ObjectiveStats.C_PuckSpeedDecreaseAmount.ToString();
         slider_puckSpeedDecreaseRate.value = Constants.ObjectiveStats.C_PuckSpeedDecreaseAmount;
+
+        // Necromancers to Defeat
+        txt_necroMaxScore.text = Constants.ObjectiveStats.C_NecromancersMaxScore.ToString();
+        slider_necroMaxScore.value = Constants.ObjectiveStats.C_NecromancersMaxScore;
 
         // Rift Boss Max Health
         txt_riftBossHealth.text = Constants.ObjectiveStats.C_RiftBossMaxHealth.ToString();

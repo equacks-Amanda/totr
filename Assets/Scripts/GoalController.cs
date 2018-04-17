@@ -4,16 +4,29 @@
  * 
  */
 
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class GoalController : MonoBehaviour {
-
+#region Variables and Declarations
     [SerializeField] private Constants.Global.Color e_color; // identifies owning team
-
-    // Getters
-    public Constants.Global.Color Color {
+    [SerializeField] private GameObject go_goalGlow;
+#endregion
+    
+#region Getters and Setters
+    public Constants.Global.Color Color
+    {
         get { return e_color; }
     }
+#endregion
+
+#region Visual Methods
+    public void FlashOn() {
+        go_goalGlow.SetActive(true);
+        Invoke("FlashOff", 1.0f);
+    }
+
+    private void FlashOff() {
+        go_goalGlow.SetActive(false);
+    }
+#endregion
 }

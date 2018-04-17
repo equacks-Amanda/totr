@@ -6,10 +6,10 @@ public class PortalController : MonoBehaviour {
 	public float f_portalOffset = 1.5f;
     private float f_timeIn = 0;
 	private Constants.Global.Side e_side;
-	protected Maestro maestro;
+	protected Maestro maestro;      // reference to audio controller singleton
 
-	void Start(){
-		maestro = Maestro.Instance;     // reference to Rift singleton
+    void Start(){
+		maestro = Maestro.Instance;
 		if (transform.position.x < 0) {
 			e_side = Constants.Global.Side.LEFT;
 		}
@@ -20,7 +20,7 @@ public class PortalController : MonoBehaviour {
 
 	void OnTriggerEnter(Collider other) {
 
-		if (other.tag == "Player" || other.tag == "Spell" || other.tag == "Potato" || other.tag == "Puck") {
+		if (other.tag == "Player" || other.tag == "Spell" || other.tag == "Potato") {
             Debug.Log("ow");
             maestro.PlayPortal();
 			other.gameObject.transform.position = new Vector3(-1*other.transform.position.x + (int)e_side * Constants.RiftStats.C_PortalTeleportOffset,

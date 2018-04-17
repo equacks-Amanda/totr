@@ -17,6 +17,8 @@ public class MenuController : MonoBehaviour {
     [SerializeField]GameObject go_credits;
     [SerializeField]GameObject go_quit;
 
+    [SerializeField]Text txt_buildLabel;
+
     [SerializeField]Button butt_optSelect;
     [SerializeField]Button butt_mainSelect;
     [SerializeField]Button butt_helpSelect;
@@ -91,5 +93,9 @@ public class MenuController : MonoBehaviour {
 
     public void QuitTheFuckinGame() {
         Application.Quit();
+    }
+
+    private void Start() {
+        txt_buildLabel.text = "Build: v" + Constants.Global.C_BuildNumber;
     }
 }

@@ -3,18 +3,12 @@
  *  Desc:   Facilitates Capture The Flag Objective
  * 
  */
-
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+ using UnityEngine;
 
 public class CaptureTheFlagObjective : Objective {
+    [SerializeField] private GoalController gc_owned;
 
-    public FlagController fc_activeFlag; // TODO: see note on ParamReset
-	private int i_score = 0;     // current progress towards i_maxScore
-
-    /*/////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
-
+#region CaptureTheFlagObjective Methods
     override protected void SetUI() {
         calligrapher.CTFInit(e_color);
     }
@@ -23,23 +17,23 @@ public class CaptureTheFlagObjective : Objective {
         calligrapher.ScoreReset(e_color);
     }
 
+    // Update UI and check for completion
     public void UpdateFlagScore() {
         i_score++;
+		maestro.PlayScore();
         calligrapher.UpdateScoreUI(e_color, i_score);
+        gc_owned.FlashOn();
         if (i_score >= Constants.ObjectiveStats.C_CTFMaxScore) {
             b_isComplete = true;
         }
     }
 
-    // [Param Fix] - Used in Parameters Screen. TODO: remove for release.
-    public override void ParamReset() {
-        i_score = 0;
-        calligrapher.UpdateScoreUI(e_color, i_score);
-        fc_activeFlag.ResetFlagPosition();
-    }
-	
-	void OnEnable() {
+
+#endregion
+
+#region Unity Overrides	
+    void OnEnable() {
         maestro.PlayBeginCTF();
     }
-
+#endregion
 }
