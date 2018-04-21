@@ -26,6 +26,7 @@ public class CTGIntructions : MonoBehaviour
         StartCoroutine(CaptureTheGem());
         originalPos = apprentice1.transform.position;
         gemPosition = gem.transform.position;
+        apprentice2.SetActive(false);
     }
 	
 	// Update is called once per frame
@@ -44,9 +45,9 @@ public class CTGIntructions : MonoBehaviour
     IEnumerator CaptureTheGem()
     {
         //Phase 1: Grab the Gem and take it to the goal.
-        yield return new WaitForSeconds(0.5f);
+        //yield return new WaitForSeconds(0.5f);
         MoveToGem();
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(0.8f);
         GrabGem();
         yield return new WaitForSeconds(1);
         GoalReached();
@@ -54,29 +55,31 @@ public class CTGIntructions : MonoBehaviour
         gem.SetActive(false);
         //apprentice1.GetComponent<PlayerController>().DropFlag();
         gem.transform.position = gemPosition;
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(1);
 
 
         //Phase 2: Opponenet Intercepts
         apprentice1.transform.position = originalPos;
         gem.SetActive(true);
+        apprentice2.SetActive(true);
         StartCoroutine(EnemyInterception());
-        //Instantiate(gem, gemPosition);
-        yield return new WaitForSeconds(0.5f);
+        //yield return new WaitForSeconds(0.5f);
         MoveToGem();
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(0.8f);
         GrabGem();
-        yield return new WaitForSeconds(0.4f);
+        yield return new WaitForSeconds(0.5f);
         DropGem();
         yield return new WaitForSeconds(1);
         GoalReached();
+        yield return new WaitForSeconds(1);
+        Debug.Log("End of Instruction.");
 
         //apprentice1.GetComponent<PlayerController>().DropFlag();
     }
 
     IEnumerator EnemyInterception()
     {
-        yield return new WaitForSeconds(0.5f);
+        //yield return new WaitForSeconds(0.5f);
         Chase();
         yield return new WaitForSeconds(0.6f);
         Debug.Log("Fire.");
