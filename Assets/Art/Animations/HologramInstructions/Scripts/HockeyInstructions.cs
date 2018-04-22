@@ -48,7 +48,7 @@ public class HockeyInstructions : MonoBehaviour
 
     IEnumerator CrystalHockey()
     {
-        //Phase 1: Grab the Gem and take it to the goal.
+        //Phase 1: Wind parry the puck into the goal.
         yield return new WaitForSeconds(0.25f);
         MoveToPuck();
         yield return new WaitForSeconds(1.5f);
@@ -86,7 +86,7 @@ public class HockeyInstructions : MonoBehaviour
     void MoveToPuck()
     {
         apprentince1Run = true;
-        anim1.SetTrigger("runToGem");
+        anim1.SetTrigger("run");
     }
 
     void pushGem()
@@ -108,7 +108,7 @@ public class HockeyInstructions : MonoBehaviour
     void Chase()
     {
         apprentince2Run = true;
-        anim2.SetTrigger("runToGem");
+        anim2.SetTrigger("run");
     }
 
     void DropGem()

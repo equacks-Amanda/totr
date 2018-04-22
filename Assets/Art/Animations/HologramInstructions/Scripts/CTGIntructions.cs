@@ -94,7 +94,7 @@ public class CTGIntructions : MonoBehaviour
     void MoveToGem()
     {
         apprentince1Run = true;
-        anim1.SetTrigger("runToGem");
+        anim1.SetTrigger("run");
     }
 
     void GrabGem()
@@ -112,7 +112,7 @@ public class CTGIntructions : MonoBehaviour
     void Chase()
     {
         apprentince2Run = true;
-        anim2.SetTrigger("runToGem");
+        anim2.SetTrigger("run");
     }
 
     void DropGem()
