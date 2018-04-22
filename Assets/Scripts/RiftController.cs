@@ -395,6 +395,7 @@ public sealed class RiftController : MonoBehaviour {
 		maestro = Maestro.Instance;
         ResetVolatility();
 		Invoke("PlayNoise", r_random.Next(0,10));
+		anim = GetComponentInChildren <Animator>();
     }
 
     void OnTriggerEnter(Collider other) {
