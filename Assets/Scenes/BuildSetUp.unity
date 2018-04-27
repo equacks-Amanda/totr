@@ -1251,6 +1251,10 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 235460823}
     m_Modifications:
+    - target: {fileID: 2300006, guid: a83b5224d32106e4c9a4d159743fe240, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: a83b5224d32106e4c9a4d159743fe240, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1339,6 +1343,14 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 290a4b397990b4a1389982f2b9bbbdd0, type: 2}
+    - target: {fileID: 2300006, guid: a83b5224d32106e4c9a4d159743fe240, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c92d3a96ccc293940979951b296325ad, type: 2}
+    - target: {fileID: 2300006, guid: a83b5224d32106e4c9a4d159743fe240, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 45cb880a58e92764d99ffb534bea4593, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a83b5224d32106e4c9a4d159743fe240, type: 3}
   m_IsPrefabParent: 0
@@ -1511,12 +1523,11 @@ MeshRenderer:
   m_GameObject: {fileID: 228241327}
   m_Enabled: 0
   m_CastShadows: 1
-  m_ReceiveShadows: 1
+  m_ReceiveShadows: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_Materials:
-  - {fileID: 2100000, guid: c92d3a96ccc293940979951b296325ad, type: 2}
+  m_Materials: []
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -10466,6 +10477,10 @@ Prefab:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: 45cb880a58e92764d99ffb534bea4593, type: 2}
+    - target: {fileID: 2300006, guid: a83b5224d32106e4c9a4d159743fe240, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c92d3a96ccc293940979951b296325ad, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a83b5224d32106e4c9a4d159743fe240, type: 3}
   m_IsPrefabParent: 0
@@ -11398,7 +11413,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1342396673
 MonoBehaviour:
   m_ObjectHideFlags: 0
