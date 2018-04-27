@@ -8587,7 +8587,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 6d8a178c380dc6a41853e947c206346d, type: 3}
+  m_Sprite: {fileID: 21300012, guid: 51bfd5901961e474ca94fc2959942b54, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -8786,6 +8786,8 @@ MonoBehaviour:
   go_indicator: {fileID: 1420028771413978}
   rb: {fileID: 54264193241143258}
   anim: {fileID: 95644928374862380}
+  dissolve: {fileID: 0}
+  fader: {fileID: 0}
   rbo_owner: {fileID: 114404955938652292}
   go_ForceField: {fileID: 1231359933900444}
   go_runes:
@@ -8871,6 +8873,8 @@ MonoBehaviour:
   go_indicator: {fileID: 1971260093398270}
   rb: {fileID: 54261029104748490}
   anim: {fileID: 95450560265728778}
+  dissolve: {fileID: 0}
+  fader: {fileID: 0}
   nma_agent: {fileID: 195784079691307892}
 --- !u!114 &114789799182631386
 MonoBehaviour:
@@ -8937,6 +8941,8 @@ MonoBehaviour:
   go_indicator: {fileID: 1061498763701452}
   rb: {fileID: 54666643171626412}
   anim: {fileID: 95304812400729600}
+  dissolve: {fileID: 0}
+  fader: {fileID: 0}
   nma_agent: {fileID: 195236521700956070}
 --- !u!114 &114988279499419644
 MonoBehaviour:
@@ -8954,6 +8960,8 @@ MonoBehaviour:
   go_indicator: {fileID: 1114207972477656}
   rb: {fileID: 54453936520702740}
   anim: {fileID: 95888945555584756}
+  dissolve: {fileID: 0}
+  fader: {fileID: 0}
   nma_agent: {fileID: 195707505200904276}
 --- !u!114 &114995862352139108
 MonoBehaviour:

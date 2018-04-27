@@ -11,14 +11,14 @@ public class DefeatNecromancersObjective : Objective {
     }
 
     override protected void ResetUI() {
-        calligrapher.ScoreReset(e_color);
+        calligrapher.GoalScoreReset(e_color);
     }
 
     // Update UI and check for completion
     public void UpdateNecroScore() {
         i_score++;
 		maestro.PlayScore();
-        calligrapher.UpdateScoreUI(e_color, i_score);
+        calligrapher.UpdateGoalScoreUI(e_color, i_score);
         if (i_score >= Constants.ObjectiveStats.C_NecromancersMaxScore) {
             b_isComplete = true;
         }

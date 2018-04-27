@@ -552,6 +552,7 @@ MonoBehaviour:
   as_sfxLo: {fileID: 82591520879756484}
   as_voi: {fileID: 82918665187056784}
   ac_windShoot: {fileID: 8300000, guid: 845f96f3c43a3fb4d9a35fd5d176135f, type: 3}
+  ac_windHit: {fileID: 8300000, guid: 1737d8d48fab40e4c94ba6d71c8c9023, type: 3}
   ac_iceShoot: {fileID: 8300000, guid: 297ae035c2f736f4d8d75997dbae1dc2, type: 3}
   ac_electricShoot: {fileID: 8300000, guid: f5f1d7995fd51b2458b35afd99c619a5, type: 3}
   ac_magicMissileShoot:

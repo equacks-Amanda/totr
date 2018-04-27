@@ -18,15 +18,18 @@ public abstract class SpellController : MonoBehaviour {
     protected float f_charge = 1;         // charging multiplier
     protected PlayerController pc_owner;      // owner of the spell
     protected RiftController riftController;    // reference to Rift singleton
-
+#endregion
     #region Getters and Setters
     public Constants.Global.Color Color{
         get { return e_color; }
     }
-    #endregion
-#endregion
 
-#region SpellController Shared Methods
+    public PlayerController PC_Owner {
+        get { return pc_owner; }
+    }
+    #endregion
+
+    #region SpellController Shared Methods
     protected abstract void Charge(float f_chargeTime);
     protected abstract void BuffSpell();
 
@@ -34,6 +37,13 @@ public abstract class SpellController : MonoBehaviour {
         pc_owner = owner;
         e_color = color;
         Charge(chargeTime);
+        if(e_color == Constants.Global.Color.RED) {
+            gameObject.layer = LayerMask.NameToLayer("RedShot");
+        }
+        else {
+            gameObject.layer = LayerMask.NameToLayer("BlueShot");
+        }
+
     }
 
     void InvokeDestroy() {
@@ -44,45 +54,45 @@ public abstract class SpellController : MonoBehaviour {
 #region Unity Overrides
     protected virtual void Start() {
         riftController = RiftController.Instance;
-		Invoke("InvokeDestroy", Constants.SpellStats.C_SpellLiveTime);
+        Invoke("InvokeDestroy", Constants.SpellStats.C_SpellLiveTime);
 	}
 
-	protected virtual void OnCollisionEnter(Collision collision) {
+    protected virtual void OnCollisionEnter(Collision collision)
+    {
         SpellTarget target;
-        if(target = collision.gameObject.GetComponent<SpellTarget>()) {
+        if (target = collision.gameObject.GetComponent<SpellTarget>()) {
             target.ApplySpellEffect(e_spellType, e_color, f_damage, transform.forward.normalized);
         }
-
-        if (collision.gameObject.CompareTag("Spell")) {
-            Constants.Global.Color spellColor = collision.gameObject.GetComponent<SpellController>().e_color;
-            if (spellColor != e_color) {    // opposing spells destroy each other
-                Destroy(gameObject);
-            }
-            else {              // ignore collisions between spells of the same color
-                Physics.IgnoreCollision(GetComponent<Collider>(), collision.gameObject.GetComponent<Collider>());
-            }
-        } 
-        else {  // destroy spell on collision with anything else (including specific spell target objects above, once the effect has happened) (Rift and portal interactions are controlled by OnTriggerEnter, below)
-            Destroy(gameObject);
-        }        
+        Destroy(gameObject);
 	}
 
 	protected virtual void OnTriggerEnter(Collider other) {
-		if (other.CompareTag("Rift")) {	    // Rift reacts to spells by trigger rather than collision
+        if (other.CompareTag("Rift")) {	    // Rift reacts to spells by trigger rather than collision
 			CancelInvoke();     // cancels and restarts spell's live timer
 			BuffSpell();
 			Invoke("InvokeDestroy", Constants.SpellStats.C_SpellLiveTime);
         }
 
         if (other.CompareTag("ParryShield")) {
+
             CancelInvoke();     // cancels and restarts spell's live timer
             Invoke("InvokeDestroy", Constants.SpellStats.C_SpellLiveTime);
 
+            // deflect spell back from whence it came
+            // this sends it backwards from where it came, not to where the player was directing it toward
+            //Vector3 v3_direction = -transform.forward.normalized;
+            //transform.forward = v3_direction;
+            //rb.velocity = v3_direction * rb.velocity.magnitude;
+
+
             // deflect spell in player's facing direction
             Vector3 v3_direction = other.gameObject.transform.forward.normalized;
-            transform.Rotate(v3_direction);
+            transform.forward = v3_direction;
             rb.velocity = v3_direction * rb.velocity.magnitude;
+            pc_owner = other.gameObject.transform.parent.gameObject.GetComponent<PlayerController>();
+            e_color = other.gameObject.transform.parent.gameObject.GetComponent<PlayerController>().Color;
         }
     }
-#endregion
+    #endregion
 }
+

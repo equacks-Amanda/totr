@@ -32,12 +32,13 @@ public class MagicMissileController : SpellController {
 
         if (collision.gameObject.CompareTag("Spell")) {
             Constants.Global.Color spellColor = collision.gameObject.GetComponent<SpellController>().Color;
-            if (spellColor != e_color) {    // opposing spells destroy each other
+            //if (spellColor != e_color) {    // opposing spells destroy each other
                 Destroy(gameObject);
-            }
-            else {              // ignore collisions between spells of the same color
-                Physics.IgnoreCollision(GetComponent<Collider>(), collision.gameObject.GetComponent<Collider>());
-            }
+            //}
+            //else {              // ignore collisions between spells of the same color -THIS DOES NOT WORK!
+                //Debug.Log("oof");
+            //    Physics.IgnoreCollision(GetComponent<Collider>(), collision.gameObject.GetComponent<Collider>());
+            //}
         }
         else {    // magic missile can reflect off of surfaces
             Vector3 v = Vector3.Reflect(transform.forward, collision.contacts[0].normal);

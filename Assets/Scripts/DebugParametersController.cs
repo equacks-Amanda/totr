@@ -548,8 +548,8 @@ public class DebugParametersController : MonoBehaviour {
         slider_puckMaxSpeed.value = Constants.ObjectiveStats.C_PuckMaxSpeed;
 
         // Hockey Puck Hit Increase Speed
-        txt_hockeyMaxScore.text = Constants.ObjectiveStats.C_PuckSpeedHitIncrease.ToString();
-        slider_hockeyMaxScore.value = Constants.ObjectiveStats.C_PuckSpeedHitIncrease;
+        txt_puckHitIncreaseSpeed.text = Constants.ObjectiveStats.C_PuckSpeedHitIncrease.ToString();
+        slider_puckHitIncreaseSpeed.value = Constants.ObjectiveStats.C_PuckSpeedHitIncrease;
 
         // Hockey Puck Speed Decay Rate
         txt_puckSpeedDecayRate.text = Constants.ObjectiveStats.C_PuckSpeedDecayRate.ToString();

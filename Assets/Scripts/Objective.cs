@@ -49,11 +49,10 @@ public abstract class Objective : MonoBehaviour {
         b_isComplete = false;                       // initialize variables
         i_numberInList = i;
         SetUI();                                    // set UI
-        calligrapher.RoomUpdate(e_color, i_numberInList);
-        calligrapher.Flash(e_color);
         go_activeRoom = SelectRoom();               // set room
         go_activeRoom.SetActive(true);
         gameObject.SetActive(true);                 // finally, turn on objective
+        riftController.ResetPlayers();
         StartCoroutine("Notify");
         return this;
     }

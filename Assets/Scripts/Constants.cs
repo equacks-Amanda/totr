@@ -16,7 +16,7 @@ public static class Constants {
         public enum Color { RED, BLUE, NULL };
         public enum Side { LEFT = -1, RIGHT = 1 };
 		public enum DamageType { WIND, ICE, ELECTRICITY, MAGICMISSILE, ENEMY, RIFT, DEATHBOLT, RUNE, PUCK };
-        public static string C_BuildNumber = "3.22";
+        public static string C_BuildNumber = "3.31";
     }
 
     // Team Stats
@@ -33,12 +33,17 @@ public static class Constants {
         public static float C_MaxHealth = 300.0f;
         public static float C_StepSoundDelay = 0.4f;
         public static float C_InvulnTime = 2.0f;
-        public static float C_PlayerWindPushMultiplier = 1f;
+        public static float C_PlayerWindPushMultiplier = 0.5f;
 
         public static Global.Color C_p1Color = Global.Color.RED;
         public static Global.Color C_p2Color = Global.Color.RED;
         public static Global.Color C_p3Color = Global.Color.BLUE;
         public static Global.Color C_p4Color = Global.Color.BLUE;
+
+        public static Vector3 C_r1Start = new Vector3(-7.62f, 0.0f, -3.87f);
+        public static Vector3 C_r2Start = new Vector3(-7.62f, 0.0f, 2.45f);
+        public static Vector3 C_b1Start = new Vector3(7.62f, 0.0f, 2.45f);
+        public static Vector3 C_b2Start = new Vector3(7.62f, 0.0f, -3.87f);
 
         public static int C_p1Hat = 0;
         public static int C_p2Hat = 1;
@@ -110,6 +115,7 @@ public static class Constants {
         //public static Vector3 C_GenericRedObjectiveGoalSpawn = new Vector3(-4.5f, .01f, 0f);
         //public static Vector3 C_GenericBlueObjectiveGoalSpawn = new Vector3(4.5f, .01f, 0f);
         public static float C_NotificationTimer = 10.0f;
+        public static float C_ScoringParticleLiveTime = 1.0f;
 
         // Potato Stats
         //public static Vector3 C_RedPotatoSpawn = new Vector3(-7.5f, 0.5f, 0f);
@@ -193,8 +199,8 @@ public static class Constants {
         public static float C_MapBoundryXAxis = 14.5f;
         public static float C_MapBoundryZAxis = 9.5f;
 		
-		public static float C_SkeletonWindPushMultiplier = .5f;
-		public static float C_NecromancerWindPushMultiplier = .2f;
+		public static float C_SkeletonWindPushMultiplier = 0.5f;
+		public static float C_NecromancerWindPushMultiplier = 25.0f;
     }
 
     // Rift Stats

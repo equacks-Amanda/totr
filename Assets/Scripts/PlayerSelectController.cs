@@ -75,8 +75,12 @@ public class PlayerSelectController : MonoBehaviour {
     void Awake() {
         p_player1 = ReInput.players.GetPlayer(0);
     }
-	
-	void Update () {
+
+    void Start() {
+        Time.timeScale = 1;
+    }
+
+    void Update () {
         //Check for settings.
 		if (p_player1.GetButtonDown("MenuSettings") && !b_settingsActive) {
             b_settingsActive = true;

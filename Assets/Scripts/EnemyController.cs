@@ -15,7 +15,7 @@ public abstract class EnemyController : SpellTarget {
     [SerializeField] protected UnityEngine.AI.NavMeshAgent nma_agent;
 
     //Added WANDER and FLEE states
-    protected enum State {CHASE, ATTACK, FROZEN, SLOWED, DIE, WANDER, FLEE, SUMMONING, DROPPING};
+    protected enum State {CHASE, ATTACK, FROZEN, SLOWED, DIE, WANDER, FLEE, SUMMONING, DROPPING, BREAKOUT};
 	protected float f_damage;
 	protected State e_state;
 	protected State e_previousState; //Used for returning to the state previous to entering the AttackState.
@@ -38,7 +38,7 @@ public abstract class EnemyController : SpellTarget {
     override public void ApplySpellEffect(Constants.SpellStats.SpellType spell, Constants.Global.Color color, float damage, Vector3 direction) {
         switch(spell) {
             case Constants.SpellStats.SpellType.WIND:
-                StartCoroutine(WindPush(Constants.EnemyStats.C_SkeletonWindPushMultiplier,direction));
+                StartCoroutine(WindPush(Constants.EnemyStats.C_SkeletonWindPushMultiplier,direction, false));
                 break;
             case Constants.SpellStats.SpellType.ICE:
                 Freeze();
@@ -187,31 +187,37 @@ public abstract class EnemyController : SpellTarget {
 		//nma_agent.acceleration = nma_agent.acceleration* (Constants.EnviroStats.C_EnemySpeed / 3.5f) * f_canMove;
 	}
 
+	protected virtual void EnterStateBreakout() {
+		e_state = State.BREAKOUT;
+    }
+
+    protected virtual void UpdateBreakout() {}
+
 	//If the bot tries to move to a destination that's out of bounds
 	//This will reset the destination with in bounds
 	protected void CheckOutOfBounds() {
 		if (e_startSide == Constants.Global.Side.LEFT) {
-			if (v3_destination.x < -1*Constants.EnemyStats.C_MapBoundryXAxis+2) {
-				v3_destination.x = -1*Constants.EnemyStats.C_MapBoundryXAxis+2;
+			if (v3_destination.x < -1*Constants.EnemyStats.C_MapBoundryXAxis+1.5) {
+				v3_destination.x = -1*Constants.EnemyStats.C_MapBoundryXAxis+1.5f;
 			}
-			else if (v3_destination.x > -2.0f) {
-				v3_destination.x = -2.0f;
+			else if (v3_destination.x > -1.5f) {
+				v3_destination.x = -1.5f;
 			}
 		}
 		else {
-			if (v3_destination.x > Constants.EnemyStats.C_MapBoundryXAxis-2) {
-				v3_destination.x = Constants.EnemyStats.C_MapBoundryXAxis-2;
+			if (v3_destination.x > Constants.EnemyStats.C_MapBoundryXAxis-1.5) {
+				v3_destination.x = Constants.EnemyStats.C_MapBoundryXAxis-1.5f;
 			}
-			else if (v3_destination.x < 2.0f) {
-				v3_destination.x = 2.0f;
+			else if (v3_destination.x < 1.5f) {
+				v3_destination.x = 1.5f;
 			}
 		}
 
-		if (v3_destination.z > Constants.EnemyStats.C_MapBoundryZAxis-2) {
-			v3_destination.z = Constants.EnemyStats.C_MapBoundryZAxis-2;
+		if (v3_destination.z > Constants.EnemyStats.C_MapBoundryZAxis-1.5) {
+			v3_destination.z = Constants.EnemyStats.C_MapBoundryZAxis-1.5f;
 		}
-		else if (v3_destination.z < -1*Constants.EnemyStats.C_MapBoundryZAxis+2) {
-			v3_destination.z = -1*Constants.EnemyStats.C_MapBoundryZAxis+2;
+		else if (v3_destination.z < -1*Constants.EnemyStats.C_MapBoundryZAxis+1.5) {
+			v3_destination.z = -1*Constants.EnemyStats.C_MapBoundryZAxis+1.5f;
 		}
 	}
 
@@ -228,7 +234,7 @@ public abstract class EnemyController : SpellTarget {
 		e_startSide = side;
 	}
 
-	void Start() {
+    protected override void Start() {
 		f_damage = Constants.EnemyStats.C_EnemyDamage;
 
 		//nma_agent.speed = Constants.EnemyStats.C_EnemyBaseSpeed;
@@ -285,6 +291,9 @@ public abstract class EnemyController : SpellTarget {
 			break;
 		case State.DIE:
 			UpdateDie ();
+			break;
+		case State.BREAKOUT:
+			UpdateBreakout();
 			break;
 		}
     }

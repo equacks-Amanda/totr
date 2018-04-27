@@ -14,8 +14,9 @@ public abstract class SpellTarget : MonoBehaviour {
     [SerializeField] protected GameObject go_indicator;
     [SerializeField] protected Rigidbody rb;
     [SerializeField] protected Animator anim;
-	[SerializeField] protected ShaderEffect dissolve;
-    [SerializeField] protected ShaderEffect fader;
+	[SerializeField] protected ShaderEffect se_dissolve;
+    [SerializeField] protected ShaderEffect se_fader;
+    [SerializeField] protected ShaderEffect se_clothesDissolve;
     protected float f_health;
     protected float f_speed;
     protected Coroutine cor_AOECoroutine;
@@ -63,10 +64,14 @@ public abstract class SpellTarget : MonoBehaviour {
         go_indicator.SetActive(true);
     }
 	
-	public IEnumerator WindPush(float multiplier, Vector3 direction){
+	public IEnumerator WindPush(float multiplier, Vector3 direction, bool velocityReset){
+		maestro.PlayWindHit();
 		float startTime = Time.time;
 		float elapsedTime = 0;
 		while(elapsedTime < .99f){
+            if (velocityReset) {
+                rb.velocity = Vector3.zero;
+            }
 			elapsedTime = (Time.time - startTime)/Constants.SpellStats.C_WindPushTime;
 			rb.AddForce(direction * Mathf.Lerp(Constants.SpellStats.C_WindForce*multiplier,0f,elapsedTime));
 			yield return 0;
@@ -75,6 +80,10 @@ public abstract class SpellTarget : MonoBehaviour {
 #endregion
 
 #region Unity Overrides
+	protected virtual void Start(){
+		maestro = Maestro.Instance;
+	}
+	
     void OnEnable() {
         if (go_indicator) {
             InvokeRepeating("Notify", 0, Constants.ObjectiveStats.C_NotificationTimer);

@@ -11,6 +11,7 @@ using UnityEngine;
 public sealed class RiftController : MonoBehaviour {
 #region Variables and Declarations
     [SerializeField] private GameObject go_riftDeathBolt;
+    [SerializeField] private GameObject go_boardClear;
     public GameObject[] go_playerReferences;    // TODO: write a getter for this
     [SerializeField] private GameObject[] go_deathOrbs;
     [SerializeField]
@@ -180,6 +181,8 @@ public sealed class RiftController : MonoBehaviour {
     #region Rift Volatility Attacks and Effects
     private void BoardClear() {
 		maestro.PlayAnnouncementBoardClear();
+        Invoke("TurnOffBoardClear", 2f);
+        go_boardClear.SetActive(true);
         foreach (GameObject player in go_playerReferences) {
             player.GetComponent<PlayerController>().TakeDamage(Constants.PlayerStats.C_MaxHealth,Constants.Global.DamageType.RIFT);
         }
@@ -201,6 +204,11 @@ public sealed class RiftController : MonoBehaviour {
 					go_runes[i].SetActive(false);
 			}
 		}
+    }
+
+    private void TurnOffBoardClear()
+    {
+        go_boardClear.SetActive(false);
     }
 
 	public void ActivateEnemy(Vector3 position) {
@@ -327,6 +335,7 @@ public sealed class RiftController : MonoBehaviour {
      // Only shoot at players of Color c, and don't collide with anything EXCEPT players (layer matrix, probably)
 
         float f_projectileSize = Constants.SpellStats.C_PlayerProjectileSize;
+        firePosition.position = new Vector3(firePosition.position.x, 1.0f, firePosition.position.z);
         
         var array = new int[] { 0, 1, 2, 3 };
         new System.Random().Shuffle(array);
@@ -336,6 +345,7 @@ public sealed class RiftController : MonoBehaviour {
                 GameObject go_spell = Instantiate(go_riftDeathBolt, firePosition.position, firePosition.rotation);
                 go_spell.transform.localScale = new Vector3(f_projectileSize, f_projectileSize, f_projectileSize);
                 go_spell.GetComponent<Rigidbody>().velocity = go_playerReferences[array[i]].transform.position.normalized * Constants.RiftStats.C_VolatilityDeathboltSpeed;
+                go_spell.transform.forward = -1 * (go_spell.GetComponent<Rigidbody>().velocity.normalized);
                 break;
             }
         }
@@ -378,6 +388,13 @@ public sealed class RiftController : MonoBehaviour {
 		Invoke("PlayNoise", r_random.Next(5,10));
 	}
 
+    public void ResetPlayers() {
+        go_playerReferences[0].transform.localPosition = Constants.PlayerStats.C_r1Start;
+        go_playerReferences[1].transform.localPosition = Constants.PlayerStats.C_r2Start;
+        go_playerReferences[2].transform.localPosition = Constants.PlayerStats.C_b1Start;
+        go_playerReferences[3].transform.localPosition = Constants.PlayerStats.C_b2Start;
+    }
+
     IEnumerator TurnOffDeathOrb(GameObject go_deathOrb, GameObject go_player) {
         yield return new WaitForSeconds(Constants.RiftStats.C_RiftTeleportDelay);
         go_player.transform.position = go_player.transform.position + (int)go_player.GetComponent<PlayerController>().Side * Constants.RiftStats.C_RiftTeleportOffset;
@@ -395,11 +412,10 @@ public sealed class RiftController : MonoBehaviour {
 		maestro = Maestro.Instance;
         ResetVolatility();
 		Invoke("PlayNoise", r_random.Next(0,10));
-		anim = GetComponentInChildren <Animator>();
     }
 
-    void OnTriggerEnter(Collider other) {
-        if (other.CompareTag("Player")) {
+    void OnTriggerStay(Collider other) {
+        if (other.CompareTag("Player") && !other.GetComponent<PlayerController>().Wisp && !other.GetComponent<PlayerController>().Invulnerable) {
             other.GetComponent<PlayerController>().TakeDamage(Constants.PlayerStats.C_MaxHealth, Constants.Global.DamageType.RIFT);
             //while (!isWisp)
             //{

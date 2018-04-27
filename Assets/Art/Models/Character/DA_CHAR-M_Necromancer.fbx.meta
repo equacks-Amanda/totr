@@ -1,0 +1,1758 @@
+fileFormatVersion: 2
+guid: 00a7b0d508606432fb9ddd24f72146dd
+timeCreated: 1524501697
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Cloak
+    100002: //RootNode
+    100004: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Arms
+    100006: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger1
+    100008: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger1_1
+    100010: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger1_2
+    100012: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger1_3
+    100014: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger2
+    100016: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger2_1
+    100018: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger2_2
+    100020: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger2_3
+    100022: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger3
+    100024: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger3_1
+    100026: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger3_2
+    100028: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger3_3
+    100030: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger4
+    100032: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger4_1
+    100034: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger4_2
+    100036: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger4_3
+    100038: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger5
+    100040: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger5_1
+    100042: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger5_2
+    100044: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger5_3
+    100046: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger6
+    100048: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger6_1
+    100050: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger6_2
+    100052: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger6_3
+    100054: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger7
+    100056: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger7_1
+    100058: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger7_2
+    100060: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger7_3
+    100062: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger8
+    100064: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger8_1
+    100066: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger8_2
+    100068: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger8_3
+    100070: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Head
+    100072: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Head_jB
+    100074: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__HeadTop_j
+    100076: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__joint3
+    100078: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Ankle_jB
+    100080: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Arm
+    100082: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Arm_jB
+    100084: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Foot_j
+    100086: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Foot_jB
+    100088: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Forearm
+    100090: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Forearm_jB
+    100092: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Hand
+    100094: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_HandBase
+    100096: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Index1_jB
+    100098: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Index2_jB
+    100100: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Index3_jB
+    100102: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Index4_j
+    100104: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Leg
+    100106: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Leg_jB
+    100108: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Middle1_jB
+    100110: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Middle2_jB
+    100112: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Middle3_jB
+    100114: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Middle4_j
+    100116: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Pinky1_jB
+    100118: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Pinky2_jB
+    100120: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Pinky3_jB
+    100122: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Pinky4_j
+    100124: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Ring1_jB
+    100126: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Ring2_jB
+    100128: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Ring3_jB
+    100130: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Ring4_j
+    100132: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Shing
+    100134: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Shoulder
+    100136: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Shoulder_jB
+    100138: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Thigh
+    100140: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Thigh_jB
+    100142: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Thumb1_jB
+    100144: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Thumb2_jB
+    100146: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Thumb3_jB
+    100148: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Thumb4_j
+    100150: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_UpperArm
+    100152: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Wrist_jB
+    100154: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Legs
+    100156: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Neck_jB
+    100158: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__NecromancerHead1
+    100160: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Pelvis
+    100162: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Pelvis1
+    100164: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Pelvis2
+    100166: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Pelvis2 1
+    100168: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Ankle_jB
+    100170: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Arm
+    100172: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Arm_jB
+    100174: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Foot_j
+    100176: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Foot_jB
+    100178: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Forearm
+    100180: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Forearm_jB
+    100182: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Hand
+    100184: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_HandBase
+    100186: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Index1_jB
+    100188: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Index2_jB
+    100190: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Index3_jB
+    100192: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Index4_j
+    100194: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Leg
+    100196: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Leg_jB
+    100198: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Middle1_jB
+    100200: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Middle2_jB
+    100202: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Middle3_jB
+    100204: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Middle4_j
+    100206: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Pinky1_jB
+    100208: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Pinky2_jB
+    100210: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Pinky3_jB
+    100212: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Pinky4_j
+    100214: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Ring1_jB
+    100216: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Ring2_jB
+    100218: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Ring3_jB
+    100220: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Ring4_j
+    100222: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Shin
+    100224: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Shoulder
+    100226: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Shoulder_jB
+    100228: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Thigh
+    100230: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Thigh_jB
+    100232: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Thumb1_jB
+    100234: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Thumb2_jB
+    100236: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Thumb3_jB
+    100238: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Thumb4_j
+    100240: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_UpperArm
+    100242: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Wrist_jB
+    100244: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__RibCage
+    100246: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Root_jB
+    100248: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Spine
+    100250: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Spine1
+    100252: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Spine10
+    100254: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Spine11
+    100256: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Spine12
+    100258: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Spine13
+    100260: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Spine14
+    100262: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Spine15
+    100264: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Spine16
+    100266: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Spine17
+    100268: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Spine18
+    100270: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Spine19
+    100272: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Spine1_jB
+    100274: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Spine2
+    100276: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Spine20
+    100278: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Spine21
+    100280: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Spine2_jB
+    100282: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Spine3
+    100284: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Spine3_jB
+    100286: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Spine4
+    100288: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Spine5
+    100290: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Spine6
+    100292: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Spine7
+    100294: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Spine8
+    100296: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Spine9
+    100298: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Thumb
+    100300: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Thumb 1
+    100302: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Thumb_1
+    100304: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Thumb_1 1
+    100306: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Thumb_2
+    100308: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Thumb_2 1
+    100310: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Thumb_3
+    100312: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Thumb_3 1
+    100314: Necromancer 1
+    100316: Staff
+    400000: Cloak
+    400002: //RootNode
+    400004: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Arms
+    400006: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger1
+    400008: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger1_1
+    400010: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger1_2
+    400012: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger1_3
+    400014: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger2
+    400016: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger2_1
+    400018: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger2_2
+    400020: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger2_3
+    400022: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger3
+    400024: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger3_1
+    400026: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger3_2
+    400028: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger3_3
+    400030: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger4
+    400032: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger4_1
+    400034: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger4_2
+    400036: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger4_3
+    400038: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger5
+    400040: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger5_1
+    400042: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger5_2
+    400044: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger5_3
+    400046: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger6
+    400048: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger6_1
+    400050: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger6_2
+    400052: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger6_3
+    400054: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger7
+    400056: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger7_1
+    400058: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger7_2
+    400060: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger7_3
+    400062: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger8
+    400064: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger8_1
+    400066: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger8_2
+    400068: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger8_3
+    400070: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Head
+    400072: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Head_jB
+    400074: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__HeadTop_j
+    400076: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__joint3
+    400078: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Ankle_jB
+    400080: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Arm
+    400082: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Arm_jB
+    400084: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Foot_j
+    400086: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Foot_jB
+    400088: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Forearm
+    400090: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Forearm_jB
+    400092: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Hand
+    400094: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_HandBase
+    400096: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Index1_jB
+    400098: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Index2_jB
+    400100: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Index3_jB
+    400102: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Index4_j
+    400104: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Leg
+    400106: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Leg_jB
+    400108: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Middle1_jB
+    400110: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Middle2_jB
+    400112: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Middle3_jB
+    400114: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Middle4_j
+    400116: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Pinky1_jB
+    400118: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Pinky2_jB
+    400120: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Pinky3_jB
+    400122: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Pinky4_j
+    400124: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Ring1_jB
+    400126: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Ring2_jB
+    400128: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Ring3_jB
+    400130: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Ring4_j
+    400132: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Shing
+    400134: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Shoulder
+    400136: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Shoulder_jB
+    400138: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Thigh
+    400140: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Thigh_jB
+    400142: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Thumb1_jB
+    400144: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Thumb2_jB
+    400146: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Thumb3_jB
+    400148: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Thumb4_j
+    400150: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_UpperArm
+    400152: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Wrist_jB
+    400154: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Legs
+    400156: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Neck_jB
+    400158: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__NecromancerHead1
+    400160: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Pelvis
+    400162: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Pelvis1
+    400164: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Pelvis2
+    400166: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Pelvis2 1
+    400168: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Ankle_jB
+    400170: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Arm
+    400172: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Arm_jB
+    400174: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Foot_j
+    400176: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Foot_jB
+    400178: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Forearm
+    400180: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Forearm_jB
+    400182: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Hand
+    400184: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_HandBase
+    400186: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Index1_jB
+    400188: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Index2_jB
+    400190: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Index3_jB
+    400192: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Index4_j
+    400194: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Leg
+    400196: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Leg_jB
+    400198: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Middle1_jB
+    400200: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Middle2_jB
+    400202: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Middle3_jB
+    400204: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Middle4_j
+    400206: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Pinky1_jB
+    400208: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Pinky2_jB
+    400210: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Pinky3_jB
+    400212: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Pinky4_j
+    400214: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Ring1_jB
+    400216: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Ring2_jB
+    400218: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Ring3_jB
+    400220: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Ring4_j
+    400222: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Shin
+    400224: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Shoulder
+    400226: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Shoulder_jB
+    400228: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Thigh
+    400230: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Thigh_jB
+    400232: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Thumb1_jB
+    400234: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Thumb2_jB
+    400236: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Thumb3_jB
+    400238: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Thumb4_j
+    400240: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_UpperArm
+    400242: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Wrist_jB
+    400244: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__RibCage
+    400246: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Root_jB
+    400248: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Spine
+    400250: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Spine1
+    400252: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Spine10
+    400254: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Spine11
+    400256: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Spine12
+    400258: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Spine13
+    400260: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Spine14
+    400262: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Spine15
+    400264: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Spine16
+    400266: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Spine17
+    400268: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Spine18
+    400270: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Spine19
+    400272: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Spine1_jB
+    400274: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Spine2
+    400276: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Spine20
+    400278: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Spine21
+    400280: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Spine2_jB
+    400282: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Spine3
+    400284: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Spine3_jB
+    400286: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Spine4
+    400288: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Spine5
+    400290: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Spine6
+    400292: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Spine7
+    400294: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Spine8
+    400296: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Spine9
+    400298: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Thumb
+    400300: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Thumb 1
+    400302: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Thumb_1
+    400304: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Thumb_1 1
+    400306: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Thumb_2
+    400308: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Thumb_2 1
+    400310: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Thumb_3
+    400312: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Thumb_3 1
+    400314: Necromancer 1
+    400316: Staff
+    4300000: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Spine1
+    4300002: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Spine2
+    4300004: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Spine3
+    4300006: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Spine4
+    4300008: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Spine5
+    4300010: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Spine6
+    4300012: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Spine7
+    4300014: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Spine8
+    4300016: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Spine9
+    4300018: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Spine10
+    4300020: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Spine11
+    4300022: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Spine12
+    4300024: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Spine13
+    4300026: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Spine14
+    4300028: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Spine15
+    4300030: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Spine16
+    4300032: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Spine17
+    4300034: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Spine18
+    4300036: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Spine19
+    4300038: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Spine20
+    4300040: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Spine21
+    4300042: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__NecromancerHead1
+    4300044: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__RibCage
+    4300046: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Pelvis1
+    4300048: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Pelvis2
+    4300050: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Thigh
+    4300052: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Shin
+    4300054: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Thigh
+    4300056: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Shing
+    4300058: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Shoulder
+    4300060: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_UpperArm
+    4300062: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Forearm
+    4300064: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_HandBase
+    4300066: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger1_1
+    4300068: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger1_2
+    4300070: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger1_3
+    4300072: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Thumb_1
+    4300074: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Thumb_2
+    4300076: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Thumb_3
+    4300078: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger2_1
+    4300080: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger2_2
+    4300082: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger2_3
+    4300084: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger3_1
+    4300086: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger3_2
+    4300088: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger3_3
+    4300090: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger4_1
+    4300092: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger4_2
+    4300094: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger4_3
+    4300096: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Shoulder
+    4300098: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_UpperArm
+    4300100: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Forearm
+    4300102: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_HandBase
+    4300104: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger5_1
+    4300106: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger5_2
+    4300108: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger5_3
+    4300110: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Thumb_1
+    4300112: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Thumb_2
+    4300114: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Thumb_3
+    4300116: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger6_1
+    4300118: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger6_2
+    4300120: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger6_3
+    4300122: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger7_1
+    4300124: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger7_2
+    4300126: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger7_3
+    4300128: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger8_1
+    4300130: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger8_2
+    4300132: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger8_3
+    4300134: Staff
+    4300136: Cloak
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: Cloak
+    13700002: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger1_1
+    13700004: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger1_2
+    13700006: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger1_3
+    13700008: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger2_1
+    13700010: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger2_2
+    13700012: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger2_3
+    13700014: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger3_1
+    13700016: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger3_2
+    13700018: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger3_3
+    13700020: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger4_1
+    13700022: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger4_2
+    13700024: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger4_3
+    13700026: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger5_1
+    13700028: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger5_2
+    13700030: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger5_3
+    13700032: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger6_1
+    13700034: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger6_2
+    13700036: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger6_3
+    13700038: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger7_1
+    13700040: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger7_2
+    13700042: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger7_3
+    13700044: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger8_1
+    13700046: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger8_2
+    13700048: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger8_3
+    13700050: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Forearm
+    13700052: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_HandBase
+    13700054: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Shing
+    13700056: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Shoulder
+    13700058: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Thigh
+    13700060: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_UpperArm
+    13700062: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__NecromancerHead1
+    13700064: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Pelvis1
+    13700066: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Pelvis2 1
+    13700068: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Forearm
+    13700070: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_HandBase
+    13700072: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Shin
+    13700074: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Shoulder
+    13700076: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Thigh
+    13700078: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_UpperArm
+    13700080: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__RibCage
+    13700082: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Spine1
+    13700084: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Spine10
+    13700086: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Spine11
+    13700088: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Spine12
+    13700090: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Spine13
+    13700092: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Spine14
+    13700094: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Spine15
+    13700096: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Spine16
+    13700098: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Spine17
+    13700100: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Spine18
+    13700102: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Spine19
+    13700104: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Spine2
+    13700106: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Spine20
+    13700108: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Spine21
+    13700110: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Spine3
+    13700112: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Spine4
+    13700114: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Spine5
+    13700116: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Spine6
+    13700118: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Spine7
+    13700120: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Spine8
+    13700122: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Spine9
+    13700124: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Thumb_1
+    13700126: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Thumb_1 1
+    13700128: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Thumb_2
+    13700130: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Thumb_2 1
+    13700132: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Thumb_3
+    13700134: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Thumb_3 1
+    13700136: Staff
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__lambert3
+    second: {fileID: 2100000, guid: 2c2e268dfd55b454983c6f920adab023, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__lambert4
+    second: {fileID: 2100000, guid: 731688becee944052adac39ded201626, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DA_CHAR_S_Necromancer1_Necromancer_Material
+    second: {fileID: 2100000, guid: 896e7791b1e2f49d9b4f950b24bb6b6a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert1
+    second: {fileID: 2100000, guid: 25608e403bc4f684ea1c480265d456cb, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.8
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human:
+    - boneName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Root_jB
+      humanName: Hips
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Thigh_jB
+      humanName: LeftUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Thigh_jB
+      humanName: RightUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Leg_jB
+      humanName: LeftLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Leg_jB
+      humanName: RightLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Spine1_jB
+      humanName: Spine
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Spine2_jB
+      humanName: Chest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Neck_jB
+      humanName: Neck
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Head_jB
+      humanName: Head
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Shoulder_jB
+      humanName: LeftShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Shoulder_jB
+      humanName: RightShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Arm_jB
+      humanName: LeftUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Arm_jB
+      humanName: RightUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Forearm_jB
+      humanName: LeftLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Forearm_jB
+      humanName: RightLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Wrist_jB
+      humanName: LeftHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Wrist_jB
+      humanName: RightHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Thumb1_jB
+      humanName: Left Thumb Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Thumb2_jB
+      humanName: Left Thumb Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Thumb3_jB
+      humanName: Left Thumb Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Index1_jB
+      humanName: Left Index Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Index2_jB
+      humanName: Left Index Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Index3_jB
+      humanName: Left Index Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Middle1_jB
+      humanName: Left Middle Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Middle2_jB
+      humanName: Left Middle Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Middle3_jB
+      humanName: Left Middle Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Ring1_jB
+      humanName: Left Ring Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Ring2_jB
+      humanName: Left Ring Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Ring3_jB
+      humanName: Left Ring Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Pinky1_jB
+      humanName: Left Little Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Pinky2_jB
+      humanName: Left Little Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Pinky3_jB
+      humanName: Left Little Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Thumb1_jB
+      humanName: Right Thumb Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Thumb2_jB
+      humanName: Right Thumb Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Thumb3_jB
+      humanName: Right Thumb Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Index1_jB
+      humanName: Right Index Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Index2_jB
+      humanName: Right Index Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Index3_jB
+      humanName: Right Index Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Middle1_jB
+      humanName: Right Middle Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Middle2_jB
+      humanName: Right Middle Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Middle3_jB
+      humanName: Right Middle Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Ring1_jB
+      humanName: Right Ring Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Ring2_jB
+      humanName: Right Ring Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Ring3_jB
+      humanName: Right Ring Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Pinky1_jB
+      humanName: Right Little Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Pinky2_jB
+      humanName: Right Little Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Pinky3_jB
+      humanName: Right Little Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Spine3_jB
+      humanName: UpperChest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Ankle_jB
+      humanName: LeftFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Ankle_jB
+      humanName: RightFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    skeleton:
+    - name: DA_CHAR-M_Necromancer(Clone)
+      parentName: 
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Cloak
+      parentName: DA_CHAR-M_Necromancer(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Necromancer 1
+      parentName: DA_CHAR-M_Necromancer(Clone)
+      position: {x: -0, y: -0.00008337403, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Arms
+      parentName: Necromancer 1
+      position: {x: -0, y: 0.00008337403, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Arm
+      parentName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Arms
+      position: {x: 0.29553315, y: 2.5525293, z: 0.28052983}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Shoulder
+      parentName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Arm
+      position: {x: -0.29553315, y: -2.5525293, z: -0.28052983}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_UpperArm
+      parentName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Shoulder
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Forearm
+      parentName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_UpperArm
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Hand
+      parentName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Forearm
+      position: {x: -0, y: 3.1621335, z: -0.025371248}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_HandBase
+      parentName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Hand
+      position: {x: -0, y: -3.1621335, z: 0.025371248}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger1
+      parentName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_HandBase
+      position: {x: -0, y: 3.1621335, z: -0.014402792}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger1_1
+      parentName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger1
+      position: {x: -0, y: -3.1621335, z: 0.014402792}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger1_2
+      parentName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger1
+      position: {x: -0, y: -3.1621335, z: 0.014402792}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger1_3
+      parentName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger1
+      position: {x: -0, y: -3.1621335, z: 0.014402792}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger2
+      parentName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_HandBase
+      position: {x: -0, y: 3.1621335, z: -0.040036973}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger2_1
+      parentName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger2
+      position: {x: -0, y: -3.1621335, z: 0.040036973}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger2_2
+      parentName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger2
+      position: {x: -0, y: -3.1621335, z: 0.040036973}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger2_3
+      parentName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger2
+      position: {x: -0, y: -3.1621335, z: 0.040036973}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger3
+      parentName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_HandBase
+      position: {x: -0, y: 3.1621335, z: -0.06680404}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger3_1
+      parentName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger3
+      position: {x: -0, y: -3.1621335, z: 0.06680404}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger3_2
+      parentName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger3
+      position: {x: -0, y: -3.1621335, z: 0.06680404}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger3_3
+      parentName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger3
+      position: {x: -0, y: -3.1621335, z: 0.06680404}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger4
+      parentName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_HandBase
+      position: {x: -0, y: 3.1621335, z: -0.09121769}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger4_1
+      parentName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger4
+      position: {x: -0, y: -3.1621335, z: 0.09121769}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger4_2
+      parentName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger4
+      position: {x: -0, y: -3.1621335, z: 0.09121769}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger4_3
+      parentName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger4
+      position: {x: -0, y: -3.1621335, z: 0.09121769}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Thumb 1
+      parentName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_HandBase
+      position: {x: -0, y: 3.1621335, z: -0.025371248}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Thumb_1 1
+      parentName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Thumb 1
+      position: {x: -0, y: -3.1621335, z: 0.025371248}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Thumb_2 1
+      parentName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Thumb 1
+      position: {x: -0, y: -3.1621335, z: 0.025371248}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Thumb_3 1
+      parentName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Thumb 1
+      position: {x: -0, y: -3.1621335, z: 0.025371248}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Arm
+      parentName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Arms
+      position: {x: -0.3125955, y: 2.5525293, z: 0.28052983}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Shoulder
+      parentName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Arm
+      position: {x: 0.3125955, y: -2.5525293, z: -0.28052983}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_UpperArm
+      parentName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Shoulder
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Forearm
+      parentName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_UpperArm
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Hand
+      parentName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Forearm
+      position: {x: -0.014691493, y: 3.1621335, z: -0.025371248}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger5
+      parentName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Hand
+      position: {x: -0, y: 0, z: 0.010968456}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger5_1
+      parentName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger5
+      position: {x: 0.014691493, y: -3.1621335, z: 0.014402792}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger5_2
+      parentName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger5
+      position: {x: 0.014691493, y: -3.1621335, z: 0.014402792}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger5_3
+      parentName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger5
+      position: {x: 0.014691493, y: -3.1621335, z: 0.014402792}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger6
+      parentName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Hand
+      position: {x: -0, y: 0, z: -0.014665725}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger6_1
+      parentName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger6
+      position: {x: 0.014691493, y: -3.1621335, z: 0.040036973}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger6_2
+      parentName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger6
+      position: {x: 0.014691493, y: -3.1621335, z: 0.040036973}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger6_3
+      parentName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger6
+      position: {x: 0.014691493, y: -3.1621335, z: 0.040036973}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger7
+      parentName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Hand
+      position: {x: -0, y: 0, z: -0.041432783}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger7_1
+      parentName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger7
+      position: {x: 0.014691493, y: -3.1621335, z: 0.06680404}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger7_2
+      parentName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger7
+      position: {x: 0.014691493, y: -3.1621335, z: 0.06680404}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger7_3
+      parentName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger7
+      position: {x: 0.014691493, y: -3.1621335, z: 0.06680404}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger8
+      parentName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Hand
+      position: {x: -0, y: 0, z: -0.065846436}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger8_1
+      parentName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger8
+      position: {x: 0.014691493, y: -3.1621335, z: 0.09121769}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger8_2
+      parentName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger8
+      position: {x: 0.014691493, y: -3.1621335, z: 0.09121769}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger8_3
+      parentName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Finger8
+      position: {x: 0.014691493, y: -3.1621335, z: 0.09121769}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_HandBase
+      parentName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Hand
+      position: {x: 0.014691493, y: -3.1621335, z: 0.025371248}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Thumb
+      parentName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Hand
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Thumb_1
+      parentName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Thumb
+      position: {x: 0.014691493, y: -3.1621335, z: 0.025371248}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Thumb_2
+      parentName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Thumb
+      position: {x: 0.014691493, y: -3.1621335, z: 0.025371248}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Thumb_3
+      parentName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Thumb
+      position: {x: 0.014691493, y: -3.1621335, z: 0.025371248}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Head
+      parentName: Necromancer 1
+      position: {x: -0, y: 3.162217, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__NecromancerHead1
+      parentName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Head
+      position: {x: 0.9464407, y: -3.1621335, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Legs
+      parentName: Necromancer 1
+      position: {x: -0, y: 0.00008337403, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Leg
+      parentName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Legs
+      position: {x: -0, y: 3.1621335, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Shing
+      parentName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Leg
+      position: {x: -0, y: -3.1621335, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Thigh
+      parentName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Leg
+      position: {x: -0, y: -3.1621335, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Leg
+      parentName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Legs
+      position: {x: -0, y: 3.1621335, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Shin
+      parentName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Leg
+      position: {x: -0, y: -3.1621335, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Thigh
+      parentName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Leg
+      position: {x: -0, y: -3.1621335, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Pelvis
+      parentName: Necromancer 1
+      position: {x: -0, y: 3.162217, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Pelvis1
+      parentName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Pelvis
+      position: {x: -0, y: -3.1621335, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Pelvis2
+      parentName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Pelvis
+      position: {x: -0.09701771, y: -1.3324364, z: 0.23360229}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Pelvis2 1
+      parentName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Pelvis2
+      position: {x: 0.09701771, y: -1.8296971, z: -0.23360229}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__RibCage
+      parentName: Necromancer 1
+      position: {x: -0, y: 0.00008337403, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Spine
+      parentName: Necromancer 1
+      position: {x: -0.01019634, y: 3.162217, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Spine1
+      parentName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Spine
+      position: {x: 0.01019634, y: -3.1621335, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Spine2
+      parentName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Spine
+      position: {x: 0.01019634, y: -3.1621335, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Spine3
+      parentName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Spine
+      position: {x: 0.01019634, y: -3.1621335, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Spine4
+      parentName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Spine
+      position: {x: 0.01019634, y: -3.1621335, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Spine5
+      parentName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Spine
+      position: {x: 0.01019634, y: -3.1621335, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Spine6
+      parentName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Spine
+      position: {x: 0.01019634, y: -3.1621335, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Spine7
+      parentName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Spine
+      position: {x: 0.01019634, y: -3.1621335, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Spine8
+      parentName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Spine
+      position: {x: 0.01019634, y: -3.1621335, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Spine9
+      parentName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Spine
+      position: {x: 0.01019634, y: -3.1621335, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Spine10
+      parentName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Spine
+      position: {x: 0.01019634, y: -3.1621335, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Spine11
+      parentName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Spine
+      position: {x: 0.01019634, y: -3.1621335, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Spine12
+      parentName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Spine
+      position: {x: 0.01019634, y: -3.1621335, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Spine13
+      parentName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Spine
+      position: {x: 0.01019634, y: -3.1621335, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Spine14
+      parentName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Spine
+      position: {x: 0.01019634, y: -3.1621335, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Spine15
+      parentName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Spine
+      position: {x: 0.01019634, y: -3.1621335, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Spine16
+      parentName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Spine
+      position: {x: 0.01019634, y: -3.1621335, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Spine17
+      parentName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Spine
+      position: {x: 0.01019634, y: -3.1621335, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Spine18
+      parentName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Spine
+      position: {x: 0.01019634, y: -3.1621335, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Spine19
+      parentName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Spine
+      position: {x: 0.01019634, y: -3.1621335, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Spine20
+      parentName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Spine
+      position: {x: 0.01019634, y: -3.1621335, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Spine21
+      parentName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Spine
+      position: {x: 0.01019634, y: -3.1621335, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Staff
+      parentName: DA_CHAR-M_Necromancer(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Root_jB
+      parentName: DA_CHAR-M_Necromancer(Clone)
+      position: {x: -0.014188628, y: 1.6603394, z: -0.05102232}
+      rotation: {x: 0.46685657, y: -0.53393024, z: -0.46402985, w: 0.5306974}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Spine1_jB
+      parentName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Root_jB
+      position: {x: -0.2592032, y: -7.105428e-18, z: 2.3925308e-17}
+      rotation: {x: -0.0028829682, y: 0.00095358, z: 0.18452956, w: 0.9828223}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Spine2_jB
+      parentName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Spine1_jB
+      position: {x: -0.28479022, y: -9.9475986e-17, z: 8.2776057e-17}
+      rotation: {x: -1.0791685e-16, y: -4.045621e-17, z: -0.2348628, w: 0.97202855}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Spine3_jB
+      parentName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Spine2_jB
+      position: {x: -0.26009575, y: 7.815971e-17, z: 7.0937044e-17}
+      rotation: {x: 0.9923455, y: -0.123492494, z: -5.154122e-17, w: 5.5290608e-17}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Neck_jB
+      parentName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Spine3_jB
+      position: {x: -0.2618518, y: 3.552714e-17, z: -2.3899928e-17}
+      rotation: {x: -0.0000000072717046, y: -0.000000007645506, z: 0.1400914, w: 0.99013853}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Head_jB
+      parentName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Neck_jB
+      position: {x: -0.15335315, y: 1.5631941e-16, z: -2.2457854e-17}
+      rotation: {x: 2.8500544e-17, y: 1.2302074e-16, z: -0.25671008, w: 0.9664885}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__HeadTop_j
+      parentName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Head_jB
+      position: {x: -0.36806238, y: -2.4517877e-16, z: -8.350262e-17}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Shoulder_jB
+      parentName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Spine3_jB
+      position: {x: -0.21480681, y: -0.0531506, z: 0.14886826}
+      rotation: {x: -0.6151657, y: -0.3486708, z: -0.4728038, w: 0.52579135}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Arm_jB
+      parentName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Shoulder_jB
+      position: {x: 0.14161487, y: 0.0000029404869, z: -1.4779289e-15}
+      rotation: {x: -0.0029824064, y: -0.006233764, z: -0.19714655, w: 0.98034966}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Forearm_jB
+      parentName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Arm_jB
+      position: {x: 0.5248415, y: 0.00000006071008, z: -0.000000100872384}
+      rotation: {x: 0.00026393187, y: 0.022223543, z: 0.03717885, w: 0.99906147}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Wrist_jB
+      parentName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Forearm_jB
+      position: {x: 0.40723544, y: 0.00000004779348, z: -0.0000000023494335}
+      rotation: {x: 0.083293274, y: 0.51973546, z: 0.093202345, w: 0.84513354}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Ring1_jB
+      parentName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Wrist_jB
+      position: {x: 0.039018307, y: -0.018238982, z: 0.11113943}
+      rotation: {x: -0.071765214, y: -0.53085434, z: -0.113126375, w: 0.83680695}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Ring2_jB
+      parentName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Ring1_jB
+      position: {x: 0.05988347, y: 5.0249583e-13, z: -0.00000026296516}
+      rotation: {x: 3.611444e-34, y: 0.013421588, z: -2.832443e-17, w: 0.99990994}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Ring3_jB
+      parentName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Ring2_jB
+      position: {x: 0.052769393, y: 4.6793504e-13, z: 0.00000027156224}
+      rotation: {x: 3.009366e-35, y: -0.008153264, z: -6.052093e-18, w: 0.9999668}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Ring4_j
+      parentName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Ring3_jB
+      position: {x: 0.043457776, y: 3.733476e-13, z: -0.000000040389196}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Pinky1_jB
+      parentName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Wrist_jB
+      position: {x: 0.016681654, y: -0.012087253, z: 0.12202146}
+      rotation: {x: -0.071765214, y: -0.53085434, z: -0.113126375, w: 0.83680695}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Pinky2_jB
+      parentName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Pinky1_jB
+      position: {x: 0.059875477, y: 5.020411e-13, z: -0.000000106359295}
+      rotation: {x: 0.0000000074499096, y: 0.013421588, z: -9.999864e-11, w: 0.99990994}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Pinky3_jB
+      parentName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Pinky2_jB
+      position: {x: 0.05277739, y: 4.674803e-13, z: 0.00000032969768}
+      rotation: {x: 0.0000000074503332, y: -0.008153264, z: 6.0746554e-11, w: 0.9999668}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Pinky4_j
+      parentName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Pinky3_jB
+      position: {x: 0.043449778, y: 3.7289285e-13, z: 0.000000031927513}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Middle1_jB
+      parentName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Wrist_jB
+      position: {x: 0.06292797, y: -0.024823932, z: 0.09949421}
+      rotation: {x: -0.071765214, y: -0.53085434, z: -0.113126375, w: 0.83680695}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Middle2_jB
+      parentName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Middle1_jB
+      position: {x: 0.059875477, y: 5.020411e-13, z: -0.000000106359295}
+      rotation: {x: -5.77831e-34, y: 0.013421588, z: -2.9814527e-17, w: 0.99990994}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Middle3_jB
+      parentName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Middle2_jB
+      position: {x: 0.05277739, y: 4.6702556e-13, z: 0.00000032969768}
+      rotation: {x: -9.028097e-36, y: -0.008153264, z: -6.6370375e-18, w: 0.9999668}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Middle4_j
+      parentName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Middle3_jB
+      position: {x: 0.043457776, y: 3.733476e-13, z: -0.000000040389196}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Thumb1_jB
+      parentName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Wrist_jB
+      position: {x: 0.063946076, y: -0.0000033106523, z: -0.000004154134}
+      rotation: {x: -0.0033360266, y: -0.07520266, z: -0.079774596, w: 0.9939665}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Thumb2_jB
+      parentName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Thumb1_jB
+      position: {x: 0.044252604, y: 0.0000050018775, z: 0.0000011123844}
+      rotation: {x: 0.00090090005, y: 0.00075507874, z: -0.03482627, w: 0.99939275}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Thumb3_jB
+      parentName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Thumb2_jB
+      position: {x: 0.032914273, y: 0.0000016536735, z: -0.00000031123375}
+      rotation: {x: -0.0011431933, y: -0.015526833, z: 0.016149284, w: 0.9997484}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Thumb4_j
+      parentName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Thumb3_jB
+      position: {x: 0.028237658, y: -0.000000011553006, z: 0.0000017415363}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Index1_jB
+      parentName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Wrist_jB
+      position: {x: 0.084180236, y: -0.030677011, z: 0.089142315}
+      rotation: {x: -0.071765214, y: -0.53085434, z: -0.113126375, w: 0.83680695}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Index2_jB
+      parentName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Index1_jB
+      position: {x: 0.059875477, y: 5.0249583e-13, z: -0.000000106359295}
+      rotation: {x: -2.4076294e-35, y: 0.013421588, z: -3.0187053e-17, w: 0.99990994}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Index3_jB
+      parentName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Index2_jB
+      position: {x: 0.05277739, y: 4.688445e-13, z: 0.00000032969768}
+      rotation: {x: 6.018732e-36, y: -0.008153264, z: -6.783274e-18, w: 0.9999668}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Index4_j
+      parentName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Index3_jB
+      position: {x: 0.043449778, y: 3.7289285e-13, z: 0.000000031927513}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Shoulder_jB
+      parentName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Spine3_jB
+      position: {x: -0.21480377, y: -0.053151276, z: -0.14886801}
+      rotation: {x: -0.34866405, y: 0.61516947, z: -0.5257965, w: -0.47279814}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Arm_jB
+      parentName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Shoulder_jB
+      position: {x: -0.14161374, y: 1.2950251e-16, z: 5.434495e-23}
+      rotation: {x: -0.0029823626, y: -0.006234466, z: -0.1971576, w: 0.9803475}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Forearm_jB
+      parentName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Arm_jB
+      position: {x: -0.5248391, y: 1.3246443e-16, z: -1.34618895e-14}
+      rotation: {x: 0.00026393187, y: 0.022223543, z: 0.03717885, w: 0.99906147}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Wrist_jB
+      parentName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Forearm_jB
+      position: {x: -0.4072364, y: 6.8732303e-16, z: 3.7039937e-17}
+      rotation: {x: 0.083293274, y: 0.51973546, z: 0.093202345, w: 0.84513354}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Ring1_jB
+      parentName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Wrist_jB
+      position: {x: -0.039017595, y: 0.018242246, z: -0.111140184}
+      rotation: {x: -0.071765214, y: -0.53085434, z: -0.113126375, w: 0.83680695}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Ring2_jB
+      parentName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Ring1_jB
+      position: {x: -0.05988059, y: 3.8243485e-16, z: 2.143913e-16}
+      rotation: {x: 0, y: 0.013421588, z: -0, w: 0.99990994}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Ring3_jB
+      parentName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Ring2_jB
+      position: {x: -0.052770656, y: -1.6574696e-17, z: -4.7507815e-17}
+      rotation: {x: 0, y: -0.008153264, z: -0, w: 0.9999668}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Ring4_j
+      parentName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Ring3_jB
+      position: {x: -0.04345719, y: 2.3190777e-16, z: -1.9891601e-16}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Pinky1_jB
+      parentName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Wrist_jB
+      position: {x: -0.016680384, y: 0.012090363, z: -0.122020856}
+      rotation: {x: -0.071765214, y: -0.53085434, z: -0.113126375, w: 0.83680695}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Pinky2_jB
+      parentName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Pinky1_jB
+      position: {x: -0.05988059, y: 1.273131e-16, z: 1.9060363e-16}
+      rotation: {x: 0, y: 0.013421588, z: -0, w: 0.99990994}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Pinky3_jB
+      parentName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Pinky2_jB
+      position: {x: -0.052770656, y: -1.589876e-17, z: -2.384562e-17}
+      rotation: {x: 0, y: -0.008153264, z: -0, w: 0.9999668}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Pinky4_j
+      parentName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Pinky3_jB
+      position: {x: -0.04345719, y: 2.5702727e-17, z: -1.510559e-16}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Middle1_jB
+      parentName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Wrist_jB
+      position: {x: -0.06292703, y: 0.024827132, z: -0.099493675}
+      rotation: {x: -0.071765214, y: -0.53085434, z: -0.113126375, w: 0.83680695}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Middle2_jB
+      parentName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Middle1_jB
+      position: {x: -0.05988059, y: 1.4364313e-16, z: 3.4841178e-17}
+      rotation: {x: 0, y: 0.013421588, z: -0, w: 0.99990994}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Middle3_jB
+      parentName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Middle2_jB
+      position: {x: -0.052770656, y: -1.3378595e-17, z: -4.6410646e-17}
+      rotation: {x: 0, y: -0.008153264, z: -0, w: 0.9999668}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Middle4_j
+      parentName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Middle3_jB
+      position: {x: -0.04345719, y: 1.5731567e-18, z: -6.88605e-17}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Thumb1_jB
+      parentName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Wrist_jB
+      position: {x: -0.06394868, y: 7.7952257e-16, z: -1.5459814e-16}
+      rotation: {x: -0.003345637, y: -0.07520508, z: -0.07972965, w: 0.99397}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Thumb2_jB
+      parentName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Thumb1_jB
+      position: {x: -0.044250563, y: 1.9650795e-16, z: -2.0004876e-16}
+      rotation: {x: 0.00090143917, y: 0.000763386, z: -0.03485299, w: 0.9993918}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Thumb3_jB
+      parentName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Thumb2_jB
+      position: {x: -0.032914378, y: 3.942306e-17, z: 5.2023417e-17}
+      rotation: {x: -0.0011431933, y: -0.015526833, z: 0.016149284, w: 0.9997484}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Thumb4_j
+      parentName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Thumb3_jB
+      position: {x: -0.028236233, y: -2.2361252e-16, z: -6.455994e-17}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Index1_jB
+      parentName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Wrist_jB
+      position: {x: -0.084178865, y: 0.030680096, z: -0.089141704}
+      rotation: {x: -0.071765214, y: -0.53085434, z: -0.113126375, w: 0.83680695}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Index2_jB
+      parentName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Index1_jB
+      position: {x: -0.05988059, y: -2.9595424e-17, z: 1.5025691e-16}
+      rotation: {x: 0, y: 0.013421588, z: -0, w: 0.99990994}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Index3_jB
+      parentName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Index2_jB
+      position: {x: -0.052770656, y: -1.355761e-17, z: 1.10035284e-16}
+      rotation: {x: 0, y: -0.008153264, z: -0, w: 0.9999668}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Index4_j
+      parentName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Index3_jB
+      position: {x: -0.04345719, y: 1.10986264e-16, z: -3.7378526e-16}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Thigh_jB
+      parentName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Root_jB
+      position: {x: 0.08434544, y: -0.026169263, z: -0.21598276}
+      rotation: {x: -0.7074907, y: 0.04989803, z: -0.009887513, w: 0.7048896}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Leg_jB
+      parentName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Thigh_jB
+      position: {x: 0.70142937, y: -0.0000002310159, z: -0.00000020640024}
+      rotation: {x: -0.0008635687, y: 0.069628835, z: -0.06826773, w: 0.99523395}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Ankle_jB
+      parentName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Leg_jB
+      position: {x: 0.7171203, y: 0.000000044967887, z: 0.00000019090031}
+      rotation: {x: 0.02405428, y: -0.5944221, z: 0.032500237, w: 0.80313605}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Foot_jB
+      parentName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Ankle_jB
+      position: {x: 0.27696243, y: 9.833912e-15, z: -0.00000042544679}
+      rotation: {x: 0.00000001034067, y: -0.19203496, z: 0.0000000020232143, w: 0.9813881}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Foot_j
+      parentName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__R_Foot_jB
+      position: {x: 0.13007708, y: -2.7540638e-14, z: 2.2453151e-15}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Thigh_jB
+      parentName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__Root_jB
+      position: {x: 0.08469412, y: -0.023567911, z: 0.2161453}
+      rotation: {x: -0.04938537, y: -0.70322704, z: 0.70917535, w: 0.010160365}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Leg_jB
+      parentName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Thigh_jB
+      position: {x: -0.70142806, y: -1.0705326e-16, z: 1.1368684e-16}
+      rotation: {x: -0.0008635687, y: 0.069628835, z: -0.06826773, w: 0.99523395}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Ankle_jB
+      parentName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Leg_jB
+      position: {x: -0.7171236, y: 7.721601e-17, z: 2.1316282e-17}
+      rotation: {x: 0.02405428, y: -0.5944221, z: 0.032500237, w: 0.80313605}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__joint3
+      parentName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Ankle_jB
+      position: {x: 0.00000006934022, y: -0.00000023531533, z: -0.00000034422277}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Foot_jB
+      parentName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__joint3
+      position: {x: -0.2769625, y: 0.00000023531533, z: 0.00000034422277}
+      rotation: {x: 2.7104017e-16, y: -0.19203496, z: -1.9649536e-15, w: 0.9813881}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Foot_j
+      parentName: DA_CHAR_M_Necromancer__1__DA_CHAR_M_Necromancer__1__L_Foot_jB
+      position: {x: -0.13007684, y: 8.476135e-18, z: 1.6178958e-17}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 3
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

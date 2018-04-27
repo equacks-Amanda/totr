@@ -96,6 +96,7 @@ public class MenuController : MonoBehaviour {
     }
 
     private void Start() {
+        Time.timeScale = 1;
         txt_buildLabel.text = "Build: v" + Constants.Global.C_BuildNumber;
     }
 }

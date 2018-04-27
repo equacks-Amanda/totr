@@ -2,6 +2,7 @@
  * 
  *  Desc:   Facilitates UI and score updates
  * 
+ *
  */
 
 using System.Collections;
@@ -24,13 +25,18 @@ public sealed class Calligrapher : MonoBehaviour {
     [SerializeField] private Text txt_redObjvDescription, txt_blueObjvDescription;
     [SerializeField] private Text txt_redPauseObjvTitle, txt_bluePauseObjvTitle;
     [SerializeField] private Text txt_redPauseObjvDescription, txt_bluePauseObjvDescription;
+    [SerializeField] private Text txt_redTotalScore, txt_blueTotalScore;
  
     [SerializeField] private Image img_redPopupBacking, img_bluePopupBacking;
+    [SerializeField] private GameObject go_redCTFGif, go_blueCTFGif;
+    [SerializeField] private GameObject go_redHockeyGif, go_blueHockeyGif;
+    [SerializeField] private GameObject go_redNecroGif, go_blueNecroGif;
+    [SerializeField] private GameObject go_redBossGif, go_blueBossGif;
+    private GameObject go_redActiveGif, go_blueActiveGif;
     [SerializeField] private Image img_redFlashBacking, img_blueFlashBacking;
-    [SerializeField] private Text  txt_redRoomCounter, txt_blueRoomCounter;
 
     private float f_redStartTime, f_blueStartTime;  // controls UI pop-up fading
-    private float f_redFlashTime, f_blueFlashTime;  // separate timers for flash to avoid overwriting, since both animations play at roughly the same time.
+    //private float f_redFlashTime, f_blueFlashTime;  // separate timers for flash to avoid overwriting, since both animations play at roughly the same time.
 
 
     #region Singletons
@@ -45,7 +51,7 @@ public sealed class Calligrapher : MonoBehaviour {
 
     #region UI Initialization and Updating Methods
     // update score (CTF and Ice Hockey)
-    public void UpdateScoreUI(Constants.Global.Color colorIn, int scoreIn) {
+    public void UpdateGoalScoreUI(Constants.Global.Color colorIn, int scoreIn) {
         if (colorIn == Constants.Global.Color.RED) {
             txt_redScoreText.text = scoreIn.ToString();
         }
@@ -77,6 +83,7 @@ public sealed class Calligrapher : MonoBehaviour {
 
             txt_redObjvTitle.text = txt_redPauseObjvTitle.text = Constants.ObjectiveText.C_CTFTitle;
             txt_redObjvDescription.text = txt_redPauseObjvDescription.text = Constants.ObjectiveText.C_CTFDescription;
+            go_redActiveGif = go_redCTFGif;
         }
         else {
             txt_blueScoreText.transform.parent.gameObject.SetActive(true);
@@ -84,9 +91,10 @@ public sealed class Calligrapher : MonoBehaviour {
 
             txt_blueObjvTitle.text = txt_bluePauseObjvTitle.text = Constants.ObjectiveText.C_CTFTitle;
             txt_blueObjvDescription.text = txt_bluePauseObjvDescription.text = Constants.ObjectiveText.C_CTFDescription;
+            go_blueActiveGif = go_blueCTFGif;
         }
-        UpdateScoreUI(colorIn, 0);
-        PopupFadeIn(colorIn);
+        UpdateGoalScoreUI(colorIn, 0);
+        StartCoroutine("Flash", colorIn);
     }
 
     public void IceHockeyInit(Constants.Global.Color colorIn) {
@@ -96,6 +104,7 @@ public sealed class Calligrapher : MonoBehaviour {
 
             txt_redObjvTitle.text = txt_redPauseObjvTitle.text = Constants.ObjectiveText.C_HockeyTitle;
             txt_redObjvDescription.text = txt_redPauseObjvDescription.text = Constants.ObjectiveText.C_HockeyDescription;
+            go_redActiveGif = go_redHockeyGif;
         }
         else {
             txt_blueScoreText.transform.parent.gameObject.SetActive(true);
@@ -103,9 +112,10 @@ public sealed class Calligrapher : MonoBehaviour {
 
             txt_blueObjvTitle.text = txt_bluePauseObjvTitle.text = Constants.ObjectiveText.C_HockeyTitle;
             txt_blueObjvDescription.text = txt_bluePauseObjvDescription.text = Constants.ObjectiveText.C_HockeyDescription;
+            go_blueActiveGif = go_blueHockeyGif;
         }
-        UpdateScoreUI(colorIn, 0);
-        PopupFadeIn(colorIn);
+        UpdateGoalScoreUI(colorIn, 0);
+        StartCoroutine("Flash", colorIn);
     }
 
     public void DefeatNecromancersInit(Constants.Global.Color colorIn) {
@@ -115,6 +125,7 @@ public sealed class Calligrapher : MonoBehaviour {
 
             txt_redObjvTitle.text = txt_redPauseObjvTitle.text = Constants.ObjectiveText.C_DefeatNecromancersTitle;
             txt_redObjvDescription.text = txt_redPauseObjvDescription.text = Constants.ObjectiveText.C_DefeatNecromancersDescription;
+            go_redActiveGif = go_redNecroGif;
         }
         else {
             txt_blueScoreText.transform.parent.gameObject.SetActive(true);
@@ -122,9 +133,10 @@ public sealed class Calligrapher : MonoBehaviour {
 
             txt_blueObjvTitle.text = txt_bluePauseObjvTitle.text = Constants.ObjectiveText.C_DefeatNecromancersTitle;
             txt_blueObjvDescription.text = txt_bluePauseObjvDescription.text = Constants.ObjectiveText.C_DefeatNecromancersDescription;
+            go_blueActiveGif = go_blueNecroGif;
         }
-        UpdateScoreUI(colorIn, 0);
-        PopupFadeIn(colorIn);
+        UpdateGoalScoreUI(colorIn, 0);
+        StartCoroutine("Flash", colorIn);
     }
 
     public void RiftBossInit(Constants.Global.Color colorIn) {
@@ -134,7 +146,7 @@ public sealed class Calligrapher : MonoBehaviour {
 
             txt_redObjvTitle.text = txt_redPauseObjvTitle.text = Constants.ObjectiveText.C_BossTitle;
             txt_redObjvDescription.text = txt_redPauseObjvDescription.text = Constants.ObjectiveText.C_BossDescription;
-            PopupFadeIn(Constants.Global.Color.RED);
+            go_redActiveGif = go_redBossGif;
         }
         else {
             txt_blueRiftBossHealthText.transform.parent.gameObject.SetActive(true);
@@ -142,36 +154,47 @@ public sealed class Calligrapher : MonoBehaviour {
 
             txt_blueObjvTitle.text = txt_bluePauseObjvTitle.text = Constants.ObjectiveText.C_BossTitle;
             txt_blueObjvDescription.text = txt_bluePauseObjvDescription.text = Constants.ObjectiveText.C_BossDescription;
-            PopupFadeIn(Constants.Global.Color.BLUE);
+            go_blueActiveGif = go_blueBossGif;
         }
         UpdateRiftBossHealthUI(colorIn, Constants.ObjectiveStats.C_RiftBossMaxHealth);
+        StartCoroutine("Flash", colorIn);
     }
 
     //----------------------------
     // Flash to mask room switching.
 
-    public void Flash(Constants.Global.Color colorIn) {
+    public IEnumerator Flash(Constants.Global.Color colorIn) {
+        Time.timeScale = 0;
         if (colorIn == Constants.Global.Color.RED) {
-            f_redFlashTime = Time.realtimeSinceStartup;
+            img_redFlashBacking.color = Color.white;
+            txt_redTotalScore.color = Color.red;
+            yield return new WaitForSecondsRealtime(0.5f);
+            txt_redTotalScore.color = Color.yellow;
+            txt_redTotalScore.text = Constants.TeamStats.C_RedTeamScore + "";
+            yield return new WaitForSecondsRealtime(0.5f);
+            txt_redTotalScore.color = Color.red;
+            yield return new WaitForSecondsRealtime(2f);
+            f_redStartTime = Time.realtimeSinceStartup;
             StartCoroutine(RedFlash());
+            StartCoroutine(FadeInRed());
         } else {
-            f_blueFlashTime = Time.realtimeSinceStartup;
+            img_blueFlashBacking.color = Color.white;
+            txt_blueTotalScore.color = Color.blue;
+            yield return new WaitForSecondsRealtime(0.5f);
+            txt_blueTotalScore.color = Color.yellow;
+            txt_blueTotalScore.text = Constants.TeamStats.C_BlueTeamScore + "";
+            yield return new WaitForSecondsRealtime(0.5f);
+            txt_blueTotalScore.color = Color.blue;
+            yield return new WaitForSecondsRealtime(2f);
+            f_blueStartTime = Time.realtimeSinceStartup;
             StartCoroutine(BlueFlash());
+            //StartCoroutine(FadeInBlue());
         }
-    }
-
-    public void RoomUpdate(Constants.Global.Color colorIn, int i_currentRoom) {
-        if (colorIn == Constants.Global.Color.RED) {
-            txt_redRoomCounter.text = "Room:\n" + i_currentRoom + "/5";
-        } else {
-            txt_blueRoomCounter.text = "Room:\n" + i_currentRoom + "/5";
-        }
-
     }
 
     //----------------------------
     // Reset of different UI objects
-    public void ScoreReset(Constants.Global.Color colorIn) {
+    public void GoalScoreReset(Constants.Global.Color colorIn) {
         if (colorIn == Constants.Global.Color.RED) {
             txt_redScoreText.transform.parent.gameObject.SetActive(false);
             img_redHockeyIcon.gameObject.SetActive(false);
@@ -199,37 +222,13 @@ public sealed class Calligrapher : MonoBehaviour {
     #endregion
 
     #region UI Fade In/Out Methods
-    //----------------------------
-    // Fade in/out objective description UI at the start of each objective
-    private void PopupFadeIn(Constants.Global.Color colorIn) {
-        Time.timeScale = 0;
-        if (colorIn == Constants.Global.Color.RED) {
-            f_redStartTime = Time.realtimeSinceStartup;
-            img_redFlashBacking.color = Color.white;
-            StartCoroutine(FadeInRed());
-        } else {
-            f_blueStartTime = Time.realtimeSinceStartup;
-            img_blueFlashBacking.color = Color.white;
-            StartCoroutine(FadeInBlue());
-        }
-    }
-
-/*    private void PopupFadeOut(Constants.Global.Color colorIn) {
-        if (colorIn == Constants.Global.Color.RED) {
-            f_redStartTime = Time.time;
-            InvokeRepeating("FadeOutRed", 0.1f, 0.075f);
-        } else {
-            f_blueStartTime = Time.time;
-            InvokeRepeating("FadeOutBlue", 0.1f, 0.075f);
-        }
-    } */
-
     private IEnumerator FadeInRed() {
         float timer = (Time.realtimeSinceStartup - f_redStartTime);
         float fracJourney = timer / 1f;
-        img_redPopupBacking.color = Color.Lerp(img_redPopupBacking.color, new Color(0,0,0,0.2f), fracJourney);
+        img_redPopupBacking.color = Color.Lerp(img_redPopupBacking.color, new Color(0,0,0,1), fracJourney);
         txt_redObjvTitle.color = Color.Lerp(txt_redObjvTitle.color, new Color(1,1,1,1), fracJourney);
         txt_redObjvDescription.color = Color.Lerp(txt_redObjvDescription.color, new Color(1,1,1,1), fracJourney);
+        go_redActiveGif.GetComponent<Image>().color = Color.Lerp(go_redActiveGif.GetComponent<Image>().color, new Color(1, 1, 1, 1), fracJourney);
         if (timer > 5f) {
             StopCoroutine(FadeInRed());
             StartCoroutine(FadeOutRed());
@@ -242,9 +241,10 @@ public sealed class Calligrapher : MonoBehaviour {
     private IEnumerator FadeInBlue() {
         float timer = (Time.realtimeSinceStartup - f_blueStartTime);
         float fracJourney = timer / 1f;
-        img_bluePopupBacking.color = Color.Lerp(img_bluePopupBacking.color, new Color(0,0,0,0.2f), fracJourney);
+        img_bluePopupBacking.color = Color.Lerp(img_bluePopupBacking.color, new Color(0,0,0,1), fracJourney);
         txt_blueObjvTitle.color = Color.Lerp(txt_blueObjvTitle.color, new Color(1,1,1,1), fracJourney);
         txt_blueObjvDescription.color = Color.Lerp(txt_blueObjvDescription.color, new Color(1,1,1,1), fracJourney);
+        go_blueActiveGif.GetComponent<Image>().color = Color.Lerp(go_blueActiveGif.GetComponent<Image>().color, new Color(1, 1, 1, 1), fracJourney);
         if (timer > 5f) {
             StopCoroutine(FadeInBlue());
             StartCoroutine(FadeOutBlue());
@@ -257,11 +257,14 @@ public sealed class Calligrapher : MonoBehaviour {
 
     private IEnumerator FadeOutRed() {
         float timer = (Time.realtimeSinceStartup - f_redStartTime);
-        float fracJourney = timer / 1f;
+        float fracJourney = timer / 8f;
         img_redPopupBacking.color = Color.Lerp(img_redPopupBacking.color, new Color(0,0,0,0), fracJourney);
         txt_redObjvTitle.color = Color.Lerp(txt_redObjvTitle.color, new Color(1,1,1,0), fracJourney);
         txt_redObjvDescription.color = Color.Lerp(txt_redObjvDescription.color, new Color(1,1,1,0), fracJourney);
-        if (timer > 2f) {
+        txt_redTotalScore.color = Color.Lerp(txt_redTotalScore.color, new Color(1,0,0,0), fracJourney);
+        txt_blueTotalScore.color = Color.Lerp(txt_blueTotalScore.color, new Color(0, 0, 1, 0), fracJourney);
+        go_redActiveGif.GetComponent<Image>().color = Color.Lerp(go_redActiveGif.GetComponent<Image>().color, new Color(1, 1, 1, 0), fracJourney);
+        if (timer > 5.5f) {
             Time.timeScale = 1;
             StopCoroutine(FadeOutRed());
             yield break;
@@ -272,11 +275,13 @@ public sealed class Calligrapher : MonoBehaviour {
 
     private IEnumerator FadeOutBlue() {
         float timer = (Time.realtimeSinceStartup - f_blueStartTime);
-        float fracJourney = timer / 1f;
+        float fracJourney = timer / 8f;
         img_bluePopupBacking.color = Color.Lerp(img_bluePopupBacking.color, new Color(0,0,0,0), fracJourney);
         txt_blueObjvTitle.color = Color.Lerp(txt_blueObjvTitle.color, new Color(1,1,1,0), fracJourney);
         txt_blueObjvDescription.color = Color.Lerp(txt_blueObjvDescription.color, new Color(1,1,1,0), fracJourney);
-        if (timer > 2f) {
+        txt_blueTotalScore.color = Color.Lerp(txt_blueTotalScore.color, new Color(0,0,1,0), fracJourney);
+        go_blueActiveGif.GetComponent<Image>().color = Color.Lerp(go_blueActiveGif.GetComponent<Image>().color, new Color(1, 1, 1, 0), fracJourney);
+        if (timer > 5.5f) {
             Time.timeScale = 1;
             StopCoroutine(FadeOutBlue());
             yield break;
@@ -286,7 +291,7 @@ public sealed class Calligrapher : MonoBehaviour {
     }
 
     private IEnumerator BlueFlash() {
-        float timer = (Time.realtimeSinceStartup - f_blueFlashTime);
+        float timer = (Time.realtimeSinceStartup - f_blueStartTime);
         float fracJourney = timer / 0.4f;
         img_blueFlashBacking.color = Color.Lerp(img_blueFlashBacking.color, new Color(1,1,1,0), fracJourney);
         if (timer > 0.4f) {
@@ -298,7 +303,7 @@ public sealed class Calligrapher : MonoBehaviour {
     }
 
     private IEnumerator RedFlash() {
-        float timer = (Time.realtimeSinceStartup - f_redFlashTime);
+        float timer = (Time.realtimeSinceStartup - f_redStartTime);
         float fracJourney = timer / 0.4f;
         img_redFlashBacking.color = Color.Lerp(img_redFlashBacking.color, new Color(1,1,1,0), fracJourney);
         if (timer > 0.4f) {
@@ -315,6 +320,7 @@ public sealed class Calligrapher : MonoBehaviour {
     #region Unity Overrides
     void Awake() {
         instance = this;
+        Constants.TeamStats.C_RedTeamScore = Constants.TeamStats.C_BlueTeamScore = 0;       //Reset the match count through restarts.
     }
     #endregion
 }

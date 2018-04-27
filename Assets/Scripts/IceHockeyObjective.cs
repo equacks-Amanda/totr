@@ -16,14 +16,14 @@ public class IceHockeyObjective : Objective {
     }
 
     override protected void ResetUI() {
-        calligrapher.ScoreReset(e_color);
+        calligrapher.GoalScoreReset(e_color);
     }
 
     // Update UI and check for completion
     public void UpdatePuckScore() {
         i_score++;
 		maestro.PlayScore();
-        calligrapher.UpdateScoreUI(e_color, i_score);
+        calligrapher.UpdateGoalScoreUI(e_color, i_score);
         gc_owned.FlashOn();
         if (i_score >= Constants.ObjectiveStats.C_HockeyMaxScore) {
             b_isComplete = true;

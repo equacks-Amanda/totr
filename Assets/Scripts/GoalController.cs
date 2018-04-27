@@ -22,7 +22,7 @@ public class GoalController : MonoBehaviour {
 #region Visual Methods
     public void FlashOn() {
         go_goalGlow.SetActive(true);
-        Invoke("FlashOff", 1.0f);
+        Invoke("FlashOff", 3.5f);
     }
 
     private void FlashOff() {

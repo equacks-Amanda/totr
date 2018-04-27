@@ -7,7 +7,7 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: MAT_CTFRedCrystal
-  m_Shader: {fileID: 4800000, guid: a60aa93e68e555a43890d1b3db5c5acd, type: 3}
+  m_Shader: {fileID: 4800000, guid: 9c6ece3d5ef8bb84db19471daaf6c788, type: 3}
   m_ShaderKeywords: _EMISSION _NORMALMAP
   m_LightmapFlags: 1
   m_EnableInstancingVariants: 0
@@ -83,13 +83,34 @@ Material:
     - _Glossiness: 0.5
     - _GlossyReflections: 1
     - _IceVisibility: 0.42
+    - _LightSmoothness: 0
+    - _LightThreshold: 0.3
+    - _MKEditorShowDetailBehavior: 0
+    - _MKEditorShowDissolveBehavior: 0
+    - _MKEditorShowLightBehavior: 0
+    - _MKEditorShowMainBehavior: 1
+    - _MKEditorShowOutlineBehavior: 1
+    - _MKEditorShowReflectionBehavior: 0
+    - _MKEditorShowRenderBehavior: 0
+    - _MKEditorShowRimBehavior: 1
+    - _MKEditorShowShadowBehavior: 0
+    - _MKEditorShowSketchBehavior: 0
+    - _MKEditorShowSpecularBehavior: 1
+    - _MKEditorShowTranslucentBehavior: 0
     - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 1
+    - _OutlineSize: 0
     - _Parallax: 0.02
+    - _RimIntensity: 0.4
+    - _RimSize: 1.5
+    - _RimSmoothness: 0.5
     - _Scale: 1
+    - _ShadowIntensity: 1
+    - _Shininess: 0.11
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
+    - _SpecularIntensity: 0.77
     - _SrcBlend: 1
     - _Tighten: 0.45
     - _UVSec: 0
@@ -98,3 +119,8 @@ Material:
     - _Color: {r: 1, g: 0.35172415, b: 0, a: 1}
     - _EmissionColor: {r: 1, g: 0.39310342, b: 0, a: 1}
     - _FrozenTint: {r: 0.9338235, g: 0.69705284, b: 0.07552986, a: 1}
+    - _HighlightColor: {r: 1, g: 1, b: 1, a: 1}
+    - _OutlineColor: {r: 0, g: 0, b: 0, a: 1}
+    - _RimColor: {r: 1, g: 1, b: 1, a: 1}
+    - _ShadowColor: {r: 0, g: 0, b: 0, a: 1}
+    - _SpecColor: {r: 1, g: 1, b: 1, a: 0.5}

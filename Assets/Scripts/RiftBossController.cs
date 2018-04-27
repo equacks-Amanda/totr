@@ -71,7 +71,7 @@ public class RiftBossController : SpellTarget {
 #endregion
 
 #region Unity Overrides
-    void Start() {
+    protected override void Start() {
         riftController = RiftController.Instance;
         if (e_color == Constants.Global.Color.RED) {
             f_health = (Constants.ObjectiveStats.C_RiftBossMaxHealth - (Constants.ObjectiveStats.C_RiftBossHealthReductionMultiplier * Constants.TeamStats.C_RedTeamScore));     // cannot read from Constants.cs in initialization at top

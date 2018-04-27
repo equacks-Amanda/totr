@@ -63,33 +63,28 @@ public class RegisterPlayers : SceneLoader {
             b_p1Connected = true;
             go_backing1.sprite = img_red;
             go_hat1.sprite = img_hats[i_p1Hat];
-            //e_p1Color = Constants.Global.Color.RED;
         }
-        if (Input.GetJoystickNames().Length >= 2 && !b_p2Connected)
+        if (connectedControllers >= 2 && !b_p2Connected)
         {
             txt_p2Message.text = "CONNECTED";
             b_p2Connected = true;
             go_backing2.sprite = img_red;
             go_hat2.sprite = img_hats[i_p2Hat];
-            //e_p1Color = Constants.Global.Color.RED;
         }
-        if (Input.GetJoystickNames().Length >= 3 && !b_p3Connected)
+        if (connectedControllers >= 3 && !b_p3Connected)
         {
             txt_p3Message.text = "CONNECTED";
             b_p3Connected = true;
             go_backing3.sprite = img_blue;
             go_hat3.sprite = img_hats[i_p3Hat];
-            //e_p1Color = Constants.Global.Color.BLUE;
         }
-        if (Input.GetJoystickNames().Length == 4 && !b_p4Connected)
+        if (connectedControllers >= 4 && !b_p4Connected)
         {
             txt_p4Message.text = "CONNECTED";
             b_p4Connected = true;
             go_backing4.sprite = img_blue;
             go_hat4.sprite = img_hats[i_p4Hat];
-            //e_p1Color = Constants.Global.Color.BLUE;
         }
-
 
         // switch colors
         if ((p_player1.GetButtonDown("UIPageLeft") || p_player1.GetButtonDown("UIPageRight")) && !b_p1Ready)    // AND NOT READY!!!!
