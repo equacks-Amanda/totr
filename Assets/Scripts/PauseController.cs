@@ -1,4 +1,4 @@
-﻿/*  Debug Parameters Controller - Sam Caulker
+﻿/*  Pause Controller - Sam Caulker
  * 
  *  Desc:   Facilitates pausing the game and limiting it to only one user
  * 
@@ -33,7 +33,7 @@ public class PauseController : MonoBehaviour {
 
 
     public void Pause(PlayerController pc_in) {
-        if (pc_owner == null) {
+        if (pc_owner == null && Constants.Global.C_CanPause) {
             pc_owner = pc_in;
             txt_pauseIndicator.text = "P" + (pc_owner.Num + 1) + " Pause";
             if(txt_redScoreLabel != null) {
@@ -48,13 +48,19 @@ public class PauseController : MonoBehaviour {
             butt_select.Select();
 
             Time.timeScale = 0;
-            
+            Constants.Global.C_CanPause = false;
         }  
+    }
+
+    private IEnumerator PauseDelayOff() {
+        yield return new WaitForSecondsRealtime(1f);
+        Constants.Global.C_CanPause = true;
     }
 
     public void Unpause() {
         pc_owner = null;
         img_pauseBacking.SetActive(false);
+        StartCoroutine(PauseDelayOff());
         Time.timeScale = 1;
     }
 

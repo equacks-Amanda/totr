@@ -28,6 +28,9 @@ public abstract class Objective : MonoBehaviour {
     public Constants.Global.Color Color {
         get { return e_color; }
     }
+    public int Score {
+        get { return i_score; }
+    }
     public int NumberInList {
         get { return i_numberInList; }
     }
@@ -83,10 +86,11 @@ public abstract class Objective : MonoBehaviour {
         if (!go_objectIndicator)
             yield break;
 
-        yield return new WaitForSeconds(Constants.ObjectiveStats.C_NotificationTimer);
         go_objectIndicator.SetActive(true);
         yield return new WaitForSeconds(2.0f);
         go_goalIndicator.SetActive(true);
+        yield return new WaitForSeconds(Constants.ObjectiveStats.C_NotificationTimer);
+
         StartCoroutine("Notify");
     }
 

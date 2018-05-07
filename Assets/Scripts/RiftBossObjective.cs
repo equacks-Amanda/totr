@@ -3,7 +3,10 @@
  *  Desc:   Facilitates Rift Boss Objective
  * 
  */
- 
+
+using System.Collections;
+using UnityEngine;
+
 public class RiftBossObjective : Objective {
 
 #region RiftBossObjective Methods
@@ -19,8 +22,13 @@ public class RiftBossObjective : Objective {
     public void UpdateRiftBossHealth(float f) {
         calligrapher.UpdateRiftBossHealthUI(e_color, f);
         if (f <= 0) {
-            b_isComplete = true;
+            StartCoroutine(DelayCompleteforExplosion());
         }
+    }
+
+    private IEnumerator DelayCompleteforExplosion() {
+        yield return new WaitForSecondsRealtime(4f);
+        b_isComplete = true;
     }
 #endregion
 

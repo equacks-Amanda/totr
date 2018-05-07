@@ -12,12 +12,15 @@ public sealed class RiftController : MonoBehaviour {
 #region Variables and Declarations
     [SerializeField] private GameObject go_riftDeathBolt;
     [SerializeField] private GameObject go_boardClear;
+    [SerializeField] private GameObject go_screenshake;
     public GameObject[] go_playerReferences;    // TODO: write a getter for this
     [SerializeField] private GameObject[] go_deathOrbs;
     [SerializeField]
     private RiftBossController rbc_redRiftBossController;
     [SerializeField]
     private RiftBossController rbc_blueRiftBossController;
+    [SerializeField] private GameObject[] go_lightsRight;
+    [SerializeField] private GameObject[] go_lightsLeft;
 
     // enemies
 	[SerializeField] private GameObject[] go_skeletons;
@@ -181,8 +184,9 @@ public sealed class RiftController : MonoBehaviour {
     #region Rift Volatility Attacks and Effects
     private void BoardClear() {
 		maestro.PlayAnnouncementBoardClear();
-        Invoke("TurnOffBoardClear", 2f);
+        Invoke("TurnOffBoardClear", 4f);
         go_boardClear.SetActive(true);
+        go_screenshake.SetActive(true);
         foreach (GameObject player in go_playerReferences) {
             player.GetComponent<PlayerController>().TakeDamage(Constants.PlayerStats.C_MaxHealth,Constants.Global.DamageType.RIFT);
         }
@@ -209,6 +213,7 @@ public sealed class RiftController : MonoBehaviour {
     private void TurnOffBoardClear()
     {
         go_boardClear.SetActive(false);
+        go_screenshake.SetActive(false);
     }
 
 	public void ActivateEnemy(Vector3 position) {
@@ -383,12 +388,25 @@ public sealed class RiftController : MonoBehaviour {
     }
     #endregion
 
+    public void ActivateLights(int level) {
+        for (int i = 0; i < go_lightsLeft.Length; i++) { 
+            go_lightsLeft[i].SetActive(false);
+            go_lightsRight[i].SetActive(false);
+        }
+
+        go_lightsLeft[level].SetActive(true);
+        go_lightsRight[level].SetActive(true);
+    }
+
     void PlayNoise() {
 		maestro.PlayVolatilityNoise(i_volatilityLevel);
 		Invoke("PlayNoise", r_random.Next(5,10));
 	}
 
     public void ResetPlayers() {
+        if (Constants.UnitTests.C_RunningCTFTests)
+            return;
+
         go_playerReferences[0].transform.localPosition = Constants.PlayerStats.C_r1Start;
         go_playerReferences[1].transform.localPosition = Constants.PlayerStats.C_r2Start;
         go_playerReferences[2].transform.localPosition = Constants.PlayerStats.C_b1Start;

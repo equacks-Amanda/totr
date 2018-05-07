@@ -1,0 +1,1046 @@
+fileFormatVersion: 2
+guid: c63c066ab06bb4c49b6df4d3b75b1b9b
+timeCreated: 1525472272
+licenseType: Free
+ModelImporter:
+  serializedVersion: 21
+  fileIDToRecycleName:
+    100000: Apprentice_01
+    100002: Apprentice_Apprentice_Apprentice_DA_CHAR_M_ApprenticeBase_Hip_jB
+    100004: Apprentice_Head_jB
+    100006: Apprentice_L_Ankle_jB
+    100008: Apprentice_L_Elbow_jB
+    100010: Apprentice_L_Foot_jB
+    100012: Apprentice_L_Forearm_jB
+    100014: Apprentice_L_Index_jB_1
+    100016: Apprentice_L_Index_jB_2
+    100018: Apprentice_L_Index_jB_3
+    100020: Apprentice_L_Index_jB_4
+    100022: Apprentice_L_Knee_jB
+    100024: Apprentice_L_Middle_jB_1
+    100026: Apprentice_L_Middle_jB_2
+    100028: Apprentice_L_Middle_jB_3
+    100030: Apprentice_L_Middle_jB_4
+    100032: Apprentice_L_Pec_jB
+    100034: Apprentice_L_Pinky_jB_1
+    100036: Apprentice_L_Pinky_jB_2
+    100038: Apprentice_L_Pinky_jB_3
+    100040: Apprentice_L_Pinky_jB_4
+    100042: Apprentice_L_Ring_jB_1
+    100044: Apprentice_L_Ring_jB_2
+    100046: Apprentice_L_Ring_jB_3
+    100048: Apprentice_L_Ring_jB_4
+    100050: Apprentice_L_Shoulder_jB
+    100052: Apprentice_L_Thigh_jB
+    100054: Apprentice_L_Thumb_jB_1
+    100056: Apprentice_L_Thumb_jB_2
+    100058: Apprentice_L_Thumb_jB_3
+    100060: Apprentice_L_Toe_jB
+    100062: Apprentice_L_Wrist_jB
+    100064: Apprentice_Neck_jB_1
+    100066: Apprentice_Neck_jB_2
+    100068: Apprentice_R_Ankle_jB
+    100070: Apprentice_R_Elbow_jB
+    100072: Apprentice_R_Foot_jB
+    100074: Apprentice_R_Forearm_jB
+    100076: Apprentice_R_Index_jB_1
+    100078: Apprentice_R_Index_jB_2
+    100080: Apprentice_R_Index_jB_3
+    100082: Apprentice_R_Index_jB_4
+    100084: Apprentice_R_Knee_jB
+    100086: Apprentice_R_Middle_jB_1
+    100088: Apprentice_R_Middle_jB_2
+    100090: Apprentice_R_Middle_jB_3
+    100092: Apprentice_R_Middle_jB_4
+    100094: Apprentice_R_Pec_jB
+    100096: Apprentice_R_Pinky_jB_1
+    100098: Apprentice_R_Pinky_jB_2
+    100100: Apprentice_R_Pinky_jB_3
+    100102: Apprentice_R_Pinky_jB_4
+    100104: Apprentice_R_Ring_jB_1
+    100106: Apprentice_R_Ring_jB_2
+    100108: Apprentice_R_Ring_jB_3
+    100110: Apprentice_R_Ring_jB_4
+    100112: Apprentice_R_Shoulder_jB
+    100114: Apprentice_R_Thigh_jB
+    100116: Apprentice_R_Thumb_jB_1
+    100118: Apprentice_R_Thumb_jB_2
+    100120: Apprentice_R_Thumb_jB_3
+    100122: Apprentice_R_Toe_jB
+    100124: Apprentice_R_Wrist_jB
+    100126: Apprentice_Rig
+    100128: Apprentice_Spine_jB_1
+    100130: Apprentice_Spine_jB_2
+    100132: Apprentice_Spine_jB_3
+    100134: Apprentice_Spine_jB_4
+    100136: Back_jB1
+    100138: Back_jB2
+    100140: //RootNode
+    100142: Outfit_1_Sun
+    400000: Apprentice_01
+    400002: Apprentice_Apprentice_Apprentice_DA_CHAR_M_ApprenticeBase_Hip_jB
+    400004: Apprentice_Head_jB
+    400006: Apprentice_L_Ankle_jB
+    400008: Apprentice_L_Elbow_jB
+    400010: Apprentice_L_Foot_jB
+    400012: Apprentice_L_Forearm_jB
+    400014: Apprentice_L_Index_jB_1
+    400016: Apprentice_L_Index_jB_2
+    400018: Apprentice_L_Index_jB_3
+    400020: Apprentice_L_Index_jB_4
+    400022: Apprentice_L_Knee_jB
+    400024: Apprentice_L_Middle_jB_1
+    400026: Apprentice_L_Middle_jB_2
+    400028: Apprentice_L_Middle_jB_3
+    400030: Apprentice_L_Middle_jB_4
+    400032: Apprentice_L_Pec_jB
+    400034: Apprentice_L_Pinky_jB_1
+    400036: Apprentice_L_Pinky_jB_2
+    400038: Apprentice_L_Pinky_jB_3
+    400040: Apprentice_L_Pinky_jB_4
+    400042: Apprentice_L_Ring_jB_1
+    400044: Apprentice_L_Ring_jB_2
+    400046: Apprentice_L_Ring_jB_3
+    400048: Apprentice_L_Ring_jB_4
+    400050: Apprentice_L_Shoulder_jB
+    400052: Apprentice_L_Thigh_jB
+    400054: Apprentice_L_Thumb_jB_1
+    400056: Apprentice_L_Thumb_jB_2
+    400058: Apprentice_L_Thumb_jB_3
+    400060: Apprentice_L_Toe_jB
+    400062: Apprentice_L_Wrist_jB
+    400064: Apprentice_Neck_jB_1
+    400066: Apprentice_Neck_jB_2
+    400068: Apprentice_R_Ankle_jB
+    400070: Apprentice_R_Elbow_jB
+    400072: Apprentice_R_Foot_jB
+    400074: Apprentice_R_Forearm_jB
+    400076: Apprentice_R_Index_jB_1
+    400078: Apprentice_R_Index_jB_2
+    400080: Apprentice_R_Index_jB_3
+    400082: Apprentice_R_Index_jB_4
+    400084: Apprentice_R_Knee_jB
+    400086: Apprentice_R_Middle_jB_1
+    400088: Apprentice_R_Middle_jB_2
+    400090: Apprentice_R_Middle_jB_3
+    400092: Apprentice_R_Middle_jB_4
+    400094: Apprentice_R_Pec_jB
+    400096: Apprentice_R_Pinky_jB_1
+    400098: Apprentice_R_Pinky_jB_2
+    400100: Apprentice_R_Pinky_jB_3
+    400102: Apprentice_R_Pinky_jB_4
+    400104: Apprentice_R_Ring_jB_1
+    400106: Apprentice_R_Ring_jB_2
+    400108: Apprentice_R_Ring_jB_3
+    400110: Apprentice_R_Ring_jB_4
+    400112: Apprentice_R_Shoulder_jB
+    400114: Apprentice_R_Thigh_jB
+    400116: Apprentice_R_Thumb_jB_1
+    400118: Apprentice_R_Thumb_jB_2
+    400120: Apprentice_R_Thumb_jB_3
+    400122: Apprentice_R_Toe_jB
+    400124: Apprentice_R_Wrist_jB
+    400126: Apprentice_Rig
+    400128: Apprentice_Spine_jB_1
+    400130: Apprentice_Spine_jB_2
+    400132: Apprentice_Spine_jB_3
+    400134: Apprentice_Spine_jB_4
+    400136: Back_jB1
+    400138: Back_jB2
+    400140: //RootNode
+    400142: Outfit_1_Sun
+    4300000: Apprentice_01
+    4300002: Outfit_1_Sun
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: Apprentice_01
+    13700002: Outfit_1_Sun
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: "Avatar Rig Configuration mis-match. Inbetween bone rotation
+      in configuration does not match rotation in animation file:\n\t'Apprentice_R_Forearm_jB'
+      : rotation error = 9.718633 deg\n"
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Take 001
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 120
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human:
+    - boneName: Apprentice_Apprentice_Apprentice_DA_CHAR_M_ApprenticeBase_Hip_jB
+      humanName: Hips
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Apprentice_L_Thigh_jB
+      humanName: LeftUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Apprentice_R_Thigh_jB
+      humanName: RightUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Apprentice_L_Knee_jB
+      humanName: LeftLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Apprentice_R_Knee_jB
+      humanName: RightLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Apprentice_L_Ankle_jB
+      humanName: LeftFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Apprentice_R_Ankle_jB
+      humanName: RightFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Apprentice_Spine_jB_1
+      humanName: Spine
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Apprentice_Spine_jB_2
+      humanName: Chest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Apprentice_Neck_jB_1
+      humanName: Neck
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Apprentice_Neck_jB_2
+      humanName: Head
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Apprentice_L_Pec_jB
+      humanName: LeftShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Apprentice_R_Pec_jB
+      humanName: RightShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Apprentice_L_Shoulder_jB
+      humanName: LeftUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Apprentice_R_Shoulder_jB
+      humanName: RightUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Apprentice_L_Elbow_jB
+      humanName: LeftLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Apprentice_R_Elbow_jB
+      humanName: RightLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Apprentice_L_Wrist_jB
+      humanName: LeftHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Apprentice_R_Wrist_jB
+      humanName: RightHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Apprentice_L_Toe_jB
+      humanName: LeftToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Apprentice_R_Toe_jB
+      humanName: RightToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Apprentice_Head_jB
+      humanName: LeftEye
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Apprentice_L_Thumb_jB_1
+      humanName: Left Thumb Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Apprentice_L_Thumb_jB_2
+      humanName: Left Thumb Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Apprentice_L_Thumb_jB_3
+      humanName: Left Thumb Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Apprentice_L_Index_jB_1
+      humanName: Left Index Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Apprentice_L_Index_jB_2
+      humanName: Left Index Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Apprentice_L_Index_jB_3
+      humanName: Left Index Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Apprentice_L_Middle_jB_1
+      humanName: Left Middle Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Apprentice_L_Middle_jB_2
+      humanName: Left Middle Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Apprentice_L_Middle_jB_3
+      humanName: Left Middle Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Apprentice_L_Ring_jB_1
+      humanName: Left Ring Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Apprentice_L_Ring_jB_2
+      humanName: Left Ring Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Apprentice_L_Ring_jB_3
+      humanName: Left Ring Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Apprentice_L_Pinky_jB_1
+      humanName: Left Little Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Apprentice_L_Pinky_jB_2
+      humanName: Left Little Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Apprentice_L_Pinky_jB_3
+      humanName: Left Little Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Apprentice_R_Thumb_jB_1
+      humanName: Right Thumb Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Apprentice_R_Thumb_jB_2
+      humanName: Right Thumb Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Apprentice_R_Thumb_jB_3
+      humanName: Right Thumb Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Apprentice_R_Index_jB_1
+      humanName: Right Index Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Apprentice_R_Index_jB_2
+      humanName: Right Index Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Apprentice_R_Index_jB_3
+      humanName: Right Index Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Apprentice_R_Middle_jB_1
+      humanName: Right Middle Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Apprentice_R_Middle_jB_2
+      humanName: Right Middle Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Apprentice_R_Middle_jB_3
+      humanName: Right Middle Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Apprentice_R_Ring_jB_1
+      humanName: Right Ring Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Apprentice_R_Ring_jB_2
+      humanName: Right Ring Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Apprentice_R_Ring_jB_3
+      humanName: Right Ring Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Apprentice_R_Pinky_jB_1
+      humanName: Right Little Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Apprentice_R_Pinky_jB_2
+      humanName: Right Little Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Apprentice_R_Pinky_jB_3
+      humanName: Right Little Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Apprentice_Spine_jB_3
+      humanName: UpperChest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    skeleton:
+    - name: DA_CHAR-S_Apprentice01(Clone)
+      parentName: 
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Apprentice_01
+      parentName: DA_CHAR-S_Apprentice01(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Apprentice_Rig
+      parentName: DA_CHAR-S_Apprentice01(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Apprentice_Apprentice_Apprentice_DA_CHAR_M_ApprenticeBase_Hip_jB
+      parentName: Apprentice_Rig
+      position: {x: 2.2648935e-33, y: 0.9641549, z: -0.044163182}
+      rotation: {x: 0.57683444, y: -0.40897682, z: -0.57683444, w: 0.40897682}
+      scale: {x: 1, y: 1.0000006, z: 1}
+    - name: Back_jB1
+      parentName: Apprentice_Apprentice_Apprentice_DA_CHAR_M_ApprenticeBase_Hip_jB
+      position: {x: 0.14267053, y: -0.03417975, z: -3.7371292e-17}
+      rotation: {x: -0.115403146, y: 0.9933188, z: -0, w: 0}
+      scale: {x: 1.0000007, y: 1.0000001, z: 1.0000002}
+    - name: Back_jB2
+      parentName: Back_jB1
+      position: {x: -0.32316446, y: -1.5987211e-16, z: 1.7763568e-17}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1.0000002, y: 1.0000002, z: 1}
+    - name: Apprentice_L_Thigh_jB
+      parentName: Apprentice_Apprentice_Apprentice_DA_CHAR_M_ApprenticeBase_Hip_jB
+      position: {x: 0.03091379, y: 0.04382531, z: 0.10151527}
+      rotation: {x: -0, y: -0, z: -0.9834784, w: 0.18102531}
+      scale: {x: 1.0000005, y: 1.0000002, z: 1}
+    - name: Apprentice_L_Knee_jB
+      parentName: Apprentice_L_Thigh_jB
+      position: {x: -0.5166815, y: -0.047339175, z: 0.022888506}
+      rotation: {x: -0.0004837708, y: -0.0042687035, z: 0.11261301, w: -0.99362963}
+      scale: {x: 1.0000013, y: 1.0000005, z: 1.0000007}
+    - name: Apprentice_L_Ankle_jB
+      parentName: Apprentice_L_Knee_jB
+      position: {x: -0.31792176, y: 0.010846893, z: 0.02029819}
+      rotation: {x: 0.0033044359, y: -0.0024068016, z: -0.29734164, w: -0.95476246}
+      scale: {x: 0.9999999, y: 0.9999998, z: 0.9999998}
+    - name: Apprentice_L_Foot_jB
+      parentName: Apprentice_L_Ankle_jB
+      position: {x: -0.06272483, y: 0.0078907795, z: 0.00018324904}
+      rotation: {x: -0.025459437, y: 0.036347557, z: 0.46485218, w: 0.88427556}
+      scale: {x: 1.0000002, y: 1.0000002, z: 1.0000007}
+    - name: Apprentice_L_Toe_jB
+      parentName: Apprentice_L_Foot_jB
+      position: {x: -0.10409137, y: 0.008244075, z: -0.00015770769}
+      rotation: {x: -0.0000000018626445, y: -0, z: -0.0000000034924583, w: 1}
+      scale: {x: 1.0000001, y: 1.0000002, z: 1.0000002}
+    - name: Apprentice_Spine_jB_1
+      parentName: Apprentice_Apprentice_Apprentice_DA_CHAR_M_ApprenticeBase_Hip_jB
+      position: {x: -0.095250286, y: -0.01414922, z: 1.8065997e-17}
+      rotation: {x: -0.99885166, y: -0.047910973, z: -0.000000059604645, w: -0.000000029802322}
+      scale: {x: 1.0000007, y: 1.0000007, z: 1.0000008}
+    - name: Apprentice_Spine_jB_2
+      parentName: Apprentice_Spine_jB_1
+      position: {x: -0.075800575, y: -3.5527136e-17, z: 1.9894688e-18}
+      rotation: {x: 0.9806004, y: -0.19601761, z: 0.00000006832598, w: 0.000000015441088}
+      scale: {x: 1.0000005, y: 1.0000015, z: 1.0000015}
+    - name: Apprentice_Spine_jB_3
+      parentName: Apprentice_Spine_jB_2
+      position: {x: -0.082931794, y: -1.7763568e-17, z: -9.620709e-18}
+      rotation: {x: 0.000000020917708, y: -0.00000004444604, z: -0.1103018, w: 0.99389815}
+      scale: {x: 1.0000012, y: 1.0000012, z: 1.0000005}
+    - name: Apprentice_Spine_jB_4
+      parentName: Apprentice_Spine_jB_3
+      position: {x: -0.124800205, y: -0.0011861818, z: 7.07102e-17}
+      rotation: {x: 0.000000033793118, y: 0.000000025186948, z: 0.010196484, w: 0.9999481}
+      scale: {x: 1.0000008, y: 1.0000011, z: 1.0000012}
+    - name: Apprentice_Neck_jB_1
+      parentName: Apprentice_Spine_jB_4
+      position: {x: -0.09768868, y: 0.0025208113, z: -0.015109065}
+      rotation: {x: 0.0000000611316, y: 0.000000006138836, z: 0.17791146, w: -0.9840466}
+      scale: {x: 1.0000008, y: 1.0000015, z: 1.0000017}
+    - name: Apprentice_Neck_jB_2
+      parentName: Apprentice_Neck_jB_1
+      position: {x: -0.06095651, y: -0.005078656, z: -0.005128069}
+      rotation: {x: -0.000000090033055, y: -0.00000003548322, z: -0.20122121, w: -0.9795459}
+      scale: {x: 1.000001, y: 0.99999946, z: 1}
+    - name: Apprentice_Head_jB
+      parentName: Apprentice_Neck_jB_2
+      position: {x: -0.10338958, y: 1.110223e-16, z: 1.0508072e-16}
+      rotation: {x: -0, y: 3.552712e-15, z: -3.1946627e-15, w: 1}
+      scale: {x: 1.0000005, y: 1, z: 1.0000005}
+    - name: Apprentice_L_Pec_jB
+      parentName: Apprentice_Spine_jB_4
+      position: {x: -0.059633784, y: 0.045657404, z: 0.038829677}
+      rotation: {x: -0.35306144, y: 0.32949084, z: 0.6271857, w: 0.6110824}
+      scale: {x: 1.0000006, y: 1.0000005, z: 1.0000006}
+    - name: Apprentice_L_Shoulder_jB
+      parentName: Apprentice_L_Pec_jB
+      position: {x: -0.07971484, y: 0.0024943931, z: 0.021273745}
+      rotation: {x: -0.0028250501, y: 0.2607633, z: 0.014755435, w: 0.9652859}
+      scale: {x: 1.0000007, y: 1.0000006, z: 0.9999997}
+    - name: Apprentice_L_Elbow_jB
+      parentName: Apprentice_L_Shoulder_jB
+      position: {x: -0.23851146, y: -2.842171e-16, z: 5.863365e-17}
+      rotation: {x: 0.0018757342, y: 0.07732607, z: -0.024752881, w: 0.9966968}
+      scale: {x: 1.0000012, y: 1.0000005, z: 1.0000005}
+    - name: Apprentice_L_Forearm_jB
+      parentName: Apprentice_L_Elbow_jB
+      position: {x: -0.1929209, y: -0.0002865621, z: 0.0022211606}
+      rotation: {x: 0.0001161149, y: -0.0416604, z: 0.0027857346, w: 0.9991279}
+      scale: {x: 0.9999999, y: 1.0000002, z: 1.0000001}
+    - name: Apprentice_L_Wrist_jB
+      parentName: Apprentice_L_Forearm_jB
+      position: {x: -0.03877782, y: -0.003433731, z: 0.00060728187}
+      rotation: {x: -0.000116062576, y: 0.041660443, z: -0.0027857514, w: 0.9991279}
+      scale: {x: 1.000001, y: 1.0000008, z: 1.0000006}
+    - name: Apprentice_L_Pinky_jB_1
+      parentName: Apprentice_L_Wrist_jB
+      position: {x: -0.06866515, y: -0.004033391, z: -0.0308425}
+      rotation: {x: -0.0012504264, y: 0.009695121, z: 0.04526123, w: 0.99892735}
+      scale: {x: 1.0000017, y: 1.0000012, z: 1.0000002}
+    - name: Apprentice_L_Pinky_jB_2
+      parentName: Apprentice_L_Pinky_jB_1
+      position: {x: -0.029587738, y: 0.0027468395, z: -0.000057665457}
+      rotation: {x: -0.002555684, y: -0.025771456, z: -0.05917937, w: 0.9979114}
+      scale: {x: 0.9999999, y: 1.0000001, z: 0.9999998}
+    - name: Apprentice_L_Pinky_jB_3
+      parentName: Apprentice_L_Pinky_jB_2
+      position: {x: -0.024921147, y: -0.0019254204, z: 0.0028658614}
+      rotation: {x: 0.0007630253, y: 0.022547638, z: -0.033810724, w: 0.9991736}
+      scale: {x: 1.0000001, y: 1.0000002, z: 1}
+    - name: Apprentice_L_Pinky_jB_4
+      parentName: Apprentice_L_Pinky_jB_3
+      position: {x: -0.015328873, y: -0.0016468765, z: 0.00044908267}
+      rotation: {x: 1, y: -0.00000014872778, z: -0.000000036010515, w: 0.000000031315707}
+      scale: {x: 1, y: 1.0000004, z: 1.0000004}
+    - name: Apprentice_L_Ring_jB_1
+      parentName: Apprentice_L_Wrist_jB
+      position: {x: -0.07866311, y: 0.002540444, z: -0.008163786}
+      rotation: {x: 0.00059118104, y: -0.0030697526, z: -0.014816647, w: 0.9998854}
+      scale: {x: 1, y: 1, z: 0.99999994}
+    - name: Apprentice_L_Ring_jB_2
+      parentName: Apprentice_L_Ring_jB_1
+      position: {x: -0.02988222, y: 0.0000066028238, z: -0.000009751951}
+      rotation: {x: -0.00023639877, y: -0.0072244206, z: 0.031938627, w: 0.99946374}
+      scale: {x: 1.0000002, y: 1.0000001, z: 0.9999996}
+    - name: Apprentice_L_Ring_jB_3
+      parentName: Apprentice_L_Ring_jB_2
+      position: {x: -0.035632756, y: 0.00061832875, z: 0.002905216}
+      rotation: {x: 0.002561787, y: 0.029815651, z: 0.05698745, w: 0.99792635}
+      scale: {x: 0.99999994, y: 1, z: 1.0000001}
+    - name: Apprentice_L_Ring_jB_4
+      parentName: Apprentice_L_Ring_jB_3
+      position: {x: -0.01794299, y: 0.00096052943, z: 0.00018691273}
+      rotation: {x: -0.77983963, y: -0.000000109896014, z: 0.00000007534978, w: 0.6259795}
+      scale: {x: 0.99999976, y: 1.0000014, z: 1.0000011}
+    - name: Apprentice_L_Middle_jB_1
+      parentName: Apprentice_L_Wrist_jB
+      position: {x: -0.08422976, y: 0.009522236, z: 0.011384085}
+      rotation: {x: -0.008638482, y: 0.027306298, z: -0.013852493, w: 0.99949384}
+      scale: {x: 0.99999994, y: 1, z: 1.0000002}
+    - name: Apprentice_L_Middle_jB_2
+      parentName: Apprentice_L_Middle_jB_1
+      position: {x: -0.0341819, y: -0.002097696, z: 0.00074204174}
+      rotation: {x: -0.001239784, y: -0.0053997235, z: -0.03259716, w: 0.99945325}
+      scale: {x: 0.99999994, y: 1, z: 0.99999976}
+    - name: Apprentice_L_Middle_jB_3
+      parentName: Apprentice_L_Middle_jB_2
+      position: {x: -0.04060795, y: -0.0019725547, z: 0.0006105026}
+      rotation: {x: -0.001156149, y: -0.014472929, z: 0.08642174, w: 0.9961529}
+      scale: {x: 1.0000001, y: 0.99999976, z: 0.9999998}
+    - name: Apprentice_L_Middle_jB_4
+      parentName: Apprentice_L_Middle_jB_3
+      position: {x: -0.017975722, y: 0.0010990453, z: 0.0017103358}
+      rotation: {x: -0.74063885, y: 0.00000038120183, z: -0.0000002617443, w: 0.6719034}
+      scale: {x: 1, y: 1.0000007, z: 1.0000001}
+    - name: Apprentice_L_Index_jB_1
+      parentName: Apprentice_L_Wrist_jB
+      position: {x: -0.08318204, y: 0.0074957698, z: 0.032181296}
+      rotation: {x: 0.0000442881, y: 0.0047925618, z: 0.014839888, w: 0.99987847}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Apprentice_L_Index_jB_2
+      parentName: Apprentice_L_Index_jB_1
+      position: {x: -0.03335729, y: 0.003870413, z: 0.0013234213}
+      rotation: {x: -0.004760723, y: -0.004197157, z: 0.0034984958, w: 0.99997383}
+      scale: {x: 1, y: 1.0000001, z: 1}
+    - name: Apprentice_L_Index_jB_3
+      parentName: Apprentice_L_Index_jB_2
+      position: {x: -0.03139478, y: 0.0016042629, z: 0.00090841606}
+      rotation: {x: 0.0004744608, y: -0.0033468583, z: -0.01996128, w: 0.999795}
+      scale: {x: 0.99999994, y: 0.99999964, z: 1.0000001}
+    - name: Apprentice_L_Index_jB_4
+      parentName: Apprentice_L_Index_jB_3
+      position: {x: -0.01902757, y: -0.0012256446, z: 0.0010366811}
+      rotation: {x: -0.7694973, y: 0.000000042375156, z: 0.000000002200976, w: 0.6386502}
+      scale: {x: 1.0000001, y: 1.0000006, z: 1.0000005}
+    - name: Apprentice_L_Thumb_jB_1
+      parentName: Apprentice_L_Wrist_jB
+      position: {x: -0.032261122, y: -0.0016222064, z: 0.044553217}
+      rotation: {x: -0.1164432, y: 0.39321604, z: -0.19462602, w: 0.8910347}
+      scale: {x: 1.0000012, y: 1.0000017, z: 1.0000007}
+    - name: Apprentice_L_Thumb_jB_2
+      parentName: Apprentice_L_Thumb_jB_1
+      position: {x: -0.03165938, y: -0.019064844, z: 0.00070732326}
+      rotation: {x: -0.10694106, y: 0.12154423, z: -0.00014536447, w: 0.9868083}
+      scale: {x: 0.9999999, y: 0.99999994, z: 1.0000002}
+    - name: Apprentice_L_Thumb_jB_3
+      parentName: Apprentice_L_Thumb_jB_2
+      position: {x: -0.04433, y: -0.026849998, z: -0.019548541}
+      rotation: {x: 1, y: 0.0000000018335404, z: 0.000000059662824, w: 0.0000000013969832}
+      scale: {x: 1.0000001, y: 1.0000008, z: 1.0000001}
+    - name: Apprentice_R_Pec_jB
+      parentName: Apprentice_Spine_jB_4
+      position: {x: -0.04553082, y: 0.04669457, z: -0.061244063}
+      rotation: {x: -0.43253765, y: 0.35623294, z: -0.58017254, w: -0.5911084}
+      scale: {x: 1.0000002, y: 0.99999994, z: 0.9999999}
+    - name: Apprentice_R_Shoulder_jB
+      parentName: Apprentice_R_Pec_jB
+      position: {x: -0.08950669, y: -0.022059605, z: -0.0036261412}
+      rotation: {x: -0.9776276, y: -0.03961892, z: -0.20652737, w: -0.004584146}
+      scale: {x: 1.0000021, y: 1.0000013, z: 0.9999994}
+    - name: Apprentice_R_Elbow_jB
+      parentName: Apprentice_R_Shoulder_jB
+      position: {x: -0.23851158, y: -5.684342e-16, z: -5.0147384e-16}
+      rotation: {x: -0.014969415, y: -0.025166368, z: 0.04605782, w: 0.9985096}
+      scale: {x: 1.0000011, y: 1.000001, z: 0.9999994}
+    - name: Apprentice_R_Forearm_jB
+      parentName: Apprentice_R_Elbow_jB
+      position: {x: -0.19612457, y: 0.006536949, z: 0.025225215}
+      rotation: {x: -0.00039387489, y: -0.04198884, z: 0.005284325, w: 0.9991041}
+      scale: {x: 1.000001, y: 1.0000007, z: 1.0000007}
+    - name: Apprentice_R_Wrist_jB
+      parentName: Apprentice_R_Forearm_jB
+      position: {x: -0.03685981, y: 0.027628759, z: -0.010089154}
+      rotation: {x: -0.01172068, y: -0.17394845, z: -0.07665949, w: 0.9816964}
+      scale: {x: 1.0000005, y: 1.0000011, z: 1.0000011}
+    - name: Apprentice_R_Pinky_jB_1
+      parentName: Apprentice_R_Wrist_jB
+      position: {x: -0.07538118, y: -5.684342e-16, z: 0}
+      rotation: {x: -0.0027629335, y: 0.21790913, z: 0.027035676, w: 0.97559065}
+      scale: {x: 0.9999992, y: 1.0000005, z: 1.0000006}
+    - name: Apprentice_R_Pinky_jB_2
+      parentName: Apprentice_R_Pinky_jB_1
+      position: {x: -0.02971492, y: 2.842171e-16, z: -1.0658141e-16}
+      rotation: {x: -0.0045858542, y: 0.03237302, z: -0.025237747, w: 0.99914664}
+      scale: {x: 1.0000007, y: 1.0000001, z: 1}
+    - name: Apprentice_R_Pinky_jB_3
+      parentName: Apprentice_R_Pinky_jB_2
+      position: {x: -0.025159743, y: -2.842171e-16, z: 3.5527136e-17}
+      rotation: {x: 0.0025578048, y: -0.02031205, z: 0.018716317, w: 0.99961525}
+      scale: {x: 1.0000008, y: 1.0000012, z: 1}
+    - name: Apprentice_R_Pinky_jB_4
+      parentName: Apprentice_R_Pinky_jB_3
+      position: {x: -0.015422766, y: 5.684342e-16, z: 0}
+      rotation: {x: 1, y: 0.00000013312817, z: -0.000000021034788, w: 0.0000001080916}
+      scale: {x: 0.9999998, y: 0.99999934, z: 1.0000002}
+    - name: Apprentice_R_Ring_jB_1
+      parentName: Apprentice_R_Wrist_jB
+      position: {x: -0.074857846, y: -0.006612416, z: 0.024769267}
+      rotation: {x: -0.0018416127, y: 0.20626049, z: 0.04120994, w: 0.9776272}
+      scale: {x: 1.0000002, y: 1.0000012, z: 1.0000005}
+    - name: Apprentice_R_Ring_jB_2
+      parentName: Apprentice_R_Ring_jB_1
+      position: {x: -0.02988227, y: 0, z: -7.105427e-17}
+      rotation: {x: -0.0016143911, y: 0.03359253, z: -0.023339808, w: 0.9991617}
+      scale: {x: 1.0000004, y: 1.0000004, z: 1}
+    - name: Apprentice_R_Ring_jB_3
+      parentName: Apprentice_R_Ring_jB_2
+      position: {x: -0.035756968, y: -2.842171e-16, z: 8.8817837e-17}
+      rotation: {x: 0.0017743644, y: -0.0053915554, z: -0.03901023, w: 0.99922276}
+      scale: {x: 0.9999999, y: 1, z: 1}
+    - name: Apprentice_R_Ring_jB_4
+      parentName: Apprentice_R_Ring_jB_3
+      position: {x: -0.017969744, y: 5.684342e-16, z: 8.881784e-18}
+      rotation: {x: 1, y: 0.00000010515757, z: -0.000000003623426, w: 0.000000036030535}
+      scale: {x: 1.0000008, y: 1, z: 1.0000011}
+    - name: Apprentice_R_Middle_jB_1
+      parentName: Apprentice_R_Wrist_jB
+      position: {x: -0.07155642, y: -0.013480614, z: 0.044866074}
+      rotation: {x: -0.0037445454, y: 0.24687275, z: 0.0089191925, w: 0.9689996}
+      scale: {x: 1.0000005, y: 1.0000006, z: 1.0000008}
+    - name: Apprentice_R_Middle_jB_2
+      parentName: Apprentice_R_Middle_jB_1
+      position: {x: -0.034255654, y: 5.684342e-16, z: -5.3290704e-17}
+      rotation: {x: 0.0027428071, y: -0.008761563, z: 0.038960695, w: 0.99919856}
+      scale: {x: 0.9999993, y: 0.9999995, z: 0.99999994}
+    - name: Apprentice_R_Middle_jB_3
+      parentName: Apprentice_R_Middle_jB_2
+      position: {x: -0.040659428, y: -8.5265126e-16, z: 5.7731595e-17}
+      rotation: {x: -0.0056937225, y: 0.025635364, z: -0.031374913, w: 0.99916273}
+      scale: {x: 1.0000001, y: 1.0000008, z: 0.9999999}
+    - name: Apprentice_R_Middle_jB_4
+      parentName: Apprentice_R_Middle_jB_3
+      position: {x: -0.018090758, y: 2.842171e-16, z: 0}
+      rotation: {x: 1, y: 0.00000016535337, z: -0.00000010651999, w: 0.000000101397724}
+      scale: {x: 1.0000005, y: 0.9999995, z: 1.0000008}
+    - name: Apprentice_R_Index_jB_1
+      parentName: Apprentice_R_Wrist_jB
+      position: {x: -0.062201742, y: -0.010984728, z: 0.06341381}
+      rotation: {x: 0.0050223796, y: 0.23336786, z: 0.06796959, w: 0.9699971}
+      scale: {x: 1.0000002, y: 1.0000008, z: 1.0000007}
+    - name: Apprentice_R_Index_jB_2
+      parentName: Apprentice_R_Index_jB_1
+      position: {x: -0.03360779, y: 0, z: -1.4210854e-16}
+      rotation: {x: 0.0013678707, y: -0.009785511, z: -0.035546955, w: 0.9993192}
+      scale: {x: 0.9999995, y: 0.99999964, z: 0.99999994}
+    - name: Apprentice_R_Index_jB_3
+      parentName: Apprentice_R_Index_jB_2
+      position: {x: -0.031449545, y: 5.684342e-16, z: 6.217249e-17}
+      rotation: {x: -0.006420278, y: 0.009844765, z: -0.037593927, w: 0.999224}
+      scale: {x: 1.0000013, y: 1.000001, z: 1.0000001}
+    - name: Apprentice_R_Index_jB_4
+      parentName: Apprentice_R_Index_jB_3
+      position: {x: -0.019094113, y: -2.842171e-16, z: 1.7763568e-17}
+      rotation: {x: 1, y: 0.00000014947723, z: -0.00000011938388, w: 0.00000016507688}
+      scale: {x: 0.9999996, y: 0.9999994, z: 1.0000005}
+    - name: Apprentice_R_Thumb_jB_1
+      parentName: Apprentice_R_Wrist_jB
+      position: {x: 0.0047726105, y: 0.001673055, z: 0.051405992}
+      rotation: {x: 0.0023640774, y: 0.588116, z: -0.016155222, w: 0.8086118}
+      scale: {x: 1.0000002, y: 1.0000011, z: 1.0000015}
+    - name: Apprentice_R_Thumb_jB_2
+      parentName: Apprentice_R_Thumb_jB_1
+      position: {x: -0.032594692, y: 0, z: -7.105427e-17}
+      rotation: {x: 0.072799794, y: -0.03530402, z: -0.005241482, w: 0.9967078}
+      scale: {x: 0.99999887, y: 0.99999964, z: 1.0000013}
+    - name: Apprentice_R_Thumb_jB_3
+      parentName: Apprentice_R_Thumb_jB_2
+      position: {x: -0.06565326, y: 0, z: -3.5527136e-17}
+      rotation: {x: 1, y: -0.000000027939667, z: -0.00000002735759, w: 0.000000020256259}
+      scale: {x: 1, y: 0.99999934, z: 0.9999997}
+    - name: Apprentice_R_Thigh_jB
+      parentName: Apprentice_Apprentice_Apprentice_DA_CHAR_M_ApprenticeBase_Hip_jB
+      position: {x: 0.030913863, y: 0.043825362, z: -0.101514995}
+      rotation: {x: 0.021937788, y: 0.0033760816, z: 0.9827646, w: -0.18352425}
+      scale: {x: 1.0000014, y: 1.0000018, z: 1.0000007}
+    - name: Apprentice_R_Knee_jB
+      parentName: Apprentice_R_Thigh_jB
+      position: {x: -0.51277876, y: 0.08005737, z: 0.015004618}
+      rotation: {x: 0.0014973114, y: -0.014882728, z: -0.13179389, w: 0.99116427}
+      scale: {x: 1.0000013, y: 1, z: 1.0000012}
+    - name: Apprentice_R_Ankle_jB
+      parentName: Apprentice_R_Knee_jB
+      position: {x: -0.3187533, y: 5.3290704e-17, z: -1.7763568e-17}
+      rotation: {x: 0.0006755131, y: 0.028602589, z: 0.25318602, w: 0.9669945}
+      scale: {x: 1.0000004, y: 1.0000007, z: 1.0000004}
+    - name: Apprentice_R_Foot_jB
+      parentName: Apprentice_R_Ankle_jB
+      position: {x: -0.06321946, y: 7.105427e-17, z: -3.5527136e-17}
+      rotation: {x: -0.11025761, y: -0.11161355, z: 0.4731366, w: 0.8669068}
+      scale: {x: 1.0000004, y: 1.0000002, z: 0.9999999}
+    - name: Apprentice_R_Toe_jB
+      parentName: Apprentice_R_Foot_jB
+      position: {x: -0.10441743, y: 2.2204459e-17, z: -1.7763568e-17}
+      rotation: {x: -0, y: -0, z: -0.0000000018626449, w: 1}
+      scale: {x: 1.0000001, y: 1.0000005, z: 1}
+    - name: Outfit_1_Sun
+      parentName: DA_CHAR-S_Apprentice01(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 3
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

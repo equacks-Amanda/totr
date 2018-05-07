@@ -16,7 +16,9 @@ public static class Constants {
         public enum Color { RED, BLUE, NULL };
         public enum Side { LEFT = -1, RIGHT = 1 };
 		public enum DamageType { WIND, ICE, ELECTRICITY, MAGICMISSILE, ENEMY, RIFT, DEATHBOLT, RUNE, PUCK };
-        public static string C_BuildNumber = "3.31";
+        public static string C_BuildNumber = "3.50";
+        public static bool C_CanPause = true;
+        public static Global.Color C_WinningTeam = Global.Color.BLUE;
     }
 
     // Team Stats
@@ -30,6 +32,7 @@ public static class Constants {
         public static float C_MovementSpeed = 6.0f;
         public static float C_WispMovementSpeed = 1.5f;
         public static float C_RespawnTimer = 5.0f;
+        public static float C_RespawnHealthSubDivision = 100.0f;
         public static float C_MaxHealth = 300.0f;
         public static float C_StepSoundDelay = 0.4f;
         public static float C_InvulnTime = 2.0f;
@@ -67,11 +70,11 @@ public static class Constants {
         // Magic Missile Stats
         public static float C_MagicMissileLiveTime = 0.35f; //2 sec in GDD
 		public static float C_MagicMissileSpeed = 10.0f;
-        public static float C_MagicMissileDamage = 25.0f;
-        public static float C_MagicMissileCooldown = 1.0f;
+        public static float C_MagicMissileDamage = 25.0f; 
+        public static float C_MagicMissileCooldown = 0.75f;
         public static float C_MagicMissileChargeTime = C_SpellChargeTime;
         public static float C_MagicMissileChargeCooldown = 0.5f;
-        public static float C_MagicMissileHeal = 10.0f;
+        public static float C_MagicMissileHeal = 25.0f;
 
         // Wind Stats
         public static float C_WindLiveTime = 0.2f;
@@ -96,7 +99,7 @@ public static class Constants {
 
         // it's ELECTRIC! (boogie woogie woogie) Stats
         // TODO: make charge time and Live time tied
-        public static float C_ElectricLiveTime = 0.3f;
+        public static float C_ElectricLiveTime = 0.1f;
         public static float C_ElectricSpeed = 15.0f;
 		public static float C_ElectricDamage = 40.0f;
 		public static float C_ElectricCooldown = 8.0f;
@@ -130,6 +133,7 @@ public static class Constants {
         //public static Vector3 C_RedCTFGoalSpawn = C_GenericRedObjectiveGoalSpawn;
         //public static Vector3 C_BlueCTFGoalSpawn = C_GenericBlueObjectiveGoalSpawn;
         public static int C_CTFMaxScore = 3;
+        public static float C_FlagResetTimer = 10.0f;
 
         // Crystal Stats
         //public static Vector3 C_RedCrystalSpawn = C_GenericBlueObjectiveTargetSpawn;
@@ -161,7 +165,7 @@ public static class Constants {
         public static Vector3 C_RedNecromancerSpawn = new Vector3(-5.0f, 0.5f, 0f);
         public static Vector3 C_BlueNecromancerSpawn = new Vector3(5.0f, 0.5f, 0f);
         public static float C_NecromancerSpawnTime = 6.0f;
-        public static float C_NecromancerTeleportHealthThreshold = 0.25f;
+        public static float C_NecromancerTeleportHealthThreshold = 0.5f;
 
         // Rift Boss Stats
         //public static Vector3 C_RedRiftBossSpawn = new Vector3(-5.0f, 0.5f, 0f);
@@ -179,17 +183,17 @@ public static class Constants {
     public static class EnemyStats {
 
         public static float C_NecromancerBaseSpeed = 1.5f;
-        public static float C_NecromancerHealth = 1800.0f;
-		public static float C_NecromancerAvoidDistance = 3.0f;
+        public static float C_NecromancerHealth = 400.0f;
+		public static float C_NecromancerAvoidDistance = 2.0f;
 		public static int C_NecromancerSpawnCapPerSide = 1;
 		public static float C_WanderingRadius = 10.0f;
-		public static float C_RuneExplosionCountDownTime = 5.0f;
-        public static float C_RuneExplosionLiveTime = 1.5f;
+		public static float C_RuneExplosionCountDownTime = 0.5f;
+        public static float C_RuneExplosionLiveTime = 4f;
         public static float C_RuneTimer = 4.0f;
 		public static float C_SummonTimer = 8.0f;
         public static float C_RuneDamage = 75.0f;
 
-        public static int C_EnemySpawnCapPerSide = 4;
+        public static int C_EnemySpawnCapPerSide = 6;
         public static float C_EnemyBaseSpeed = 1.2f;
 		public static float C_EnemyAttackRange = 1.5f;
         public static float C_EnemyHealth = 125.0f;
@@ -254,7 +258,13 @@ public static class Constants {
         public static float C_VOIVolume = 1f;
     }
 
-	//public static GameObject[] C_Players = GameObject.FindGameObjectsWithTag("Player");
+
+    public static class UnitTests {
+        public static bool C_RunningCTFTests = false;
+
+        public static float C_WaitTime = 1.0f;
+    }
+    
 }
 
 static class RandomExtensions

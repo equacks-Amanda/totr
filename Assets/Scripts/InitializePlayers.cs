@@ -9,9 +9,18 @@ using UnityEngine.UI;
 
 public class InitializePlayers : MonoBehaviour {
 #region Variables and Declarations
-    [SerializeField] private GameObject[] go_r1Hats, go_r2Hats, go_b1Hats, go_b2Hats;
-    [SerializeField] private PlayerController pc_r1, pc_r2, pc_b1, pc_b2;
-    [SerializeField] private Text txt_r1Indicator, txt_r2Indicator, txt_b1Indicator, txt_b2Indicator;
+    [SerializeField] private GameObject[] go_r1Hats;
+    [SerializeField] private GameObject[] go_r2Hats;
+    [SerializeField] private GameObject[] go_b1Hats;
+    [SerializeField] private GameObject[] go_b2Hats;
+    [SerializeField] private PlayerController pc_r1;
+    [SerializeField] private PlayerController pc_r2;
+    [SerializeField] private PlayerController pc_b1;
+    [SerializeField] private PlayerController pc_b2;
+    [SerializeField] private Text txt_r1Indicator;
+    [SerializeField] private Text txt_r2Indicator;
+    [SerializeField] private Text txt_b1Indicator;
+    [SerializeField] private Text txt_b2Indicator;
     private bool b_r1Used = false, b_b1Used = false;
 
 #endregion

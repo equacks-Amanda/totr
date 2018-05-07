@@ -1,0 +1,298 @@
+fileFormatVersion: 2
+guid: 7c57093ec763045348b99812dd672a58
+timeCreated: 1525439607
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: SnowflakeParticles_0
+    21300002: SnowflakeParticles_1
+    21300004: SnowflakeParticles_2
+    21300006: SnowflakeParticles_3
+    21300008: SnowflakeParticles_4
+    21300010: SnowflakeParticles_5
+    21300012: SnowflakeParticles_6
+    21300014: SnowflakeParticles_7
+    21300016: SnowflakeParticles_8
+    21300018: SnowflakeParticles_9
+    21300020: SnowflakeParticles_10
+    21300022: SnowflakeParticles_11
+    21300024: DA_ENV-S_IceParticleSprites_0
+    21300026: DA_ENV-S_IceParticleSprites_1
+    21300028: DA_ENV-S_IceParticleSprites_2
+    21300030: DA_ENV-S_IceParticleSprites_3
+    21300032: DA_ENV-S_IceParticleSprites_4
+    21300034: DA_ENV-S_IceParticleSprites_5
+    21300036: DA_ENV-S_IceParticleSprites_6
+    21300038: DA_ENV-S_IceParticleSprites_7
+    21300040: DA_ENV-S_IceParticleSprites_8
+    21300042: DA_ENV-S_IceParticleSprites_9
+    21300044: DA_ENV-S_IceParticleSprites_10
+    21300046: DA_ENV-S_IceParticleSprites_11
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapU: 1
+    wrapV: -1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: iPhone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Android
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: WebGL
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: DA_ENV-S_IceParticleSprites_0
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 481
+        width: 41
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: DA_ENV-S_IceParticleSprites_1
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 444
+        width: 62
+        height: 183
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: DA_ENV-S_IceParticleSprites_2
+      rect:
+        serializedVersion: 2
+        x: 508
+        y: 440
+        width: 65
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: DA_ENV-S_IceParticleSprites_3
+      rect:
+        serializedVersion: 2
+        x: 738
+        y: 473
+        width: 41
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: DA_ENV-S_IceParticleSprites_4
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 242
+        width: 45
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: DA_ENV-S_IceParticleSprites_5
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 261
+        width: 35
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: DA_ENV-S_IceParticleSprites_6
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 241
+        width: 73
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: DA_ENV-S_IceParticleSprites_7
+      rect:
+        serializedVersion: 2
+        x: 724
+        y: 249
+        width: 36
+        height: 147
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: DA_ENV-S_IceParticleSprites_8
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 84
+        width: 37
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: DA_ENV-S_IceParticleSprites_9
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 60
+        width: 35
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: DA_ENV-S_IceParticleSprites_10
+      rect:
+        serializedVersion: 2
+        x: 516
+        y: 88
+        width: 49
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: DA_ENV-S_IceParticleSprites_11
+      rect:
+        serializedVersion: 2
+        x: 733
+        y: 71
+        width: 29
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    outline: []
+    physicsShape: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

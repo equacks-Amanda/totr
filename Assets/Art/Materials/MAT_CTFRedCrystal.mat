@@ -88,7 +88,7 @@ Material:
     - _MKEditorShowDetailBehavior: 0
     - _MKEditorShowDissolveBehavior: 0
     - _MKEditorShowLightBehavior: 0
-    - _MKEditorShowMainBehavior: 1
+    - _MKEditorShowMainBehavior: 0
     - _MKEditorShowOutlineBehavior: 1
     - _MKEditorShowReflectionBehavior: 0
     - _MKEditorShowRenderBehavior: 0

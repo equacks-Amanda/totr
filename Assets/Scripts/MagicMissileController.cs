@@ -18,7 +18,7 @@ public class MagicMissileController : SpellController {
 
     override protected void BuffSpell() {
         // Magic Missile doesn't cross the rift. Destroy it
-        Destroy(gameObject);
+        //Destroy(gameObject);
     }
 #endregion
 

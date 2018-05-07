@@ -12,6 +12,7 @@ public class RiftBossController : SpellTarget {
     [SerializeField] private GameObject go_ForceField;
     [SerializeField] private GameObject[] go_runes;
     [SerializeField] private GameObject[] go_skeletons;
+    [SerializeField] private GameObject go_explode;
 	private bool b_firstShield, b_secondShield = false;
 #endregion
 
@@ -19,6 +20,12 @@ public class RiftBossController : SpellTarget {
     public void TakeDamage(float damage) {
         if (!go_ForceField.activeSelf) {
             f_health -= damage;
+            if (f_health <= 0) {
+                Time.timeScale = 0;
+                anim.updateMode = AnimatorUpdateMode.UnscaledTime;
+                anim.SetTrigger("deathTrigger");
+                go_explode.SetActive(true);
+            }
             rbo_owner.UpdateRiftBossHealth(f_health);
             CancelInvoke("Notify");
             InvokeRepeating("Notify", Constants.ObjectiveStats.C_NotificationTimer, Constants.ObjectiveStats.C_NotificationTimer);
@@ -68,6 +75,8 @@ public class RiftBossController : SpellTarget {
             go_skeletons[i].SetActive(true);
         }
     }
+
+
 #endregion
 
 #region Unity Overrides

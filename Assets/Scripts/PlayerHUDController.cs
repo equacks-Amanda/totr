@@ -13,6 +13,7 @@ public class PlayerHUDController : MonoBehaviour {
     private Color col_origIceColor;
     private Color col_origWindColor;
     private Color col_origElecColor;
+    private Color col_origHealthColor;
     private Vector2 v2_origIceSize;
     private Vector2 v2_origWindSize;
     private Vector2 v2_origElecSize;
@@ -20,6 +21,7 @@ public class PlayerHUDController : MonoBehaviour {
     private void Start() {
         col_origElecColor = img_electricbar.color;
         col_origIceColor = img_icebar.color;
+        col_origHealthColor = img_healthbar.color;
         //col_origWindColor = img_windbar.color;
         v2_origIceSize = img_icebar.rectTransform.sizeDelta;
         v2_origElecSize = img_electricbar.rectTransform.sizeDelta;
@@ -30,7 +32,17 @@ public class PlayerHUDController : MonoBehaviour {
 		//img_windbar.fillAmount = playc_trackedPlayer.NextWind / Constants.SpellStats.C_WindCooldown;
         img_icebar.fillAmount = playc_trackedPlayer.NextIce / Constants.SpellStats.C_IceCooldown;
 		img_electricbar.fillAmount = playc_trackedPlayer.NextElectric / Constants.SpellStats.C_ElectricCooldown;
-		img_healthbar.fillAmount = playc_trackedPlayer.Health / Constants.PlayerStats.C_MaxHealth;
+
+        if (playc_trackedPlayer.Wisp)
+        {
+            img_healthbar.color = new Color32(255, 255, 255, 255);
+            img_healthbar.fillAmount = playc_trackedPlayer.Health / Constants.PlayerStats.C_MaxHealth;
+        }
+        else
+        {
+            img_healthbar.color = col_origHealthColor;
+            img_healthbar.fillAmount = playc_trackedPlayer.Health / Constants.PlayerStats.C_MaxHealth;
+        }
 
 
         //Statements for doing visual things to the spell counters.

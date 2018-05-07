@@ -46,6 +46,7 @@ public class DebugParametersController : MonoBehaviour {
     [SerializeField] private Slider slider_electricCooldown;
     [SerializeField] private Slider slider_magicMissileSpeed;
     [SerializeField] private Slider slider_magicMissileHeal;
+    [SerializeField] private Slider slider_magicMissileFireRate;
     [SerializeField] private Slider slider_projSize;
     [SerializeField] private Slider slider_projLife;
     [SerializeField] private Slider slider_windForce;
@@ -54,6 +55,7 @@ public class DebugParametersController : MonoBehaviour {
     [SerializeField] private Slider slider_enemySpawn;
     [SerializeField] private Slider slider_enemySpeed;
     [SerializeField] private Slider slider_enemyHealth;
+    [SerializeField] private Slider slider_necromancerHealth;
     [SerializeField] private Slider slider_enemyDamage;
     [SerializeField] private Slider slider_respawnTime;
     [SerializeField] private Slider slider_wispMoveSpeed;
@@ -89,6 +91,7 @@ public class DebugParametersController : MonoBehaviour {
     [SerializeField] private Text txt_electricCooldown;
     [SerializeField] private Text txt_magicMissileSpeed;
     [SerializeField] private Text txt_magicMissileHeal;
+    [SerializeField] private Text txt_magicMissileFireRate;
     [SerializeField] private Text txt_projSize;
     [SerializeField] private Text txt_projLife;
     [SerializeField] private Text txt_windForce;
@@ -97,6 +100,7 @@ public class DebugParametersController : MonoBehaviour {
     [SerializeField] private Text txt_enemySpawn;
     [SerializeField] private Text txt_enemySpeed;
     [SerializeField] private Text txt_enemyHealth;
+    [SerializeField] private Text txt_necromancerHealth;
     [SerializeField] private Text txt_enemyDamage;
     [SerializeField] private Text txt_respawnTime;
     [SerializeField] private Text txt_wispMoveSpeed;
@@ -143,6 +147,13 @@ public class DebugParametersController : MonoBehaviour {
     public void ChangeMagicMissileHeal(float f__magicMissileHealIn) {
         txt_magicMissileHeal.text = slider_magicMissileHeal.value.ToString();
         Constants.SpellStats.C_MagicMissileHeal = (int)f__magicMissileHealIn;
+    }
+
+    public void ChangeMagicMissileFireRate(float f__magicMissileRate) {
+        float value = f__magicMissileRate / 10.0f;
+        Debug.Log(value);
+        txt_magicMissileFireRate.text = value.ToString();
+        Constants.SpellStats.C_MagicMissileCooldown = value;
     }
 
     public void ChangeWindSpeed(float f_windSpeedIn) {
@@ -216,6 +227,13 @@ public class DebugParametersController : MonoBehaviour {
         float value = f_enemyHealthIn * 25.0f;
         txt_enemyHealth.text = value.ToString();
         Constants.EnemyStats.C_EnemyHealth = (int)value;
+    }
+
+    public void ChangeNecromancerHealth(float f_neckHealthIn)
+    {
+        float value = f_neckHealthIn * 50.0f;
+        txt_necromancerHealth.text = value.ToString();
+        Constants.EnemyStats.C_NecromancerHealth = (int)value;
     }
 
     public void ChangeEnemyDamage(float f_enemyDamageIn) {
@@ -436,6 +454,10 @@ public class DebugParametersController : MonoBehaviour {
         txt_enemyHealth.text = Constants.EnemyStats.C_EnemyHealth.ToString();
         slider_enemyHealth.value = Constants.EnemyStats.C_EnemyHealth / 25;
 
+        // Necromancer Health
+        txt_necromancerHealth.text = Constants.EnemyStats.C_NecromancerHealth.ToString();
+        slider_necromancerHealth.value = Constants.EnemyStats.C_NecromancerHealth / 50;
+
         // Enemy Damage
         txt_enemyDamage.text = Constants.EnemyStats.C_EnemyDamage.ToString();
         slider_enemyDamage.value = Constants.EnemyStats.C_EnemyDamage / 5;
@@ -478,6 +500,10 @@ public class DebugParametersController : MonoBehaviour {
         // Magic Missile Heal
         txt_magicMissileHeal.text = Constants.SpellStats.C_MagicMissileHeal.ToString();
         slider_magicMissileHeal.value = Constants.SpellStats.C_MagicMissileHeal;
+
+        // Magic Missile Fire Rate
+        txt_magicMissileFireRate.text = Constants.SpellStats.C_MagicMissileCooldown.ToString();
+        slider_magicMissileFireRate.value = Constants.SpellStats.C_MagicMissileCooldown * 10;
 
         // Projectile Size 
         txt_projSize.text = Constants.SpellStats.C_PlayerProjectileSize.ToString();

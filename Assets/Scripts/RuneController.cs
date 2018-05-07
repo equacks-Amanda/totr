@@ -19,15 +19,19 @@ public class RuneController : MonoBehaviour {
     }
 #endregion
 #region Unity Overrides
+    void Start() {
+        Invoke("Explode", 4.0f);
+    }
+
     void OnTriggerEnter(Collider other) {
         if ((other.CompareTag("Player") || other.CompareTag("Enemy")) && !activated) {
             activated = true;
             Invoke("Explode", Constants.EnemyStats.C_RuneExplosionCountDownTime);
         }
     }
-#endregion
 
-	void OnDisable() {
+    void OnDisable() {
 		CancelInvoke();
 	}
+#endregion
 }

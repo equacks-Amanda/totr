@@ -13,27 +13,45 @@ using UnityEngine;
 
 public sealed class Calligrapher : MonoBehaviour {
 
-    [SerializeField] private Text txt_redScoreText, txt_blueScoreText;
-    [SerializeField] private Image img_redCTFIcon, img_blueCTFIcon;
-    [SerializeField] private Image img_redHockeyIcon, img_blueHockeyIcon;
-    [SerializeField] private Image img_redNecroIcon, img_blueNecroIcon;
+    [SerializeField] private Text txt_redScoreText;
+    [SerializeField] private Text txt_blueScoreText;
+    [SerializeField] private Image img_redCTFIcon;
+    [SerializeField] private Image img_blueCTFIcon;
+    [SerializeField] private Image img_redHockeyIcon;
+    [SerializeField] private Image img_blueHockeyIcon;
+    [SerializeField] private Image img_redNecroIcon;
+    [SerializeField] private Image img_blueNecroIcon;
 
-    [SerializeField] private Text txt_redRiftBossHealthText, txt_blueRiftBossHealthText;
-    [SerializeField] private Image img_redBossIcon, img_blueBossIcon;
+    [SerializeField] private Text txt_redRiftBossHealthText;
+    [SerializeField] private Text txt_blueRiftBossHealthText;
+    [SerializeField] private Image img_redBossIcon;
+    [SerializeField] private Image img_blueBossIcon;
 
-    [SerializeField] private Text txt_redObjvTitle, txt_blueObjvTitle;
-    [SerializeField] private Text txt_redObjvDescription, txt_blueObjvDescription;
-    [SerializeField] private Text txt_redPauseObjvTitle, txt_bluePauseObjvTitle;
-    [SerializeField] private Text txt_redPauseObjvDescription, txt_bluePauseObjvDescription;
-    [SerializeField] private Text txt_redTotalScore, txt_blueTotalScore;
- 
-    [SerializeField] private Image img_redPopupBacking, img_bluePopupBacking;
-    [SerializeField] private GameObject go_redCTFGif, go_blueCTFGif;
-    [SerializeField] private GameObject go_redHockeyGif, go_blueHockeyGif;
-    [SerializeField] private GameObject go_redNecroGif, go_blueNecroGif;
-    [SerializeField] private GameObject go_redBossGif, go_blueBossGif;
+    [SerializeField] private Text txt_redObjvTitle;
+    [SerializeField] private Text txt_blueObjvTitle;
+    [SerializeField] private Text txt_redObjvDescription;
+    [SerializeField] private Text txt_blueObjvDescription;
+    [SerializeField] private Text txt_redPauseObjvTitle;
+    [SerializeField] private Text txt_bluePauseObjvTitle;
+    [SerializeField] private Text txt_redPauseObjvDescription;
+    [SerializeField] private Text txt_bluePauseObjvDescription;
+    [SerializeField] private Text txt_redTotalScore;
+    [SerializeField] private Text txt_blueTotalScore;
+
+    [SerializeField] private Image img_redPopupBacking;
+    [SerializeField] private Image img_bluePopupBacking;
+    [SerializeField] private GameObject go_redCTFGif;
+    [SerializeField] private GameObject go_blueCTFGif;
+    [SerializeField] private GameObject go_redHockeyGif;
+    [SerializeField] private GameObject go_blueHockeyGif;
+    [SerializeField] private GameObject go_redNecroGif;
+    [SerializeField] private GameObject go_blueNecroGif;
+    [SerializeField] private GameObject go_redBossGif;
+    [SerializeField] private GameObject go_blueBossGif;
     private GameObject go_redActiveGif, go_blueActiveGif;
-    [SerializeField] private Image img_redFlashBacking, img_blueFlashBacking;
+    [SerializeField] private Image img_redFlashBacking;
+    [SerializeField] private Image img_blueFlashBacking;
+
 
     private float f_redStartTime, f_blueStartTime;  // controls UI pop-up fading
     //private float f_redFlashTime, f_blueFlashTime;  // separate timers for flash to avoid overwriting, since both animations play at roughly the same time.
@@ -77,6 +95,10 @@ public sealed class Calligrapher : MonoBehaviour {
     //----------------------------
     // Initialization of different objectives
     public void CTFInit(Constants.Global.Color colorIn) {
+        if (Constants.UnitTests.C_RunningCTFTests)
+            return;
+
+
         if (colorIn == Constants.Global.Color.RED) {
             txt_redScoreText.transform.parent.gameObject.SetActive(true);
             img_redCTFIcon.gameObject.SetActive(true);

@@ -104,8 +104,8 @@ public class NecromancerController : EnemyController {
 
 	protected override void EnterStateBreakout() {
 		base.EnterStateBreakout();
-		float z = Random.Range(-1.0f*(Constants.EnemyStats.C_MapBoundryZAxis-3.0f), (Constants.EnemyStats.C_MapBoundryZAxis-3.0f));
-		float x = Random.Range(3.0f, (Constants.EnemyStats.C_MapBoundryXAxis-3.0f));
+		float z = Random.Range(-1.0f*(Constants.EnemyStats.C_MapBoundryZAxis-4.0f), (Constants.EnemyStats.C_MapBoundryZAxis-4.0f));
+		float x = Random.Range(5.0f, (Constants.EnemyStats.C_MapBoundryXAxis-5.0f));
 		if (transform.position.x < 0) {
 			x = -1 * x;
 		}
@@ -219,7 +219,7 @@ public class NecromancerController : EnemyController {
 	}
 
 	private void Summon() {
-		for (int i = 0; i < 4; i++) {
+		for (int i = 0; i < 2; i++) {
 			riftController.CircularEnemySpawn(transform.position, e_startSide);
 		}
 	}
