@@ -29,10 +29,10 @@ public class ElectricAOEController : MonoBehaviour {
 		Invoke("InvokeDestroy", Constants.SpellStats.C_ElectricAOELiveTime);
 	}
 	
-	void OnTriggerEnter(Collider other) {
+	void OnTriggerStay(Collider other) {
         SpellTarget target;
         if (target = other.GetComponent<SpellTarget>()) {
-            target.AOECoroutine = StartCoroutine(target.ApplyAOE(e_color, f_damage));
+            target.ApplySpellEffect(Constants.SpellStats.SpellType.ELECTRICITYAOE, e_color, Constants.SpellStats.C_ElectricDamage, Vector3.zero);
         }
     }
 
@@ -40,6 +40,10 @@ public class ElectricAOEController : MonoBehaviour {
         SpellTarget target;
         if (target = other.GetComponent<SpellTarget>()) {
             target.NegateSpellEffect(Constants.SpellStats.SpellType.ELECTRICITYAOE);
+            PlayerController target_player;
+            if (target_player = other.GetComponent<PlayerController>()) {
+                target_player.CleanOffGoo();
+            }
         }
 	}
 #endregion

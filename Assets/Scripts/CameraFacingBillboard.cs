@@ -27,6 +27,7 @@ public class CameraFacingBillboard : MonoBehaviour {
 
 #region Unity Overrides
     void OnEnable() {
+        gameObject.SetActive(true);
         if (!b_persistent) {
             Invoke("SetInactive", 2.0f);  // non-player indicators do not persist after spawn
         }

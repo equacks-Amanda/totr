@@ -35,30 +35,17 @@ public abstract class SpellTarget : MonoBehaviour {
 	public float Health{
 		get { return f_health; }
 	}
-    #endregion
-#endregion
 
-#region SpellTarget Shared Methods
+    public Rigidbody RigidBody {
+        get { return rb; }
+    }
+    #endregion
+    #endregion
+
+    #region SpellTarget Shared Methods
     public abstract void ApplySpellEffect(Constants.SpellStats.SpellType spell, Constants.Global.Color color, float damage, Vector3 direction);
 
-    public virtual void NegateSpellEffect(Constants.SpellStats.SpellType spell) {
-        if (spell == Constants.SpellStats.SpellType.ELECTRICITYAOE && cor_AOECoroutine != null) {
-            StopCoroutine(cor_AOECoroutine);
-        }
-    }
-
-    public virtual IEnumerator ApplyAOE(Constants.Global.Color color, float damage) {
-		if (gameObject && gameObject.activeSelf) {
-            ApplySpellEffect(Constants.SpellStats.SpellType.ELECTRICITYAOE, color, damage, Vector3.zero);
-            yield return new WaitForSeconds(Constants.SpellStats.C_ElectricAOEDamageRate);
-            if (gameObject && gameObject.activeSelf) {
-                cor_AOECoroutine = StartCoroutine(ApplyAOE(color, damage));
-            }
-        }
-        else {  // hopefully this is not malicious
-            NegateSpellEffect(Constants.SpellStats.SpellType.ELECTRICITYAOE);
-        }
-	}
+    public virtual void NegateSpellEffect(Constants.SpellStats.SpellType spell) { }
 
     public virtual void Notify() {
         go_indicator.SetActive(true);

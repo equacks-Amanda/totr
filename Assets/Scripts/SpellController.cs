@@ -36,6 +36,8 @@ public abstract class SpellController : MonoBehaviour {
     public void Init(PlayerController owner, Constants.Global.Color color, float chargeTime) {
         pc_owner = owner;
         e_color = color;
+        Physics.IgnoreCollision(pc_owner.RigidBody.GetComponent<Collider>(), GetComponent<Collider>());
+
         Charge(chargeTime);
         if(e_color == Constants.Global.Color.RED) {
             gameObject.layer = LayerMask.NameToLayer("RedShot");
@@ -89,7 +91,11 @@ public abstract class SpellController : MonoBehaviour {
             Vector3 v3_direction = other.gameObject.transform.forward.normalized;
             transform.forward = v3_direction;
             rb.velocity = v3_direction * rb.velocity.magnitude;
+
+            //Allow any collision with the original owner of the spell, reassign the pc_owner, and now ignore the new playercontroller
+            Physics.IgnoreCollision(pc_owner.RigidBody.GetComponent<Collider>(), GetComponent<Collider>(), false);
             pc_owner = other.gameObject.transform.parent.gameObject.GetComponent<PlayerController>();
+            Physics.IgnoreCollision(pc_owner.RigidBody.GetComponent<Collider>(), GetComponent<Collider>());
             e_color = other.gameObject.transform.parent.gameObject.GetComponent<PlayerController>().Color;
         }
     }

@@ -24,7 +24,8 @@ public class ObjectBounce : MonoBehaviour {
     {
         index += Time.deltaTime;
         x = f_ampX * Mathf.Sin(f_omegaX * index) + start_x;
-        y = Mathf.Abs(f_ampY * Mathf.Sin(f_omegaY * index)) + start_y;
+
+        y = (f_ampY * Mathf.Cos(f_omegaY * index)) + start_y;
 
         if (verticalBounce && horizBounce)
             transform.localPosition = new Vector3(x, y, start_z);

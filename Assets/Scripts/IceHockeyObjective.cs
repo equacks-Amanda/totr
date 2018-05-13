@@ -21,13 +21,8 @@ public class IceHockeyObjective : Objective {
 
     // Update UI and check for completion
     public void UpdatePuckScore() {
-        i_score++;
-		maestro.PlayScore();
-        calligrapher.UpdateGoalScoreUI(e_color, i_score);
-        gc_owned.FlashOn();
-        if (i_score >= Constants.ObjectiveStats.C_HockeyMaxScore) {
-            b_isComplete = true;
-        }
+		UpdateScore(Constants.ObjectiveStats.C_HockeyMaxScore);
+		gc_owned.FlashOn();
     }
 #endregion
 

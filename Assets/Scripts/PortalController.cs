@@ -22,6 +22,10 @@ public class PortalController : MonoBehaviour {
 	void OnTriggerEnter(Collider other) {
 
 		if (other.tag == "Player" || other.tag == "Spell" || other.tag == "Potato") {
+			if(other.tag == "Player"){
+				PlayerController player = other.gameObject.GetComponent<PlayerController>();
+				maestro.PlayAnnouncementPortal(player.Num);
+			}
             maestro.PlayPortal();
             go_pulseEffect.SetActive(true);
             Invoke("TurnOffParticleSystem", 1f);

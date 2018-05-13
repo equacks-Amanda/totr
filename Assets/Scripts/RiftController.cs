@@ -184,7 +184,7 @@ public sealed class RiftController : MonoBehaviour {
     #region Rift Volatility Attacks and Effects
     private void BoardClear() {
 		maestro.PlayAnnouncementBoardClear();
-        Invoke("TurnOffBoardClear", 4f);
+        Invoke("TurnOffBoardClear", 10f);
         go_boardClear.SetActive(true);
         go_screenshake.SetActive(true);
         foreach (GameObject player in go_playerReferences) {
@@ -193,18 +193,18 @@ public sealed class RiftController : MonoBehaviour {
 
 		if (go_necromancers[0]) {
 			for (int i = 0; i < go_skeletons.Length; i++) {
-				if (go_skeletons[i].activeSelf) {
+				if (go_skeletons[i].activeInHierarchy) {
 					go_skeletons[i].GetComponent<SkeletonController>().TakeDamage(Constants.EnemyStats.C_EnemyHealth, Constants.Global.Color.NULL);
 				}
 			}
 
 			for (int i = 0; i < go_necromancers.Length; i++) {
-				if (go_necromancers[i].activeSelf)
+				if (go_necromancers[i].activeInHierarchy)
 					go_necromancers[i].GetComponent<NecromancerController>().TakeDamage(Constants.EnemyStats.C_NecromancerHealth, Constants.Global.Color.NULL);
 			}
 
 			for (int i = 0; i < go_runes.Length; i++) {
-				if (go_runes[i].activeSelf)
+				if (go_runes[i].activeInHierarchy)
 					go_runes[i].SetActive(false);
 			}
 		}
@@ -329,6 +329,10 @@ public sealed class RiftController : MonoBehaviour {
         else if (pos.x <= (-1.0f * Constants.EnemyStats.C_MapBoundryXAxis)) {
             float diff = pos.x + Constants.EnemyStats.C_MapBoundryXAxis;
             pos.x = pos.x - diff + 1;
+        }
+        //Checks to see if the pos.x is the same side thats been passed in.  if not, then swap the side value
+        if(!(pos.x >= 0 && s >= 0) && !(pos.x < 0 && s < 0)) {
+            pos.x *= -1;
         }
 
         return pos;

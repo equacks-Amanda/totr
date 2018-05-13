@@ -4,16 +4,32 @@
  * 
  */
 
+using System.Collections;
 using UnityEngine;
 
 public class WarmUpPortalController : SceneLoader {
 #region Variables and Declarations
     [SerializeField] private GameObject go_pulseEffect;
+    [SerializeField] private GameObject go_whatshisface;
     private static int i_players = 4;           // number of players in the game, should be 4.
     private int i_remainingPlayers = i_players; // decreases as players enter the portal
 #endregion
 
+    // this should absolutely not be being done here
+    private IEnumerator WaitForCameraAnimation() {
+        Time.timeScale = 0;
+        yield return new WaitForSecondsRealtime(12f);
+        Time.timeScale = 1;
+        go_whatshisface.SetActive(false);
+    }
+
+
 #region Unity Overrides
+void Start() {
+        StartCoroutine(WaitForCameraAnimation());
+    }
+
+
     void OnTriggerEnter(Collider other) {
 		if (other.CompareTag("Player")) {
             go_pulseEffect.SetActive(true);

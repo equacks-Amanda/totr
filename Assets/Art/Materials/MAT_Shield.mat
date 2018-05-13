@@ -68,20 +68,20 @@ Material:
     - _MKEditorShowDissolveBehavior: 0
     - _MKEditorShowLightBehavior: 0
     - _MKEditorShowMainBehavior: 1
-    - _MKEditorShowOutlineBehavior: 0
+    - _MKEditorShowOutlineBehavior: 1
     - _MKEditorShowReflectionBehavior: 0
     - _MKEditorShowRenderBehavior: 0
     - _MKEditorShowRimBehavior: 1
-    - _MKEditorShowShadowBehavior: 0
+    - _MKEditorShowShadowBehavior: 1
     - _MKEditorShowSketchBehavior: 0
     - _MKEditorShowSpecularBehavior: 1
     - _MKEditorShowTranslucentBehavior: 0
     - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 1
-    - _OutlineSize: 0.02
+    - _OutlineSize: 0
     - _Parallax: 0.02
-    - _RimIntensity: 0
+    - _RimIntensity: 0.04
     - _RimSize: 1.5
     - _RimSmoothness: 0.5
     - _ShadowIntensity: 1
@@ -95,8 +95,8 @@ Material:
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _HighlightColor: {r: 1, g: 1, b: 1, a: 1}
+    - _HighlightColor: {r: 1, g: 0.95943207, b: 0.85294116, a: 1}
     - _OutlineColor: {r: 0, g: 0, b: 0, a: 1}
-    - _RimColor: {r: 1, g: 1, b: 1, a: 1}
-    - _ShadowColor: {r: 0, g: 0, b: 0, a: 1}
-    - _SpecColor: {r: 1, g: 1, b: 1, a: 0.5}
+    - _RimColor: {r: 0.7647059, g: 0.8929006, b: 1, a: 1}
+    - _ShadowColor: {r: 0.009515572, g: 0.051351283, b: 0.08088237, a: 1}
+    - _SpecColor: {r: 0.9705882, g: 0.9044386, b: 0.820718, a: 0.5}

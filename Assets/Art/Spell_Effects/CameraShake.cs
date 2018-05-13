@@ -8,32 +8,34 @@ using System.Collections;
 
 public class CameraShake : MonoBehaviour {
 
-	public bool debugMode = false;//Test-run/Call ShakeCamera() on start
+    public float startAmount;//The initial shake amount (to determine percentage), set when ShakeCamera is called.
+    public float startDuration;//The initial shake duration, set when ShakeCamera is called.
 
-	public float shakeAmount;//The amount to shake this frame.
-	public float shakeDuration;//The duration this frame.
+
 
 	//Readonly values...
 	float shakePercentage;//A percentage (0-1) representing the amount of shake to be applied when setting rotation.
-	float startAmount;//The initial shake amount (to determine percentage), set when ShakeCamera is called.
-	float startDuration;//The initial shake duration, set when ShakeCamera is called.
+    public float shakeAmount;//The amount to shake this frame.
+    public float shakeDuration;//The duration this frame.
 
-	bool isRunning = false;	//Is the coroutine running right now?
+    bool isRunning = false;	//Is the coroutine running right now?
 
 	public bool smooth;//Smooth rotation?
 	public float smoothAmount = 5f;//Amount to smooth
 
-	void Start () {
-
-		if(debugMode) ShakeCamera ();
+	void OnEnable () {
+        isRunning = false;
+        ShakeCamera ();
 	}
 
 
 	void ShakeCamera() {
 
-		startAmount = shakeAmount;//Set default (start) values
-		startDuration = shakeDuration;//Set default (start) values
-
+        //startAmount = shakeAmount;//Set default (start) values
+        //startDuration = shakeDuration;//Set default (start) values
+        shakeAmount = startAmount;
+        shakeDuration = startDuration;
+        Debug.Log(isRunning);
 		if (!isRunning) StartCoroutine (Shake());//Only call the coroutine if it isn't currently running. Otherwise, just set the variables.
 	}
 
@@ -50,9 +52,8 @@ public class CameraShake : MonoBehaviour {
 
 	IEnumerator Shake() {
 		isRunning = true;
-
-		while (shakeDuration > 0.01f) {
-			Vector3 rotationAmount = Random.insideUnitSphere * shakeAmount;//A Vector3 to add to the Local Rotation
+        while (shakeDuration > 0.01f) {
+            Vector3 rotationAmount = Random.insideUnitSphere * shakeAmount;//A Vector3 to add to the Local Rotation
 			rotationAmount.z = 0;//Don't change the Z; it looks funny.
 
 			shakePercentage = shakeDuration / startDuration;//Used to set the amount of shake (% * startAmount).

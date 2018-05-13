@@ -60,6 +60,7 @@ public sealed class Maestro : MonoBehaviour {
 	
 	[Header("Audio Clips (Announcer)")]
 	[SerializeField] private AudioClip[] ac_generic;
+	[SerializeField] private AudioClip[] ac_team_encouragement;
 	[SerializeField] private AudioClip[] ac_volatility_up;
 	[SerializeField] private AudioClip[] ac_trial_transition;
 	[SerializeField] private AudioClip[] ac_wisp_generic;
@@ -71,6 +72,17 @@ public sealed class Maestro : MonoBehaviour {
 	[SerializeField] private AudioClip[] ac_spell_hit_player;
 	[SerializeField] private AudioClip[] ac_generic_hit_player;
 	[SerializeField] private AudioClip[] ac_board_clear;
+	[SerializeField] private AudioClip[] ac_first_score;
+	[SerializeField] private AudioClip[] ac_score_comeback;
+	[SerializeField] private AudioClip[] ac_score_loser;
+	[SerializeField] private AudioClip[] ac_friendly_fire;
+	[SerializeField] private AudioClip[] ac_player_spawn;
+	[SerializeField] private AudioClip[] ac_portal_announcement_one;
+	[SerializeField] private AudioClip[] ac_portal_announcement_two;
+	[SerializeField] private AudioClip[] ac_portal_announcement_three;
+	[SerializeField] private AudioClip[] ac_portal_announcement_four;
+	[SerializeField] private AudioClip[] ac_score_announcement;
+	[SerializeField] private AudioClip[] ac_idle;
 	[SerializeField] private AudioClip ac_begin_ctf;
 	[SerializeField] private AudioClip ac_begin_hockey;
 	[SerializeField] private AudioClip ac_begin_crystal_destruction;
@@ -114,22 +126,22 @@ public sealed class Maestro : MonoBehaviour {
     }
 	
 	public void PlayVolatilityNoise(int i) {
-		System.Random r = new System.Random();
+		
 		switch(i){
 			case(0):
-				as_sfxMe.PlayOneShot(ac_volatility_noise_0[r.Next(0, ac_volatility_noise_0.Length)],0.5f);
+				as_sfxMe.PlayOneShot(ac_volatility_noise_0[Constants.R_Random.Next(0, ac_volatility_noise_0.Length)],0.5f);
 				break;
 			case(1):
-				as_sfxMe.PlayOneShot(ac_volatility_noise_1[r.Next(0, ac_volatility_noise_1.Length)],0.5f);
+				as_sfxMe.PlayOneShot(ac_volatility_noise_1[Constants.R_Random.Next(0, ac_volatility_noise_1.Length)],0.5f);
 				break;
 			case(2):
-				as_sfxMe.PlayOneShot(ac_volatility_noise_2[r.Next(0, ac_volatility_noise_2.Length)],0.5f);
+				as_sfxMe.PlayOneShot(ac_volatility_noise_2[Constants.R_Random.Next(0, ac_volatility_noise_2.Length)],0.5f);
 				break;
 			case(3):
-				as_sfxMe.PlayOneShot(ac_volatility_noise_3[r.Next(0, ac_volatility_noise_3.Length)],0.5f);
+				as_sfxMe.PlayOneShot(ac_volatility_noise_3[Constants.R_Random.Next(0, ac_volatility_noise_3.Length)],0.5f);
 				break;
 			case(4):
-				as_sfxMe.PlayOneShot(ac_volatility_noise_4[r.Next(0, ac_volatility_noise_4.Length)],0.5f);
+				as_sfxMe.PlayOneShot(ac_volatility_noise_4[Constants.R_Random.Next(0, ac_volatility_noise_4.Length)],0.5f);
 				break;
 		}
     }
@@ -139,13 +151,13 @@ public sealed class Maestro : MonoBehaviour {
 	}
 	
 	private void PlayRandom(AudioSource s, AudioClip[] c){
-		System.Random r = new System.Random();
-		s.PlayOneShot(c[r.Next(0, c.Length)]);
+		
+		s.PlayOneShot(c[Constants.R_Random.Next(0, c.Length)]);
 	}
 	
 	private void PlaySingleAnnouncement(AudioClip c){
-		System.Random r = new System.Random();
-		if(b_announcementOk && r.NextDouble() <= f_announcementChance && !as_voi.isPlaying){
+		
+		if(b_announcementOk && Constants.R_Random.NextDouble() <= f_announcementChance && !as_voi.isPlaying){
 				b_announcementOk = false;
 				as_voi.clip = c;
 				as_voi.Play();
@@ -153,10 +165,10 @@ public sealed class Maestro : MonoBehaviour {
 		}
 	}
 	private void PlayRandomAnnouncement(AudioClip[] c){
-		System.Random r = new System.Random();
-		if(b_announcementOk && r.NextDouble() <= f_announcementChance && !as_voi.isPlaying){
+		
+		if(b_announcementOk && Constants.R_Random.NextDouble() <= f_announcementChance && !as_voi.isPlaying){
 				b_announcementOk = false;
-				as_voi.clip = c[r.Next(0, c.Length)];
+				as_voi.clip = c[Constants.R_Random.Next(0, c.Length)];
 				as_voi.Play();
 				Invoke("AnnouncementOk",f_announcementDelay);
 		}
@@ -230,44 +242,89 @@ public sealed class Maestro : MonoBehaviour {
 		//PlayRandom(as_sfxLo,ac_player_clothing);
 	}
 	public void PlayPlayerHit(){
-		System.Random r = new System.Random();
-		if(r.NextDouble() <= .2f){
+		
+		if(Constants.R_Random.NextDouble() <= .2f){
 				//PlayRandom(as_sfxMe,ac_player_hit);
-				as_sfxMe.PlayOneShot(ac_player_hit[r.Next(0, ac_player_hit.Length)],0.4f);
+				as_sfxMe.PlayOneShot(ac_player_hit[Constants.R_Random.Next(0, ac_player_hit.Length)],0.4f);
 			}
 		//PlayRandom(as_sfxMe,ac_player_hit);
 	}
 	
 	public void PlayAnnouncmentPlayerHit(int playerNum, Constants.Global.DamageType d){
-		System.Random r = new System.Random();
-		if(b_announcementOk && r.NextDouble() <= f_announcementChance && !as_voi.isPlaying){
+		
+		if(b_announcementOk && Constants.R_Random.NextDouble() <= f_announcementChance && !as_voi.isPlaying){
 			b_announcementOk = false;
 			switch(d){
 				case(Constants.Global.DamageType.ENEMY):
-					if(r.NextDouble() <= .2f){
-						as_voi.clip = ac_enemy_hit_player[r.Next(0, ac_enemy_hit_player.Length)];
+					if(Constants.R_Random.NextDouble() <= .2f){
+						as_voi.clip = ac_enemy_hit_player[Constants.R_Random.Next(0, ac_enemy_hit_player.Length)];
 						as_voi.Play();
 					}
 					break;
 				case(Constants.Global.DamageType.RIFT):
-					as_voi.clip = ac_rift_hit_player[r.Next(0, ac_rift_hit_player.Length)];
+					as_voi.clip = ac_rift_hit_player[Constants.R_Random.Next(0, ac_rift_hit_player.Length)];
 					as_voi.Play();
 					break;
 				case(Constants.Global.DamageType.WIND):
-					as_voi.clip = ac_wind_hit_player[r.Next(0, ac_wind_hit_player.Length)];
+					as_voi.clip = ac_wind_hit_player[Constants.R_Random.Next(0, ac_wind_hit_player.Length)];
 					as_voi.Play();
 					break;
 				case(Constants.Global.DamageType.ICE):
-					as_voi.clip = ac_ice_hit_player[r.Next(0, ac_ice_hit_player.Length)];
+					as_voi.clip = ac_ice_hit_player[Constants.R_Random.Next(0, ac_ice_hit_player.Length)];
 					as_voi.Play();
 					break;
 				case(Constants.Global.DamageType.MAGICMISSILE):
 				case(Constants.Global.DamageType.ELECTRICITY):
-					as_voi.clip = ac_spell_hit_player[r.Next(0, ac_spell_hit_player.Length)];
+					as_voi.clip = ac_spell_hit_player[Constants.R_Random.Next(0, ac_spell_hit_player.Length)];
 					as_voi.Play();
 					break;
 				default:
-					as_voi.clip = ac_generic_hit_player[r.Next(0, ac_generic_hit_player.Length)];
+					as_voi.clip = ac_generic_hit_player[Constants.R_Random.Next(0, ac_generic_hit_player.Length)];
+					as_voi.Play();
+					break;
+			}
+			Invoke("AnnouncementOk",f_announcementDelay);
+		}
+	}
+	public void PlayAnnouncementFirstScore(){
+		PlayRandomAnnouncement(ac_first_score);
+	}
+	public void PlayAnnouncementScoreComeback(){
+		PlayRandomAnnouncement(ac_score_comeback);
+	}
+	public void PlayAnnouncementScoreLoser(){
+		PlayRandomAnnouncement(ac_score_loser);
+	}
+	public void PlayAnnouncementScore(){
+		PlayRandomAnnouncement(ac_score_announcement);
+	}
+	public void PlayAnnouncementFriendlyFire(){
+		PlayRandomAnnouncement(ac_friendly_fire);
+	}
+	public void PlayAnnouncementPlayerSpawn(){
+		PlayRandomAnnouncement(ac_player_spawn);
+	}
+	public void PlayAnnouncementIdle(){
+		PlayRandomAnnouncement(ac_idle);
+	}
+	public void PlayAnnouncementPortal(int playerNum){
+		if(b_announcementOk && Constants.R_Random.NextDouble() <= f_announcementChance && !as_voi.isPlaying){
+			b_announcementOk = false;
+			switch(playerNum){
+				case(0):
+					as_voi.clip = ac_portal_announcement_one[Constants.R_Random.Next(0, ac_portal_announcement_one.Length)];
+					as_voi.Play();
+					break;
+				case(1):
+					as_voi.clip = ac_portal_announcement_two[Constants.R_Random.Next(0, ac_portal_announcement_two.Length)];
+					as_voi.Play();
+					break;
+				case(2):
+					as_voi.clip = ac_portal_announcement_three[Constants.R_Random.Next(0, ac_portal_announcement_three.Length)];
+					as_voi.Play();
+					break;
+				case(3):
+					as_voi.clip = ac_portal_announcement_four[Constants.R_Random.Next(0, ac_portal_announcement_four.Length)];
 					as_voi.Play();
 					break;
 			}
@@ -276,6 +333,9 @@ public sealed class Maestro : MonoBehaviour {
 	}
 	public void PlayAnnouncementGeneric(){
 		PlayRandomAnnouncement(ac_generic);
+	}
+	public void PlayTeamEncouragement(){
+		PlayRandomAnnouncement(ac_team_encouragement);
 	}
 	public void PlayAnnouncementVolatilityUp(){
 		PlayRandomAnnouncement(ac_volatility_up);
@@ -297,10 +357,10 @@ public sealed class Maestro : MonoBehaviour {
 			Invoke("PlayAnnouncementTutorial",1);
 	}
 	public void PlayAnnouncementIntro(){
-		System.Random r = new System.Random();
+		
 		if(!as_voi.isPlaying){
 			b_announcementOk = false;
-			as_voi.clip = ac_intro[r.Next(0, ac_intro.Length)];
+			as_voi.clip = ac_intro[Constants.R_Random.Next(0, ac_intro.Length)];
 			as_voi.Play();
 			Invoke("AnnouncementOk",f_announcementDelay);
 		}

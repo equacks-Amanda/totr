@@ -23,6 +23,8 @@ public class PlayerController : SpellTarget {
     [SerializeField] private Transform t_flagPos;       // location on character model of flag
     [SerializeField] private GameObject go_interactCollider;  // activated with button-press to interact with objectives
     [SerializeField] private GameObject go_parryShield;       // activated with right stick click
+    [SerializeField] private GameObject go_healingVFX;			// healing particle effect 
+    [SerializeField] private GameObject go_windHitParticles;
     [SerializeField] private PauseController pauc_pause;        // for pausing
 
     [SerializeField] private SkinnedMeshRenderer smr_playerBody;            //These are for visual cue on the player model
@@ -30,6 +32,8 @@ public class PlayerController : SpellTarget {
 
     [SerializeField] private Texture txtr_bodyNormal;                       //These are for invulnerability.
     [SerializeField] private Texture txtr_bodyFlash;
+    [SerializeField] private Texture txtr_bodyGooed;
+    [SerializeField] private Texture txtr_outfitNormal;
     [SerializeField] private Material mat_hatFlash;
     [SerializeField] private Color col_outfitNormal;
     [SerializeField] private Color col_outfitFlash;
@@ -119,6 +123,7 @@ public class PlayerController : SpellTarget {
 
         switch (spell) {
             case Constants.SpellStats.SpellType.WIND:
+				if(color == e_color) maestro.PlayAnnouncementFriendlyFire();
                 DropFlag();
 
                 if (Constants.UnitTests.C_RunningCTFTests)
@@ -126,9 +131,12 @@ public class PlayerController : SpellTarget {
 
                 StartCoroutine(WindPush(Constants.PlayerStats.C_PlayerWindPushMultiplier,direction,false));
                 TakeDamage(damage, Constants.Global.DamageType.WIND);
+                go_windHitParticles.SetActive(true);
+                Invoke("TurnOffWindHitParticles", 0.5f);
                 anim.SetTrigger("windTrigger");
                 break;
             case Constants.SpellStats.SpellType.ICE:
+				if(color == e_color) maestro.PlayAnnouncementFriendlyFire();
                 DropFlag();
 
                 if (Constants.UnitTests.C_RunningCTFTests)
@@ -150,9 +158,13 @@ public class PlayerController : SpellTarget {
                     if (Constants.UnitTests.C_RunningCTFTests)
                         return;
 
-                    f_canMove = Constants.SpellStats.C_ElectricAOESlowDownMultiplier;
+                    if (f_canMove != 0) {
+                        f_canMove = Constants.SpellStats.C_ElectricAOESlowDownMultiplier;
+                        smr_playerBody.material.mainTexture = txtr_bodyGooed;
+                        smr_playerOutfit.material.mainTexture = txtr_bodyGooed;
+                        anim.SetTrigger("gooTrigger");
+                    }
                     TakeDamage(damage, Constants.Global.DamageType.ELECTRICITY);
-                    anim.SetTrigger("gooTrigger");
                 }
                 break;
             case Constants.SpellStats.SpellType.MAGICMISSILE:
@@ -174,7 +186,6 @@ public class PlayerController : SpellTarget {
 
     override public void NegateSpellEffect(Constants.SpellStats.SpellType spell) {
         if (spell == Constants.SpellStats.SpellType.ELECTRICITYAOE) {
-            StopCoroutine(cor_AOECoroutine);
             f_canMove = 1;
         }
     }
@@ -224,6 +235,15 @@ public class PlayerController : SpellTarget {
     #region Reset Helper Functions
     private void TurnOffParryShield() {
         go_parryShield.SetActive(false);
+    }
+
+    private void TurnOffWindHitParticles() {
+        go_windHitParticles.SetActive(false);
+    }
+
+    public void CleanOffGoo() {
+        smr_playerBody.material.mainTexture = txtr_bodyNormal;
+        smr_playerOutfit.material.mainTexture = txtr_outfitNormal;
     }
 
     private void TurnOffInteractCollider() {
@@ -309,6 +329,7 @@ public class PlayerController : SpellTarget {
         Invoke("EndInvuln", Constants.PlayerStats.C_InvulnTime);
         InvokeRepeating("InvulnFlicker", 0f, 0.25f);
 		maestro.PlayPlayerSpawn();
+		maestro.PlayAnnouncementPlayerSpawn();
         if (b_deathAnimOK) {
             ReconstructPlayer();
             b_deathAnimOK = false;
@@ -358,7 +379,7 @@ public class PlayerController : SpellTarget {
             } else {
                 f_health = tempHp;
             }
-            //HealVisualOn();
+            HealVisualOn();
         }
     }
 
@@ -396,7 +417,7 @@ public class PlayerController : SpellTarget {
     #region Flag Stuff
     // there's no good way to do any of this
     public void Pickup(GameObject flag) {
-        if (!isWisp) {
+        if (!isWisp && f_canMove != 0) {
             flag.transform.SetParent(t_flagPos);
             flag.transform.localPosition = Vector3.zero;
             go_flagObj = flag;
@@ -435,18 +456,20 @@ public class PlayerController : SpellTarget {
     //    go_playerCapsule.GetComponent<MeshRenderer>().material.color = col_originalColor;
     //}
 
-    //public void HealVisualOn() {
-    //    go_playerCapsule.GetComponent<MeshRenderer>().material.color = Color.green;
-    //    //Call screenshake here.
-    //    Invoke("HealVisualOff", 0.1666f * 2);
-    //}
+    public void HealVisualOn() {
+        go_healingVFX.SetActive(true);
+        //go_playerCapsule.GetComponent<MeshRenderer>().material.color = Color.green;
+        //Call screenshake here.
+        Invoke("HealVisualOff", 1.0f);
+    }
 
-    //public void HealVisualOff() {
-    //    go_playerCapsule.GetComponent<MeshRenderer>().material.color = col_originalColor;
-    //}
+    public void HealVisualOff() {
+        go_healingVFX.SetActive(false);
+        //go_playerCapsule.GetComponent<MeshRenderer>().material.color = col_originalColor;
+    }
     #endregion
 
-#region Unity Overrides
+    #region Unity Overrides
     protected override void Start() {
         maestro = Maestro.Instance;
         riftController = RiftController.Instance;
