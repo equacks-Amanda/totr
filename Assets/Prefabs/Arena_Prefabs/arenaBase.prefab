@@ -3413,7 +3413,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4187943617227596}
   - component: {fileID: 33833821733398668}
-  - component: {fileID: 23052730776524008}
   - component: {fileID: 65082118597004566}
   m_Layer: 8
   m_Name: Rift
@@ -3849,8 +3848,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1553166424166488}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 0, y: 3, z: 6}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 5, z: 5.02}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
   m_Children:
   - {fileID: 4974916187232258}
   m_Father: {fileID: 4187943617227596}
@@ -3983,7 +3982,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1696823489258596}
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0.085, y: 15.573205, z: 0.21}
+  m_LocalPosition: {x: 0.085, y: 17.36, z: 1.68}
   m_LocalScale: {x: 4.5, y: 4.500008, z: 4.500007}
   m_Children: []
   m_Father: {fileID: 4187943617227596}
@@ -4066,7 +4065,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1698098198379930}
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0.085, y: 15.573204, z: -6.74}
+  m_LocalPosition: {x: 0.085, y: 16.6, z: -6.74}
   m_LocalScale: {x: 4.5, y: 4.500016, z: 4.5000052}
   m_Children: []
   m_Father: {fileID: 4187943617227596}
@@ -6750,7 +6749,7 @@ Transform:
   m_GameObject: {fileID: 1508728708480484}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0, y: 2.88, z: 0.76}
-  m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4986718568871628}
   - {fileID: 4573257428945092}
@@ -6863,37 +6862,6 @@ MeshRenderer:
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
---- !u!23 &23052730776524008
-MeshRenderer:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1917304231643362}
-  m_Enabled: 0
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_Materials: []
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
   m_SelectedEditorRenderState: 3
@@ -8695,8 +8663,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.4263141, y: 12.628485, z: 20.921988}
-  m_Center: {x: -0.113157034, y: 1.0907755, z: 5.8669443}
+  m_Size: {x: 1.4263142, y: 12.628485, z: 34.56501}
+  m_Center: {x: -0.113157034, y: 1.0907753, z: 9.797776}
 --- !u!65 &65366455988610292
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -9070,7 +9038,7 @@ Light:
   m_Color: {r: 0.30818963, g: 0.115971014, b: 0.47794116, a: 1}
   m_Intensity: 25
   m_Range: 10
-  m_SpotAngle: 56.45
+  m_SpotAngle: 98.10574
   m_CookieSize: 10
   m_Shadows:
     m_Type: 2
@@ -9502,7 +9470,7 @@ Light:
   m_Color: {r: 0.30818963, g: 0.115971014, b: 0.47794116, a: 1}
   m_Intensity: 25
   m_Range: 10
-  m_SpotAngle: 56.45
+  m_SpotAngle: 92.37116
   m_CookieSize: 10
   m_Shadows:
     m_Type: 2
@@ -9743,6 +9711,11 @@ MonoBehaviour:
   - {fileID: 1927969458032748}
   - {fileID: 1171360937970746}
   - {fileID: 1058237088608482}
+  go_riftParticles:
+  - {fileID: 1752246929662922}
+  - {fileID: 1755439717380532}
+  - {fileID: 1234256256641838}
+  - {fileID: 1093131977804684}
   go_skeletons:
   - {fileID: 0}
   - {fileID: 0}

@@ -21,6 +21,7 @@ public sealed class RiftController : MonoBehaviour {
     private RiftBossController rbc_blueRiftBossController;
     [SerializeField] private GameObject[] go_lightsRight;
     [SerializeField] private GameObject[] go_lightsLeft;
+    [SerializeField] private GameObject[] go_riftParticles;
 
     // enemies
 	[SerializeField] private GameObject[] go_skeletons;
@@ -143,6 +144,7 @@ public sealed class RiftController : MonoBehaviour {
 			i_volatilityLevel = 0;
             EnterNewVolatilityLevel();
         }
+        ActivateParticles(i_volatilityLevel);
     }
 
     private void EnterNewVolatilityLevel() {
@@ -400,6 +402,17 @@ public sealed class RiftController : MonoBehaviour {
 
         go_lightsLeft[level].SetActive(true);
         go_lightsRight[level].SetActive(true);
+    }
+
+    void ActivateParticles(int level) {
+        for(int i=0; i < go_riftParticles.Length; i++) {
+             if( i <= level ) {
+                go_riftParticles[i].SetActive(true);
+            }
+             else {
+                go_riftParticles[i].SetActive(false);
+            }
+        }
     }
 
     void PlayNoise() {
