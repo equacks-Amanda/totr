@@ -247,10 +247,9 @@ public sealed class Calligrapher : MonoBehaviour {
     private IEnumerator FadeInRed() {
         float timer = (Time.realtimeSinceStartup - f_redStartTime);
         float fracJourney = timer / 1f;
-        img_redPopupBacking.color = Color.Lerp(img_redPopupBacking.color, new Color(0,0,0,1), fracJourney);
         txt_redObjvTitle.color = Color.Lerp(txt_redObjvTitle.color, new Color(1,1,1,1), fracJourney);
         txt_redObjvDescription.color = Color.Lerp(txt_redObjvDescription.color, new Color(1,1,1,1), fracJourney);
-        go_redActiveGif.GetComponent<Image>().color = Color.Lerp(go_redActiveGif.GetComponent<Image>().color, new Color(1, 1, 1, 1), fracJourney);
+        go_redActiveGif.GetComponent<RawImage>().color = Color.Lerp(go_redActiveGif.GetComponent<RawImage>().color, new Color(1, 1, 1, 1), fracJourney);
         if (timer > 5f) {
             StopCoroutine(FadeInRed());
             StartCoroutine(FadeOutRed());
@@ -280,12 +279,11 @@ public sealed class Calligrapher : MonoBehaviour {
     private IEnumerator FadeOutRed() {
         float timer = (Time.realtimeSinceStartup - f_redStartTime);
         float fracJourney = timer / 8f;
-        img_redPopupBacking.color = Color.Lerp(img_redPopupBacking.color, new Color(0,0,0,0), fracJourney);
         txt_redObjvTitle.color = Color.Lerp(txt_redObjvTitle.color, new Color(1,1,1,0), fracJourney);
         txt_redObjvDescription.color = Color.Lerp(txt_redObjvDescription.color, new Color(1,1,1,0), fracJourney);
         txt_redTotalScore.color = Color.Lerp(txt_redTotalScore.color, new Color(1,0,0,0), fracJourney);
         txt_blueTotalScore.color = Color.Lerp(txt_blueTotalScore.color, new Color(0, 0, 1, 0), fracJourney);
-        go_redActiveGif.GetComponent<Image>().color = Color.Lerp(go_redActiveGif.GetComponent<Image>().color, new Color(1, 1, 1, 0), fracJourney);
+        go_redActiveGif.GetComponent<RawImage>().color = Color.Lerp(go_redActiveGif.GetComponent<RawImage>().color, new Color(1, 1, 1, 0), fracJourney);
         if (timer > 5.5f) {
             Time.timeScale = 1;
             StopCoroutine(FadeOutRed());

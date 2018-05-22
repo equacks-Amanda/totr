@@ -56,6 +56,7 @@ GameObject:
   - component: {fileID: 135075445476289018}
   - component: {fileID: 23738636981268756}
   - component: {fileID: 114489839272409192}
+  - component: {fileID: 114748370429513676}
   m_Layer: 0
   m_Name: Artemis
   m_TagString: Untagged
@@ -269,6 +270,22 @@ MonoBehaviour:
   start_z: 5
   start_y: 1.5
   start_x: 0
+--- !u!114 &114748370429513676
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1968717404458770}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5268fc509297bbd4cabcf15cff03b412, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_mat: {fileID: 2100000, guid: f63a3e282cc342c4ba396fbc7d22d4d6, type: 2}
+  f_brightnessMin: 0.8
+  f_brightnessMax: 1.8
+  sampleDataLength: 1024
+  updateStep: 0.1
 --- !u!135 &135075445476289018
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -340,7 +357,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -1577807806
+  randomSeed: 1087516252
   InitialModule:
     serializedVersion: 3
     enabled: 1

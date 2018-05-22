@@ -45,6 +45,7 @@ public sealed class DarkMagician : MonoBehaviour {
             Constants.Global.C_WinningTeam = c;
 			return;
 		}
+		maestro.ChangeBGM(objectiveNumber-1);
         objectiveNumber++;
         maestro.PlayObjectiveStart();
         objv_currentRedObjective.Complete();

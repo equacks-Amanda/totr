@@ -19,7 +19,7 @@ public class RuneController : MonoBehaviour {
     }
 #endregion
 #region Unity Overrides
-    void Start() {
+    void OnEnable() {
         Invoke("Explode", 4.0f);
     }
 

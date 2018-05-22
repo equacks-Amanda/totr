@@ -18,6 +18,10 @@ public class CaptureTheFlagObjective : Objective {
         calligrapher.GoalScoreReset(e_color);
     }
 
+    override public int GetMax() {
+        return Constants.ObjectiveStats.C_CTFMaxScore;
+    }
+
     // Update UI and check for completion
     public void UpdateFlagScore() {
 		UpdateScore(Constants.ObjectiveStats.C_CTFMaxScore);

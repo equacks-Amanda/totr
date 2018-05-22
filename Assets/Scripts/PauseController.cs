@@ -79,11 +79,13 @@ public class PauseController : MonoBehaviour {
 
     public void GameReset() {
         Time.timeScale = 1;
+        Constants.Global.C_CanPause = true;
         SceneManager.LoadScene("MainMenu");
     }
 
     public void MatchRestart() {
 		Time.timeScale = 1;
+        Constants.Global.C_CanPause = true;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 

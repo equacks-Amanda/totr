@@ -1,0 +1,735 @@
+fileFormatVersion: 2
+guid: 29ada800790b584468c9aeaaee4e4118
+timeCreated: 1526707585
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: genericController_Sprites_0
+    21300002: genericController_Sprites_1
+    21300004: gooicon_Select
+    21300006: missileIcon_select
+    21300008: genericController_Sprites_4
+    21300010: genericController_Sprites_5
+    21300012: gooLine_Select
+    21300014: missileLine_select
+    21300016: controllerBody
+    21300018: iceIcon_Select
+    21300020: iceLine_select
+    21300022: windLine_select
+    21300024: windIcon_select
+    21300026: selectLine1
+    21300028: selectLine2
+    21300030: selectLine3
+    21300032: gooIcon_normal
+    21300034: gooLine_normal
+    21300036: missileLine_normal
+    21300038: missileIcon_normal
+    21300040: iceIcon_normal
+    21300042: iceLine_normal
+    21300044: windLine_normal
+    21300046: windIcon_normal
+    21300048: leftTrigger_normal
+    21300050: rightTrigger_normal
+    21300052: faceButton_normal
+    21300054: genericController_Sprites_27
+    21300056: genericController_Sprites_28
+    21300058: stick_normal
+    21300060: normalLine1
+    21300062: leftBumper_normal
+    21300064: rightBumper_normal
+    21300066: genericController_Sprites_33
+    21300068: normalLine2
+    21300070: normalLine3
+    21300072: leftTrigger_select
+    21300074: rightTrigger_select
+    21300076: faceButton_select
+    21300078: stick_select
+    21300080: leftBumper_select
+    21300082: rightBumper_select
+    21300084: facePad
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapU: 1
+    wrapV: -1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: WebGL
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: genericController_Sprites_0
+      rect:
+        serializedVersion: 2
+        x: 871
+        y: 616
+        width: 41
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: genericController_Sprites_1
+      rect:
+        serializedVersion: 2
+        x: 1180
+        y: 616
+        width: 40
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: gooicon_Select
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 556
+        width: 27
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: missileIcon_select
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 555
+        width: 23
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: genericController_Sprites_4
+      rect:
+        serializedVersion: 2
+        x: 868
+        y: 584
+        width: 90
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: genericController_Sprites_5
+      rect:
+        serializedVersion: 2
+        x: 1125
+        y: 585
+        width: 89
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: gooLine_Select
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 561
+        width: 114
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: missileLine_select
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 555
+        width: 113
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: controllerBody
+      rect:
+        serializedVersion: 2
+        x: 796
+        y: 280
+        width: 482
+        height: 305
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: iceIcon_Select
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 494
+        width: 39
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: iceLine_select
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 510
+        width: 143
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: windLine_select
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 510
+        width: 142
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: windIcon_select
+      rect:
+        serializedVersion: 2
+        x: 589
+        y: 494
+        width: 32
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: selectLine1
+      rect:
+        serializedVersion: 2
+        x: 411
+        y: 418
+        width: 172
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: selectLine2
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 349
+        width: 192
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: selectLine3
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 349
+        width: 200
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: gooIcon_normal
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 254
+        width: 27
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: gooLine_normal
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 259
+        width: 114
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: missileLine_normal
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 253
+        width: 113
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: missileIcon_normal
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 253
+        width: 23
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: iceIcon_normal
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 192
+        width: 39
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: iceLine_normal
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 208
+        width: 143
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: windLine_normal
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 208
+        width: 142
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: windIcon_normal
+      rect:
+        serializedVersion: 2
+        x: 589
+        y: 192
+        width: 32
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: leftTrigger_normal
+      rect:
+        serializedVersion: 2
+        x: 767
+        y: 153
+        width: 41
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rightTrigger_normal
+      rect:
+        serializedVersion: 2
+        x: 953
+        y: 153
+        width: 40
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: faceButton_normal
+      rect:
+        serializedVersion: 2
+        x: 1064
+        y: 142
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: genericController_Sprites_27
+      rect:
+        serializedVersion: 2
+        x: 1093
+        y: 172
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: genericController_Sprites_28
+      rect:
+        serializedVersion: 2
+        x: 1124
+        y: 142
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: stick_normal
+      rect:
+        serializedVersion: 2
+        x: 1233
+        y: 119
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: normalLine1
+      rect:
+        serializedVersion: 2
+        x: 411
+        y: 116
+        width: 172
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: leftBumper_normal
+      rect:
+        serializedVersion: 2
+        x: 764
+        y: 121
+        width: 90
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rightBumper_normal
+      rect:
+        serializedVersion: 2
+        x: 898
+        y: 122
+        width: 89
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: genericController_Sprites_33
+      rect:
+        serializedVersion: 2
+        x: 1093
+        y: 114
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: normalLine2
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 47
+        width: 192
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: normalLine3
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 47
+        width: 200
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: leftTrigger_select
+      rect:
+        serializedVersion: 2
+        x: 767
+        y: 32
+        width: 41
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rightTrigger_select
+      rect:
+        serializedVersion: 2
+        x: 953
+        y: 32
+        width: 40
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: faceButton_select
+      rect:
+        serializedVersion: 2
+        x: 1093
+        y: 27
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: stick_select
+      rect:
+        serializedVersion: 2
+        x: 1233
+        y: 4
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: leftBumper_select
+      rect:
+        serializedVersion: 2
+        x: 764
+        y: 0
+        width: 90
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rightBumper_select
+      rect:
+        serializedVersion: 2
+        x: 898
+        y: 1
+        width: 89
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: facePad
+      rect:
+        serializedVersion: 2
+        x: 1051
+        y: 104
+        width: 118
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    outline: []
+    physicsShape: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

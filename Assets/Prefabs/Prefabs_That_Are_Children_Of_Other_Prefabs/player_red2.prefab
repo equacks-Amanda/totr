@@ -97,7 +97,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4253447049445466}
   - component: {fileID: 137842771267319642}
-  - component: {fileID: 114815554978463392}
   m_Layer: 0
   m_Name: Apprentice 1
   m_TagString: Untagged
@@ -696,7 +695,6 @@ GameObject:
   - component: {fileID: 224798549472768872}
   - component: {fileID: 222162004068324940}
   - component: {fileID: 114278008770789172}
-  - component: {fileID: 114440091204928198}
   m_Layer: 5
   m_Name: PlayerHUD
   m_TagString: Untagged
@@ -1686,7 +1684,6 @@ GameObject:
   - component: {fileID: 4551452735543194}
   - component: {fileID: 33781895579830390}
   - component: {fileID: 23095284423815390}
-  - component: {fileID: 114953034748768560}
   m_Layer: 15
   m_Name: Wisp
   m_TagString: Untagged
@@ -4025,17 +4022,6 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
---- !u!114 &114440091204928198
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1459299055691692}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 620a1300eebbd3b4b9b6aa9958ae9632, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114521569869671960
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4065,6 +4051,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam_Camera: {fileID: 0}
   go_trackedObject: {fileID: 1583972251795130}
+  b_persistent: 0
   v3_offset: {x: 0, y: 0, z: 0}
 --- !u!114 &114754039279040862
 MonoBehaviour:
@@ -4087,23 +4074,6 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
---- !u!114 &114815554978463392
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1056810391121802}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 97f34f47d5ae346ceabd5d33d65aa799, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  EffectSource: {fileID: 0}
-  EffectSound: {fileID: 0}
-  SourceRenderer: {fileID: 137842771267319642}
-  EffectLength: 0
-  isFinished: 0
-  currentParamValue: 0
 --- !u!114 &114816419642442504
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4117,21 +4087,40 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   e_color: 0
   e_startSide: 0
+  go_indicator: {fileID: 0}
   rb: {fileID: 54288112553346870}
   anim: {fileID: 95978871138941574}
-  dissolve: {fileID: 114815554978463392}
-  fader: {fileID: 114953034748768560}
+  se_dissolve: {fileID: 0}
+  se_fader: {fileID: 0}
+  se_clothesDissolve: {fileID: 0}
+  f_electricDamageSoundRate: 0.5
   go_playerCapsule: {fileID: 1181778127059472}
   go_playerWisp: {fileID: 1883407479332574}
   go_magicMissileShot: {fileID: 0}
   go_windShot: {fileID: 0}
   go_iceShot: {fileID: 0}
   go_electricShot: {fileID: 0}
+  go_hats: []
   t_spellSpawn: {fileID: 4269060225649432}
   t_flagPos: {fileID: 4092718926412322}
   go_interactCollider: {fileID: 1465450620450822}
   go_parryShield: {fileID: 1501408921185976}
+  go_healingVFX: {fileID: 0}
+  go_windHitParticles: {fileID: 0}
   pauc_pause: {fileID: 0}
+  smr_playerBody: {fileID: 0}
+  smr_playerOutfit: {fileID: 0}
+  txtr_bodyNormal: {fileID: 0}
+  txtr_bodyFlash: {fileID: 0}
+  txtr_bodyGooed: {fileID: 0}
+  txtr_outfitNormal: {fileID: 0}
+  mat_hatFlash: {fileID: 0}
+  col_outfitNormal: {r: 0, g: 0, b: 0, a: 0}
+  col_outfitFlash: {r: 0, g: 0, b: 0, a: 0}
+  mat_bodyNormal: {fileID: 0}
+  mat_outfitNormal: {fileID: 0}
+  mat_freeze: {fileID: 0}
+  mat_freezeExtend: {fileID: 0}
 --- !u!114 &114852477227990024
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4145,6 +4134,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam_Camera: {fileID: 0}
   go_trackedObject: {fileID: 1583972251795130}
+  b_persistent: 0
   v3_offset: {x: 0, y: 0, z: 0}
 --- !u!114 &114863522538035730
 MonoBehaviour:
@@ -4178,23 +4168,6 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &114953034748768560
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1883407479332574}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 97f34f47d5ae346ceabd5d33d65aa799, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  EffectSource: {fileID: 0}
-  EffectSound: {fileID: 0}
-  SourceRenderer: {fileID: 23095284423815390}
-  EffectLength: 0
-  isFinished: 0
-  currentParamValue: 0
 --- !u!114 &114965610139094634
 MonoBehaviour:
   m_ObjectHideFlags: 1

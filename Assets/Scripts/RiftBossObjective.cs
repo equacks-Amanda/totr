@@ -18,6 +18,10 @@ public class RiftBossObjective : Objective {
         calligrapher.RiftBossReset(e_color);
     }
 
+    override public int GetMax() {
+        return 0;
+    }
+
     // Update UI and check for completion
     public void UpdateRiftBossHealth(float f) {
         calligrapher.UpdateRiftBossHealthUI(e_color, f);

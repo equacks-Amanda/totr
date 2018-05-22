@@ -22,6 +22,8 @@ public abstract class SpellTarget : MonoBehaviour {
     protected Coroutine cor_AOECoroutine;
     protected Maestro maestro;                  // reference to audio controller singleton
     protected RiftController riftController;    // reference to Rift singleton
+    protected bool b_electricDamageSoundOk = true;
+    [SerializeField] protected float f_electricDamageSoundRate = 0.5f;
 
     #region Getters and Setters
     public Constants.Global.Color Color {
@@ -63,6 +65,11 @@ public abstract class SpellTarget : MonoBehaviour {
 			rb.AddForce(direction * Mathf.Lerp(Constants.SpellStats.C_WindForce*multiplier,0f,elapsedTime));
 			yield return 0;
 		}
+	}
+	
+	protected IEnumerator AdmitElectricDamageSound(){
+		yield return new WaitForSeconds(f_electricDamageSoundRate);
+		b_electricDamageSoundOk = true;
 	}
 #endregion
 

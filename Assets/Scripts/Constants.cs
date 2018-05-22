@@ -17,7 +17,7 @@ public static class Constants {
         public enum Color { RED, BLUE, NULL };
         public enum Side { LEFT = -1, RIGHT = 1 };
 		public enum DamageType { WIND, ICE, ELECTRICITY, MAGICMISSILE, ENEMY, RIFT, DEATHBOLT, RUNE, PUCK };
-        public static string C_BuildNumber = "3.60";
+        public static string C_BuildNumber = "3.70";
         public static bool C_CanPause = true;
         public static Global.Color C_WinningTeam = Global.Color.BLUE;
 		
@@ -38,7 +38,7 @@ public static class Constants {
         public static float C_MaxHealth = 300.0f;
         public static float C_StepSoundDelay = 0.4f;
         public static float C_InvulnTime = 2.0f;
-        public static float C_PlayerWindPushMultiplier = 0.5f;
+        public static float C_PlayerWindPushMultiplier = 2f;
 
         public static Global.Color C_p1Color = Global.Color.RED;
         public static Global.Color C_p2Color = Global.Color.RED;
@@ -187,7 +187,7 @@ public static class Constants {
 
         public static float C_NecromancerBaseSpeed = 1.5f;
         public static float C_NecromancerHealth = 400.0f;
-		public static float C_NecromancerAvoidDistance = 2.0f;
+		public static float C_NecromancerAvoidDistance = 5.0f;
 		public static int C_NecromancerSpawnCapPerSide = 1;
 		public static float C_WanderingRadius = 10.0f;
 		public static float C_RuneExplosionCountDownTime = 0.5f;

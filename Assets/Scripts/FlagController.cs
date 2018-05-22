@@ -78,8 +78,14 @@ public class FlagController : MonoBehaviour {
             ResetTimer();
             CancelInvoke("FlagResetTimer");
         }
+
+        if (other.CompareTag("OutofBounds")) {
+            DropFlag();
+            ResetFlagPosition();
+        }
+
         // Player scoring with flag
-		if (other.CompareTag("Goal")) {
+        if (other.CompareTag("Goal")) {
 			if (IsPickedUp() &&
                 transform.parent.parent.GetComponent<PlayerController>().Color == other.GetComponent<GoalController>().Color &&
                 other.GetComponent<GoalController>().Color != e_color) {        // check for correct color of player/flag/goal
