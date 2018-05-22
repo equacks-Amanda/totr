@@ -20,9 +20,9 @@ public class ObjectBounce : MonoBehaviour {
     [SerializeField] float start_y;
     [SerializeField] float start_x;
 
-    private void FixedUpdate()
+    private void Update()
     {
-        index += Time.deltaTime;
+        index += Time.unscaledDeltaTime;
         x = f_ampX * Mathf.Sin(f_omegaX * index) + start_x;
 
         y = (f_ampY * Mathf.Cos(f_omegaY * index)) + start_y;

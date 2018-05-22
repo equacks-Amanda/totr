@@ -10,6 +10,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using UnityEngine.AI;
+using Rewired;
 
 public class DebugParametersController : MonoBehaviour {
     // Public Vars
@@ -35,6 +36,8 @@ public class DebugParametersController : MonoBehaviour {
     [SerializeField] private GameObject go_enemyMenu;
     [SerializeField] private GameObject go_objectiveMenu;
     private GameObject[] go_menuArray = new GameObject[4];
+    private int currentMenu = 0;
+    private Player p_uiPlayer;
 
     // UI sliders (set in editor)
     [SerializeField] private Slider slider_playerMoveSpeed;
@@ -126,16 +129,21 @@ public class DebugParametersController : MonoBehaviour {
     [SerializeField] private Text txt_deathBoltCooldown;
     [SerializeField] private Text txt_forceFieldCooldown;
 
+    [SerializeField] private Text txt_playerLabel;
+    [SerializeField] private Text txt_objectiveLabel;
+    
+
     /*/////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 
     // Slider change callbacks
     public void ChangePlayerSpeed(float f_playerSpeedIn) {
-        txt_playerMoveSpeed.text = slider_playerMoveSpeed.value.ToString();
+        txt_playerMoveSpeed.text = string.Format("{0:0}%",((slider_playerMoveSpeed.value / 6f)*100));
         Constants.PlayerStats.C_MovementSpeed = f_playerSpeedIn;
+        Constants.PlayerStats.C_WispMovementSpeed = f_playerSpeedIn / 4f;
     }
 
     public void ChangePlayerWispSpeed(float f_playerWispSpeedIn) {
-        txt_wispMoveSpeed.text = slider_wispMoveSpeed.value.ToString();
+        txt_wispMoveSpeed.text = string.Format("{0:0}%",((slider_wispMoveSpeed.value / slider_wispMoveSpeed.maxValue)*100));
         Constants.PlayerStats.C_WispMovementSpeed = f_playerWispSpeedIn;
     }
 
@@ -150,9 +158,8 @@ public class DebugParametersController : MonoBehaviour {
     }
 
     public void ChangeMagicMissileFireRate(float f__magicMissileRate) {
-        float value = f__magicMissileRate / 10.0f;
-        Debug.Log(value);
-        txt_magicMissileFireRate.text = value.ToString();
+        float value = f__magicMissileRate / 20.0f;
+        txt_magicMissileFireRate.text = string.Format("{0:0}%",((slider_magicMissileFireRate.value / 15f)*100));
         Constants.SpellStats.C_MagicMissileCooldown = value;
     }
 
@@ -172,23 +179,23 @@ public class DebugParametersController : MonoBehaviour {
     }
 
     public void ChangeWindCooldown(float f_windCooldownIn) {
-        txt_windCooldown.text = slider_windCooldown.value.ToString();
-        Constants.SpellStats.C_WindCooldown = f_windCooldownIn;
+        txt_windCooldown.text = string.Format("{0:0}%",((slider_windCooldown.value / 5f)*100));
+        Constants.SpellStats.C_WindCooldown = f_windCooldownIn / 5f;
     }
 
     public void ChangeIceCooldown(float f_iceCooldownIn) {
-        txt_iceCooldown.text = slider_iceCooldown.value.ToString();
+        txt_iceCooldown.text = string.Format("{0:0}%",((slider_iceCooldown.value / 5f)*100));
         Constants.SpellStats.C_IceCooldown = f_iceCooldownIn;
     }
 
     public void ChangeElectricCooldown(float f_electricCooldownIn) {
-        txt_electricCooldown.text = slider_electricCooldown.value.ToString();
+        txt_electricCooldown.text = string.Format("{0:0}%",((slider_electricCooldown.value / 8f)*100));
         Constants.SpellStats.C_ElectricCooldown = f_electricCooldownIn;
     }
 
     public void ChangeProjectileSize(float f_projSizeIn) {
         float roundedVal = Mathf.Round(slider_projSize.value * 100f) / 100f;
-        txt_projSize.text = roundedVal.ToString();
+        txt_projSize.text = string.Format("{0:0}%",((roundedVal / 0.5f)*100));
         Constants.SpellStats.C_PlayerProjectileSize = roundedVal;
     }
 
@@ -199,7 +206,7 @@ public class DebugParametersController : MonoBehaviour {
 
     public void ChangeWindForce(float f_windForceIn) {
         float value = f_windForceIn * 250.0f;
-        txt_windForce.text = value.ToString();
+        txt_windForce.text = string.Format("{0:0}%",((slider_windForce.value / 6f)*100));
         Constants.SpellStats.C_WindForce = value;
     }
 
@@ -209,7 +216,7 @@ public class DebugParametersController : MonoBehaviour {
     }
 
     public void ChangeElectricLiveTime(float f_electricLiveTimeIn) {
-        txt_electricLiveTime.text = slider_electricLiveTime.value.ToString();
+        txt_electricLiveTime.text = string.Format("{0:0}%",((slider_electricLiveTime.value / 5f)*100));
         Constants.SpellStats.C_ElectricAOELiveTime = f_electricLiveTimeIn;
     }
 
@@ -219,8 +226,9 @@ public class DebugParametersController : MonoBehaviour {
     }
 
     public void ChangeEnemySpeed(float f_enemySpeedIn) {
-        txt_enemySpeed.text = slider_enemySpeed.value.ToString();
-        Constants.EnemyStats.C_EnemyBaseSpeed = f_enemySpeedIn;
+        float value = f_enemySpeedIn / 10;
+        txt_enemySpeed.text = string.Format("{0:0}%",((slider_enemySpeed.value / 12f)*100));
+        Constants.EnemyStats.C_EnemyBaseSpeed = value;
     }
 
     public void ChangeEnemyHealth(float f_enemyHealthIn) {
@@ -232,57 +240,59 @@ public class DebugParametersController : MonoBehaviour {
     public void ChangeNecromancerHealth(float f_neckHealthIn)
     {
         float value = f_neckHealthIn * 50.0f;
-        txt_necromancerHealth.text = value.ToString();
+        txt_necromancerHealth.text = string.Format("{0:0}%",((slider_necromancerHealth.value / 8f)*100));
         Constants.EnemyStats.C_NecromancerHealth = (int)value;
     }
 
     public void ChangeEnemyDamage(float f_enemyDamageIn) {
         float value = f_enemyDamageIn * 5.0f;
-        txt_enemyDamage.text = value.ToString();
+        txt_enemyDamage.text = string.Format("{0:0}%",((slider_enemyDamage.value / 5f)*100));
         Constants.EnemyStats.C_EnemyDamage = (int)value;
     }
 
     public void ChangePlayerHealth(float f_playerHealthIn) {
         float value = f_playerHealthIn * 50.0f;
-        txt_playerHealth.text = value.ToString();
+        txt_playerHealth.text = string.Format("{0:0}%",((slider_playerHealth.value / 6f)*100));
         Constants.PlayerStats.C_MaxHealth = (int)value;
     }
 
     public void ChangeRespawnTime(float f_respawnTimeIn) {
-        txt_respawnTime.text = slider_respawnTime.value.ToString();
+        txt_respawnTime.text = string.Format("{0:0}%",((slider_respawnTime.value / 5f)*100));
         Constants.PlayerStats.C_RespawnTimer = f_respawnTimeIn;
     }
 
-    public void ChangeCrystalHealth(float f_crystalHealthIn) {
-        float value = f_crystalHealthIn * 50.0f;
-        txt_crystalHealth.text = value.ToString();
-        Constants.ObjectiveStats.C_CrystalMaxHealth = (int)value;
-    }
+    //public void ChangeCrystalHealth(float f_crystalHealthIn) {
+    //    float value = f_crystalHealthIn * 50.0f;
+    //    txt_crystalHealth.text = value.ToString();
+    //    Constants.ObjectiveStats.C_CrystalMaxHealth = (int)value;
+    //}
 
-    public void ChangeCrystalHealthRegen(float f_crystalHealthIn)
-    {
-        float value = f_crystalHealthIn;
-        txt_crystalHealthRegen.text = value.ToString();
-        Constants.ObjectiveStats.C_CrystalRegenHeal = (int)value;
-    }
+    //public void ChangeCrystalHealthRegen(float f_crystalHealthIn)
+    //{
+    //    float value = f_crystalHealthIn;
+    //    txt_crystalHealthRegen.text = value.ToString();
+    //    Constants.ObjectiveStats.C_CrystalRegenHeal = (int)value;
+    //}
 
-    public void ChangeCrystalHealthRegenRate(float f_crystalHealthIn)
-    {
-        float value = f_crystalHealthIn;
-        txt_crystalHealthRegenRate.text = value.ToString();
-        Constants.ObjectiveStats.C_CrystalHealRate = (int)value;
-    }
+    //public void ChangeCrystalHealthRegenRate(float f_crystalHealthIn)
+    //{
+    //    float value = f_crystalHealthIn;
+    //    txt_crystalHealthRegenRate.text = value.ToString();
+    //    Constants.ObjectiveStats.C_CrystalHealRate = (int)value;
+    //}
 
-    public void ChangeCrystalHealthRegenDelay(float f_crystalHealthIn)
-    {
-        float value = f_crystalHealthIn;
-        txt_crystalHealthRegenDelay.text = value.ToString();
-        Constants.ObjectiveStats.C_CrystalHealDelay = (int)value;
-    }
+    //public void ChangeCrystalHealthRegenDelay(float f_crystalHealthIn)
+    //{
+    //    float value = f_crystalHealthIn;
+    //    txt_crystalHealthRegenDelay.text = value.ToString();
+    //    Constants.ObjectiveStats.C_CrystalHealDelay = (int)value;
+    //}
 
-    public void ChangeCTFMaxScore(float f_CTFScoreIn) {
-        txt_CTFScore.text = slider_CTFScore.value.ToString();
+    public void ChangeObjMaxScore(float f_CTFScoreIn) {
+        txt_CTFScore.text = string.Format("{0:0}%",((slider_CTFScore.value / 3f)*100));
         Constants.ObjectiveStats.C_CTFMaxScore = (int)f_CTFScoreIn;
+        Constants.ObjectiveStats.C_NecromancersMaxScore = (int)f_CTFScoreIn;
+        Constants.ObjectiveStats.C_HockeyMaxScore = (int)f_CTFScoreIn;
     }
 
     public void ChangeCompletionTimer(float f_timerIn) {
@@ -297,19 +307,19 @@ public class DebugParametersController : MonoBehaviour {
         Constants.ObjectiveStats.C_PotatoSelfDestructTimer = (int)value;
     }
 
-    public void ChangeEnemySpawnCap(float f_capIn) {
-        txt_enemySpawnCap.text = slider_enemySpawnCap.value.ToString();
-        Constants.EnemyStats.C_EnemySpawnCapPerSide = (int)(f_capIn - 1);
-    }
+    //public void ChangeEnemySpawnCap(float f_capIn) {
+    //    txt_enemySpawnCap.text = slider_enemySpawnCap.value.ToString();
+    //    Constants.EnemyStats.C_EnemySpawnCapPerSide = (int)(f_capIn - 1);
+    //}
 
-    public void ChangeHockeyMaxScore(float f_score) {
-        txt_hockeyMaxScore.text = slider_hockeyMaxScore.value.ToString();
-        Constants.ObjectiveStats.C_HockeyMaxScore = (int)f_score;
-    }
+    //public void ChangeHockeyMaxScore(float f_score) {
+    //    txt_hockeyMaxScore.text = slider_hockeyMaxScore.value.ToString();
+    //    Constants.ObjectiveStats.C_HockeyMaxScore = (int)f_score;
+    //}
 
     public void ChangePuckDamage(float f_damage) {
         float value = f_damage * 5.0f;
-        txt_puckDamage.text = value.ToString();
+        txt_puckDamage.text = string.Format("{0:0}%",((slider_puckDamage.value / 2f)*100));
         Constants.ObjectiveStats.C_PuckDamage = (int)value;
     }
 
@@ -324,13 +334,12 @@ public class DebugParametersController : MonoBehaviour {
     }
 
     public void ChangePuckBaseSpeed(float f_speed) {
-        txt_puckBaseSpeed.text = slider_puckBaseSpeed.value.ToString();
+        txt_puckBaseSpeed.text = string.Format("{0:0}%",((slider_puckBaseSpeed.value / 10f)*100));
         Constants.ObjectiveStats.C_PuckBaseSpeed = (int)f_speed;
     }
 
-    public void ChangePuckMaxSpeed(float f_speed)
-    {
-        txt_puckMaxSpeed.text = slider_puckMaxSpeed.value.ToString();
+    public void ChangePuckMaxSpeed(float f_speed) {
+        txt_puckMaxSpeed.text = string.Format("{0:0}%",((slider_puckMaxSpeed.value / 15f)*100));
         Constants.ObjectiveStats.C_PuckMaxSpeed = (int)f_speed;
     }
 
@@ -339,14 +348,14 @@ public class DebugParametersController : MonoBehaviour {
         Constants.ObjectiveStats.C_PuckSpeedHitIncrease = (int)f_hit;
     }
 
-    public void ChangeNecroMaxScore(float f_score) {
-        txt_necroMaxScore.text = slider_necroMaxScore.value.ToString();
-        Constants.ObjectiveStats.C_NecromancersMaxScore = (int)f_score;
-    }
+    //public void ChangeNecroMaxScore(float f_score) {
+    //    txt_necroMaxScore.text = slider_necroMaxScore.value.ToString();
+    //    Constants.ObjectiveStats.C_NecromancersMaxScore = (int)f_score;
+    //}
 
     public void ChangeRiftBossHealth(float f_riftBossHealthIn) {
         float value = f_riftBossHealthIn * 250.0f;
-        txt_riftBossHealth.text = value.ToString();
+        txt_riftBossHealth.text = string.Format("{0:0}%",((slider_riftBossHealth.value / 16f)*100));
         Constants.ObjectiveStats.C_RiftBossMaxHealth = (int)value;
     }
 
@@ -369,48 +378,37 @@ public class DebugParametersController : MonoBehaviour {
     }
 
     // Light buttons up as they are selected
-    public void LightUp(int which) {
-        for (int i = 0; i < 4; i++) {
-            ColorBlock cb = butt_buttonArray[i].colors;
-            if (i == which) {
-                cb.normalColor = Color.cyan;
-            }
-            else {
-                cb.normalColor = Color.white;
-            }
-            butt_buttonArray[i].colors = cb;
+    public void LightUp() {
+        if (currentMenu == 0) {
+            txt_playerLabel.color = new Color(20f/255f,1f,252f/255f);
+            txt_objectiveLabel.color = Color.white;
+        } else {
+            txt_objectiveLabel.color = new Color(20f/255f,1f,252f/255f);
+            txt_playerLabel.color = Color.white;
         }
     }
 
     // Show the proper menu on click
     public void MenuSwitch(int which) {
-        for (int i = 0; i < 4; i++) {
-            if (i == which) {
-                go_menuArray[i].SetActive(true);
-                Navigation nav_goNav = butt_go.navigation;
-                switch (i) {
-                    case 0:
-                        nav_goNav.selectOnUp = slider_playerHealth;
-                        nav_goNav.selectOnRight = slider_respawnTime;
-                        break;
-                    case 1:
-                        nav_goNav.selectOnUp = slider_electricCooldown;
-                        nav_goNav.selectOnRight = slider_electricLiveTime;
-                        break;
-                    case 2:
-                        nav_goNav.selectOnUp = slider_enemyHealth;
-                        nav_goNav.selectOnRight = slider_enemyDamage;
-                        break;
-                    case 3:
-                        nav_goNav.selectOnUp = slider_puckSpeedDecayRate;
-                        nav_goNav.selectOnRight = slider_selfDestructTimer;
-                        break;
-                }
-                butt_go.navigation = nav_goNav;
-            }
-            else {
-                go_menuArray[i].SetActive(false);
-            }
+        //loop
+        if (which > 1) {
+            currentMenu = 0;
+        } else if (which < 0) { 
+            currentMenu = 1;
+        } else {
+            currentMenu = which;
+        }
+         LightUp();
+        if (currentMenu == 0) {
+            go_playerMenu.SetActive(true);
+            go_objectiveMenu.SetActive(false);
+            slider_playerMoveSpeed.Select();
+            slider_playerMoveSpeed.OnSelect(null);
+        } else {
+            go_objectiveMenu.SetActive(true);
+            go_playerMenu.SetActive(false);
+            slider_CTFScore.Select();
+            slider_CTFScore.OnSelect(null);
         }
     }
 
@@ -423,7 +421,7 @@ public class DebugParametersController : MonoBehaviour {
         // Player
 
         // Player Speed
-        txt_playerMoveSpeed.text = Constants.PlayerStats.C_MovementSpeed.ToString();
+        txt_playerMoveSpeed.text = string.Format("{0:0}%",((Constants.PlayerStats.C_MovementSpeed / 6f)*100));
         slider_playerMoveSpeed.value = Constants.PlayerStats.C_MovementSpeed;
 
         // Player Wisp Speed
@@ -431,11 +429,11 @@ public class DebugParametersController : MonoBehaviour {
         slider_wispMoveSpeed.value = Constants.PlayerStats.C_WispMovementSpeed;
 
         // Player Health
-        txt_playerHealth.text = Constants.PlayerStats.C_MaxHealth.ToString();
+        txt_playerHealth.text = string.Format("{0:0}%",(((Constants.PlayerStats.C_MaxHealth / 50f) / 6f)*100));
         slider_playerHealth.value = Constants.PlayerStats.C_MaxHealth / 50;
         
         // Respawn Rate
-        txt_respawnTime.text = Constants.PlayerStats.C_RespawnTimer.ToString();
+        txt_respawnTime.text = string.Format("{0:0}%",(((Constants.PlayerStats.C_RespawnTimer) / 5f)*100));
         slider_respawnTime.value = Constants.PlayerStats.C_RespawnTimer;
 
 
@@ -447,19 +445,19 @@ public class DebugParametersController : MonoBehaviour {
         slider_enemySpawn.value = Constants.RiftStats.C_VolatilityEnemySpawnTimer;
 
         // Enemy Speed
-        txt_enemySpeed.text = Constants.EnemyStats.C_EnemyBaseSpeed.ToString();
-        slider_enemySpeed.value = Constants.EnemyStats.C_EnemyBaseSpeed;
+        txt_enemySpeed.text = string.Format("{0:0}%",(((Constants.EnemyStats.C_EnemyBaseSpeed * 10) / 12f)*100));
+        slider_enemySpeed.value = Constants.EnemyStats.C_EnemyBaseSpeed * 10;
 
         // Enemy Health
         txt_enemyHealth.text = Constants.EnemyStats.C_EnemyHealth.ToString();
         slider_enemyHealth.value = Constants.EnemyStats.C_EnemyHealth / 25;
 
         // Necromancer Health
-        txt_necromancerHealth.text = Constants.EnemyStats.C_NecromancerHealth.ToString();
+        txt_necromancerHealth.text = string.Format("{0:0}%",(((Constants.EnemyStats.C_NecromancerHealth / 50f) / 8f)*100));
         slider_necromancerHealth.value = Constants.EnemyStats.C_NecromancerHealth / 50;
 
         // Enemy Damage
-        txt_enemyDamage.text = Constants.EnemyStats.C_EnemyDamage.ToString();
+        txt_enemyDamage.text = string.Format("{0:0}%",(((Constants.EnemyStats.C_EnemyDamage / 5f) / 5f)*100));
         slider_enemyDamage.value = Constants.EnemyStats.C_EnemyDamage / 5;
 
         // Enemy Spawn Cap
@@ -482,15 +480,15 @@ public class DebugParametersController : MonoBehaviour {
         slider_electricSpeed.value = Constants.SpellStats.C_ElectricSpeed;
 
         // Wind Spell Cooldown
-        txt_windCooldown.text = Constants.SpellStats.C_WindCooldown.ToString();
-        slider_windCooldown.value = Constants.SpellStats.C_WindCooldown;
+        txt_windCooldown.text =  string.Format("{0:0}%",((Constants.SpellStats.C_WindCooldown)*100));
+        slider_windCooldown.value = Constants.SpellStats.C_WindCooldown * 5f;
 
         // Ice Spell Cooldown
-        txt_iceCooldown.text = Constants.SpellStats.C_IceCooldown.ToString();
+        txt_iceCooldown.text = string.Format("{0:0}%",((Constants.SpellStats.C_IceCooldown / 5f)*100));
         slider_iceCooldown.value = Constants.SpellStats.C_IceCooldown;
 
         // Electric Spell Cooldown
-        txt_electricCooldown.text = Constants.SpellStats.C_ElectricCooldown.ToString();
+        txt_electricCooldown.text = string.Format("{0:0}%",((Constants.SpellStats.C_ElectricCooldown / 8f)*100));
         slider_electricCooldown.value = Constants.SpellStats.C_ElectricCooldown;
 
         // Magic Missile Speed
@@ -502,11 +500,11 @@ public class DebugParametersController : MonoBehaviour {
         slider_magicMissileHeal.value = Constants.SpellStats.C_MagicMissileHeal;
 
         // Magic Missile Fire Rate
-        txt_magicMissileFireRate.text = Constants.SpellStats.C_MagicMissileCooldown.ToString();
-        slider_magicMissileFireRate.value = Constants.SpellStats.C_MagicMissileCooldown * 10;
+        txt_magicMissileFireRate.text = string.Format("{0:0}%",(((Constants.SpellStats.C_MagicMissileCooldown) / 0.75f)*100));
+        slider_magicMissileFireRate.value = Constants.SpellStats.C_MagicMissileCooldown * 20;
 
         // Projectile Size 
-        txt_projSize.text = Constants.SpellStats.C_PlayerProjectileSize.ToString();
+        txt_projSize.text = string.Format("{0:0}%",((Constants.SpellStats.C_PlayerProjectileSize / 0.5f)*100));
         slider_projSize.value = Constants.SpellStats.C_PlayerProjectileSize;
 
         // Projectile Live Time
@@ -514,7 +512,7 @@ public class DebugParametersController : MonoBehaviour {
         slider_projLife.value = Constants.SpellStats.C_SpellLiveTime;
 
         // Wind Force
-        txt_windForce.text = Constants.SpellStats.C_WindForce.ToString();
+        txt_windForce.text = string.Format("{0:0}%",(((Constants.SpellStats.C_WindForce / 250f) / 6f)*100));
         slider_windForce.value = Constants.SpellStats.C_WindForce / 250;
 
         // Ice Freeze Duration
@@ -522,7 +520,7 @@ public class DebugParametersController : MonoBehaviour {
         slider_iceFreeze.value = Constants.SpellStats.C_IceFreezeTime;
 
         // Electric AOE Live-Time
-        txt_electricLiveTime.text = Constants.SpellStats.C_ElectricAOELiveTime.ToString();
+        txt_electricLiveTime.text = string.Format("{0:0}%",((Constants.SpellStats.C_ElectricAOELiveTime / 5f)*100));
         slider_electricLiveTime.value = Constants.SpellStats.C_ElectricAOELiveTime;
 
 
@@ -530,47 +528,47 @@ public class DebugParametersController : MonoBehaviour {
         // Objective
 
         // CTF Score
-        txt_CTFScore.text = Constants.ObjectiveStats.C_CTFMaxScore.ToString();
+        txt_CTFScore.text = string.Format("{0:0}%",((Constants.ObjectiveStats.C_CTFMaxScore / 3f)*100));
         slider_CTFScore.value = Constants.ObjectiveStats.C_CTFMaxScore;
         
-        // Crystal Health
-        txt_crystalHealth.text = Constants.ObjectiveStats.C_CrystalMaxHealth.ToString();
-        slider_crystalHealth.value = Constants.ObjectiveStats.C_CrystalMaxHealth / 50;
+        //// Crystal Health
+        //txt_crystalHealth.text = Constants.ObjectiveStats.C_CrystalMaxHealth.ToString();
+        //slider_crystalHealth.value = Constants.ObjectiveStats.C_CrystalMaxHealth / 50;
 
-        // Crystal Health Regen
-        txt_crystalHealthRegen.text = Constants.ObjectiveStats.C_CrystalRegenHeal.ToString();
-        slider_crystalHealthRegen.value = Constants.ObjectiveStats.C_CrystalRegenHeal;
+        //// Crystal Health Regen
+        //txt_crystalHealthRegen.text = Constants.ObjectiveStats.C_CrystalRegenHeal.ToString();
+        //slider_crystalHealthRegen.value = Constants.ObjectiveStats.C_CrystalRegenHeal;
 
-        // Crystal Health Regen Rate
-        txt_crystalHealthRegenRate.text = Constants.ObjectiveStats.C_CrystalHealRate.ToString();
-        slider_crystalHealthRegenRate.value = Constants.ObjectiveStats.C_CrystalHealRate;
+        //// Crystal Health Regen Rate
+        //txt_crystalHealthRegenRate.text = Constants.ObjectiveStats.C_CrystalHealRate.ToString();
+        //slider_crystalHealthRegenRate.value = Constants.ObjectiveStats.C_CrystalHealRate;
 
-        // Crystal Health Regen Delay
-        txt_crystalHealthRegenDelay.text = Constants.ObjectiveStats.C_CrystalHealDelay.ToString();
-        slider_crystalHealthRegenDelay.value = Constants.ObjectiveStats.C_CrystalHealDelay;
+        //// Crystal Health Regen Delay
+        //txt_crystalHealthRegenDelay.text = Constants.ObjectiveStats.C_CrystalHealDelay.ToString();
+        //slider_crystalHealthRegenDelay.value = Constants.ObjectiveStats.C_CrystalHealDelay;
 
-        // Hot Potato Completion Timer 
-        txt_completionTimer.text = Constants.ObjectiveStats.C_PotatoCompletionTimer.ToString();
-        slider_completionTimer.value = Constants.ObjectiveStats.C_PotatoCompletionTimer / 5;
+        //// Hot Potato Completion Timer 
+        //txt_completionTimer.text = Constants.ObjectiveStats.C_PotatoCompletionTimer.ToString();
+        //slider_completionTimer.value = Constants.ObjectiveStats.C_PotatoCompletionTimer / 5;
 
-        // Hot Potato Self Destruct Timer
-        txt_selfDestructTimer.text = Constants.ObjectiveStats.C_PotatoSelfDestructTimer.ToString();
-        slider_selfDestructTimer.value = Constants.ObjectiveStats.C_PotatoSelfDestructTimer / 5;
+        //// Hot Potato Self Destruct Timer
+        //txt_selfDestructTimer.text = Constants.ObjectiveStats.C_PotatoSelfDestructTimer.ToString();
+        //slider_selfDestructTimer.value = Constants.ObjectiveStats.C_PotatoSelfDestructTimer / 5;
 
-        // Hockey Max Score
-        txt_hockeyMaxScore.text = Constants.ObjectiveStats.C_HockeyMaxScore.ToString();
-        slider_hockeyMaxScore.value = Constants.ObjectiveStats.C_HockeyMaxScore;
+        //// Hockey Max Score
+        //txt_hockeyMaxScore.text = Constants.ObjectiveStats.C_HockeyMaxScore.ToString();
+        //slider_hockeyMaxScore.value = Constants.ObjectiveStats.C_HockeyMaxScore;
 
         // Hockey Puck Damage
-        txt_puckDamage.text = Constants.ObjectiveStats.C_PuckDamage.ToString();
+        txt_puckDamage.text = string.Format("{0:0}%",(((Constants.ObjectiveStats.C_PuckDamage / 5f) / 2f)*100));
         slider_puckDamage.value = Constants.ObjectiveStats.C_PuckDamage / 5;
 
         // Hockey Puck Base Speed
-        txt_puckBaseSpeed.text = Constants.ObjectiveStats.C_PuckBaseSpeed.ToString();
+        txt_puckBaseSpeed.text = string.Format("{0:0}%",((Constants.ObjectiveStats.C_PuckBaseSpeed / 10f)*100));
         slider_puckBaseSpeed.value = Constants.ObjectiveStats.C_PuckBaseSpeed;
 
         // Hockey Puck Max Speed
-        txt_puckMaxSpeed.text = Constants.ObjectiveStats.C_PuckMaxSpeed.ToString();
+        txt_puckMaxSpeed.text = string.Format("{0:0}%",((Constants.ObjectiveStats.C_PuckMaxSpeed / 15f)*100));
         slider_puckMaxSpeed.value = Constants.ObjectiveStats.C_PuckMaxSpeed;
 
         // Hockey Puck Hit Increase Speed
@@ -585,12 +583,12 @@ public class DebugParametersController : MonoBehaviour {
         txt_puckSpeedDecreaseRate.text = Constants.ObjectiveStats.C_PuckSpeedDecreaseAmount.ToString();
         slider_puckSpeedDecreaseRate.value = Constants.ObjectiveStats.C_PuckSpeedDecreaseAmount;
 
-        // Necromancers to Defeat
-        txt_necroMaxScore.text = Constants.ObjectiveStats.C_NecromancersMaxScore.ToString();
-        slider_necroMaxScore.value = Constants.ObjectiveStats.C_NecromancersMaxScore;
+        //// Necromancers to Defeat
+        //txt_necroMaxScore.text = Constants.ObjectiveStats.C_NecromancersMaxScore.ToString();
+        //slider_necroMaxScore.value = Constants.ObjectiveStats.C_NecromancersMaxScore;
 
         // Rift Boss Max Health
-        txt_riftBossHealth.text = Constants.ObjectiveStats.C_RiftBossMaxHealth.ToString();
+        txt_riftBossHealth.text = string.Format("{0:0}%",(((Constants.ObjectiveStats.C_RiftBossMaxHealth / 250f) / 16f)*100));
         slider_riftBossHealth.value = Constants.ObjectiveStats.C_RiftBossMaxHealth / 250;
 
         // Rift Boss Rune Spawn Interval
@@ -612,15 +610,24 @@ public class DebugParametersController : MonoBehaviour {
         butt_buttonArray[2] = butt_enemySelect;
         butt_buttonArray[3] = butt_objectiveSelect;
 
-        LightUp(0);
-        butt_playerSelect.Select();
-
         // Organize menus
         go_menuArray[0] = go_playerMenu;
-        go_menuArray[1] = go_spellMenu;
-        go_menuArray[2] = go_enemyMenu;
-        go_menuArray[3] = go_objectiveMenu;
+        go_menuArray[1] = go_objectiveMenu;
+        currentMenu = 0;
 
-        MenuSwitch(0);
+        p_uiPlayer = ReInput.players.GetPlayer(0);
+        MenuSwitch(currentMenu);
+    }
+
+    private void FixedUpdate() {
+        if (go_topMenu.activeSelf) {
+            if (p_uiPlayer.GetButtonDown("UIPageRight")) {
+                MenuSwitch(++currentMenu);
+            } else if (p_uiPlayer.GetButtonDown("UIPageLeft")) {
+                MenuSwitch(--currentMenu);
+            } else if (p_uiPlayer.GetButtonDown("UICancel")) {
+                psc_master.CloseParams();
+            }
+        }
     }
 }

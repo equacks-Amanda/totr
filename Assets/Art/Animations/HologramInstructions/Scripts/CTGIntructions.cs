@@ -17,6 +17,7 @@ public class CTGIntructions : MonoBehaviour
 
     private bool apprentince1Run = false;
     private bool apprentince2Run = false;
+    private bool magicMissileRun = false;
 
     private Rigidbody rb;
 
@@ -27,6 +28,7 @@ public class CTGIntructions : MonoBehaviour
         originalPos = apprentice1.transform.position;
         gemPosition = gem.transform.position;
         apprentice2.SetActive(false);
+        magicMissile.SetActive(false);
     }
 	
 	// Update is called once per frame
@@ -34,28 +36,30 @@ public class CTGIntructions : MonoBehaviour
     {
 	    if (apprentince1Run)
         {
-            apprentice1.transform.Translate(Vector3.forward * Time.deltaTime * 5.0f);
+            apprentice1.transform.Translate(Vector3.forward * Time.unscaledDeltaTime * 5.0f);
         }
         if (apprentince2Run)
         {
-            apprentice2.transform.Translate(Vector3.forward * Time.deltaTime * 3.0f);
+            apprentice2.transform.Translate(Vector3.forward * Time.unscaledDeltaTime * 3.0f);
         }
+		if (magicMissile != null && magicMissileRun)
+			magicMissile.transform.Translate(Vector3.down * Time.unscaledDeltaTime * 10.0f);
     }
 
     IEnumerator CaptureTheGem()
     {
         //Phase 1: Grab the Gem and take it to the goal.
-        //yield return new WaitForSeconds(0.5f);
+        //yield return StartCoroutine(CoroutineUnscaledWait.WaitForSecondsUnscaled(0.5f));
         MoveToGem();
-        yield return new WaitForSeconds(0.8f);
+        yield return StartCoroutine(CoroutineUnscaledWait.WaitForSecondsUnscaled(0.8f));
         GrabGem();
-        yield return new WaitForSeconds(1);
+        yield return StartCoroutine(CoroutineUnscaledWait.WaitForSecondsUnscaled(1));
         GoalReached();
         DropGem();
         gem.SetActive(false);
         //apprentice1.GetComponent<PlayerController>().DropFlag();
         gem.transform.position = gemPosition;
-        yield return new WaitForSeconds(1);
+        yield return StartCoroutine(CoroutineUnscaledWait.WaitForSecondsUnscaled(1));
 
 
         //Phase 2: Opponenet Intercepts
@@ -65,16 +69,17 @@ public class CTGIntructions : MonoBehaviour
         apprentice1.transform.position = originalPos;
         gem.SetActive(true);
         apprentice2.SetActive(true);
+		magicMissile.SetActive(true);
         StartCoroutine(EnemyInterception());
-        //yield return new WaitForSeconds(0.5f);
+        //yield return StartCoroutine(CoroutineUnscaledWait.WaitForSecondsUnscaled(0.5f));
         MoveToGem();
-        yield return new WaitForSeconds(0.8f);
+        yield return StartCoroutine(CoroutineUnscaledWait.WaitForSecondsUnscaled(0.8f));
         GrabGem();
-        yield return new WaitForSeconds(0.5f);
+        yield return StartCoroutine(CoroutineUnscaledWait.WaitForSecondsUnscaled(0.5f));
         DropGem();
-        yield return new WaitForSeconds(0.5f);
+        yield return StartCoroutine(CoroutineUnscaledWait.WaitForSecondsUnscaled(0.5f));
         GoalReached();
-        yield return new WaitForSeconds(1);
+        yield return StartCoroutine(CoroutineUnscaledWait.WaitForSecondsUnscaled(1));
 
 
 
@@ -83,14 +88,12 @@ public class CTGIntructions : MonoBehaviour
 
     IEnumerator EnemyInterception()
     {
-        //yield return new WaitForSeconds(0.5f);
+        //yield return StartCoroutine(CoroutineUnscaledWait.WaitForSecondsUnscaled(0.5f));
         Chase();
-        yield return new WaitForSeconds(0.6f);
-        Debug.Log("Fire.");
-        GameObject go_spell = Instantiate(magicMissile, apprentice2.transform.position, apprentice2.transform.rotation);
-        go_spell.GetComponent<Rigidbody>().velocity = Vector3.left * Constants.SpellStats.C_MagicMissileSpeed;
-        Destroy(go_spell, 0.8f);
-        yield return new WaitForSeconds(1.2f);
+        yield return StartCoroutine(CoroutineUnscaledWait.WaitForSecondsUnscaled(0.6f));
+		magicMissileRun = true;
+		Destroy(magicMissile, 0.8f);
+        yield return StartCoroutine(CoroutineUnscaledWait.WaitForSecondsUnscaled(1.2f));
         apprentince2Run = false;
         //anim2.SetTrigger("stop");
 
@@ -118,6 +121,6 @@ public class CTGIntructions : MonoBehaviour
 
     void DropGem()
     {
-        gem.transform.parent = null;
+        gem.transform.parent = gameObject.transform;
     }
 }

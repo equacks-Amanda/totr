@@ -7,6 +7,7 @@
 using UnityEngine;
 using System.Linq;
 using System;
+using System.Collections;
 [RequireComponent(typeof(Rigidbody))]
 [RequireComponent(typeof(UnityEngine.AI.NavMeshAgent))]
 
@@ -37,14 +38,24 @@ public abstract class EnemyController : SpellTarget {
 
     override public void ApplySpellEffect(Constants.SpellStats.SpellType spell, Constants.Global.Color color, float damage, Vector3 direction) {
         switch(spell) {
+			case Constants.SpellStats.SpellType.MAGICMISSILE:
+				maestro.PlayEnemyHit();
+				break;
             case Constants.SpellStats.SpellType.WIND:
                 StartCoroutine(WindPush(Constants.EnemyStats.C_SkeletonWindPushMultiplier,direction, false));
+				maestro.PlayEnemyHit();
                 break;
             case Constants.SpellStats.SpellType.ICE:
                 Freeze();
+				maestro.PlayEnemyHit();
                 break;
             case Constants.SpellStats.SpellType.ELECTRICITYAOE:
                 Slow();
+				if(b_electricDamageSoundOk){
+					maestro.PlayEnemyHit();
+					b_electricDamageSoundOk = false;
+					StartCoroutine("AdmitElectricDamageSound");
+				}
                 break;
         }
         TakeDamage(damage, color);
@@ -129,7 +140,6 @@ public abstract class EnemyController : SpellTarget {
 		//If for some reason this enemy is dead but it's still taking damage
 		//This if statement will prevent it
 		if (gameObject.activeSelf) {
-			maestro.PlayEnemyHit();
 			f_health -= damage;
 			//Debug.Log(i_health);
 			if(f_health <= 0f){
@@ -229,8 +239,8 @@ public abstract class EnemyController : SpellTarget {
         this.enabled = true;
         riftController = RiftController.Instance;   // Init() is called before Start(), these must be set here (repeatedly...)
         maestro = Maestro.Instance;
-        EnterStateWander();
-		e_startSide = side;
+        e_startSide = side;
+	EnterStateWander();
 	}
 
     protected override void Start() {

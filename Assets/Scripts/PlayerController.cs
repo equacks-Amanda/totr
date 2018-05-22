@@ -123,6 +123,7 @@ public class PlayerController : SpellTarget {
 
         switch (spell) {
             case Constants.SpellStats.SpellType.WIND:
+				maestro.PlayPlayerHit();
 				if(color == e_color) maestro.PlayAnnouncementFriendlyFire();
                 DropFlag();
 
@@ -136,6 +137,7 @@ public class PlayerController : SpellTarget {
                 anim.SetTrigger("windTrigger");
                 break;
             case Constants.SpellStats.SpellType.ICE:
+				maestro.PlayPlayerHit();
 				if(color == e_color) maestro.PlayAnnouncementFriendlyFire();
                 DropFlag();
 
@@ -153,6 +155,11 @@ public class PlayerController : SpellTarget {
                 break;
             case Constants.SpellStats.SpellType.ELECTRICITYAOE:
                 if(e_color != color) {
+					if(b_electricDamageSoundOk){
+						maestro.PlayEnemyHit();
+						b_electricDamageSoundOk = false;
+						StartCoroutine("AdmitElectricDamageSound");
+					}
                     DropFlag();
 
                     if (Constants.UnitTests.C_RunningCTFTests)
@@ -169,6 +176,7 @@ public class PlayerController : SpellTarget {
                 break;
             case Constants.SpellStats.SpellType.MAGICMISSILE:
                 if (e_color != color) {
+					maestro.PlayPlayerHit();
                     DropFlag();
 
                     if (Constants.UnitTests.C_RunningCTFTests)
@@ -362,7 +370,6 @@ public class PlayerController : SpellTarget {
 	public void TakeDamage(float damage, Constants.Global.DamageType d) {
 		if (!isWisp && !isInvuln) {
 			maestro.PlayAnnouncmentPlayerHit(i_playerNumber,d);
-			maestro.PlayPlayerHit();
 			f_health -= damage;
             //DamageVisualOn();
 			if (f_health <= 0.0f) {
@@ -457,16 +464,16 @@ public class PlayerController : SpellTarget {
     //}
 
     public void HealVisualOn() {
-        go_healingVFX.SetActive(true);
+        Instantiate(go_healingVFX,transform.position, Quaternion.identity);
         //go_playerCapsule.GetComponent<MeshRenderer>().material.color = Color.green;
         //Call screenshake here.
-        Invoke("HealVisualOff", 1.0f);
+        //Invoke("HealVisualOff", 1.0f);
     }
 
-    public void HealVisualOff() {
-        go_healingVFX.SetActive(false);
-        //go_playerCapsule.GetComponent<MeshRenderer>().material.color = col_originalColor;
-    }
+    //public void HealVisualOff() {
+    //    go_healingVFX.SetActive(false);
+    //    //go_playerCapsule.GetComponent<MeshRenderer>().material.color = col_originalColor;
+    //}
     #endregion
 
     #region Unity Overrides
@@ -500,6 +507,16 @@ public class PlayerController : SpellTarget {
 
     }
 
+    protected virtual void Update()
+    {
+        // pause
+        if (p_player.GetButtonDown("Menu") && Time.timeScale == 1) {
+            Debug.Log("Check");
+            pauc_pause.Pause(this);
+        }
+    }
+
+
 	protected virtual void FixedUpdate() {
         if (Constants.UnitTests.C_RunningCTFTests)
             return;
@@ -514,12 +531,6 @@ public class PlayerController : SpellTarget {
             e_side = Constants.Global.Side.LEFT;
 
         Move();
-
-        // pause
-        if (p_player.GetButtonDown("Menu") && Time.timeScale == 1) {
-            Debug.Log("Check");
-            pauc_pause.Pause(this);
-        }
 
         if (isWisp)
             return;

@@ -82,7 +82,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1298340107703782
 GameObject:
   m_ObjectHideFlags: 1
@@ -938,6 +938,7 @@ MonoBehaviour:
   - {fileID: 0}
   go_objectIndicator: {fileID: 1565081607546806}
   go_goalIndicator: {fileID: 1179722883262634}
+  soc_scoreOrb: {fileID: 0}
   gc_owned: {fileID: 114926868657018088}
   fc_owned: {fileID: 114257386682752634}
 --- !u!198 &198200265682629410

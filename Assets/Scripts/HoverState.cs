@@ -6,7 +6,7 @@ using UnityEngine.EventSystems;
 
 public class HoverState : MonoBehaviour, ISelectHandler, IDeselectHandler  {
 
-    [SerializeField] private GameObject img_backing;
+    [SerializeField] private GameObject go_backing;
     [SerializeField] private Text txt_button;
 
     private Color col_original;
@@ -16,12 +16,17 @@ public class HoverState : MonoBehaviour, ISelectHandler, IDeselectHandler  {
     }
 
     public void OnSelect(BaseEventData eventData) {
-        img_backing.SetActive(true);
+        go_backing.SetActive(true);
         txt_button.color = new Color(255,231,0);
     }
     
     public void OnDeselect(BaseEventData eventData) {
-        img_backing.SetActive(false);
+        go_backing.SetActive(false);
+        txt_button.color = col_original;
+    }
+
+    public void OnDisable() {
+        go_backing.SetActive(false);
         txt_button.color = col_original;
     }
 

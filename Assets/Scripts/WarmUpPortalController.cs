@@ -20,7 +20,7 @@ public class WarmUpPortalController : SceneLoader {
         Time.timeScale = 0;
         yield return new WaitForSecondsRealtime(12f);
         Time.timeScale = 1;
-        go_whatshisface.SetActive(false);
+        //go_whatshisface.SetActive(false);
     }
 
 

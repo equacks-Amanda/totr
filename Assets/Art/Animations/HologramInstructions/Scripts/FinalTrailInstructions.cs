@@ -24,6 +24,8 @@ public class FinalTrailInstructions : MonoBehaviour
     private Rigidbody rb;
     private float _fireRate;
     private float _bulletLifetime;
+	private bool isMissile = false;
+	private Vector3 start;
 
     // Use this for initialization
     void Start()
@@ -34,6 +36,7 @@ public class FinalTrailInstructions : MonoBehaviour
         forceField.SetActive(false);
         skeleton.SetActive(false);
         _bulletLifetime = 0.4f;
+		start = magicMissile.transform.position;
     }
 
     // Update is called once per frame
@@ -41,37 +44,46 @@ public class FinalTrailInstructions : MonoBehaviour
     {
         if (isRunning)
         {
-            apprentice.transform.Translate(Vector3.left * Time.deltaTime * 3.0f);
+            apprentice.transform.Translate(Vector3.left * Time.unscaledDeltaTime * 3.0f);
         }
         if (isChasing)
         {
-            skeleton.transform.Translate(Vector3.forward * Time.deltaTime * 1.0f);
+            skeleton.transform.Translate(Vector3.forward * Time.unscaledDeltaTime * 1.0f);
         }
         if (canShoot)
         {
             if (_fireRate <= 0f)
             {
-                GameObject go_spell1 = Instantiate(magicMissile, apprentice.transform.position, apprentice.transform.rotation);
-                go_spell1.GetComponent<Rigidbody>().velocity = Vector3.forward * Constants.SpellStats.C_MagicMissileSpeed;
-                Destroy(go_spell1, _bulletLifetime);
+                isMissile = true;
+				magicMissile.SetActive(true);
+                StartCoroutine("ResetBullet");
                 _fireRate = 1.0f;
             }
-            _fireRate -= Time.deltaTime;
+            _fireRate -= Time.unscaledDeltaTime;
         }
+		if(isMissile)
+			magicMissile.transform.Translate(Vector3.down * Time.unscaledDeltaTime * 10.0f);
     }
+	
+	IEnumerator ResetBullet(){
+		yield return new WaitForSecondsRealtime(_bulletLifetime);
+		magicMissile.transform.position = start;
+		magicMissile.SetActive(false);
+		isMissile = false;
+	}
 
     IEnumerator FinalTrial()
     {
         //Phase 1: Attack Rift Head and dodge death bolt.
         Shoot();
-        yield return new WaitForSeconds(1f);
+        yield return StartCoroutine(CoroutineUnscaledWait.WaitForSecondsUnscaled(1f));
         StrafeLeft();
         FireBolt();
         GameObject bolt = Instantiate(deathBolt, riftHead.transform.position, riftHead.transform.rotation);
         bolt.GetComponent<Rigidbody>().velocity = Vector3.back * Constants.SpellStats.C_MagicMissileSpeed;
-        yield return new WaitForSeconds(1f);
+        yield return StartCoroutine(CoroutineUnscaledWait.WaitForSecondsUnscaled(1f));
         isRunning = false;
-        yield return new WaitForSeconds(1f);
+        yield return StartCoroutine(CoroutineUnscaledWait.WaitForSecondsUnscaled(1f));
         ResetPosition();
 
         //Phase 2: Destroy Skeleton to deactivate shields.
@@ -80,11 +92,11 @@ public class FinalTrailInstructions : MonoBehaviour
         forceField.SetActive(true);
         isChasing = true;
         canShoot = true;
-        yield return new WaitForSeconds(2.0f);
+        yield return StartCoroutine(CoroutineUnscaledWait.WaitForSecondsUnscaled(2.0f));
         skeleton.SetActive(false);
         forceField.SetActive(false);
         canShoot = false;
-        yield return new WaitForSeconds(1.5f);
+        yield return StartCoroutine(CoroutineUnscaledWait.WaitForSecondsUnscaled(1.5f));
 
 
         Debug.Log("End of Instruction.");
@@ -93,9 +105,6 @@ public class FinalTrailInstructions : MonoBehaviour
     void Shoot()
     {
         apprenticeAnim.Play("FinalTrial", -1, 0f);
-        GameObject go_spell1 = Instantiate(magicMissile, apprentice.transform.position, apprentice.transform.rotation);
-        go_spell1.GetComponent<Rigidbody>().velocity = Vector3.forward * Constants.SpellStats.C_MagicMissileSpeed;
-        Destroy(go_spell1, 0.8f);
     }
 
     void ResetPosition()

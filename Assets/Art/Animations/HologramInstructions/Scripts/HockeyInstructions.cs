@@ -42,21 +42,21 @@ public class HockeyInstructions : MonoBehaviour
     {
 	    if (apprentince1Run)
         {
-            apprentice1.transform.Translate(Vector3.forward * Time.deltaTime * 3.5f);
+            apprentice1.transform.Translate(Vector3.forward * Time.unscaledDeltaTime * 3.5f);
         }
         if (apprentince2Run)
         {
-            apprentice2.transform.Translate(Vector3.forward * Time.deltaTime * 5f);
+            apprentice2.transform.Translate(Vector3.forward * Time.unscaledDeltaTime * 5f);
         }
         if (puckMove)
         {
             if(push1)
             {
-                puck.transform.Translate(Vector3.up * Time.deltaTime * 10f);
+                puck.transform.Translate(Vector3.up * Time.unscaledDeltaTime * 10f);
             }
             if (push2)
             {
-                puck.transform.Translate(Vector3.left * Time.deltaTime * 10f);
+                puck.transform.Translate(Vector3.left * Time.unscaledDeltaTime * 10f);
             }
         }
     }
@@ -66,14 +66,14 @@ public class HockeyInstructions : MonoBehaviour
         //Phase 1: Wind parry the puck into the goal.
         MoveToPuck();
         anim1.Play("Wind Parry", -1, 0f);
-        yield return new WaitForSeconds(1.1f);
+        yield return StartCoroutine(CoroutineUnscaledWait.WaitForSecondsUnscaled(1.1f));
         pushGem();
         push1 = true;
-        yield return new WaitForSeconds(0.5f);
+        yield return StartCoroutine(CoroutineUnscaledWait.WaitForSecondsUnscaled(0.5f));
         GoalReached();
         puck.transform.position = puckPosition;
         puck.transform.rotation = puckRotation;
-        yield return new WaitForSeconds(1);
+        yield return StartCoroutine(CoroutineUnscaledWait.WaitForSecondsUnscaled(1));
 
         //Phase 2: Opponent Intercepts
         anim1.Play("Wind Parry", -1, 0f);
@@ -84,7 +84,7 @@ public class HockeyInstructions : MonoBehaviour
         MoveToPuck();
         StartCoroutine(EnemyInterception());
         MoveToPuck();
-        yield return new WaitForSeconds(1.1f);
+        yield return StartCoroutine(CoroutineUnscaledWait.WaitForSecondsUnscaled(1.1f));
         pushGem();
     }
 
@@ -92,12 +92,12 @@ public class HockeyInstructions : MonoBehaviour
     {
         Chase();
         anim2.Play("Wind Parry", -1, 0f);
-        yield return new WaitForSeconds(1.5f);
+        yield return StartCoroutine(CoroutineUnscaledWait.WaitForSecondsUnscaled(1.5f));
         windParry2.SetActive(true);
         apprentince2Run = false;
         push1 = false;
         push2 = true;
-        yield return new WaitForSeconds(2);
+        yield return StartCoroutine(CoroutineUnscaledWait.WaitForSecondsUnscaled(2));
         puck.SetActive(false);
 
 

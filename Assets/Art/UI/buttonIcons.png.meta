@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 5ee2c24fa91668f4785281e717b6a9a9
-timeCreated: 1525310757
+timeCreated: 1526387917
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -72,8 +72,8 @@ TextureImporter:
     21300130: xbox_x
     21300132: xbox_select
     21300134: xbox_start
-    21300136: buttonIcons_68
-    21300138: buttonIcons_69
+    21300136: leftBump
+    21300138: rightBump
     21300140: buttonIcons_70
     21300142: buttonIcons_71
   serializedVersion: 4
@@ -1107,7 +1107,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: buttonIcons_68
+      name: leftBump
       rect:
         serializedVersion: 2
         x: 811
@@ -1121,7 +1121,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: buttonIcons_69
+      name: rightBump
       rect:
         serializedVersion: 2
         x: 859

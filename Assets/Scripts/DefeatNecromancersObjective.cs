@@ -14,6 +14,10 @@ public class DefeatNecromancersObjective : Objective {
         calligrapher.GoalScoreReset(e_color);
     }
 
+    override public int GetMax() {
+        return Constants.ObjectiveStats.C_NecromancersMaxScore;
+    }
+
     // Update UI and check for completion
     public void UpdateNecroScore() {
 		UpdateScore(Constants.ObjectiveStats.C_NecromancersMaxScore);
@@ -22,7 +26,7 @@ public class DefeatNecromancersObjective : Objective {
 
 #region Unity Overrides	
     void OnEnable() {
-        //maestro.PlayBeginDefeatNecromancers();
+        maestro.PlayBeginNecromancer();
     }
 #endregion
 }

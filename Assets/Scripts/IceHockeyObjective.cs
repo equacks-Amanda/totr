@@ -19,6 +19,10 @@ public class IceHockeyObjective : Objective {
         calligrapher.GoalScoreReset(e_color);
     }
 
+    override public int GetMax() {
+        return Constants.ObjectiveStats.C_HockeyMaxScore;
+    }
+
     // Update UI and check for completion
     public void UpdatePuckScore() {
 		UpdateScore(Constants.ObjectiveStats.C_HockeyMaxScore);

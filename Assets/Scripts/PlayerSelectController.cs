@@ -17,8 +17,8 @@ public class PlayerSelectController : MonoBehaviour {
     [SerializeField] GameObject go_selectMenu;
     [SerializeField] GameObject go_regController;
 
-    [SerializeField] Button butt_settingsSelect;
     [SerializeField] Button butt_optionsSelect;
+    [SerializeField] DebugParametersController dpc_params;
 
     public void SettingsFree() {
         b_settingsActive = false;
@@ -29,8 +29,7 @@ public class PlayerSelectController : MonoBehaviour {
         go_selectMenu.SetActive(false);
         go_regController.SetActive(false);
 
-        butt_settingsSelect.Select();
-        butt_settingsSelect.OnSelect(null);
+        dpc_params.MenuSwitch(0);
     }
 
     public void CloseParams() {
@@ -46,7 +45,7 @@ public class PlayerSelectController : MonoBehaviour {
         go_regController.SetActive(false);
 
         butt_optionsSelect.Select();
-        butt_optionsSelect.OnSelect(null);
+        butt_optionsSelect.GetComponent<HoverState>().OnSelect(null);
     }
 
     public void CloseOptions() {

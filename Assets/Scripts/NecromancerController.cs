@@ -28,14 +28,24 @@ public class NecromancerController : EnemyController {
 	
 	override public void ApplySpellEffect(Constants.SpellStats.SpellType spell, Constants.Global.Color color, float damage, Vector3 direction) {
         switch(spell) {
+			case Constants.SpellStats.SpellType.MAGICMISSILE:
+				maestro.PlayEnemyHit();
+				break;
             case Constants.SpellStats.SpellType.WIND:
                 StartCoroutine(WindPush(Constants.EnemyStats.C_NecromancerWindPushMultiplier,direction,true));
+				maestro.PlayEnemyHit();
                 break;
             case Constants.SpellStats.SpellType.ICE:
                 Freeze();
+				maestro.PlayEnemyHit();
                 break;
             case Constants.SpellStats.SpellType.ELECTRICITYAOE:
                 Slow();
+				if(b_electricDamageSoundOk){
+					maestro.PlayEnemyHit();
+					b_electricDamageSoundOk = false;
+					StartCoroutine("AdmitElectricDamageSound");
+				}
                 break;
         }
         TakeDamage(damage, color);
@@ -51,21 +61,28 @@ public class NecromancerController : EnemyController {
 
     protected override void UpdateWander() {
 		base.UpdateWander();
-		bool b_playersAvailable = false;
-		for(int i = 0; i < riftController.go_playerReferences.Length; i++){	
-			if(riftController.go_playerReferences[i].GetComponent<PlayerController>().Side == e_startSide && riftController.go_playerReferences[i].GetComponent<PlayerController>().Wisp == false){
-				if (Vector3.Distance(riftController.go_playerReferences[i].transform.position, transform.position) < Constants.EnemyStats.C_NecromancerAvoidDistance) {
-					b_playersAvailable = true;
-					break;
-				}
-			}
-		}
 
-		if (b_playersAvailable) {
-			EnterStateFlee();
+		if (IsCornered(2.0f) == true) {
+			f_timer = 0;
+			EnterStateBreakout();
 		}
 		else {
-			 Wander();
+			bool b_playersAvailable = false;
+			for(int i = 0; i < riftController.go_playerReferences.Length; i++){	
+				if(riftController.go_playerReferences[i].GetComponent<PlayerController>().Side == e_startSide && riftController.go_playerReferences[i].GetComponent<PlayerController>().Wisp == false){
+					if (Vector3.Distance(riftController.go_playerReferences[i].transform.position, transform.position) < Constants.EnemyStats.C_NecromancerAvoidDistance) {
+						b_playersAvailable = true;
+						break;
+					}
+				}
+			}
+
+			if (b_playersAvailable) {
+				EnterStateFlee();
+			}
+			else {
+				 Wander();
+			}
 		}
     }
 
@@ -170,7 +187,7 @@ public class NecromancerController : EnemyController {
 
 		base.UpdateFlee();
 
-		if (IsCornered() == true) {
+		if (IsCornered(3.0f) == true) {
 			f_timer = 0;
 			EnterStateBreakout();
 		}
@@ -239,20 +256,20 @@ public class NecromancerController : EnemyController {
         Init(e_startSide);
     }
 
-	private bool IsCornered() {
-		if (transform.position.x <= 3.0 || transform.position.x <= -1*Constants.EnemyStats.C_MapBoundryXAxis+3.0) {
-			if ((transform.position.z >= Constants.EnemyStats.C_MapBoundryZAxis-3.0)) {
+	private bool IsCornered(float length) {
+		if (transform.position.x <= length || transform.position.x <= -1*Constants.EnemyStats.C_MapBoundryXAxis+length) {
+			if ((transform.position.z >= Constants.EnemyStats.C_MapBoundryZAxis-length)) {
 				return true;
 			}
-			else if ((transform.position.z <= -1*Constants.EnemyStats.C_MapBoundryZAxis+3.0)) {
+			else if ((transform.position.z <= -1*Constants.EnemyStats.C_MapBoundryZAxis+length)) {
 				return true;
 			}
 		}
-		else if (transform.position.x >= -3.0 || transform.position.x >= Constants.EnemyStats.C_MapBoundryXAxis-3.0) {
-			if ((transform.position.z >= Constants.EnemyStats.C_MapBoundryZAxis-3.0)) {
+		else if (transform.position.x >= -length || transform.position.x >= Constants.EnemyStats.C_MapBoundryXAxis-length) {
+			if ((transform.position.z >= Constants.EnemyStats.C_MapBoundryZAxis-length)) {
 				return true;
 			}
-			else if ((transform.position.z <= -1*Constants.EnemyStats.C_MapBoundryZAxis+3.0)) {
+			else if ((transform.position.z <= -1*Constants.EnemyStats.C_MapBoundryZAxis+length)) {
 				return true;
 			}
 		}
