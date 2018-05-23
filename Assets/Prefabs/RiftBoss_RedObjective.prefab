@@ -1120,14 +1120,13 @@ GameObject:
   - component: {fileID: 54752586030562164}
   - component: {fileID: 114357584676372220}
   - component: {fileID: 136069151611669432}
-  - component: {fileID: 95341036833897652}
   m_Layer: 0
   m_Name: Skeleton_Basic
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1247694373874294
 GameObject:
   m_ObjectHideFlags: 1
@@ -1569,14 +1568,13 @@ GameObject:
   - component: {fileID: 54252718434141682}
   - component: {fileID: 114093571910969296}
   - component: {fileID: 136587496236658046}
-  - component: {fileID: 95301690069062144}
   m_Layer: 0
   m_Name: Skeleton_Basic (2)
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1338587499206968
 GameObject:
   m_ObjectHideFlags: 1
@@ -2052,7 +2050,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1463375732904762
 GameObject:
   m_ObjectHideFlags: 1
@@ -2080,14 +2078,13 @@ GameObject:
   - component: {fileID: 54525531215280690}
   - component: {fileID: 114751540822775270}
   - component: {fileID: 136967054022137862}
-  - component: {fileID: 95030088430268762}
   m_Layer: 0
   m_Name: Skeleton_Basic (1)
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1476849870893134
 GameObject:
   m_ObjectHideFlags: 1
@@ -8689,23 +8686,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 10, y: 50, z: 10}
   m_Center: {x: 0, y: 25, z: 0}
---- !u!95 &95030088430268762
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1468067933962994}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: e1946a32795ff431d9d3f6ecbc2de38e, type: 3}
-  m_Controller: {fileID: 9100000, guid: 2b938b4242de7f6499ade9b29221beb6, type: 2}
-  m_CullingMode: 1
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 1
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!95 &95042657577070886
 Animator:
   serializedVersion: 3
@@ -8716,40 +8696,6 @@ Animator:
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 7fea14323cc1d411b99f0d1bb352dd58, type: 3}
   m_Controller: {fileID: 9100000, guid: 946a65e7ae641c94aad17a238c9f4d9b, type: 2}
-  m_CullingMode: 1
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 1
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
---- !u!95 &95301690069062144
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1334022831866788}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: e1946a32795ff431d9d3f6ecbc2de38e, type: 3}
-  m_Controller: {fileID: 9100000, guid: 2b938b4242de7f6499ade9b29221beb6, type: 2}
-  m_CullingMode: 1
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 1
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
---- !u!95 &95341036833897652
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1247073232569698}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: e1946a32795ff431d9d3f6ecbc2de38e, type: 3}
-  m_Controller: {fileID: 9100000, guid: 2b938b4242de7f6499ade9b29221beb6, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
@@ -9322,10 +9268,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.5395789
-  m_Height: 3.2342038
+  m_Radius: 0.5
+  m_Height: 4
   m_Direction: 1
-  m_Center: {x: -0.017015457, y: 1.1080911, z: 0.104070425}
+  m_Center: {x: 0, y: 2, z: 0}
 --- !u!136 &136587496236658046
 CapsuleCollider:
   m_ObjectHideFlags: 1
@@ -9335,10 +9281,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.5395789
-  m_Height: 3.2342038
+  m_Radius: 0.5
+  m_Height: 4
   m_Direction: 1
-  m_Center: {x: -0.017015457, y: 1.1080911, z: 0.104070425}
+  m_Center: {x: 0, y: 2, z: 0}
 --- !u!136 &136967054022137862
 CapsuleCollider:
   m_ObjectHideFlags: 1
@@ -9348,10 +9294,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.5395789
-  m_Height: 3.2342038
+  m_Radius: 0.5
+  m_Height: 4
   m_Direction: 1
-  m_Center: {x: -0.017015457, y: 1.1080911, z: 0.104070425}
+  m_Center: {x: 0, y: 2, z: 0}
 --- !u!137 &137031911200401556
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1

@@ -95,12 +95,12 @@ public class SkeletonController : EnemyController {
 
 		if (b_playersAvailable) {
 			EnterStateChase();
-			GetComponent<Animator>().SetBool("isRunning", true);
+			anim.SetBool("isRunning", true);
 
 		}
 		else {
 			 Wander();
-			GetComponent<Animator>().SetBool("isRunning", false);
+			anim.SetBool("isRunning", false);
 		}
 	}
 	
@@ -123,14 +123,14 @@ public class SkeletonController : EnemyController {
 
     protected override void EnterStateAttack() {
 		base.EnterStateAttack();
-        GetComponentInChildren<Animator>().SetTrigger("attackTrigger");
-        //GetComponent<Animator>().Play("placeholder_enemy_attack");
+        DoAttack();
     }
 
     protected override void DoAttack() {
 		base.DoAttack();
 		if (go_closestTarget) {
-			go_closestTarget.GetComponent<PlayerController>().TakeDamage(Constants.EnemyStats.C_EnemyDamage,Constants.Global.DamageType.ENEMY);
+            anim.SetBool("isAttacking", true);
+            go_closestTarget.GetComponent<PlayerController>().TakeDamage(Constants.EnemyStats.C_EnemyDamage,Constants.Global.DamageType.ENEMY);
 		}
     }
 	

@@ -113,7 +113,7 @@ public abstract class EnemyController : SpellTarget {
     }
 
     protected void AttackOver() {
-        Debug.Log("attackover");
+        anim.SetBool("isAttacking",false);
 		switch (e_previousState) {
 		case State.SLOWED:
 			UpdateSlowed();
