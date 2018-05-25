@@ -9,6 +9,11 @@ using System.Collections;
 using UnityEngine;
 
 public sealed class RiftController : MonoBehaviour {
+
+#region ART ADDITIONS
+    [SerializeField] private Material[] mat_floorEmissions;
+#endregion
+
 #region Variables and Declarations
     [SerializeField] private GameObject go_riftDeathBolt;
     [SerializeField] private GameObject go_boardClear;
@@ -398,7 +403,14 @@ public sealed class RiftController : MonoBehaviour {
     }
     #endregion
 
-    public void ActivateLights(int level) {
+    // ART ADDITION: Organaize functions that occur during objective swap into one function call for Dark Magician.
+    public void ObjectiveSwap( int level) {
+        ActivateLights(level);
+        SwapFloorEmissions(level);
+        IncreaseFogDensity(level);
+    }
+
+    void ActivateLights(int level) {
         for (int i = 0; i < go_lightsLeft.Length; i++) { 
             go_lightsLeft[i].SetActive(false);
             go_lightsRight[i].SetActive(false);
@@ -406,6 +418,24 @@ public sealed class RiftController : MonoBehaviour {
 
         go_lightsLeft[level].SetActive(true);
         go_lightsRight[level].SetActive(true);
+    }
+
+    // ART ADDITION : Adds small cracks of color to the floor determined by objective number.
+    void SwapFloorEmissions( int level) {
+        GameObject[] floors = GameObject.FindGameObjectsWithTag("Floor");
+
+       if( mat_floorEmissions != null )
+        {
+            for (int i = 0; i < floors.Length; i++)
+            {
+                floors[i].GetComponent<Renderer>().material = mat_floorEmissions[level];
+            }
+        }
+    }
+
+    // ART ADDITION : Increases fog density determined by objective number.
+    void IncreaseFogDensity( int level) {
+
     }
 
     void PlayNoise() {
