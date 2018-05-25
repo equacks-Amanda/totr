@@ -52,7 +52,7 @@ public sealed class DarkMagician : MonoBehaviour {
         objv_currentRedObjective = objv_redObjectiveList[objectiveNumber-1].Activate(objectiveNumber);  // objectiveNumber starts with 1 but array is 0-based
         objv_currentBlueObjective.Complete();
         objv_currentBlueObjective = objv_blueObjectiveList[objectiveNumber - 1].Activate(objectiveNumber);  // objectiveNumber starts with 1 but array is 0-based
-        riftController.ActivateLights(objectiveNumber - 1);
+        riftController.ObjectiveSwap(objectiveNumber - 1);
     }
 
     private IEnumerator SwitchToEndGame() {
