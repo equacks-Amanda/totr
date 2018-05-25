@@ -200,7 +200,7 @@ public sealed class RiftController : MonoBehaviour {
 		if (go_necromancers[0]) {
 			for (int i = 0; i < go_skeletons.Length; i++) {
 				if (go_skeletons[i].activeInHierarchy) {
-					go_skeletons[i].GetComponent<SkeletonController>().TakeDamage(Constants.EnemyStats.C_EnemyHealth, Constants.Global.Color.NULL);
+					go_skeletons[i].GetComponentInChildren<SkeletonController>().TakeDamage(Constants.EnemyStats.C_EnemyHealth, Constants.Global.Color.NULL);
 				}
 			}
 
@@ -229,11 +229,11 @@ public sealed class RiftController : MonoBehaviour {
         if (!(go_skeletons[i_nextEnemySpawnIndex].activeSelf)) {
 
 			if (position.x < 0f) {
-				go_skeletons[i_nextEnemySpawnIndex].GetComponent<SkeletonController>().Init(Constants.Global.Side.LEFT);
+				go_skeletons[i_nextEnemySpawnIndex].GetComponentInChildren<SkeletonController>().Init(Constants.Global.Side.LEFT);
 				i_leftEnemies++;
 			}
 			else {
-				go_skeletons[i_nextEnemySpawnIndex].GetComponent<SkeletonController>().Init(Constants.Global.Side.RIGHT);
+				go_skeletons[i_nextEnemySpawnIndex].GetComponentInChildren<SkeletonController>().Init(Constants.Global.Side.RIGHT);
 				i_rightEnemies++;
 			}
 

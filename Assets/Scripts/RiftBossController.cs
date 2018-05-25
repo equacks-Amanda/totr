@@ -71,7 +71,7 @@ public class RiftBossController : SpellTarget {
         for (int i = 0; i < skeletonSpawnCount; i++) {
             // move skeleton into position - must happen before Init() is called
             go_skeletons[i].transform.position = go_runes[i].transform.position;
-            go_skeletons[i].GetComponent<SkeletonController>().Init(e_startSide);
+            go_skeletons[i].GetComponentInChildren<SkeletonController>().Init(e_startSide);
             go_skeletons[i].SetActive(true);
         }
     }
