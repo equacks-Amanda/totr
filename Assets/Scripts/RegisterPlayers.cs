@@ -26,8 +26,8 @@ public class RegisterPlayers : SceneLoader {
     [SerializeField] private Material[] mat_hatRed;
     [SerializeField] private Material[] mat_hatBlue;
     [SerializeField] private SkinnedMeshRenderer[] smr_outfits; //4 units
-    [SerializeField] private Material mat_outfitRed;
-    [SerializeField] private Material mat_outfitBlue;
+    [SerializeField] private Material[] mat_outfitRed;
+    [SerializeField] private Material[] mat_outfitBlue;
     [SerializeField] private Text txt_p1Message;
     [SerializeField] private Text txt_p2Message;
     [SerializeField] private Text txt_p3Message;
@@ -80,7 +80,7 @@ public class RegisterPlayers : SceneLoader {
                 go_backing1.sprite = img_red;
                 mr_hats[(4 * 0) + i_p1Hat].gameObject.SetActive(true);
                 mr_hats[(4 * 0) + i_p1Hat].materials = new Material[] { mat_hatRed[i_p1Hat] };
-                smr_outfits[0].materials = new Material[] { mat_outfitRed, mat_outfitRed };
+                smr_outfits[0].materials = new Material[] { mat_outfitRed[0], mat_outfitRed[0] };
             }
             if (connectedControllers >= 2 && !b_p2Connected) {
                 txt_p2Message.text = "CONNECTED";
@@ -88,7 +88,7 @@ public class RegisterPlayers : SceneLoader {
                 go_backing2.sprite = img_red;
                 mr_hats[(4 * 1) + i_p2Hat].gameObject.SetActive(true);
                 mr_hats[(4 * 1) + i_p2Hat].materials = new Material[] { mat_hatRed[i_p2Hat] };
-                smr_outfits[1].materials = new Material[] { mat_outfitRed, mat_outfitRed };
+                smr_outfits[1].materials = new Material[] { mat_outfitRed[1], mat_outfitRed[1] };
             }
             if (connectedControllers >= 3 && !b_p3Connected) {
                 txt_p3Message.text = "CONNECTED";
@@ -96,7 +96,7 @@ public class RegisterPlayers : SceneLoader {
                 go_backing3.sprite = img_blue;
                 mr_hats[(4 * 2) + i_p3Hat].gameObject.SetActive(true);
                 mr_hats[(4 * 2) + i_p3Hat].materials = new Material[] { mat_hatBlue[i_p3Hat] };
-                smr_outfits[2].materials = new Material[] { mat_outfitBlue, mat_outfitBlue };
+                smr_outfits[2].materials = new Material[] { mat_outfitBlue[2], mat_outfitBlue[2] };
             }
             if (connectedControllers >= 4 && !b_p4Connected) {
                 txt_p4Message.text = "CONNECTED";
@@ -104,7 +104,7 @@ public class RegisterPlayers : SceneLoader {
                 go_backing4.sprite = img_blue;
                 mr_hats[(4 * 3) + i_p4Hat].gameObject.SetActive(true);
                 mr_hats[(4 * 3) + i_p4Hat].materials = new Material[] { mat_hatBlue[i_p4Hat] };
-                smr_outfits[3].materials = new Material[] { mat_outfitBlue, mat_outfitBlue };
+                smr_outfits[3].materials = new Material[] { mat_outfitBlue[3], mat_outfitBlue[3] };
             }
 
             // switch colors
@@ -114,13 +114,13 @@ public class RegisterPlayers : SceneLoader {
                     go_backing1.sprite = img_blue;
                     e_p1Color = Constants.Global.Color.BLUE;
                     mr_hats[(4 * 0) + i_p1Hat].materials = new Material[] { mat_hatBlue[i_p1Hat] };
-                    smr_outfits[0].materials = new Material[] { mat_outfitBlue, mat_outfitBlue };
+                    smr_outfits[0].materials = new Material[] { mat_outfitBlue[0], mat_outfitBlue[0] };
                 }
                 else {
                     go_backing1.sprite = img_red;
                     e_p1Color = Constants.Global.Color.RED;
                     mr_hats[(4 * 0) + i_p1Hat].materials = new Material[] { mat_hatRed[i_p1Hat] };
-                    smr_outfits[0].materials = new Material[] { mat_outfitRed, mat_outfitRed };
+                    smr_outfits[0].materials = new Material[] { mat_outfitRed[0], mat_outfitRed[0] };
                 }
             }
             if ((p_player2.GetButtonDown("UIPageLeft") || p_player2.GetButtonDown("UIPageRight")) && !b_p2Ready) {
@@ -128,13 +128,13 @@ public class RegisterPlayers : SceneLoader {
                     go_backing2.sprite = img_blue;
                     e_p2Color = Constants.Global.Color.BLUE;
                     mr_hats[(4 * 1) + i_p2Hat].materials = new Material[] { mat_hatBlue[i_p2Hat] };
-                    smr_outfits[1].materials = new Material[] { mat_outfitBlue, mat_outfitBlue };
+                    smr_outfits[1].materials = new Material[] { mat_outfitBlue[1], mat_outfitBlue[1] };
                 }
                 else {
                     go_backing2.sprite = img_red;
                     e_p2Color = Constants.Global.Color.RED;
                     mr_hats[(4 * 1) + i_p2Hat].materials = new Material[] { mat_hatRed[i_p2Hat] };
-                    smr_outfits[1].materials = new Material[] { mat_outfitRed, mat_outfitRed };
+                    smr_outfits[1].materials = new Material[] { mat_outfitRed[1], mat_outfitRed[1] };
                 }
             }
             if ((p_player3.GetButtonDown("UIPageLeft") || p_player3.GetButtonDown("UIPageRight")) && !b_p3Ready) {
@@ -142,13 +142,13 @@ public class RegisterPlayers : SceneLoader {
                     go_backing3.sprite = img_blue;
                     e_p3Color = Constants.Global.Color.BLUE;
                     mr_hats[(4 * 2) + i_p3Hat].materials = new Material[] { mat_hatBlue[i_p3Hat] };
-                    smr_outfits[2].materials = new Material[] { mat_outfitBlue, mat_outfitBlue };
+                    smr_outfits[2].materials = new Material[] { mat_outfitBlue[2], mat_outfitBlue[2] };
                 }
                 else {
                     go_backing3.sprite = img_red;
                     e_p3Color = Constants.Global.Color.RED;
                     mr_hats[(4 * 2) + i_p3Hat].materials = new Material[] { mat_hatRed[i_p3Hat] };
-                    smr_outfits[2].materials = new Material[] { mat_outfitRed, mat_outfitRed };
+                    smr_outfits[2].materials = new Material[] { mat_outfitRed[2], mat_outfitRed[2] };
                 }
             }
             if ((p_player4.GetButtonDown("UIPageLeft") || p_player4.GetButtonDown("UIPageRight")) && !b_p4Ready) {
@@ -156,13 +156,13 @@ public class RegisterPlayers : SceneLoader {
                     go_backing4.sprite = img_blue;
                     e_p4Color = Constants.Global.Color.BLUE;
                     mr_hats[(4 * 3) + i_p4Hat].materials = new Material[] { mat_hatBlue[i_p4Hat] };
-                    smr_outfits[3].materials = new Material[] { mat_outfitBlue, mat_outfitBlue };
+                    smr_outfits[3].materials = new Material[] { mat_outfitBlue[3], mat_outfitBlue[3] };
                 }
                 else {
                     go_backing4.sprite = img_red;
                     e_p4Color = Constants.Global.Color.RED;
                     mr_hats[(4 * 3) + i_p4Hat].materials = new Material[] { mat_hatRed[i_p4Hat] };
-                    smr_outfits[3].materials = new Material[] { mat_outfitRed, mat_outfitRed };
+                    smr_outfits[3].materials = new Material[] { mat_outfitRed[3], mat_outfitRed[3] };
                 }
             }
 
