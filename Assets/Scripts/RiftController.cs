@@ -438,7 +438,7 @@ public sealed class RiftController : MonoBehaviour {
     void IncreaseFogDensity( int level) {
         if(ps_arenaFog != null )
         {
-            ps_arenaFog.emissionRate = level * 100;
+            ps_arenaFog.emissionRate = level * 75;
         }
     }
 
