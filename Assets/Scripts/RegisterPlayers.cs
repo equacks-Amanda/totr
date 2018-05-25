@@ -28,12 +28,16 @@ public class RegisterPlayers : SceneLoader {
     [SerializeField] private SkinnedMeshRenderer[] smr_outfits; //4 units
     [SerializeField] private Material[] mat_outfitRed;
     [SerializeField] private Material[] mat_outfitBlue;
-    [SerializeField] private Text txt_p1Message;
-    [SerializeField] private Text txt_p2Message;
-    [SerializeField] private Text txt_p3Message;
-    [SerializeField] private Text txt_p4Message;
+    //[SerializeField] private Text txt_p1Message;
+    //[SerializeField] private Text txt_p2Message;
+    //[SerializeField] private Text txt_p3Message;
+    //[SerializeField] private Text txt_p4Message;
     [SerializeField] private GameObject go_go;
     [SerializeField] private GameObject go_paramMenu;
+    //ART ADDITION
+    [SerializeField] private ColorPulse[] controllerIcons;
+    [SerializeField] private Sprite sp_teamSunIcon;
+    [SerializeField] private Sprite sp_teamMoonIcon;
 
 
     private Player p_player1, p_player2, p_player3, p_player4;
@@ -75,7 +79,8 @@ public class RegisterPlayers : SceneLoader {
             // test connection
             int connectedControllers = ReInput.controllers.GetControllerCount(ControllerType.Joystick);
             if (connectedControllers >= 1 && !b_p1Connected) {
-                txt_p1Message.text = "CONNECTED";
+                //txt_p1Message.text = "CONNECTED";
+                controllerIcons[0].ChangeColorTime(Color.white, Color.green, .5f, true);
                 b_p1Connected = true;
                 go_backing1.sprite = img_red;
                 mr_hats[(4 * 0) + i_p1Hat].gameObject.SetActive(true);
@@ -83,7 +88,8 @@ public class RegisterPlayers : SceneLoader {
                 smr_outfits[0].materials = new Material[] { mat_outfitRed[0], mat_outfitRed[0] };
             }
             if (connectedControllers >= 2 && !b_p2Connected) {
-                txt_p2Message.text = "CONNECTED";
+                //txt_p2Message.text = "CONNECTED";
+                controllerIcons[1].ChangeColorTime(Color.white, Color.green, .5f, true);
                 b_p2Connected = true;
                 go_backing2.sprite = img_red;
                 mr_hats[(4 * 1) + i_p2Hat].gameObject.SetActive(true);
@@ -91,7 +97,8 @@ public class RegisterPlayers : SceneLoader {
                 smr_outfits[1].materials = new Material[] { mat_outfitRed[1], mat_outfitRed[1] };
             }
             if (connectedControllers >= 3 && !b_p3Connected) {
-                txt_p3Message.text = "CONNECTED";
+                //txt_p3Message.text = "CONNECTED";
+                controllerIcons[2].ChangeColorTime(Color.white, Color.green, .5f, true);
                 b_p3Connected = true;
                 go_backing3.sprite = img_blue;
                 mr_hats[(4 * 2) + i_p3Hat].gameObject.SetActive(true);
@@ -99,7 +106,8 @@ public class RegisterPlayers : SceneLoader {
                 smr_outfits[2].materials = new Material[] { mat_outfitBlue[2], mat_outfitBlue[2] };
             }
             if (connectedControllers >= 4 && !b_p4Connected) {
-                txt_p4Message.text = "CONNECTED";
+                //txt_p4Message.text = "CONNECTED";
+                controllerIcons[3].ChangeColorTime(Color.white, Color.green, .5f, true);
                 b_p4Connected = true;
                 go_backing4.sprite = img_blue;
                 mr_hats[(4 * 3) + i_p4Hat].gameObject.SetActive(true);
@@ -287,48 +295,48 @@ public class RegisterPlayers : SceneLoader {
             if (p_player1.GetButtonDown("UISubmit") && !b_p1Ready) {
                 if (e_p1Color == Constants.Global.Color.RED && i_numRed < 2) {
                     i_numRed++;
-                    txt_p1Message.text = "OK!";
+                    controllerIcons[0].SwapImage(sp_teamSunIcon, Color.green, Color.yellow, 1f);
                     b_p1Ready = true;
                 }
                 else if (e_p1Color == Constants.Global.Color.BLUE && i_numBlue < 2) {
                     i_numBlue++;
-                    txt_p1Message.text = "OK!";
+                    controllerIcons[0].SwapImage(sp_teamMoonIcon, Color.blue, Color.green, 1f);
                     b_p1Ready = true;
                 }
             }
             if (p_player2.GetButtonDown("UISubmit") && !b_p2Ready) {
                 if (e_p2Color == Constants.Global.Color.RED && i_numRed < 2) {
                     i_numRed++;
-                    txt_p2Message.text = "OK!";
+                    controllerIcons[1].SwapImage(sp_teamSunIcon, Color.green, Color.yellow, 1f);
                     b_p2Ready = true;
                 }
                 else if (e_p2Color == Constants.Global.Color.BLUE && i_numBlue < 2) {
                     i_numBlue++;
-                    txt_p2Message.text = "OK!";
+                    controllerIcons[1].SwapImage(sp_teamMoonIcon, Color.blue, Color.green, 1f);
                     b_p2Ready = true;
                 }
             }
             if (p_player3.GetButtonDown("UISubmit") && !b_p3Ready) {
                 if (e_p3Color == Constants.Global.Color.RED && i_numRed < 2) {
                     i_numRed++;
-                    txt_p3Message.text = "OK!";
+                    controllerIcons[2].SwapImage(sp_teamSunIcon, Color.green, Color.yellow, 1f);
                     b_p3Ready = true;
                 }
                 else if (e_p3Color == Constants.Global.Color.BLUE && i_numBlue < 2) {
                     i_numBlue++;
-                    txt_p3Message.text = "OK!";
+                    controllerIcons[2].SwapImage(sp_teamMoonIcon, Color.blue, Color.green, 1f);
                     b_p3Ready = true;
                 }
             }
             if (p_player4.GetButtonDown("UISubmit") && !b_p4Ready) {
                 if (e_p4Color == Constants.Global.Color.RED && i_numRed < 2) {
                     i_numRed++;
-                    txt_p4Message.text = "OK!";
+                    controllerIcons[3].SwapImage(sp_teamSunIcon, Color.green, Color.yellow, 1f);
                     b_p4Ready = true;
                 }
                 else if (e_p4Color == Constants.Global.Color.BLUE && i_numBlue < 2) {
                     i_numBlue++;
-                    txt_p4Message.text = "OK!";
+                    controllerIcons[3].SwapImage(sp_teamMoonIcon, Color.blue, Color.green, 1f);
                     b_p4Ready = true;
                 }
             }
@@ -343,7 +351,7 @@ public class RegisterPlayers : SceneLoader {
                 else if (e_p1Color == Constants.Global.Color.BLUE) {
                     i_numBlue--;
                 }
-                txt_p1Message.text = "CONNECTED!";
+                controllerIcons[0].ResetToDefault();
                 b_p1Ready = false;
             }
             if (p_player2.GetButtonDown("UICancel") && b_p2Ready) {
@@ -354,7 +362,7 @@ public class RegisterPlayers : SceneLoader {
                 else if (e_p2Color == Constants.Global.Color.BLUE) {
                     i_numBlue--;
                 }
-                txt_p2Message.text = "CONNECTED!";
+                controllerIcons[1].ResetToDefault();
                 b_p2Ready = false;
             }
             if (p_player3.GetButtonDown("UICancel") && b_p3Ready) {
@@ -365,7 +373,7 @@ public class RegisterPlayers : SceneLoader {
                 else if (e_p3Color == Constants.Global.Color.BLUE) {
                     i_numBlue--;
                 }
-                txt_p3Message.text = "CONNECTED!";
+                controllerIcons[2].ResetToDefault();
                 b_p3Ready = false;
             }
             if (p_player4.GetButtonDown("UICancel") && b_p4Ready) {
@@ -376,7 +384,7 @@ public class RegisterPlayers : SceneLoader {
                 else if (e_p4Color == Constants.Global.Color.BLUE) {
                     i_numBlue--;
                 }
-                txt_p4Message.text = "CONNECTED!";
+                controllerIcons[3].ResetToDefault();
                 b_p4Ready = false;
             }
 
