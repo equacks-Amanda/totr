@@ -12,6 +12,7 @@ public sealed class RiftController : MonoBehaviour {
 
 #region ART ADDITIONS
     [SerializeField] private Material[] mat_floorEmissions;
+    [SerializeField] private ParticleSystem ps_arenaFog;
 #endregion
 
 #region Variables and Declarations
@@ -435,7 +436,10 @@ public sealed class RiftController : MonoBehaviour {
 
     // ART ADDITION : Increases fog density determined by objective number.
     void IncreaseFogDensity( int level) {
-
+        if(ps_arenaFog != null )
+        {
+            ps_arenaFog.emissionRate = level * 100;
+        }
     }
 
     void PlayNoise() {
