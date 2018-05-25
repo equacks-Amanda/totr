@@ -2867,6 +2867,11 @@ Transform:
   m_PrefabParentObject: {fileID: 4830088548240664, guid: c421bb72df22d2f459aee8369505fc32,
     type: 2}
   m_PrefabInternal: {fileID: 131724504}
+--- !u!95 &275068536 stripped
+Animator:
+  m_PrefabParentObject: {fileID: 95737777883212130, guid: 9de8c005069aeca4fac05ee8f9619fe4,
+    type: 2}
+  m_PrefabInternal: {fileID: 489817196}
 --- !u!1 &282779831 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1262086817608052, guid: 9de8c005069aeca4fac05ee8f9619fe4,
@@ -3368,6 +3373,11 @@ Prefab:
       propertyPath: soc_scoreOrb
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 114801626287556884, guid: 9de8c005069aeca4fac05ee8f9619fe4,
+        type: 2}
+      propertyPath: anim
+      value: 
+      objectReference: {fileID: 275068536}
     m_RemovedComponents:
     - {fileID: 95188610398377248, guid: 9de8c005069aeca4fac05ee8f9619fe4, type: 2}
     - {fileID: 95348257382031418, guid: 9de8c005069aeca4fac05ee8f9619fe4, type: 2}
