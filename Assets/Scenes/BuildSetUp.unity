@@ -3749,6 +3749,10 @@ Prefab:
       propertyPath: InitialModule.startSize.minScalar
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 1856484121704890, guid: ba20b2d74ed8a624d9bb36ab60706549, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ba20b2d74ed8a624d9bb36ab60706549, type: 2}
   m_IsPrefabParent: 0
@@ -5292,7 +5296,7 @@ GameObject:
   m_Component:
   - component: {fileID: 916167586}
   - component: {fileID: 916167587}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RIFT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6086,9 +6090,9 @@ GameObject:
   - component: {fileID: 1395130422}
   - component: {fileID: 1395130423}
   - component: {fileID: 1395130424}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Rift Controller
-  m_TagString: Untagged
+  m_TagString: Rift
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
