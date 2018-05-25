@@ -5006,6 +5006,11 @@ GameObject:
   m_PrefabParentObject: {fileID: 1769105622107730, guid: 9de8c005069aeca4fac05ee8f9619fe4,
     type: 2}
   m_PrefabInternal: {fileID: 489817196}
+--- !u!1 &800249435 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1786646714238450, guid: 55ef8044cb039f049a7da883aa03b085,
+    type: 2}
+  m_PrefabInternal: {fileID: 1385948903}
 --- !u!1 &806835631
 GameObject:
   m_ObjectHideFlags: 0
@@ -6120,7 +6125,7 @@ MonoBehaviour:
   ps_arenaFog: {fileID: 637710239}
   go_riftDeathBolt: {fileID: 1934989086911316, guid: 3afbac15f1f5a4f41a1440adfac082be,
     type: 2}
-  go_boardClear: {fileID: 0}
+  go_boardClear: {fileID: 800249435}
   go_screenshake: {fileID: 1433637201}
   go_playerReferences:
   - {fileID: 1321318052}
