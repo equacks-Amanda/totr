@@ -85,13 +85,21 @@ public class SkeletonController : EnemyController {
 
 		base.UpdateWander();
 		bool b_playersAvailable = false;
-
-		for(int i = 0; i < riftController.go_playerReferences.Length; i++){	
-			if(riftController.go_playerReferences[i].GetComponent<PlayerController>().Side == e_startSide && riftController.go_playerReferences[i].GetComponent<PlayerController>().Wisp == false){
-				b_playersAvailable = true;
-				break;
-			}
-		}
+        if( riftController != null )
+        {
+            if(riftController.go_playerReferences != null )
+            {
+                for (int i = 0; i < riftController.go_playerReferences.Length; i++)
+                {
+                    if (riftController.go_playerReferences[i].GetComponent<PlayerController>().Side == e_startSide && riftController.go_playerReferences[i].GetComponent<PlayerController>().Wisp == false)
+                    {
+                        b_playersAvailable = true;
+                        break;
+                    }
+                }
+            }
+        }
+		
 
 		if (b_playersAvailable) {
 			EnterStateChase();
