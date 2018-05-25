@@ -23,20 +23,30 @@ public class CameraFacingBillboard : MonoBehaviour {
     private void SetInactive() {
         gameObject.SetActive(false);
     }
-#endregion
+    #endregion
 
-#region Unity Overrides
+    #region Unity Overrides
+
+    private void Awake()
+    {
+        cam_Camera = Camera.main;
+    }
     void OnEnable() {
         gameObject.SetActive(true);
+        cam_Camera = Camera.main;
         if (!b_persistent) {
             Invoke("SetInactive", 2.0f);  // non-player indicators do not persist after spawn
         }
     }
 
     void Update() {
-        transform.LookAt(transform.position + cam_Camera.transform.rotation * Vector3.forward,
-            cam_Camera.transform.rotation * Vector3.up);
-        transform.position = go_trackedObject.transform.position + v3_offset;
+        if( cam_Camera != null)
+        {
+            transform.LookAt(transform.position + cam_Camera.transform.rotation * Vector3.forward,
+           cam_Camera.transform.rotation * Vector3.up);
+            transform.position = go_trackedObject.transform.position + v3_offset;
+        }
+       
     }
 #endregion
 }
