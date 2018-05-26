@@ -26,11 +26,17 @@ public class ColorPulse : MonoBehaviour
 
     private Color defaultColor1;
     private Color defaultColor2;
+    private Color colorPrePulse;
     private Sprite defaultSprite;
     private Material defaultMaterial;
 
+    [SerializeField]
+    private bool isPulsing;
+
     // Use this for initialization
     void Start () {
+        image = GetComponent<Image>();
+        //runeMaterial = GetComponent<Renderer>().material;
         SetDefaults();
     }
 	
@@ -38,33 +44,38 @@ public class ColorPulse : MonoBehaviour
     {
         defaultColor1 = firstColor;
         defaultColor2 = lastColor;
+        colorPrePulse = image.color;
         if (image != null)
             defaultSprite = image.sprite;
         if (runeMaterial != null)
             defaultMaterial = runeMaterial;
     }
 	// Update is called once per frame
-	void FixedUpdate () {
-
-        var ratio = (Time.time - lastColorChangeTime) / FadeDuration;
-        ratio = Mathf.Clamp01(ratio);
-        if( runeMaterial != null )
+	void FixedUpdate ()
+    {
+        if( isPulsing )
         {
-            runeMaterial.color = Color.Lerp(firstColor, lastColor, ratio);
-        }
-        else if( image != null )
-        {
-            image.color = Color.Lerp(firstColor, lastColor, ratio);
-        }
+            float ratio = (Time.time - lastColorChangeTime) / FadeDuration;
+            ratio = Mathf.Clamp01(ratio);
+            if (runeMaterial != null)
+            {
+                runeMaterial.color = Color.Lerp(firstColor, lastColor, ratio);
+            }
+            else if (image != null)
+            {
+                image.color = Color.Lerp(firstColor, lastColor, ratio);
+            }
 
 
-        if (ratio == 1f)
-        {
-            lastColorChangeTime = Time.time;
-            var temp = firstColor;
-            firstColor = lastColor;
-            lastColor = temp;
+            if (ratio == 1f)
+            {
+                lastColorChangeTime = Time.time;
+                var temp = firstColor;
+                firstColor = lastColor;
+                lastColor = temp;
+            }
         }
+       
     }
 
     public void ChangeColorTime( Color c1, Color c2, float duration, bool hideImage )
@@ -87,6 +98,14 @@ public class ColorPulse : MonoBehaviour
         HideImage();
     }
 
+    IEnumerator PlayOnePulse(float duration)
+    {
+        isPulsing = true;
+        yield return new WaitForSeconds(duration);
+        isPulsing = false;
+        image.color = colorPrePulse;
+
+    }
     public void SwapImage( Sprite imageSp, Color first, Color last, float duration )
     {
         if( image != null )
@@ -99,7 +118,7 @@ public class ColorPulse : MonoBehaviour
     public void ResetToDefault( )
     {
         if (image != null)
-            image.enabled = true;
+            image.enabled = false;
             image.sprite = defaultSprite;
         if (runeMaterial != null)
             runeMaterial = defaultMaterial;
@@ -111,5 +130,17 @@ public class ColorPulse : MonoBehaviour
     public void HideImage()
     {
         image.enabled = false;
+    }
+
+    public void SetPulse( bool isPulse )
+    {
+        isPulsing = isPulse;
+    }
+
+    public void PlayOnePulse( Color c1, Color c2, float duration )
+    {
+        firstColor = c1;
+        lastColor = c2;
+        StartCoroutine(PlayOnePulse(duration));
     }
 }

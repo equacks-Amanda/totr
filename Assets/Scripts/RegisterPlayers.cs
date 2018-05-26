@@ -16,10 +16,6 @@ public class RegisterPlayers : SceneLoader {
     [SerializeField] private Image go_backing2;
     [SerializeField] private Image go_backing3;
     [SerializeField] private Image go_backing4;
-    [SerializeField] private Image go_hat1;
-    [SerializeField] private Image go_hat2;
-    [SerializeField] private Image go_hat3;
-    [SerializeField] private Image go_hat4;
     [SerializeField] private Sprite img_red;
     [SerializeField] private Sprite img_blue;
     [SerializeField] private MeshRenderer[] mr_hats; //16 units
@@ -38,6 +34,10 @@ public class RegisterPlayers : SceneLoader {
     [SerializeField] private ColorPulse[] controllerIcons;
     [SerializeField] private Sprite sp_teamSunIcon;
     [SerializeField] private Sprite sp_teamMoonIcon;
+    [SerializeField] private ColorPulse[] img_p1Arrows;
+    [SerializeField] private ColorPulse[] img_p2Arrows;
+    [SerializeField] private ColorPulse[] img_p3Arrows;
+    [SerializeField] private ColorPulse[] img_p4Arrows;
 
 
     private Player p_player1, p_player2, p_player3, p_player4;
@@ -189,6 +189,7 @@ public class RegisterPlayers : SceneLoader {
                     mr_hats[(4 * 0) + i_p1Hat].materials = new Material[] { mat_hatBlue[i_p1Hat] };
                 }
                 mr_hats[(4 * 0) + i_p1Hat].gameObject.SetActive(true);
+                img_p1Arrows[0].PlayOnePulse(Color.red, Color.white, 1f);
 
             }
             if ((p_player1.GetButtonDown("UIHorizontal") && !b_p1Ready)) {
@@ -204,6 +205,8 @@ public class RegisterPlayers : SceneLoader {
                     mr_hats[(4 * 0) + i_p1Hat].materials = new Material[] { mat_hatBlue[i_p1Hat] };
                 }
                 mr_hats[(4 * 0) + i_p1Hat].gameObject.SetActive(true);
+                img_p1Arrows[1].PlayOnePulse(Color.red, Color.white, 1f);
+
             }
             if ((p_player2.GetNegativeButtonDown("UIHorizontal") && !b_p2Ready)) {
                 mr_hats[(4 * 1) + i_p2Hat].gameObject.SetActive(false);
@@ -218,6 +221,7 @@ public class RegisterPlayers : SceneLoader {
                     mr_hats[(4 * 1) + i_p2Hat].materials = new Material[] { mat_hatBlue[i_p2Hat] };
                 }
                 mr_hats[(4 * 1) + i_p2Hat].gameObject.SetActive(true);
+                img_p2Arrows[0].PlayOnePulse(Color.red, Color.white, 1f);
             }
             if ((p_player2.GetButtonDown("UIHorizontal") && !b_p2Ready)) {
                 mr_hats[(4 * 1) + i_p2Hat].gameObject.SetActive(false);
@@ -232,6 +236,7 @@ public class RegisterPlayers : SceneLoader {
                     mr_hats[(4 * 1) + i_p2Hat].materials = new Material[] { mat_hatBlue[i_p2Hat] };
                 }
                 mr_hats[(4 * 1) + i_p2Hat].gameObject.SetActive(true);
+                img_p2Arrows[1].PlayOnePulse(Color.red, Color.white, 1f);
             }
             if ((p_player3.GetNegativeButtonDown("UIHorizontal") && !b_p3Ready)) {
                 mr_hats[(4 * 2) + i_p3Hat].gameObject.SetActive(false);
@@ -246,6 +251,7 @@ public class RegisterPlayers : SceneLoader {
                     mr_hats[(4 * 2) + i_p3Hat].materials = new Material[] { mat_hatBlue[i_p3Hat] };
                 }
                 mr_hats[(4 * 2) + i_p3Hat].gameObject.SetActive(true);
+                img_p3Arrows[0].PlayOnePulse(Color.red, Color.white, 1f);
             }
             if ((p_player3.GetButtonDown("UIHorizontal") && !b_p3Ready)) {
                 mr_hats[(4 * 2) + i_p3Hat].gameObject.SetActive(false);
@@ -260,6 +266,7 @@ public class RegisterPlayers : SceneLoader {
                     mr_hats[(4 * 2) + i_p3Hat].materials = new Material[] { mat_hatBlue[i_p3Hat] };
                 }
                 mr_hats[(4 * 2) + i_p3Hat].gameObject.SetActive(true);
+                img_p3Arrows[1].PlayOnePulse(Color.red, Color.white, 1f);
             }
             if ((p_player4.GetNegativeButtonDown("UIHorizontal") && !b_p4Ready)) {
                 mr_hats[(4 * 3) + i_p4Hat].gameObject.SetActive(false);
@@ -274,6 +281,7 @@ public class RegisterPlayers : SceneLoader {
                     mr_hats[(4 * 3) + i_p4Hat].materials = new Material[] { mat_hatBlue[i_p4Hat] };
                 }
                 mr_hats[(4 * 3) + i_p4Hat].gameObject.SetActive(true);
+                img_p4Arrows[0].PlayOnePulse(Color.red, Color.white, 1f);
             }
             if ((p_player4.GetButtonDown("UIHorizontal") && !b_p4Ready)) {
                 mr_hats[(4 * 3) + i_p4Hat].gameObject.SetActive(false);
@@ -288,6 +296,7 @@ public class RegisterPlayers : SceneLoader {
                     mr_hats[(4 * 3) + i_p4Hat].materials = new Material[] { mat_hatBlue[i_p4Hat] };
                 }
                 mr_hats[(4 * 3) + i_p4Hat].gameObject.SetActive(true);
+                img_p4Arrows[1].PlayOnePulse(Color.red, Color.white, 1f);
             }
 
 
@@ -295,36 +304,36 @@ public class RegisterPlayers : SceneLoader {
             if (p_player1.GetButtonDown("UISubmit") && !b_p1Ready) {
                 if (e_p1Color == Constants.Global.Color.RED && i_numRed < 2) {
                     i_numRed++;
-                    controllerIcons[0].SwapImage(sp_teamSunIcon, Color.green, Color.yellow, 1f);
+                    controllerIcons[0].SwapImage(sp_teamSunIcon, Color.white, Color.white, 1f);
                     b_p1Ready = true;
                 }
                 else if (e_p1Color == Constants.Global.Color.BLUE && i_numBlue < 2) {
                     i_numBlue++;
-                    controllerIcons[0].SwapImage(sp_teamMoonIcon, Color.blue, Color.green, 1f);
+                    controllerIcons[0].SwapImage(sp_teamMoonIcon, Color.white, Color.white, 1f);
                     b_p1Ready = true;
                 }
             }
             if (p_player2.GetButtonDown("UISubmit") && !b_p2Ready) {
                 if (e_p2Color == Constants.Global.Color.RED && i_numRed < 2) {
                     i_numRed++;
-                    controllerIcons[1].SwapImage(sp_teamSunIcon, Color.green, Color.yellow, 1f);
+                    controllerIcons[1].SwapImage(sp_teamSunIcon, Color.white, Color.white, 1f);
                     b_p2Ready = true;
                 }
                 else if (e_p2Color == Constants.Global.Color.BLUE && i_numBlue < 2) {
                     i_numBlue++;
-                    controllerIcons[1].SwapImage(sp_teamMoonIcon, Color.blue, Color.green, 1f);
+                    controllerIcons[1].SwapImage(sp_teamMoonIcon, Color.white, Color.white, 1f);
                     b_p2Ready = true;
                 }
             }
             if (p_player3.GetButtonDown("UISubmit") && !b_p3Ready) {
                 if (e_p3Color == Constants.Global.Color.RED && i_numRed < 2) {
                     i_numRed++;
-                    controllerIcons[2].SwapImage(sp_teamSunIcon, Color.green, Color.yellow, 1f);
+                    controllerIcons[2].SwapImage(sp_teamSunIcon, Color.white, Color.white, 1f);
                     b_p3Ready = true;
                 }
                 else if (e_p3Color == Constants.Global.Color.BLUE && i_numBlue < 2) {
                     i_numBlue++;
-                    controllerIcons[2].SwapImage(sp_teamMoonIcon, Color.blue, Color.green, 1f);
+                    controllerIcons[2].SwapImage(sp_teamMoonIcon, Color.white, Color.white, 1f);
                     b_p3Ready = true;
                 }
             }

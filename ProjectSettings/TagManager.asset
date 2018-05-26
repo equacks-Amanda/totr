@@ -51,8 +51,8 @@ TagManager:
   - OutofBounds
   - Hologram
   - Scoring
-  - 
-  - 
+  - BACK_UI
+  - BACKGROUND_SCENE
   - 
   - 
   - 
