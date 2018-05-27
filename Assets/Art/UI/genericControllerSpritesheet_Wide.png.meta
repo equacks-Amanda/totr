@@ -1,0 +1,772 @@
+fileFormatVersion: 2
+guid: 053e0c09743c6d24eb5a093f247cf8c2
+timeCreated: 1527390455
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: genericControllerSpritesheet_Wide_0
+    21300002: genericControllerSpritesheet_Wide_1
+    21300004: genericControllerSpritesheet_Wide_2
+    21300006: genericControllerSpritesheet_Wide_3
+    21300008: genericControllerSpritesheet_Wide_4
+    21300010: genericControllerSpritesheet_Wide_5
+    21300012: genericControllerSpritesheet_Wide_6
+    21300014: genericControllerSpritesheet_Wide_7
+    21300016: genericControllerSpritesheet_Wide_8
+    21300018: genericControllerSpritesheet_Wide_9
+    21300020: genericControllerSpritesheet_Wide_10
+    21300022: genericControllerSpritesheet_Wide_11
+    21300024: genericControllerSpritesheet_Wide_12
+    21300026: genericControllerSpritesheet_Wide_13
+    21300028: genericControllerSpritesheet_Wide_14
+    21300030: genericControllerSpritesheet_Wide_15
+    21300032: genericControllerSpritesheet_Wide_16
+    21300034: genericControllerSpritesheet_Wide_17
+    21300036: genericControllerSpritesheet_Wide_18
+    21300038: genericControllerSpritesheet_Wide_19
+    21300040: genericControllerSpritesheet_Wide_20
+    21300042: genericControllerSpritesheet_Wide_21
+    21300044: genericControllerSpritesheet_Wide_22
+    21300046: genericControllerSpritesheet_Wide_23
+    21300048: genericControllerSpritesheet_Wide_24
+    21300050: genericControllerSpritesheet_Wide_25
+    21300052: genericControllerSpritesheet_Wide_26
+    21300054: genericControllerSpritesheet_Wide_27
+    21300056: genericControllerSpritesheet_Wide_28
+    21300058: genericControllerSpritesheet_Wide_29
+    21300060: genericControllerSpritesheet_Wide_30
+    21300062: genericControllerSpritesheet_Wide_31
+    21300064: genericControllerSpritesheet_Wide_32
+    21300066: genericControllerSpritesheet_Wide_33
+    21300068: genericControllerSpritesheet_Wide_34
+    21300070: genericControllerSpritesheet_Wide_35
+    21300072: genericControllerSpritesheet_Wide_36
+    21300074: genericControllerSpritesheet_Wide_37
+    21300076: genericControllerSpritesheet_Wide_38
+    21300078: genericControllerSpritesheet_Wide_39
+    21300080: genericControllerSpritesheet_Wide_40
+    21300082: genericControllerSpritesheet_Wide_41
+    21300084: genericControllerSpritesheet_Wide_fullFace
+    21300086: selectedFace_bottom
+    21300088: selectedFace_Left
+    21300090: selectedFace_Right
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: 1
+    mipBias: -1
+    wrapU: 1
+    wrapV: -1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: genericControllerSpritesheet_Wide_0
+      rect:
+        serializedVersion: 2
+        x: 3896
+        y: 2940
+        width: 173
+        height: 234
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: genericControllerSpritesheet_Wide_1
+      rect:
+        serializedVersion: 2
+        x: 5183
+        y: 2940
+        width: 172
+        height: 230
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: genericControllerSpritesheet_Wide_2
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 2688
+        width: 118
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: genericControllerSpritesheet_Wide_3
+      rect:
+        serializedVersion: 2
+        x: 2739
+        y: 2685
+        width: 100
+        height: 167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: genericControllerSpritesheet_Wide_4
+      rect:
+        serializedVersion: 2
+        x: 3580
+        y: 1537
+        width: 2015
+        height: 1280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: genericControllerSpritesheet_Wide_5
+      rect:
+        serializedVersion: 2
+        x: 3877
+        y: 2806
+        width: 383
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: genericControllerSpritesheet_Wide_6
+      rect:
+        serializedVersion: 2
+        x: 4952
+        y: 2812
+        width: 376
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: genericControllerSpritesheet_Wide_7
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 2712
+        width: 454
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: genericControllerSpritesheet_Wide_8
+      rect:
+        serializedVersion: 2
+        x: 2260
+        y: 2688
+        width: 458
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: genericControllerSpritesheet_Wide_9
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 2431
+        width: 160
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: genericControllerSpritesheet_Wide_10
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 2497
+        width: 588
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: genericControllerSpritesheet_Wide_11
+      rect:
+        serializedVersion: 2
+        x: 2142
+        y: 2500
+        width: 552
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: genericControllerSpritesheet_Wide_12
+      rect:
+        serializedVersion: 2
+        x: 2721
+        y: 2430
+        width: 134
+        height: 167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: genericControllerSpritesheet_Wide_13
+      rect:
+        serializedVersion: 2
+        x: 2029
+        y: 2132
+        width: 668
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: genericControllerSpritesheet_Wide_14
+      rect:
+        serializedVersion: 2
+        x: 445
+        y: 1823
+        width: 795
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: genericControllerSpritesheet_Wide_15
+      rect:
+        serializedVersion: 2
+        x: 1868
+        y: 1826
+        width: 830
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: genericControllerSpritesheet_Wide_16
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 1428
+        width: 118
+        height: 164
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: genericControllerSpritesheet_Wide_17
+      rect:
+        serializedVersion: 2
+        x: 417
+        y: 1452
+        width: 479
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: genericControllerSpritesheet_Wide_18
+      rect:
+        serializedVersion: 2
+        x: 2260
+        y: 1431
+        width: 458
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: genericControllerSpritesheet_Wide_19
+      rect:
+        serializedVersion: 2
+        x: 2742
+        y: 1425
+        width: 94
+        height: 164
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: genericControllerSpritesheet_Wide_20
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 1173
+        width: 157
+        height: 164
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: genericControllerSpritesheet_Wide_21
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 1237
+        width: 552
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: genericControllerSpritesheet_Wide_22
+      rect:
+        serializedVersion: 2
+        x: 2141
+        y: 1243
+        width: 553
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: genericControllerSpritesheet_Wide_23
+      rect:
+        serializedVersion: 2
+        x: 2721
+        y: 1170
+        width: 134
+        height: 167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: genericControllerSpritesheet_Wide_24
+      rect:
+        serializedVersion: 2
+        x: 3462
+        y: 1012
+        width: 173
+        height: 234
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: genericControllerSpritesheet_Wide_25
+      rect:
+        serializedVersion: 2
+        x: 4236
+        y: 1012
+        width: 173
+        height: 231
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: genericControllerSpritesheet_Wide_26
+      rect:
+        serializedVersion: 2
+        x: 4697
+        y: 967
+        width: 148
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: genericControllerSpritesheet_Wide_27
+      rect:
+        serializedVersion: 2
+        x: 4821
+        y: 1088
+        width: 146
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: genericControllerSpritesheet_Wide_28
+      rect:
+        serializedVersion: 2
+        x: 4947
+        y: 967
+        width: 147
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: genericControllerSpritesheet_Wide_29
+      rect:
+        serializedVersion: 2
+        x: 5400
+        y: 867
+        width: 341
+        height: 343
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: genericControllerSpritesheet_Wide_30
+      rect:
+        serializedVersion: 2
+        x: 2026
+        y: 879
+        width: 674
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: genericControllerSpritesheet_Wide_31
+      rect:
+        serializedVersion: 2
+        x: 3444
+        y: 879
+        width: 382
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: genericControllerSpritesheet_Wide_32
+      rect:
+        serializedVersion: 2
+        x: 4005
+        y: 882
+        width: 376
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: genericControllerSpritesheet_Wide_33
+      rect:
+        serializedVersion: 2
+        x: 4821
+        y: 848
+        width: 146
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: genericControllerSpritesheet_Wide_34
+      rect:
+        serializedVersion: 2
+        x: 445
+        y: 566
+        width: 795
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: genericControllerSpritesheet_Wide_35
+      rect:
+        serializedVersion: 2
+        x: 1926
+        y: 572
+        width: 773
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: genericControllerSpritesheet_Wide_36
+      rect:
+        serializedVersion: 2
+        x: 3462
+        y: 508
+        width: 173
+        height: 234
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: genericControllerSpritesheet_Wide_37
+      rect:
+        serializedVersion: 2
+        x: 4236
+        y: 508
+        width: 172
+        height: 230
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: genericControllerSpritesheet_Wide_38
+      rect:
+        serializedVersion: 2
+        x: 5400
+        y: 387
+        width: 341
+        height: 343
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: genericControllerSpritesheet_Wide_39
+      rect:
+        serializedVersion: 2
+        x: 3446
+        y: 375
+        width: 383
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: genericControllerSpritesheet_Wide_40
+      rect:
+        serializedVersion: 2
+        x: 4005
+        y: 378
+        width: 376
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: genericControllerSpritesheet_Wide_41
+      rect:
+        serializedVersion: 2
+        x: 4818
+        y: 363
+        width: 146
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: genericControllerSpritesheet_Wide_fullFace
+      rect:
+        serializedVersion: 2
+        x: 4694
+        y: 847
+        width: 403
+        height: 388
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: selectedFace_bottom
+      rect:
+        serializedVersion: 2
+        x: 4688
+        y: 362
+        width: 403
+        height: 388
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: selectedFace_Left
+      rect:
+        serializedVersion: 2
+        x: 4811
+        y: 247
+        width: 403
+        height: 388
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: selectedFace_Right
+      rect:
+        serializedVersion: 2
+        x: 4567
+        y: 252
+        width: 403
+        height: 388
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    outline: []
+    physicsShape: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
