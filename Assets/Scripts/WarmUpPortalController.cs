@@ -11,6 +11,7 @@ public class WarmUpPortalController : SceneLoader {
 #region Variables and Declarations
     [SerializeField] private GameObject go_pulseEffect;
     [SerializeField] private GameObject go_whatshisface;
+    [SerializeField] private GameObject go_watshisface2;
     private static int i_players = 4;           // number of players in the game, should be 4.
     private int i_remainingPlayers = i_players; // decreases as players enter the portal
 #endregion
@@ -20,7 +21,8 @@ public class WarmUpPortalController : SceneLoader {
         Time.timeScale = 0;
         yield return new WaitForSecondsRealtime(12f);
         Time.timeScale = 1;
-        //go_whatshisface.SetActive(false);
+        go_whatshisface.SetActive(true);
+        go_watshisface2.SetActive(false);
     }
 
 
