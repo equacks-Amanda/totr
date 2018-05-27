@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: d26be2d77ed8d414a8b5f8476e70fe3d
+timeCreated: 1527376005
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Newt Serif Demi
+  fontNames:
+  - Newt Serif Demi
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
