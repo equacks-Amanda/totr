@@ -107,6 +107,7 @@ public abstract class EnemyController : SpellTarget {
     }
 
     protected virtual void UpdateAttack() {
+        rb.velocity = Vector3.zero;
     }
 
     protected virtual void DoAttack() {

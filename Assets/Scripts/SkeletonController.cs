@@ -123,20 +123,21 @@ public class SkeletonController : EnemyController {
 	}
 
 	protected override void EnterStateWander() {
-
 		base.EnterStateWander();
 		//Reset f_timer
 		f_timer = f_timeLimit;
 	}
 
     protected override void EnterStateAttack() {
+        rb.velocity = Vector3.zero;
 		base.EnterStateAttack();
         DoAttack();
     }
 
     protected override void DoAttack() {
 		base.DoAttack();
-		if (go_closestTarget) {
+        rb.velocity = Vector3.zero;
+        if (go_closestTarget) {
             anim.SetBool("isAttacking", true);
             go_closestTarget.GetComponent<PlayerController>().TakeDamage(Constants.EnemyStats.C_EnemyDamage,Constants.Global.DamageType.ENEMY);
 		}
