@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 29ada800790b584468c9aeaaee4e4118
-timeCreated: 1526707585
+timeCreated: 1527387321
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -661,12 +661,12 @@ TextureImporter:
       name: faceButton_select
       rect:
         serializedVersion: 2
-        x: 1093
-        y: 27
-        width: 34
-        height: 34
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 1062
+        y: 25
+        width: 96
+        height: 94
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -717,12 +717,12 @@ TextureImporter:
       name: facePad
       rect:
         serializedVersion: 2
-        x: 1051
-        y: 104
-        width: 118
-        height: 116
+        x: 1062
+        y: 114
+        width: 96
+        height: 94
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

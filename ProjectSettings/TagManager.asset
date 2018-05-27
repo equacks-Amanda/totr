@@ -23,6 +23,7 @@ TagManager:
   - Deathbolt
   - OutofBounds
   - ScoreTarget
+  - HAT
   layers:
   - Default
   - TransparentFX
