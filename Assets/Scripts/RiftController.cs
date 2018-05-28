@@ -206,7 +206,8 @@ public sealed class RiftController : MonoBehaviour {
 		if (go_necromancers[0]) {
 			for (int i = 0; i < go_skeletons.Length; i++) {
 				if (go_skeletons[i].activeInHierarchy) {
-					go_skeletons[i].GetComponentInChildren<SkeletonController>().TakeDamage(Constants.EnemyStats.C_EnemyHealth, Constants.Global.Color.NULL);
+                    if( go_skeletons[i].GetComponent<SkeletonController>() != null )
+					    go_skeletons[i].GetComponent<SkeletonController>().TakeDamage(Constants.EnemyStats.C_EnemyHealth, Constants.Global.Color.NULL);
 				}
 			}
 
