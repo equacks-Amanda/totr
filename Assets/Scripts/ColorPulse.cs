@@ -18,7 +18,6 @@ public class ColorPulse : MonoBehaviour
 
     private float lastColorChangeTime;
 
-    [SerializeField]
     private Material runeMaterial;
 
     [SerializeField]
@@ -36,7 +35,16 @@ public class ColorPulse : MonoBehaviour
     // Use this for initialization
     void Start () {
         image = GetComponent<Image>();
-        //runeMaterial = GetComponent<Renderer>().material;
+        try
+        {
+            runeMaterial = GetComponent<Renderer>().material;
+        }
+        catch (Exception)
+        {
+
+            throw;
+        }
+
         SetDefaults();
     }
 	
@@ -44,9 +52,13 @@ public class ColorPulse : MonoBehaviour
     {
         defaultColor1 = firstColor;
         defaultColor2 = lastColor;
-        colorPrePulse = image.color;
+ 
+        
         if (image != null)
+        {
             defaultSprite = image.sprite;
+            colorPrePulse = image.color;
+        }
         if (runeMaterial != null)
             defaultMaterial = runeMaterial;
     }
