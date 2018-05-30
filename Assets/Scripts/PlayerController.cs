@@ -170,6 +170,7 @@ public class PlayerController : SpellTarget {
                         smr_playerBody.material.mainTexture = txtr_bodyGooed;
                         smr_playerOutfit.material.mainTexture = txtr_bodyGooed;
                         anim.SetTrigger("gooTrigger");
+						
                     }
                     TakeDamage(damage, Constants.Global.DamageType.ELECTRICITY);
                 }
