@@ -7,7 +7,7 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: MAT_rift
-  m_Shader: {fileID: 4800000, guid: 9c6ece3d5ef8bb84db19471daaf6c788, type: 3}
+  m_Shader: {fileID: 4800000, guid: 3978064d1d0174eaba18e113f0e1b880, type: 3}
   m_ShaderKeywords: _EMISSION
   m_LightmapFlags: 1
   m_EnableInstancingVariants: 0
@@ -19,7 +19,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _BumpMap:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: ff4a3ee3592314c81af53e556cf3da83, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailAlbedoMap:
@@ -46,6 +46,10 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _NoiseTex:
+        m_Texture: {fileID: 2800000, guid: 72b1bb295756843889b97a3dc58ba5dc, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -58,6 +62,8 @@ Material:
     - _BumpScale: 1
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
+    - _DisintegrateAmount: 0
+    - _DissolveEdge: 0.0521
     - _DstBlend: 0
     - _GlossMapScale: 1
     - _Glossiness: 0.188
@@ -90,10 +96,13 @@ Material:
     - _SpecularHighlights: 1
     - _SpecularIntensity: 0.1
     - _SrcBlend: 1
+    - _TileFactor: 1
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
     - _Color: {r: 0.6838235, g: 0.6838235, b: 0.6838235, a: 1}
+    - _DissolveColor: {r: 0.57241344, g: 0, b: 1, a: 1}
+    - _EdgeEmission: {r: 0.4068966, g: 0, b: 1, a: 0}
     - _EmissionColor: {r: 0.08974914, g: 0.14705884, b: 0.13757311, a: 1}
     - _HighlightColor: {r: 1, g: 1, b: 1, a: 1}
     - _OutlineColor: {r: 0, g: 0, b: 0, a: 1}

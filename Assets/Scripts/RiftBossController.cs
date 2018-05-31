@@ -5,6 +5,7 @@
  */
 
 using UnityEngine;
+using System.Collections;
 
 public class RiftBossController : SpellTarget {
 #region Variables and Declarations
@@ -25,11 +26,20 @@ public class RiftBossController : SpellTarget {
                 anim.updateMode = AnimatorUpdateMode.UnscaledTime;
                 anim.SetTrigger("deathTrigger");
                 go_explode.SetActive(true);
+                StartCoroutine(DoDissolveRift());
+
             }
             rbo_owner.UpdateRiftBossHealth(f_health);
             CancelInvoke("Notify");
             InvokeRepeating("Notify", Constants.ObjectiveStats.C_NotificationTimer, Constants.ObjectiveStats.C_NotificationTimer);
         }
+    }
+    private IEnumerator DoDissolveRift()
+    {
+        se_dissolve.ParamIncrease(1f, true, "_DisintegrateAmount");
+        se_clothesDissolve.ParamIncrease(1f, true, "_DisintegrateAmount");
+        yield return new WaitUntil(() => se_dissolve.isFinished);
+        se_dissolve.isFinished = false;
     }
 
     override public void ApplySpellEffect(Constants.SpellStats.SpellType spell, Constants.Global.Color color, float damage, Vector3 direction) {
