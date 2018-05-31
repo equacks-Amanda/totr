@@ -34,20 +34,21 @@ public class ColorPulse : MonoBehaviour
 
     // Use this for initialization
     void Start () {
-        image = GetComponent<Image>();
-        try
-        {
-            runeMaterial = GetComponent<Renderer>().material;
-        }
-        catch (Exception)
-        {
+		image = GetComponent<Image> ();
 
-            throw;
-        }
+		if (GetComponent<Renderer>() != null) {
 
-        SetDefaults();
-    }
-	
+			try {
+				runeMaterial = GetComponent<Renderer> ().material;
+			} catch (Exception) {
+
+				throw;
+			}
+
+			SetDefaults ();
+		}
+	}
+
     void SetDefaults()
     {
         defaultColor1 = firstColor;
