@@ -122,7 +122,7 @@ public class EndGameController : MonoBehaviour {
                     go_activePlayerModels[i] = go_winnerPlayerModels[i];
                     playerCounter += 1;
 
-                    if(col_playerColors[i] == Constants.Global.Color.BLUE )
+                    if(Constants.Global.C_WinningTeam == Constants.Global.Color.BLUE )
                     {
                         smr_winnerOutfit[i].material = mat_outfitBlue[i];
                     }
@@ -139,7 +139,7 @@ public class EndGameController : MonoBehaviour {
                     go_activePlayerModels[i] = go_winnerPlayerModels[i + 4];
                     playerCounter += 1;
 
-                    if (col_playerColors[i] == Constants.Global.Color.BLUE)
+                    if (Constants.Global.C_WinningTeam == Constants.Global.Color.BLUE)
                     {
                         smr_winnerOutfit[i+4].material = mat_outfitBlue[i];
                     }
@@ -162,11 +162,11 @@ public class EndGameController : MonoBehaviour {
 
                     if (Constants.Global.C_WinningTeam == Constants.Global.Color.BLUE)
                     {
-                        smr_loserOutfit[i].material = mat_outfitBlue[i];
+                        smr_loserOutfit[i].material = mat_outfitRed[i];
                     }
                     else
                     {
-                        smr_loserOutfit[i].material = mat_outfitRed[i];
+                        smr_loserOutfit[i].material = mat_outfitBlue[i];
                     }
                     SetPlayerHat(i, i, col_playerColors[i], false);
                 }

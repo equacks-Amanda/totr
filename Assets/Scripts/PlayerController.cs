@@ -291,6 +291,7 @@ public class PlayerController : SpellTarget {
         } 
 		maestro.PlayPlayerDie();
         if (!riftDeath) {
+            anim.SetTrigger("doDying");
             DissolvePlayer();
         } else {
             go_playerWisp.SetActive(true);
