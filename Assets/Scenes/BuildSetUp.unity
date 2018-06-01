@@ -473,7 +473,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9239aa2e836c0ec46ac77acb86113e73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FadeDuration: 1
+  FadeDuration: 3
   firstColor: {r: 0, g: 0.8980393, b: 1, a: 0}
   lastColor: {r: 0.019607844, g: 0.35686275, b: 0.8470589, a: 0}
   image: {fileID: 47023870}
@@ -9960,7 +9960,8 @@ Prefab:
       propertyPath: m_ApplyRootMotion
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114065963220013698, guid: 9de8c005069aeca4fac05ee8f9619fe4, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 9de8c005069aeca4fac05ee8f9619fe4, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &1576379194
@@ -11311,11 +11312,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9239aa2e836c0ec46ac77acb86113e73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FadeDuration: 1
+  FadeDuration: 3
   firstColor: {r: 1, g: 0.2392157, b: 0, a: 0}
   lastColor: {r: 1, g: 0.8078432, b: 0, a: 0}
-  image: {fileID: 1125864090}
+  image: {fileID: 1757077848}
   isPulsing: 1
+--- !u!114 &1757077848 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114650120719141466, guid: 9de8c005069aeca4fac05ee8f9619fe4,
+    type: 2}
+  m_PrefabInternal: {fileID: 1569368703}
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &1760069725
 GameObject:
   m_ObjectHideFlags: 0

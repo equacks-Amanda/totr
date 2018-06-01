@@ -260,6 +260,9 @@ public abstract class EnemyController : SpellTarget {
 
         //go_enemyIndiPrefab.ena
         this.enabled = true;
+        rb.freezeRotation = false;
+        nma_agent.enabled = true;
+
         riftController = RiftController.Instance;   // Init() is called before Start(), these must be set here (repeatedly...)
         maestro = Maestro.Instance;
         e_startSide = side;
