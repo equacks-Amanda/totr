@@ -24,7 +24,7 @@ public abstract class SpellTarget : MonoBehaviour {
     protected RiftController riftController;    // reference to Rift singleton
     protected bool b_electricDamageSoundOk = true;
     [SerializeField] protected float f_electricDamageSoundRate = 0.5f;
-
+    [SerializeField] protected Collider col_attachedCollider;
     #region Getters and Setters
     public Constants.Global.Color Color {
         get { return e_color; }
@@ -76,6 +76,7 @@ public abstract class SpellTarget : MonoBehaviour {
 #region Unity Overrides
 	protected virtual void Start(){
 		maestro = Maestro.Instance;
+        col_attachedCollider = GetComponent<Collider>();
 	}
 	
     void OnEnable() {

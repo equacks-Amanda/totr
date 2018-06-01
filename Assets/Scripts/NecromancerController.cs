@@ -18,6 +18,7 @@ public class NecromancerController : EnemyController {
 	public override void Init(Constants.Global.Side side) {
         base.Init(side);
         e_currentSide = side;
+        nma_agent.enabled = true;
 		nma_agent.speed = Constants.EnemyStats.C_NecromancerBaseSpeed;
 		f_health = Constants.EnemyStats.C_NecromancerHealth;
         b_teleported = false;
@@ -207,11 +208,12 @@ public class NecromancerController : EnemyController {
 	protected override void EnterStateDie(Constants.Global.Color color) {
 		CancelInvoke();
         maestro.PlayNecromancerDie();
+        base.EnterStateDie(color);
         if(color != Constants.Global.Color.NULL && e_color == color) {
             dno_owner.UpdateNecroScore();
         }
         gameObject.transform.localPosition = new Vector3(gameObject.transform.localPosition.x, -1000.0f, gameObject.transform.localPosition.z);
-        gameObject.SetActive(false);    // nav mesh must be turned off before moving
+        //gameObject.SetActive(false);    // nav mesh must be turned off before moving
         Invoke("ResetNecroPosition", Constants.ObjectiveStats.C_NecromancerSpawnTime);
     }
 

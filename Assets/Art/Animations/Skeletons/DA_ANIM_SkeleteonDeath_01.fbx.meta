@@ -338,7 +338,7 @@ ModelImporter:
     4300012: DA_CHAR_M_SkeletonBasic_LeftArmBracer1
     4300014: DA_CHAR_M_SkeletonBasic_ChestPiece1
     4300016: DA_CHAR_M_SkeletonBasic_RightArmBracer1
-    7400000: MO_RAW_PC_AlexDeath_11_x2d
+    7400000: Skeleton Death 01
     9500000: //RootNode
     13700000: DA_CHAR_M_SkeletonBasic
     13700002: DA_CHAR_M_SkeletonBasic_ChestPiece1
@@ -365,14 +365,42 @@ ModelImporter:
     animationImportWarnings: 
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
-    animationCompression: 1
+    animationCompression: 3
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Skeleton Death 01
+      takeName: MO_RAW_PC_AlexDeath_11_x2d
+      firstFrame: 41
+      lastFrame: 125
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     isReadable: 1
   meshes:
     lODScreenPercentages: []
@@ -403,8 +431,1255 @@ ModelImporter:
   copyAvatar: 0
   humanDescription:
     serializedVersion: 2
-    human: []
-    skeleton: []
+    human:
+    - boneName: DA_CHAR_M_SkeletonBasic_Root_jB
+      humanName: Hips
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: DA_CHAR_M_SkeletonBasic_L_Thigh_jB
+      humanName: LeftUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: DA_CHAR_M_SkeletonBasic_R_Thigh_jB
+      humanName: RightUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: DA_CHAR_M_SkeletonBasic_L_Leg_jB
+      humanName: LeftLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: DA_CHAR_M_SkeletonBasic_R_Leg_jB
+      humanName: RightLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: DA_CHAR_M_SkeletonBasic_L_Ankle_jB
+      humanName: LeftFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: DA_CHAR_M_SkeletonBasic_R_Ankle_jB
+      humanName: RightFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: DA_CHAR_M_SkeletonBasic_Spine1_jB
+      humanName: Spine
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: DA_CHAR_M_SkeletonBasic_Spine2_jB
+      humanName: Chest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: DA_CHAR_M_SkeletonBasic_Neck_jB
+      humanName: Neck
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: DA_CHAR_M_SkeletonBasic_Head_jB
+      humanName: Head
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: DA_CHAR_M_SkeletonBasic_L_Shoulder_jB
+      humanName: LeftShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: DA_CHAR_M_SkeletonBasic_R_Shoulder_jB
+      humanName: RightShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: DA_CHAR_M_SkeletonBasic_L_Arm_jB
+      humanName: LeftUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: DA_CHAR_M_SkeletonBasic_R_Arm_jB
+      humanName: RightUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: DA_CHAR_M_SkeletonBasic_L_Forearm_jB
+      humanName: LeftLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: DA_CHAR_M_SkeletonBasic_R_Forearm_jB
+      humanName: RightLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: DA_CHAR_M_SkeletonBasic_L_Wrist_jB
+      humanName: LeftHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: DA_CHAR_M_SkeletonBasic_R_Wrist_jB
+      humanName: RightHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: DA_CHAR_M_SkeletonBasic_L_Foot_j
+      humanName: LeftToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: DA_CHAR_M_SkeletonBasic_R_Foot_j
+      humanName: RightToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: DA_CHAR_M_SkeletonBasic_L_Thumb1_jB
+      humanName: Left Thumb Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: DA_CHAR_M_SkeletonBasic_L_Thumb2_jB
+      humanName: Left Thumb Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: DA_CHAR_M_SkeletonBasic_L_Thumb3_jB
+      humanName: Left Thumb Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: DA_CHAR_M_SkeletonBasic_L_Index1_jB
+      humanName: Left Index Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: DA_CHAR_M_SkeletonBasic_L_Index2_jB
+      humanName: Left Index Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: DA_CHAR_M_SkeletonBasic_L_Index3_jB
+      humanName: Left Index Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: DA_CHAR_M_SkeletonBasic_L_Middle1_jB
+      humanName: Left Middle Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: DA_CHAR_M_SkeletonBasic_L_Middle2_jB
+      humanName: Left Middle Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: DA_CHAR_M_SkeletonBasic_L_Middle3_jB
+      humanName: Left Middle Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: DA_CHAR_M_SkeletonBasic_L_Ring1_jB
+      humanName: Left Ring Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: DA_CHAR_M_SkeletonBasic_L_Ring2_jB
+      humanName: Left Ring Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: DA_CHAR_M_SkeletonBasic_L_Ring3_jB
+      humanName: Left Ring Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: DA_CHAR_M_SkeletonBasic_L_Pinky1_jB
+      humanName: Left Little Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: DA_CHAR_M_SkeletonBasic_L_Pinky2_jB
+      humanName: Left Little Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: DA_CHAR_M_SkeletonBasic_L_Pinky3_jB
+      humanName: Left Little Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: DA_CHAR_M_SkeletonBasic_R_Thumb1_jB
+      humanName: Right Thumb Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: DA_CHAR_M_SkeletonBasic_R_Thumb2_jB
+      humanName: Right Thumb Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: DA_CHAR_M_SkeletonBasic_R_Thumb3_jB
+      humanName: Right Thumb Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: DA_CHAR_M_SkeletonBasic_R_Index1_jB
+      humanName: Right Index Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: DA_CHAR_M_SkeletonBasic_R_Index2_jB
+      humanName: Right Index Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: DA_CHAR_M_SkeletonBasic_R_Index3_jB
+      humanName: Right Index Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: DA_CHAR_M_SkeletonBasic_R_Middle1_jB
+      humanName: Right Middle Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: DA_CHAR_M_SkeletonBasic_R_Middle2_jB
+      humanName: Right Middle Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: DA_CHAR_M_SkeletonBasic_R_Middle3_jB
+      humanName: Right Middle Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: DA_CHAR_M_SkeletonBasic_R_Ring1_jB
+      humanName: Right Ring Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: DA_CHAR_M_SkeletonBasic_R_Ring2_jB
+      humanName: Right Ring Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: DA_CHAR_M_SkeletonBasic_R_Ring3_jB
+      humanName: Right Ring Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: DA_CHAR_M_SkeletonBasic_R_Pinky1_jB
+      humanName: Right Little Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: DA_CHAR_M_SkeletonBasic_R_Pinky2_jB
+      humanName: Right Little Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: DA_CHAR_M_SkeletonBasic_R_Pinky3_jB
+      humanName: Right Little Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: DA_CHAR_M_SkeletonBasic_Spine3_jB
+      humanName: UpperChest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    skeleton:
+    - name: DA_ANIM_SkeleteonDeath_01(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_Skeleton
+      parentName: DA_ANIM_SkeleteonDeath_01(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_SkeletonBasic
+      parentName: DA_CHAR_M_Skeleton
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_SkeletonBasic_ArmorAndWeapons
+      parentName: DA_CHAR_M_Skeleton
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_SkeletonBasic_ChestPiece1
+      parentName: DA_CHAR_M_SkeletonBasic_ArmorAndWeapons
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_SkeletonBasic_Club1
+      parentName: DA_CHAR_M_SkeletonBasic_ArmorAndWeapons
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_SkeletonBasic_Helmet1
+      parentName: DA_CHAR_M_SkeletonBasic_ArmorAndWeapons
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_SkeletonBasic_LeftArmBracer1
+      parentName: DA_CHAR_M_SkeletonBasic_ArmorAndWeapons
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_SkeletonBasic_LeftShinPiece1
+      parentName: DA_CHAR_M_SkeletonBasic_ArmorAndWeapons
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_SkeletonBasic_RightArmBracer1
+      parentName: DA_CHAR_M_SkeletonBasic_ArmorAndWeapons
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_SkeletonBasic_RightShinPiece1
+      parentName: DA_CHAR_M_SkeletonBasic_ArmorAndWeapons
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_SkeletonBasic_Shield1
+      parentName: DA_CHAR_M_SkeletonBasic_ArmorAndWeapons
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_SkeletonBasic_Root_jB
+      parentName: DA_CHAR_M_Skeleton
+      position: {x: -0.000000018626451, y: 0.8275613, z: -0.02}
+      rotation: {x: 0.46685663, y: -0.53393024, z: -0.46402988, w: 0.5306974}
+      scale: {x: 1.0000005, y: 0.9999999, z: 1.0000002}
+    - name: DA_CHAR_M_SkeletonBasic_Spine1_jB
+      parentName: DA_CHAR_M_SkeletonBasic_Root_jB
+      position: {x: -0.14372432, y: -0.02434221, z: -0.005906031}
+      rotation: {x: -0.0028829575, y: 0.0009535253, z: 0.1845296, w: 0.98282236}
+      scale: {x: 1.0000002, y: 1.0000001, z: 1.0000004}
+    - name: DA_CHAR_M_SkeletonBasic_Spine2_jB
+      parentName: DA_CHAR_M_SkeletonBasic_Spine1_jB
+      position: {x: -0.12410543, y: 0.017156519, z: 7.431916e-17}
+      rotation: {x: -0.00000002328306, y: 0.000000023690514, z: -0.23486283, w: 0.97202855}
+      scale: {x: 1.0000002, y: 1.0000008, z: 1.0000005}
+    - name: DA_CHAR_M_SkeletonBasic_Spine3_jB
+      parentName: DA_CHAR_M_SkeletonBasic_Spine2_jB
+      position: {x: -0.14467423, y: -0.0067255623, z: 8.454564e-17}
+      rotation: {x: -0.9923456, y: 0.123492375, z: 0.0000000062381473, w: -0.000000023876455}
+      scale: {x: 1.0000013, y: 1.0000013, z: 1.0000024}
+    - name: DA_CHAR_M_SkeletonBasic_Neck_jB
+      parentName: DA_CHAR_M_SkeletonBasic_Spine3_jB
+      position: {x: -0.15966344, y: -0.01613321, z: -4.3606983e-17}
+      rotation: {x: 0.0000000127328805, y: -0.000000019426045, z: 0.15066971, w: 0.9885842}
+      scale: {x: 1.0000002, y: 1.0000001, z: 1.0000005}
+    - name: DA_CHAR_M_SkeletonBasic_Head_jB
+      parentName: DA_CHAR_M_SkeletonBasic_Neck_jB
+      position: {x: -0.08205397, y: 0.000588603, z: -3.655519e-17}
+      rotation: {x: 0.0000000019500763, y: -0.000000007145969, z: 0.25671008, w: -0.96648854}
+      scale: {x: 1.0000017, y: 1.0000021, z: 1.000002}
+    - name: DA_CHAR_M_SkeletonBasic_HeadTop_j
+      parentName: DA_CHAR_M_SkeletonBasic_Head_jB
+      position: {x: -0.15393071, y: -5.5533593e-15, z: -1.1998362e-16}
+      rotation: {x: -0, y: -0, z: -1.3935184e-17, w: -1}
+      scale: {x: 1.0000004, y: 1.0000004, z: 1.0000004}
+    - name: DA_CHAR_M_SkeletonBasic_L_Shoulder_jB
+      parentName: DA_CHAR_M_SkeletonBasic_Spine3_jB
+      position: {x: -0.11761834, y: -0.041379478, z: -0.06889903}
+      rotation: {x: 0.28254074, y: -0.6482057, z: 0.5722799, w: 0.4153262}
+      scale: {x: 1.0000001, y: 1, z: 0.99999994}
+    - name: DA_CHAR_M_SkeletonBasic_L_Arm_jB
+      parentName: DA_CHAR_M_SkeletonBasic_L_Shoulder_jB
+      position: {x: -0.0854326, y: 0.019513795, z: -0.0095940465}
+      rotation: {x: -0.0052679465, y: -0.02034899, z: -0.27498442, w: 0.9612189}
+      scale: {x: 0.9999999, y: 1.0000001, z: 1.0000004}
+    - name: DA_CHAR_M_SkeletonBasic_L_Forearm_jB
+      parentName: DA_CHAR_M_SkeletonBasic_L_Arm_jB
+      position: {x: -0.22052442, y: -0.00779403, z: -0.008479943}
+      rotation: {x: 0.00026395632, y: 0.022223582, z: 0.037178826, w: 0.99906147}
+      scale: {x: 1.0000007, y: 1.0000002, z: 1.0000007}
+    - name: DA_CHAR_M_SkeletonBasic_L_Wrist_jB
+      parentName: DA_CHAR_M_SkeletonBasic_L_Forearm_jB
+      position: {x: -0.22242808, y: 0.0047646514, z: 0.00068973616}
+      rotation: {x: 0.08329322, y: 0.51973534, z: 0.093202315, w: 0.8451336}
+      scale: {x: 1.0000005, y: 1.0000002, z: 1.0000006}
+    - name: DA_CHAR_M_SkeletonBasic_L_Thumb1_jB
+      parentName: DA_CHAR_M_SkeletonBasic_L_Wrist_jB
+      position: {x: -0.046723716, y: -0.009146939, z: -0.017056398}
+      rotation: {x: 0.029912708, y: -0.07316023, z: -0.22582485, w: 0.97095615}
+      scale: {x: 1.0000012, y: 1.0000001, z: 1.0000008}
+    - name: DA_CHAR_M_SkeletonBasic_L_Thumb2_jB
+      parentName: DA_CHAR_M_SkeletonBasic_L_Thumb1_jB
+      position: {x: -0.033873327, y: -0.009175697, z: -0.0019777345}
+      rotation: {x: 0.021288222, y: -0.07552603, z: 0.08376726, w: 0.993391}
+      scale: {x: 1.0000011, y: 1.0000001, z: 1.0000008}
+    - name: DA_CHAR_M_SkeletonBasic_L_Thumb3_jB
+      parentName: DA_CHAR_M_SkeletonBasic_L_Thumb2_jB
+      position: {x: -0.016588325, y: -0.0006841778, z: 0.0019410695}
+      rotation: {x: -0.013046439, y: 0.048781946, z: -0.061425228, w: 0.9968335}
+      scale: {x: 1.000001, y: 1.0000002, z: 1.0000004}
+    - name: DA_CHAR_M_SkeletonBasic_L_Thumb4_j
+      parentName: DA_CHAR_M_SkeletonBasic_L_Thumb3_jB
+      position: {x: -0.0073528443, y: -0.0016542755, z: -0.00023295348}
+      rotation: {x: -1.16415266e-10, y: -9.3132213e-10, z: -0, w: 1}
+      scale: {x: 1.000001, y: 1, z: 1.0000007}
+    - name: DA_CHAR_M_SkeletonBasic_L_Index1_jB
+      parentName: DA_CHAR_M_SkeletonBasic_L_Wrist_jB
+      position: {x: -0.05295441, y: 0.023954686, z: -0.06624893}
+      rotation: {x: -0.066999234, y: -0.5230427, z: -0.11917097, w: 0.84127045}
+      scale: {x: 1.0000002, y: 0.9999998, z: 0.9999998}
+    - name: DA_CHAR_M_SkeletonBasic_L_Index2_jB
+      parentName: DA_CHAR_M_SkeletonBasic_L_Index1_jB
+      position: {x: -0.0278152, y: 4.1106764e-13, z: -0.00092093146}
+      rotation: {x: -0.0000000037252899, y: 0.013421563, z: 0.0000000037252899, w: 0.99991}
+      scale: {x: 1.0000002, y: 1.0000002, z: 1.0000004}
+    - name: DA_CHAR_M_SkeletonBasic_L_Index3_jB
+      parentName: DA_CHAR_M_SkeletonBasic_L_Index2_jB
+      position: {x: -0.026251497, y: 3.4697462e-13, z: 0.00028859067}
+      rotation: {x: 0.000000018144688, y: -0.008153189, z: 0.000000033743923, w: 0.99996674}
+      scale: {x: 1.0000002, y: 1, z: 1.0000004}
+    - name: DA_CHAR_M_SkeletonBasic_L_Index4_j
+      parentName: DA_CHAR_M_SkeletonBasic_L_Index3_jB
+      position: {x: -0.018883016, y: 3.0976475e-13, z: -0.00032036222}
+      rotation: {x: -0, y: -0, z: -1.4294116e-15, w: 1}
+      scale: {x: 1.0000005, y: 1, z: 1.0000007}
+    - name: DA_CHAR_M_SkeletonBasic_L_Middle1_jB
+      parentName: DA_CHAR_M_SkeletonBasic_L_Wrist_jB
+      position: {x: -0.042451695, y: 0.021062132, z: -0.07335666}
+      rotation: {x: -0.06595173, y: -0.5210843, z: -0.12038311, w: 0.84239507}
+      scale: {x: 1.0000005, y: 1, z: 1}
+    - name: DA_CHAR_M_SkeletonBasic_L_Middle2_jB
+      parentName: DA_CHAR_M_SkeletonBasic_L_Middle1_jB
+      position: {x: -0.024854269, y: 4.3673076e-13, z: -0.000978905}
+      rotation: {x: 0.00000005587934, y: 0.013421652, z: 0.000000078231075, w: 0.99990994}
+      scale: {x: 1.0000004, y: 1.0000002, z: 1.0000001}
+    - name: DA_CHAR_M_SkeletonBasic_L_Middle3_jB
+      parentName: DA_CHAR_M_SkeletonBasic_L_Middle2_jB
+      position: {x: -0.03165314, y: 2.9923376e-13, z: 0.00024933627}
+      rotation: {x: 0.000000025082615, y: -0.008153189, z: 0.000000026874295, w: 0.9999668}
+      scale: {x: 1.0000011, y: 1, z: 1.0000007}
+    - name: DA_CHAR_M_SkeletonBasic_L_Middle4_j
+      parentName: DA_CHAR_M_SkeletonBasic_L_Middle3_jB
+      position: {x: -0.014006087, y: 3.519685e-13, z: -0.00036444946}
+      rotation: {x: -1.7763562e-15, y: -0, z: 2.0400342e-15, w: 1}
+      scale: {x: 1.0000008, y: 1.0000004, z: 1.0000011}
+    - name: DA_CHAR_M_SkeletonBasic_L_Ring1_jB
+      parentName: DA_CHAR_M_SkeletonBasic_L_Wrist_jB
+      position: {x: -0.031002173, y: 0.017908826, z: -0.07938566}
+      rotation: {x: -0.06549386, y: -0.5202023, z: -0.12090072, w: 0.84290165}
+      scale: {x: 1.0000002, y: 0.9999998, z: 0.9999998}
+    - name: DA_CHAR_M_SkeletonBasic_L_Ring2_jB
+      parentName: DA_CHAR_M_SkeletonBasic_L_Ring1_jB
+      position: {x: -0.023742465, y: 4.470976e-13, z: -0.0010006736}
+      rotation: {x: -0.000000029802312, y: 0.013421561, z: -0.000000003725289, w: 0.99990994}
+      scale: {x: 1.0000004, y: 1.0000004, z: 1.0000005}
+    - name: DA_CHAR_M_SkeletonBasic_L_Ring3_jB
+      parentName: DA_CHAR_M_SkeletonBasic_L_Ring2_jB
+      position: {x: -0.030855097, y: 3.067286e-13, z: 0.00025513576}
+      rotation: {x: 0.000000044182098, y: -0.008153187, z: 0.00000004133179, w: 0.9999668}
+      scale: {x: 1.0000008, y: 1.0000002, z: 1.0000005}
+    - name: DA_CHAR_M_SkeletonBasic_L_Ring4_j
+      parentName: DA_CHAR_M_SkeletonBasic_L_Ring3_jB
+      position: {x: -0.016420895, y: 3.3144163e-13, z: -0.00034261972}
+      rotation: {x: -0, y: -0, z: 1.1379782e-15, w: 1}
+      scale: {x: 1.0000004, y: 0.9999998, z: 1.0000005}
+    - name: DA_CHAR_M_SkeletonBasic_L_Pinky1_jB
+      parentName: DA_CHAR_M_SkeletonBasic_L_Wrist_jB
+      position: {x: -0.0191669, y: 0.014649278, z: -0.085937604}
+      rotation: {x: -0.06564048, y: -0.5204863, z: -0.120735936, w: 0.84273845}
+      scale: {x: 1.0000002, y: 0.9999998, z: 0.9999998}
+    - name: DA_CHAR_M_SkeletonBasic_L_Pinky2_jB
+      parentName: DA_CHAR_M_SkeletonBasic_L_Pinky1_jB
+      position: {x: -0.024088081, y: 4.4392764e-13, z: -0.0009939065}
+      rotation: {x: -0.0000000037252899, y: 0.013421563, z: 0.0000000037252899, w: 0.99991}
+      scale: {x: 1.0000005, y: 1.0000005, z: 1.0000004}
+    - name: DA_CHAR_M_SkeletonBasic_L_Pinky3_jB
+      parentName: DA_CHAR_M_SkeletonBasic_L_Pinky2_jB
+      position: {x: -0.02794599, y: 3.3149246e-13, z: 0.00027627658}
+      rotation: {x: -0.000000010454962, y: -0.008153188, z: -0.00000005605496, w: 0.99996674}
+      scale: {x: 1.0000005, y: 0.99999994, z: 1.0000001}
+    - name: DA_CHAR_M_SkeletonBasic_L_Pinky4_j
+      parentName: DA_CHAR_M_SkeletonBasic_L_Pinky3_jB
+      position: {x: -0.019980667, y: 3.00003e-13, z: -0.00031043953}
+      rotation: {x: -0, y: -0, z: -1.033895e-15, w: 1}
+      scale: {x: 1, y: 1.0000004, z: 1.0000001}
+    - name: DA_CHAR_M_SkeletonBasic_R_Shoulder_jB
+      parentName: DA_CHAR_M_SkeletonBasic_Spine3_jB
+      position: {x: -0.11761917, y: -0.041379325, z: 0.06889907}
+      rotation: {x: -0.37360123, y: 0.6461266, z: 0.49103528, w: 0.4492516}
+      scale: {x: 1.000001, y: 1, z: 1.0000011}
+    - name: DA_CHAR_M_SkeletonBasic_R_Arm_jB
+      parentName: DA_CHAR_M_SkeletonBasic_R_Shoulder_jB
+      position: {x: -0.08815753, y: 2.470246e-16, z: -6.106227e-17}
+      rotation: {x: -0.0026635078, y: -0.01674324, z: -0.14723887, w: 0.98895574}
+      scale: {x: 1.0000008, y: 0.99999994, z: 1.0000006}
+    - name: DA_CHAR_M_SkeletonBasic_R_Forearm_jB
+      parentName: DA_CHAR_M_SkeletonBasic_R_Arm_jB
+      position: {x: -0.22082523, y: 2.0964946e-16, z: -2.1094237e-17}
+      rotation: {x: -0.0008090061, y: -0.042962864, z: 0.008855967, w: 0.99903715}
+      scale: {x: 1.0000069, y: 1.0000005, z: 1.0000075}
+    - name: DA_CHAR_M_SkeletonBasic_R_Wrist_jB
+      parentName: DA_CHAR_M_SkeletonBasic_R_Forearm_jB
+      position: {x: -0.22248067, y: 2.8557268e-16, z: -1.9498291e-16}
+      rotation: {x: -0.0809499, y: -0.34518135, z: 0.18820058, w: 0.91590255}
+      scale: {x: 1.0000036, y: 1.0000015, z: 1.0000019}
+    - name: DA_CHAR_M_SkeletonBasic_R_Thumb1_jB
+      parentName: DA_CHAR_M_SkeletonBasic_R_Wrist_jB
+      position: {x: -0.050571203, y: -1.6042722e-16, z: 2.4424906e-17}
+      rotation: {x: -0.034014102, y: -0.082649596, z: -0.18208204, w: 0.97921306}
+      scale: {x: 1.0000001, y: 1, z: 0.9999999}
+    - name: DA_CHAR_M_SkeletonBasic_R_Thumb2_jB
+      parentName: DA_CHAR_M_SkeletonBasic_R_Thumb1_jB
+      position: {x: -0.035147768, y: 3.6082247e-18, z: -1.0297318e-16}
+      rotation: {x: -0.03831349, y: -0.008790671, z: -0.027010761, w: 0.99886197}
+      scale: {x: 0.99999976, y: 1.0000011, z: 1.0000006}
+    - name: DA_CHAR_M_SkeletonBasic_R_Thumb3_jB
+      parentName: DA_CHAR_M_SkeletonBasic_R_Thumb2_jB
+      position: {x: -0.016716177, y: -3.1843452e-16, z: -8.4654504e-17}
+      rotation: {x: 0.018442662, y: 0.023580762, z: 0.028111866, w: 0.9991564}
+      scale: {x: 0.9999996, y: 0.99999994, z: 0.99999964}
+    - name: DA_CHAR_M_SkeletonBasic_R_Thumb4_j
+      parentName: DA_CHAR_M_SkeletonBasic_R_Thumb3_jB
+      position: {x: -0.0075386576, y: -7.424698e-17, z: -7.7680915e-17}
+      rotation: {x: -0.015928358, y: 0.0032262083, z: 0.9938033, w: 0.109958135}
+      scale: {x: 1.0000002, y: 1.000001, z: 1.0000002}
+    - name: DA_CHAR_M_SkeletonBasic_R_Index1_jB
+      parentName: DA_CHAR_M_SkeletonBasic_R_Wrist_jB
+      position: {x: -0.06693395, y: 0.040900808, z: 0.040173076}
+      rotation: {x: 0.077566534, y: 0.36426502, z: -0.20526306, w: 0.9050755}
+      scale: {x: 1.0000006, y: 1.0000007, z: 1.0000002}
+    - name: DA_CHAR_M_SkeletonBasic_R_Index2_jB
+      parentName: DA_CHAR_M_SkeletonBasic_R_Index1_jB
+      position: {x: -0.027830595, y: 2.6512396e-16, z: 7.369105e-17}
+      rotation: {x: -0.00000011920922, y: -0.035457022, z: -0.000000054016677, w: 0.99937123}
+      scale: {x: 0.99999976, y: 1.0000001, z: 1.0000002}
+    - name: DA_CHAR_M_SkeletonBasic_R_Index3_jB
+      parentName: DA_CHAR_M_SkeletonBasic_R_Index2_jB
+      position: {x: -0.026253376, y: -2.657802e-14, z: 1.8908485e-17}
+      rotation: {x: 0.00000010264953, y: 0.022127984, z: -0.000000014062372, w: 0.99975514}
+      scale: {x: 1.0000017, y: 1.0000002, z: 1.0000012}
+    - name: DA_CHAR_M_SkeletonBasic_R_Index4_j
+      parentName: DA_CHAR_M_SkeletonBasic_R_Index3_jB
+      position: {x: -0.018885383, y: -4.6305877e-15, z: 2.282896e-17}
+      rotation: {x: -0.008480972, y: 0.000000022180755, z: 0.9999641, w: 0.000000029637963}
+      scale: {x: 1.0000001, y: 1.0000014, z: 1.0000007}
+    - name: DA_CHAR_M_SkeletonBasic_R_Middle1_jB
+      parentName: DA_CHAR_M_SkeletonBasic_R_Wrist_jB
+      position: {x: -0.06015075, y: 0.037765127, z: 0.050819594}
+      rotation: {x: 0.077194616, y: 0.365001, z: -0.20637599, w: 0.9045575}
+      scale: {x: 1.0000001, y: 1.0000007, z: 0.99999994}
+    - name: DA_CHAR_M_SkeletonBasic_R_Middle2_jB
+      parentName: DA_CHAR_M_SkeletonBasic_R_Middle1_jB
+      position: {x: -0.024874195, y: 1.7505488e-16, z: 5.2735593e-18}
+      rotation: {x: 0.00000004470346, y: -0.03703568, z: 0.000000055879323, w: 0.99931395}
+      scale: {x: 1.0000002, y: 0.9999998, z: 1.0000004}
+    - name: DA_CHAR_M_SkeletonBasic_R_Middle3_jB
+      parentName: DA_CHAR_M_SkeletonBasic_R_Middle2_jB
+      position: {x: -0.03165363, y: -3.2641553e-14, z: -8.673617e-18}
+      rotation: {x: -0.000000040267548, y: 0.025099866, z: -0.000000118903905, w: 0.999685}
+      scale: {x: 0.9999999, y: 1.0000002, z: 0.99999964}
+    - name: DA_CHAR_M_SkeletonBasic_R_Middle4_j
+      parentName: DA_CHAR_M_SkeletonBasic_R_Middle3_jB
+      position: {x: -0.014010609, y: -2.284579e-15, z: 3.2612801e-18}
+      rotation: {x: -0.0130093815, y: 0.0000000135407285, z: 0.99991536, w: -0.000000044959926}
+      scale: {x: 0.9999999, y: 1.0000007, z: 1.0000008}
+    - name: DA_CHAR_M_SkeletonBasic_R_Ring1_jB
+      parentName: DA_CHAR_M_SkeletonBasic_R_Wrist_jB
+      position: {x: -0.052176412, y: 0.03407882, z: 0.060829863}
+      rotation: {x: 0.0770313, y: 0.36530468, z: -0.20685016, w: 0.9043405}
+      scale: {x: 1.0000006, y: 1.0000008, z: 1.0000007}
+    - name: DA_CHAR_M_SkeletonBasic_R_Ring2_jB
+      parentName: DA_CHAR_M_SkeletonBasic_R_Ring1_jB
+      position: {x: -0.023763219, y: 4.4912096e-16, z: 4.3853807e-17}
+      rotation: {x: -0.000000014901156, y: -0.03860958, z: -0.00000007823107, w: 0.9992544}
+      scale: {x: 0.9999998, y: 0.9999999, z: 0.99999964}
+    - name: DA_CHAR_M_SkeletonBasic_R_Ring3_jB
+      parentName: DA_CHAR_M_SkeletonBasic_R_Ring2_jB
+      position: {x: -0.030856723, y: -3.3239037e-14, z: -1.474515e-17}
+      rotation: {x: -0.0000000059761156, y: 0.02271586, z: 0.000000084430994, w: 0.999742}
+      scale: {x: 1.0000007, y: 0.9999998, z: 1.0000007}
+    - name: DA_CHAR_M_SkeletonBasic_R_Ring4_j
+      parentName: DA_CHAR_M_SkeletonBasic_R_Ring3_jB
+      position: {x: -0.016424341, y: -4.356896e-15, z: 3.330669e-18}
+      rotation: {x: -0.0104293525, y: -0.000000014214114, z: 0.99994564, w: 0.000000039579362}
+      scale: {x: 1.0000001, y: 1.0000005, z: 1.0000004}
+    - name: DA_CHAR_M_SkeletonBasic_R_Pinky1_jB
+      parentName: DA_CHAR_M_SkeletonBasic_R_Wrist_jB
+      position: {x: -0.044040512, y: 0.03031783, z: 0.07147356}
+      rotation: {x: 0.077083535, y: 0.3652073, z: -0.20669894, w: 0.9044099}
+      scale: {x: 1.0000006, y: 1.0000007, z: 1.0000004}
+    - name: DA_CHAR_M_SkeletonBasic_R_Pinky2_jB
+      parentName: DA_CHAR_M_SkeletonBasic_R_Pinky1_jB
+      position: {x: -0.024109563, y: -9.215106e-17, z: 1.267042e-16}
+      rotation: {x: 0.00000012665984, y: -0.03897064, z: 0.00000005960463, w: 0.99924034}
+      scale: {x: 0.9999989, y: 0.99999994, z: 0.9999996}
+    - name: DA_CHAR_M_SkeletonBasic_R_Pinky3_jB
+      parentName: DA_CHAR_M_SkeletonBasic_R_Pinky2_jB
+      position: {x: -0.027947111, y: -3.1690223e-14, z: -1.7173762e-17}
+      rotation: {x: -0.00000010905451, y: 0.020860648, z: 0.000000038903124, w: 0.9997824}
+      scale: {x: 1.0000005, y: 0.99999994, z: 1.0000002}
+    - name: DA_CHAR_M_SkeletonBasic_R_Pinky4_j
+      parentName: DA_CHAR_M_SkeletonBasic_R_Pinky3_jB
+      position: {x: -0.019983033, y: -7.7926514e-15, z: 2.5673906e-17}
+      rotation: {x: -0.007766667, y: -0.0000000725629, z: 0.99996984, w: 0.00000006639946}
+      scale: {x: 0.99999964, y: 1.0000002, z: 0.9999998}
+    - name: DA_CHAR_M_SkeletonBasic_L_Thigh_jB
+      parentName: DA_CHAR_M_SkeletonBasic_Root_jB
+      position: {x: 0.023115154, y: -0.019356694, z: 0.10060838}
+      rotation: {x: 0.049385346, y: 0.70322704, z: -0.7091753, w: -0.010160296}
+      scale: {x: 0.99999976, y: 0.99999994, z: 1}
+    - name: DA_CHAR_M_SkeletonBasic_L_Leg_jB
+      parentName: DA_CHAR_M_SkeletonBasic_L_Thigh_jB
+      position: {x: -0.35082006, y: -0.0041811005, z: 0.005602545}
+      rotation: {x: -0.00086343754, y: 0.069628865, z: -0.06826778, w: 0.9952339}
+      scale: {x: 1.0000006, y: 1.0000001, z: 1.0000004}
+    - name: DA_CHAR_M_SkeletonBasic_L_Ankle_jB
+      parentName: DA_CHAR_M_SkeletonBasic_L_Leg_jB
+      position: {x: -0.39963287, y: -0.0039055145, z: -0.012534968}
+      rotation: {x: 0.024054244, y: -0.5944221, z: 0.032500304, w: 0.80313605}
+      scale: {x: 1, y: 0.99999994, z: 1.0000002}
+    - name: DA_CHAR_M_SkeletonBasic_L_Foot_jB
+      parentName: DA_CHAR_M_SkeletonBasic_L_Ankle_jB
+      position: {x: -0.020068519, y: 1.2065542e-14, z: 0.04377261}
+      rotation: {x: -0.000000026077032, y: -0.19203502, z: 0.00000006519258, w: 0.9813881}
+      scale: {x: 1.0000001, y: 1.0000004, z: 0.99999964}
+    - name: DA_CHAR_M_SkeletonBasic_L_Foot_j
+      parentName: DA_CHAR_M_SkeletonBasic_L_Foot_jB
+      position: {x: -0.16259603, y: 0, z: 3.1086245e-17}
+      rotation: {x: -0, y: -0, z: 2.6645353e-15, w: 1}
+      scale: {x: 1, y: 1.0000002, z: 1.0000005}
+    - name: DA_CHAR_M_SkeletonBasic_R_Thigh_jB
+      parentName: DA_CHAR_M_SkeletonBasic_Root_jB
+      position: {x: 0.022951826, y: -0.020566477, z: -0.100405455}
+      rotation: {x: -0.7074907, y: 0.04989806, z: -0.009887457, w: 0.70488966}
+      scale: {x: 0.99999934, y: 1, z: 0.99999994}
+    - name: DA_CHAR_M_SkeletonBasic_R_Leg_jB
+      parentName: DA_CHAR_M_SkeletonBasic_R_Thigh_jB
+      position: {x: 0.3508204, y: 0.0041809324, z: -0.005602577}
+      rotation: {x: 0.07795326, y: 0.9379506, z: 0.3366197, w: -0.029310971}
+      scale: {x: 1.0000019, y: 1.0000015, z: 1.000002}
+    - name: DA_CHAR_M_SkeletonBasic_R_Ankle_jB
+      parentName: DA_CHAR_M_SkeletonBasic_R_Leg_jB
+      position: {x: -0.39984858, y: 2.1810103e-16, z: 1.7727898e-16}
+      rotation: {x: -0.9020549, y: 0.061190497, z: 0.010392088, w: -0.4271354}
+      scale: {x: 0.9999998, y: 1.0000002, z: 0.9999999}
+    - name: DA_CHAR_M_SkeletonBasic_R_Foot_jB
+      parentName: DA_CHAR_M_SkeletonBasic_R_Ankle_jB
+      position: {x: -0.04815375, y: 3.0406177e-17, z: -1.2125093e-17}
+      rotation: {x: -0.00000008940696, y: 0.000000009313225, z: -0.69159514, w: -0.72228545}
+      scale: {x: 1.000001, y: 1.000001, z: 1.0000004}
+    - name: DA_CHAR_M_SkeletonBasic_R_Foot_j
+      parentName: DA_CHAR_M_SkeletonBasic_R_Foot_jB
+      position: {x: -0.1625956, y: -7.988415e-19, z: 7.611689e-15}
+      rotation: {x: 0.00000010332748, y: -0.70710677, z: 0.7071069, w: -0.000000025045752}
+      scale: {x: 1.000001, y: 1.0000006, z: 1.0000004}
+    - name: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:Reference
+      parentName: DA_ANIM_SkeleteonDeath_01(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:ChestEndEffector
+      parentName: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:Reference
+      position: {x: -0.009609053, y: 1.3304892, z: -0.00785651}
+      rotation: {x: 0.063595295, y: -0.02622244, z: 0.010976825, w: 0.9975708}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:ChestOriginEffector
+      parentName: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:Reference
+      position: {x: -0.0066093886, y: 0.9690238, z: -0.0538918}
+      rotation: {x: 0.037918013, y: -0.029635027, z: -0.005217119, w: 0.9988277}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:HeadEffector
+      parentName: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:Reference
+      position: {x: -0.016781963, y: 1.5962502, z: 0.05419434}
+      rotation: {x: 0.116350815, y: -0.0064382395, z: 0.006976485, w: 0.9931628}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:Hips
+      parentName: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:Reference
+      position: {x: -0.017735766, y: 0.8275613, z: -0.019999994}
+      rotation: {x: 0.031492013, y: -0.030483993, z: -0.009265573, w: 0.9989961}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:LeftUpLeg
+      parentName: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:Hips
+      position: {x: -0.10050874, y: -0.025491467, z: -0.016709743}
+      rotation: {x: -0.008552724, y: -0.028521156, z: -0.081319004, w: 0.99624324}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:LeftLeg
+      parentName: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:LeftUpLeg
+      position: {x: -0.023840206, y: -0.34988365, z: 0.011690024}
+      rotation: {x: 0.06873776, y: -0.003145972, z: 0.007821209, w: 0.9975992}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:LeftFoot
+      parentName: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:LeftLeg
+      position: {x: 0.028398016, y: -0.39815548, z: -0.02333638}
+      rotation: {x: -0.09876594, y: 0.06003101, z: 0.036907665, w: 0.9926124}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:LeftToeBase
+      parentName: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:LeftFoot
+      position: {x: 0.0000000038559644, y: -0.04810843, z: 0.00208952}
+      rotation: {x: -0.036543317, y: 0.0010204702, z: -0.006576709, w: 0.9993099}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:RightUpLeg
+      parentName: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:Hips
+      position: {x: 0.100508794, y: -0.02549099, z: -0.0167097}
+      rotation: {x: -0.051368803, y: 0.057885785, z: 0.05753422, w: 0.99533933}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:RightLeg
+      parentName: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:RightUpLeg
+      position: {x: 0.023839986, y: -0.34988397, z: 0.011690003}
+      rotation: {x: 0.13036257, y: 0.0077510863, z: -0.03121442, w: 0.9909446}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:RightFoot
+      parentName: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:RightLeg
+      position: {x: -0.028397921, y: -0.3981556, z: -0.023336414}
+      rotation: {x: -0.10442421, y: -0.028080093, z: 0.01037968, w: 0.99408215}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:RightToeBase
+      parentName: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:RightFoot
+      position: {x: -0.0000000011008235, y: -0.048108395, z: 0.0020895093}
+      rotation: {x: -0.03583242, y: -0.0019855418, z: 0.015702434, w: 0.9992325}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:Spine
+      parentName: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:Hips
+      position: {x: 0.0061689042, y: 0.13919064, z: -0.043266777}
+      rotation: {x: 0.0065404032, y: 0.001030015, z: 0.0038202018, w: 0.9999708}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:Spine1
+      parentName: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:Spine
+      position: {x: 0.0000000047175197, y: 0.11691303, z: -0.045031667}
+      rotation: {x: 0.0130800195, y: 0.0020599223, z: 0.0076399334, w: 0.9998832}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:Spine2
+      parentName: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:Spine1
+      position: {x: -8.7254065e-10, y: 0.1443976, z: -0.011188461}
+      rotation: {x: 0.013079967, y: 0.0020599025, z: 0.007639909, w: 0.9998832}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:LeftShoulder
+      parentName: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:Spine2
+      position: {x: -0.06889903, y: 0.1059679, z: 0.065705046}
+      rotation: {x: 0.03524138, y: 0.004723815, z: 0.006504044, w: 0.9993465}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:LeftArm
+      parentName: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:LeftShoulder
+      position: {x: -0.08352512, y: -0.026515571, z: -0.009594034}
+      rotation: {x: 0.25776964, y: 0.2084785, z: 0.32095066, w: 0.8871765}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:LeftForeArm
+      parentName: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:LeftArm
+      position: {x: -0.22009966, y: -0.0022082252, z: -0.017746452}
+      rotation: {x: 0.02731724, y: 0.55786514, z: -0.039732736, w: 0.82852983}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:LeftHand
+      parentName: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:LeftForeArm
+      position: {x: -0.22239174, y: -0.0061517605, z: 0.0012259965}
+      rotation: {x: 0.03809246, y: -0.009932966, z: -0.138216, w: 0.98961943}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:LeftHandIndex1
+      parentName: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:LeftHand
+      position: {x: -0.084845684, y: 0.009034144, z: 0.022057034}
+      rotation: {x: 0.000000023215323, y: -0.0000000027616, z: -0.000000016694708,
+        w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:LeftHandIndex2
+      parentName: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:LeftHandIndex1
+      position: {x: -0.027791843, y: 0.000000011400884, z: -0.0014652562}
+      rotation: {x: 0.00000004997434, y: -0.000000040004988, z: 0.0000026900043, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:LeftHandIndex3
+      parentName: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:LeftHandIndex2
+      position: {x: -0.026248705, y: -0.000000013304937, z: 0.0004793629}
+      rotation: {x: -0.000000002751159, y: 0.0000000033872698, z: -0.000000002445208,
+        w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:LeftHandMiddle1
+      parentName: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:LeftHand
+      position: {x: -0.11121199, y: 0.009034172, z: 0.0076753586}
+      rotation: {x: 0.000000021053216, y: -0.00000008314359, z: -0.00000005495003,
+        w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:LeftHandMiddle2
+      parentName: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:LeftHandMiddle1
+      position: {x: -0.0316505, y: 0.000000021981085, z: 0.0004793574}
+      rotation: {x: 3.4087072e-10, y: 0.000000041576133, z: 0.00000001851152, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:LeftHandMiddle3
+      parentName: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:LeftHandMiddle2
+      position: {x: -0.014002208, y: -0.00000001241753, z: -0.00049103744}
+      rotation: {x: -2.0765542e-17, y: -3.469447e-18, z: -1.4582469e-18, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:LeftHandPinky1
+      parentName: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:LeftHand
+      position: {x: -0.08693981, y: 0.009034183, z: -0.018085744}
+      rotation: {x: 0.000000023215325, y: -0.0000000027616, z: -0.000000016694706,
+        w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:LeftHandPinky2
+      parentName: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:LeftHandPinky1
+      position: {x: -0.024064034, y: -0.00000004174872, z: -0.0014652759}
+      rotation: {x: 0.000000018133463, y: -0.00000008112067, z: 0.0000015235206, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:LeftHandPinky3
+      parentName: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:LeftHandPinky2
+      position: {x: -0.027943239, y: -2.4464156e-10, z: 0.00047934515}
+      rotation: {x: -9.2986174e-10, y: 0.00000004219313, z: 0.00000001729876, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:LeftHandRing1
+      parentName: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:LeftHand
+      position: {x: -0.086515196, y: 0.009034172, z: -0.0041772746}
+      rotation: {x: 0.000000023215325, y: -0.0000000027616, z: -0.000000016694706,
+        w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:LeftHandRing2
+      parentName: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:LeftHandRing1
+      position: {x: -0.023718316, y: 0.000000005088128, z: -0.001465257}
+      rotation: {x: -0.0000000021621076, y: -0.000000080382, z: -0.00000003825532,
+        w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:LeftHandRing3
+      parentName: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:LeftHandRing2
+      position: {x: -0.030852417, y: -0.0000000011882444, z: 0.00047935615}
+      rotation: {x: 3.4087075e-10, y: 0.000000041576133, z: 0.00000001851152, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:LeftHandThumb1
+      parentName: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:LeftHand
+      position: {x: -0.03419557, y: -0.021224882, z: 0.030624537}
+      rotation: {x: 0.000000016520364, y: -0.000000008020921, z: 0.000000015764883,
+        w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:LeftHandThumb2
+      parentName: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:LeftHandThumb1
+      position: {x: -0.015542048, y: -0.02176321, z: 0.022810368}
+      rotation: {x: 0.003495881, y: -0.09105585, z: -0.008230503, w: 0.9958057}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:LeftHandThumb3
+      parentName: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:LeftHandThumb2
+      position: {x: -0.006503818, y: -0.0016337448, z: 0.0153114265}
+      rotation: {x: 0.000000016569219, y: -0.0000000071342994, z: 0.000000013134104,
+        w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:Neck
+      parentName: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:Spine2
+      position: {x: -0.0000000049839213, y: 0.1524585, z: 0.050091214}
+      rotation: {x: 0.0044463137, y: 0.0034508815, z: -0.0010640707, w: 0.9999836}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:Neck1
+      parentName: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:Neck
+      position: {x: -0.000000001006077, y: 0.07153118, z: 0.040205374}
+      rotation: {x: 0.004440472, y: 0.003450845, z: -0.0010641649, w: 0.9999836}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:Head
+      parentName: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:Neck1
+      position: {x: 0.000000004655344, y: 0.15393072, z: 0.0000000040233377}
+      rotation: {x: 0.044149574, y: 0.011949615, z: -0.0042596273, w: 0.9989444}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:RightShoulder
+      parentName: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:Spine2
+      position: {x: 0.068899065, y: 0.10596873, z: 0.065705076}
+      rotation: {x: 0.025217343, y: 0.00035165378, z: -0.07551216, w: 0.99682593}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:RightArm
+      parentName: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:RightShoulder
+      position: {x: 0.0835248, y: -0.026519958, z: -0.009594108}
+      rotation: {x: 0.05583372, y: -0.029594373, z: -0.260535, w: 0.96339417}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:RightForeArm
+      parentName: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:RightArm
+      position: {x: 0.22010003, y: -0.002200051, z: -0.017746383}
+      rotation: {x: 0.011868159, y: -0.39414245, z: -0.1043662, w: 0.91302717}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:RightHand
+      parentName: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:RightForeArm
+      position: {x: 0.22239198, y: -0.006159993, z: 0.0012260048}
+      rotation: {x: 0.23745532, y: 0.05847341, z: 0.3444617, w: 0.90638953}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:RightHandIndex1
+      parentName: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:RightHand
+      position: {x: 0.084845014, y: 0.009039956, z: 0.022057}
+      rotation: {x: -0.000000025743114, y: -0.000000056600744, z: -0.0000000013356674,
+        w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:RightHandIndex2
+      parentName: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:RightHandIndex1
+      position: {x: 0.02779199, y: 0.000000007099945, z: -0.0014651751}
+      rotation: {x: 0.000000063368326, y: -0.000000028934263, z: -0.0000028819964,
+        w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:RightHandIndex3
+      parentName: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:RightHandIndex2
+      position: {x: 0.026248999, y: 0.000000048878036, z: 0.00047928243}
+      rotation: {x: -0.000000012956543, y: 0.00000002443257, z: 0.0000000052556732,
+        w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:RightHandMiddle1
+      parentName: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:RightHand
+      position: {x: 0.111212, y: 0.009039964, z: 0.0076753083}
+      rotation: {x: -0.000000024659327, y: -0.000000083521854, z: 0.00000000177743,
+        w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:RightHandMiddle2
+      parentName: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:RightHandMiddle1
+      position: {x: 0.031650003, y: 0.00000005086497, z: 0.00047940394}
+      rotation: {x: -0.0000000037115488, y: 0.00000005345308, z: -0.000000009591331,
+        w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:RightHandMiddle3
+      parentName: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:RightHandMiddle2
+      position: {x: 0.014002018, y: -0.00000007067271, z: -0.0004911003}
+      rotation: {x: 0.000000008897854, y: -0.000000053571267, z: 0.0000000031382494,
+        w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:RightHandPinky1
+      parentName: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:RightHand
+      position: {x: 0.08693901, y: 0.009039964, z: -0.018085795}
+      rotation: {x: -0.000000019012838, y: -0.000000056329796, z: -0.000000004423611,
+        w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:RightHandPinky2
+      parentName: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:RightHandPinky1
+      position: {x: 0.024065008, y: -0.000000016234909, z: -0.0014651881}
+      rotation: {x: -0.0000000056464886, y: -0.000000027192055, z: 0.000000006201041,
+        w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:RightHandPinky3
+      parentName: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:RightHandPinky2
+      position: {x: 0.027942989, y: 0.000000003126326, z: 0.0004793064}
+      rotation: {x: 0.000000005646489, y: 0.000000027192055, z: -0.0000000062010406,
+        w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:RightHandRing1
+      parentName: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:RightHand
+      position: {x: 0.08651502, y: 0.009039971, z: -0.004177298}
+      rotation: {x: -0.000000024659327, y: -0.000000083521854, z: 0.00000000177743,
+        w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:RightHandRing2
+      parentName: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:RightHandRing1
+      position: {x: 0.023717986, y: -0.000000004271343, z: -0.0014652717}
+      rotation: {x: -0.0000000026277607, y: 0.00000002653197, z: -0.0000000064782344,
+        w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:RightHandRing3
+      parentName: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:RightHandRing2
+      position: {x: 0.030853013, y: -0.000000018631559, z: 0.0004793748}
+      rotation: {x: 0.0000000015439721, y: 3.8913694e-10, z: 0.0000000033651386, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:RightHandThumb1
+      parentName: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:RightHand
+      position: {x: 0.034194995, y: -0.021220021, z: 0.030624514}
+      rotation: {x: -0.000000048347978, y: -0.00000013868332, z: -0.000000011569186,
+        w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:RightHandThumb2
+      parentName: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:RightHandThumb1
+      position: {x: 0.015542018, y: -0.021760033, z: 0.022810392}
+      rotation: {x: 0.0035084654, y: 0.091027014, z: 0.008259642, w: 0.995808}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:RightHandThumb3
+      parentName: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:RightHandThumb2
+      position: {x: 0.006504, y: -0.0016399405, z: 0.01531139}
+      rotation: {x: -0.000000003879132, y: -0.000000057456823, z: -0.000000007583053,
+        w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:HipsEffector
+      parentName: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:Reference
+      position: {x: -0.017131276, y: 0.8031669, z: -0.038263857}
+      rotation: {x: 0.031492013, y: -0.030483993, z: -0.009265573, w: 0.9989961}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:LeftAnkleEffector
+      parentName: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:Reference
+      position: {x: -0.23177749, y: 0.07854099, z: -0.15294425}
+      rotation: {x: -0.0035518312, y: -0.001302752, z: -0.043639895, w: 0.9990402}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:LeftElbowEffector
+      parentName: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:Reference
+      position: {x: -0.31932545, y: 1.1492801, z: -0.03664007}
+      rotation: {x: 0.09094524, y: 0.6342316, z: 0.44720978, w: 0.6240854}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:LeftFootEffector
+      parentName: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:Reference
+      position: {x: -0.23597758, y: 0.030632053, z: -0.15051885}
+      rotation: {x: -0.040004525, y: 0.001289124, z: -0.050231412, w: 0.99793524}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:LeftHandIndexEffector
+      parentName: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:Reference
+      position: {x: -0.24529986, y: 0.9433978, z: 0.24536596}
+      rotation: {x: 0.030557068, y: 0.6510543, z: 0.3312479, w: 0.68225324}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:LeftHandMiddleEffector
+      parentName: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:Reference
+      position: {x: -0.25627413, y: 0.92933273, z: 0.2589573}
+      rotation: {x: 0.030555282, y: 0.6510543, z: 0.33124605, w: 0.68225414}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:LeftHandPinkyEffector
+      parentName: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:Reference
+      position: {x: -0.28177002, y: 0.9277273, z: 0.23938176}
+      rotation: {x: 0.030556343, y: 0.6510543, z: 0.33124706, w: 0.6822536}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:LeftHandRingEffector
+      parentName: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:Reference
+      position: {x: -0.26898894, y: 0.93209463, z: 0.2433303}
+      rotation: {x: 0.030555282, y: 0.6510543, z: 0.33124605, w: 0.68225414}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:LeftHandThumbEffector
+      parentName: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:Reference
+      position: {x: -0.18656278, y: 0.9589672, z: 0.15754437}
+      rotation: {x: 0.05761564, y: 0.5876099, z: 0.31918317, w: 0.74129426}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:LeftHipEffector
+      parentName: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:Reference
+      position: {x: -0.11743601, y: 0.80522037, z: -0.044326916}
+      rotation: {x: 0.025044248, y: -0.056221835, z: -0.09162705, w: 0.9938896}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:LeftKneeEffector
+      parentName: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:Reference
+      position: {x: -0.20482606, y: 0.46559772, z: -0.05630308}
+      rotation: {x: 0.09257389, y: -0.065707766, z: -0.07984786, w: 0.99032164}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:LeftShoulderEffector
+      parentName: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:Reference
+      position: {x: -0.16031282, y: 1.3023641, z: -0.030013768}
+      rotation: {x: 0.33298504, y: 0.1614943, z: 0.3619135, w: 0.8556046}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:LeftWristEffector
+      parentName: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:Reference
+      position: {x: -0.2700535, y: 0.996454, z: 0.117353104}
+      rotation: {x: 0.030555261, y: 0.6510544, z: 0.3312461, w: 0.6822541}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:RightAnkleEffector
+      parentName: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:Reference
+      position: {x: 0.11871141, y: 0.07124813, z: -0.11429981}
+      rotation: {x: 0.0043652467, y: 0.0086771855, z: 0.024644367, w: 0.9996491}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:RightElbowEffector
+      parentName: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:Reference
+      position: {x: 0.31468397, y: 1.1652539, z: -0.042188194}
+      rotation: {x: 0.020819144, y: -0.38386253, z: -0.44864473, w: 0.8068049}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:RightFootEffector
+      parentName: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:Reference
+      position: {x: 0.12111484, y: 0.023182634, z: -0.11265112}
+      rotation: {x: -0.031272896, y: 0.0057340562, z: 0.04062463, w: 0.9986685}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:RightHandIndexEffector
+      parentName: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:Reference
+      position: {x: 0.4515446, y: 0.98173445, z: 0.20823304}
+      rotation: {x: 0.10445942, y: -0.41445655, z: -0.03636849, w: 0.9033224}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:RightHandMiddleEffector
+      parentName: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:Reference
+      position: {x: 0.4734398, y: 0.9811228, z: 0.21304922}
+      rotation: {x: 0.1044582, y: -0.41445684, z: -0.03636592, w: 0.9033225}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:RightHandPinkyEffector
+      parentName: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:Reference
+      position: {x: 0.48194742, y: 0.9880909, z: 0.18280254}
+      rotation: {x: 0.10445819, y: -0.41445684, z: -0.036365908, w: 0.9033225}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:RightHandRingEffector
+      parentName: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:Reference
+      position: {x: 0.4728259, y: 0.9855596, z: 0.19321464}
+      rotation: {x: 0.1044582, y: -0.41445684, z: -0.0363659, w: 0.9033225}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:RightHandThumbEffector
+      parentName: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:Reference
+      position: {x: 0.36542636, y: 0.9342592, z: 0.16657472}
+      rotation: {x: 0.10707657, y: -0.3314832, z: -0.017789759, w: 0.9371964}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:RightHipEffector
+      parentName: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:Reference
+      position: {x: 0.083173454, y: 0.80111355, z: -0.032200802}
+      rotation: {x: -0.021189252, y: 0.026150087, z: 0.04851116, w: 0.99825543}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:RightKneeEffector
+      parentName: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:Reference
+      position: {x: 0.14172797, y: 0.45599696, z: -0.0079139}
+      rotation: {x: 0.10794528, y: 0.039313883, z: 0.013338728, w: 0.99328965}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:RightShoulderEffector
+      parentName: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:Reference
+      position: {x: 0.1392015, y: 1.2967123, z: -0.015951015}
+      rotation: {x: 0.1462008, y: -0.029329069, z: -0.32177168, w: 0.93500173}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:RightWristEffector
+      parentName: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:Reference
+      position: {x: 0.37686652, y: 0.9974077, z: 0.089942865}
+      rotation: {x: 0.10445822, y: -0.41445678, z: -0.036365893, w: 0.9033225}
+      scale: {x: 1, y: 1, z: 1}
+    - name: LeftAnkleEffectorAux1
+      parentName: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:Reference
+      position: {x: -0.23177746, y: 0.07854107, z: -0.15294425}
+      rotation: {x: -0.0035518024, y: -0.0013027076, z: -0.043639842, w: 0.9990402}
+      scale: {x: 1, y: 1, z: 1}
+    - name: RightAnkleEffectorAux1
+      parentName: DA_CHAR_M_SkeletonBasic_BasicSkeleton_Ctrl:Reference
+      position: {x: 0.11871141, y: 0.07124813, z: -0.11429981}
+      rotation: {x: 0.0043651536, y: 0.008677313, z: 0.024644399, w: 0.9996491}
+      scale: {x: 1, y: 1, z: 1}
+    - name: System
+      parentName: DA_ANIM_SkeleteonDeath_01(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
     armTwist: 0.5
     foreArmTwist: 0.5
     upperLegTwist: 0.5
@@ -415,10 +1690,10 @@ ModelImporter:
     rootMotionBoneName: 
     rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
     hasTranslationDoF: 0
-    hasExtraRoot: 0
+    hasExtraRoot: 1
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 3
   humanoidOversampling: 1
   additionalBone: 0
   userData: 

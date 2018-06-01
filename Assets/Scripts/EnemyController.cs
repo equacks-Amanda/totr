@@ -37,28 +37,35 @@ public abstract class EnemyController : SpellTarget {
 
 
     override public void ApplySpellEffect(Constants.SpellStats.SpellType spell, Constants.Global.Color color, float damage, Vector3 direction) {
-        switch(spell) {
-			case Constants.SpellStats.SpellType.MAGICMISSILE:
-				maestro.PlayEnemyHit();
-				break;
-            case Constants.SpellStats.SpellType.WIND:
-                StartCoroutine(WindPush(Constants.EnemyStats.C_SkeletonWindPushMultiplier,direction, false));
-				maestro.PlayEnemyHit();
-                break;
-            case Constants.SpellStats.SpellType.ICE:
-                Freeze();
-				maestro.PlayEnemyHit();
-                break;
-            case Constants.SpellStats.SpellType.ELECTRICITYAOE:
-                Slow();
-				if(b_electricDamageSoundOk){
-					maestro.PlayEnemyHit();
-					b_electricDamageSoundOk = false;
-					StartCoroutine("AdmitElectricDamageSound");
-				}
-                break;
+        if( e_state != State.DIE )
+        {
+            switch (spell)
+            {
+                case Constants.SpellStats.SpellType.MAGICMISSILE:
+                    maestro.PlayEnemyHit();
+                    break;
+                case Constants.SpellStats.SpellType.WIND:
+                    StartCoroutine(WindPush(Constants.EnemyStats.C_SkeletonWindPushMultiplier, direction, false));
+                    maestro.PlayEnemyHit();
+                    break;
+                case Constants.SpellStats.SpellType.ICE:
+                    Freeze();
+                    maestro.PlayEnemyHit();
+                    break;
+                case Constants.SpellStats.SpellType.ELECTRICITYAOE:
+                    Slow();
+                    if (b_electricDamageSoundOk)
+                    {
+                        maestro.PlayEnemyHit();
+                        b_electricDamageSoundOk = false;
+                        StartCoroutine("AdmitElectricDamageSound");
+                    }
+                    break;
+            }
+            TakeDamage(damage, color);
         }
-        TakeDamage(damage, color);
+       
+        
     }
 
     override public void NegateSpellEffect(Constants.SpellStats.SpellType spell) {
@@ -128,7 +135,21 @@ public abstract class EnemyController : SpellTarget {
     protected virtual void EnterStateDie(Constants.Global.Color color) {
 		e_state = State.DIE;
 		this.enabled = false;
-		gameObject.SetActive(false);							  
+        rb.freezeRotation = true;
+        //gameObject.SetActive(false);	
+        nma_agent.enabled = false;
+        if (col_attachedCollider != null)
+            col_attachedCollider.enabled = false;
+        anim.SetTrigger("doDying");
+        StartCoroutine(PlayDeathAnimation());
+    }
+
+    private IEnumerator PlayDeathAnimation( )
+    {
+      
+        yield return new WaitForSeconds(5f);
+        
+        gameObject.SetActive(false);
     }
 
     protected virtual void UpdateDie() {
@@ -144,8 +165,9 @@ public abstract class EnemyController : SpellTarget {
 			f_health -= damage;
 			//Debug.Log(i_health);
 			if(f_health <= 0f){
-				Debug.Log("death");
-				EnterStateDie(color);
+				//Debug.Log("death");
+                if( e_state != State.DIE)
+				    EnterStateDie(color);
 			}
 		}
 	}
