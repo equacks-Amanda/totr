@@ -92,8 +92,10 @@ public class CTGIntructions : MonoBehaviour
         Chase();
         yield return StartCoroutine(CoroutineUnscaledWait.WaitForSecondsUnscaled(0.6f));
 		magicMissileRun = true;
-		Destroy(magicMissile, 0.8f);
-        yield return StartCoroutine(CoroutineUnscaledWait.WaitForSecondsUnscaled(1.2f));
+        yield return StartCoroutine(CoroutineUnscaledWait.WaitForSecondsUnscaled(0.8f));
+        magicMissile.SetActive(false);
+        //Destroy(magicMissile, 0.8f);
+        yield return StartCoroutine(CoroutineUnscaledWait.WaitForSecondsUnscaled(0.4f));
         apprentince2Run = false;
         //anim2.SetTrigger("stop");
 
