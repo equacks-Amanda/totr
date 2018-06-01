@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 1a09b0c90b9308344a2048c95aa28b8c
-timeCreated: 1527377673
+timeCreated: 1527833862
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -88,7 +88,7 @@ TextureImporter:
         width: 48
         height: 28
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -102,7 +102,7 @@ TextureImporter:
         width: 50
         height: 30
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -111,12 +111,12 @@ TextureImporter:
       name: settingsSlidersSprites_SliderMask
       rect:
         serializedVersion: 2
-        x: 0
+        x: 23
         y: 80
         width: 505
         height: 28
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -130,7 +130,7 @@ TextureImporter:
         width: 527
         height: 30
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -144,7 +144,7 @@ TextureImporter:
         width: 529
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
