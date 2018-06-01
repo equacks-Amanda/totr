@@ -92,11 +92,11 @@ public class NecromancerInstructions : MonoBehaviour
         canShoot = false;
         yield return StartCoroutine(CoroutineUnscaledWait.WaitForSecondsUnscaled(0.5f));
         necromancer.SetActive(false);     
-        yield return StartCoroutine(CoroutineUnscaledWait.WaitForSecondsUnscaled(1f));
+        yield return StartCoroutine(CoroutineUnscaledWait.WaitForSecondsUnscaled(0.5f));
 
         //Phase 2: Necromancer Spawns Skeletons
         ResetPosition();
-        _bulletLifetime = 0.5f;
+        _bulletLifetime = 0.4f;
         StartCoroutine(NecromancerSummon());
         apprenticeAnim.Play("3Fire", -1, 0f);
         //yield return StartCoroutine(CoroutineUnscaledWait.WaitForSecondsUnscaled(0.5f));
