@@ -95,7 +95,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4959722303995832}
-  - component: {fileID: 136670504578523916}
   m_Layer: 25
   m_Name: Skeleton_Basic (2)
   m_TagString: Enemy
@@ -1335,6 +1334,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4368878916492040}
   - component: {fileID: 95118416254163682}
+  - component: {fileID: 136714438291142614}
   m_Layer: 25
   m_Name: DA_CHAR-M_Skeleton
   m_TagString: Untagged
@@ -1901,7 +1901,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4377166228054744}
-  m_Layer: 15
+  m_Layer: 25
   m_Name: Hat02_Adjustments
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2617,6 +2617,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4778192883593742}
   - component: {fileID: 95728323949625992}
+  - component: {fileID: 136620955443472974}
   m_Layer: 25
   m_Name: DA_CHAR-M_Skeleton
   m_TagString: Untagged
@@ -3294,7 +3295,7 @@ GameObject:
   - component: {fileID: 4825131712589350}
   - component: {fileID: 33125676344419376}
   - component: {fileID: 23583301215085010}
-  m_Layer: 15
+  m_Layer: 25
   m_Name: Hat02
   m_TagString: HAT
   m_Icon: {fileID: 0}
@@ -3644,6 +3645,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4883457668103508}
   - component: {fileID: 95019685139326496}
+  - component: {fileID: 136809765680936596}
   m_Layer: 25
   m_Name: DA_CHAR-M_Skeleton
   m_TagString: Untagged
@@ -3754,7 +3756,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4326207157963556}
-  - component: {fileID: 136121936392893828}
   m_Layer: 25
   m_Name: Skeleton_Basic (1)
   m_TagString: Enemy
@@ -3786,7 +3787,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4229578915513840}
-  - component: {fileID: 136820147657273152}
   m_Layer: 25
   m_Name: Skeleton_Basic
   m_TagString: Enemy
@@ -14464,7 +14464,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 9401ed1acffdf904eb53ad14a1f75abc, type: 2}
+  - {fileID: 2100000, guid: ca794d0b51b3f9742ae6012cebf1ec46, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -15060,19 +15060,6 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!136 &136121936392893828
-CapsuleCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1483975025299248}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  m_Radius: 0.5395789
-  m_Height: 3.2342038
-  m_Direction: 1
-  m_Center: {x: -0.017015457, y: 1.1080911, z: 0.104070425}
 --- !u!136 &136168153738142122
 CapsuleCollider:
   m_ObjectHideFlags: 1
@@ -15086,28 +15073,41 @@ CapsuleCollider:
   m_Height: 4
   m_Direction: 1
   m_Center: {x: 0, y: 2, z: 0}
---- !u!136 &136670504578523916
+--- !u!136 &136620955443472974
 CapsuleCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1014007410387872}
+  m_GameObject: {fileID: 1337154728328844}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   m_Radius: 0.5395789
   m_Height: 3.2342038
   m_Direction: 1
   m_Center: {x: -0.017015457, y: 1.1080911, z: 0.104070425}
---- !u!136 &136820147657273152
+--- !u!136 &136714438291142614
 CapsuleCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1485670607795878}
+  m_GameObject: {fileID: 1171819898239252}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
+  m_Radius: 0.5395789
+  m_Height: 3.2342038
+  m_Direction: 1
+  m_Center: {x: -0.017015457, y: 1.1080911, z: 0.104070425}
+--- !u!136 &136809765680936596
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1464238195282934}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
   m_Radius: 0.5395789
   m_Height: 3.2342038
   m_Direction: 1
@@ -15637,9 +15637,7 @@ SkinnedMeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 162f6a233388e46bf91f42360bc07772, type: 2}
-  - {fileID: 2100000, guid: 303634e4b87ae4517b2bdf179407118d, type: 2}
-  - {fileID: 2100000, guid: 2f584a19837de452fbe7cddecf804638, type: 2}
+  - {fileID: 2100000, guid: ca794d0b51b3f9742ae6012cebf1ec46, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -16970,8 +16968,8 @@ SkinnedMeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: f728557fc09ce0d41a5ae03d206fe967, type: 2}
-  - {fileID: 2100000, guid: 55dbb186206dd4c5f838867793fc9c1e, type: 2}
+  - {fileID: 2100000, guid: ca794d0b51b3f9742ae6012cebf1ec46, type: 2}
+  - {fileID: 2100000, guid: ca794d0b51b3f9742ae6012cebf1ec46, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

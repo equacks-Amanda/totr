@@ -113,7 +113,7 @@ public class HockeyInstructions : MonoBehaviour
     void pushGem()
     {
         apprentince1Run = false;
-        windParry1.SetActive(true);
+        //windParry1.SetActive(true);
         puckMove = true;
 
     }
