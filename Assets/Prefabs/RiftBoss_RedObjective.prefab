@@ -2047,7 +2047,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1463375732904762
 GameObject:
   m_ObjectHideFlags: 1
@@ -8621,7 +8621,7 @@ Rigidbody:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1579431739136198}
   serializedVersion: 2
-  m_Mass: 0.05
+  m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
@@ -8906,6 +8906,7 @@ MonoBehaviour:
   se_fader: {fileID: 0}
   se_clothesDissolve: {fileID: 0}
   f_electricDamageSoundRate: 0.5
+  col_attachedCollider: {fileID: 0}
   nma_agent: {fileID: 195934218535098846}
 --- !u!114 &114088980241020064
 MonoBehaviour:
@@ -9115,6 +9116,7 @@ MonoBehaviour:
   se_fader: {fileID: 0}
   se_clothesDissolve: {fileID: 0}
   f_electricDamageSoundRate: 0.5
+  col_attachedCollider: {fileID: 0}
   nma_agent: {fileID: 195322964627629592}
 --- !u!114 &114729365007845846
 MonoBehaviour:
@@ -9177,6 +9179,7 @@ MonoBehaviour:
   se_fader: {fileID: 0}
   se_clothesDissolve: {fileID: 114112709381613124}
   f_electricDamageSoundRate: 0.5
+  col_attachedCollider: {fileID: 0}
   rbo_owner: {fileID: 114950012174937082}
   go_ForceField: {fileID: 1663448452159424}
   go_runes:
@@ -9250,6 +9253,7 @@ MonoBehaviour:
   se_fader: {fileID: 0}
   se_clothesDissolve: {fileID: 0}
   f_electricDamageSoundRate: 0.5
+  col_attachedCollider: {fileID: 0}
   nma_agent: {fileID: 195975509668861324}
 --- !u!114 &114929296157442400
 MonoBehaviour:

@@ -2075,12 +2075,7 @@ Prefab:
       propertyPath: m_RootOrder
       value: 6
       objectReference: {fileID: 0}
-    - target: {fileID: 114737756320058398, guid: f981430eb51e2cb44bd79bb554e56b86,
-        type: 2}
-      propertyPath: cam_Camera
-      value: 
-      objectReference: {fileID: 1859528229}
-    - target: {fileID: 114670925637851862, guid: f981430eb51e2cb44bd79bb554e56b86,
+    - target: {fileID: 114836912760660428, guid: f981430eb51e2cb44bd79bb554e56b86,
         type: 2}
       propertyPath: cam_Camera
       value: 
@@ -2090,7 +2085,12 @@ Prefab:
       propertyPath: cam_Camera
       value: 
       objectReference: {fileID: 1859528229}
-    - target: {fileID: 114836912760660428, guid: f981430eb51e2cb44bd79bb554e56b86,
+    - target: {fileID: 114670925637851862, guid: f981430eb51e2cb44bd79bb554e56b86,
+        type: 2}
+      propertyPath: cam_Camera
+      value: 
+      objectReference: {fileID: 1859528229}
+    - target: {fileID: 114737756320058398, guid: f981430eb51e2cb44bd79bb554e56b86,
         type: 2}
       propertyPath: cam_Camera
       value: 
@@ -2120,25 +2120,6 @@ Prefab:
       propertyPath: soc_scoreOrb
       value: 
       objectReference: {fileID: 416820239}
-    - target: {fileID: 1461462993876920, guid: f981430eb51e2cb44bd79bb554e56b86, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 95042657577070886, guid: f981430eb51e2cb44bd79bb554e56b86,
-        type: 2}
-      propertyPath: m_ApplyRootMotion
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 95523285508467634, guid: f981430eb51e2cb44bd79bb554e56b86,
-        type: 2}
-      propertyPath: m_ApplyRootMotion
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 95875502203102252, guid: f981430eb51e2cb44bd79bb554e56b86,
-        type: 2}
-      propertyPath: m_ApplyRootMotion
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f981430eb51e2cb44bd79bb554e56b86, type: 2}
   m_IsPrefabParent: 0
@@ -8593,7 +8574,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1786646714238450, guid: 55ef8044cb039f049a7da883aa03b085, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4120766347688302, guid: 55ef8044cb039f049a7da883aa03b085, type: 2}
       propertyPath: m_LocalPosition.z

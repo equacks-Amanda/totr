@@ -22,11 +22,12 @@ public class RiftBossController : SpellTarget {
         if (!go_ForceField.activeSelf) {
             f_health -= damage;
             if (f_health <= 0) {
-                Time.timeScale = 0;
+                
                 anim.updateMode = AnimatorUpdateMode.UnscaledTime;
                 anim.SetTrigger("deathTrigger");
                 go_explode.SetActive(true);
                 StartCoroutine(DoDissolveRift());
+                Time.timeScale = 0;
 
             }
             rbo_owner.UpdateRiftBossHealth(f_health);

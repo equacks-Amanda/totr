@@ -3,7 +3,7 @@ guid: c4e60b3a8592449e3bc925c772504540
 timeCreated: 1519261753
 licenseType: Free
 ModelImporter:
-  serializedVersion: 22
+  serializedVersion: 21
   fileIDToRecycleName:
     100000: Apprentice 1
     100002: Apprentice_Model
@@ -215,22 +215,10 @@ ModelImporter:
     13700000: Apprentice 1
     13700002: Outfit_02
     13700004: Toga
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Outfit1_LowLowPoly_1
-    second: {fileID: 2100000, guid: 021237c27999546c18643382ba463ee8, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: lambert2
-    second: {fileID: 2100000, guid: 284a8683ff8e7422d8b0dcbe03a26e22, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
     materialSearch: 1
-    materialLocation: 0
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
@@ -240,10 +228,15 @@ ModelImporter:
     rigImportErrors: 
     rigImportWarnings: 
     animationImportErrors: 
-    animationImportWarnings: 
+    animationImportWarnings: "\nClip 'Take 001' has import animation warnings that
+      might lower retargeting quality:\nNote: Activate translation DOF on avatar to
+      improve retargeting quality.\n\t'L_Foot_jB' is inbetween humanoid transforms
+      and has rotation animation that will be discarded.\n\t'R_Foot_jB' is inbetween
+      humanoid transforms and has rotation animation that will be discarded.\n\t'Spine_jB_4'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'Neck_jB_2'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n"
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
-    importAnimatedCustomProperties: 0
     animationCompression: 3
     animationRotationError: 0.5
     animationPositionError: 0.5
@@ -266,11 +259,11 @@ ModelImporter:
       loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
       keepOriginalOrientation: 0
       keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
+      keepOriginalPositionXZ: 1
       heightFromFeet: 0
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
