@@ -336,7 +336,7 @@ ModelImporter:
     4300000: Apprentice
     4300002: Outfit_1
     4300004: Wand
-    7400000: DA_ANIM_JasonIceSpell
+    7400000: Apprentice Ice Spell
     7400002: Icespell Presentation
     7400004: Icespell Presentation
     9500000: //RootNode
@@ -374,7 +374,7 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: DA_ANIM_JasonIceSpell
+      name: Apprentice Ice Spell
       takeName: Take 001
       firstFrame: 523
       lastFrame: 625
