@@ -39,6 +39,8 @@ public sealed class Maestro : MonoBehaviour {
 	[SerializeField] private AudioClip[] ac_necromancer_die;
 	[SerializeField] private AudioClip[] ac_skeleton_spawn;
 	[SerializeField] private AudioClip ac_necromancer_spawn;
+	[SerializeField] private AudioClip ac_necromancer_rune;
+	[SerializeField] private AudioClip ac_necromancer_portal;
 	[SerializeField][Range(0, 6)] private float f_necromancer;
 	[SerializeField] private AudioClip[] ac_heavy_skeleton_footstep;
 	
@@ -54,7 +56,9 @@ public sealed class Maestro : MonoBehaviour {
 	[SerializeField][Range(0, 2)] private float f_puck_bounce;
 	
 	[SerializeField] private AudioClip[] ac_rift_roar;
-	
+	[SerializeField] private AudioClip ac_rift_death;
+	[SerializeField] private AudioClip ac_rift_tpk;
+	[SerializeField] private AudioClip ac_rift_deathBolt;
 	[SerializeField] private AudioClip[] ac_bgm;
 	[SerializeField] private AudioClip ac_bgm_menu;
 	
@@ -226,6 +230,14 @@ public sealed class Maestro : MonoBehaviour {
 		//PlaySingle(as_sfxHi,ac_necromancer_spawn);
 		as_sfxHi.PlayOneShot(ac_necromancer_spawn,f_necromancer);
 	}
+	public void PlayNecromancerPortal( )
+	{
+		as_sfxHi.PlayOneShot(ac_necromancer_portal,f_necromancer);
+	}
+	public void PlayNecromancerRuneSpawn( )
+	{
+		as_sfxLo.PlayOneShot(ac_necromancer_rune,f_necromancer);
+	}
 	public void PlaySkeletonSpawn(){
 		PlayRandom(as_sfxMe,ac_skeleton_spawn);
 	}
@@ -267,6 +279,18 @@ public sealed class Maestro : MonoBehaviour {
 	}
 	public void PlayRiftRoar(){
 		PlayRandom(as_sfxHi,ac_rift_roar);
+	}
+	public void PlayRiftDie( )
+	{
+		as_sfxHi.PlayOneShot(ac_rift_death);
+	}
+	public void PlayRiftDeathBolt( )
+	{
+		as_sfxHi.PlayOneShot(ac_rift_deathBolt);
+	}
+	public void PlayRiftTPK( )
+	{
+		as_sfxHi.PlayOneShot(ac_rift_tpk);
 	}
 	
 	public void PlayAnnouncmentPlayerHit(int playerNum, Constants.Global.DamageType d){

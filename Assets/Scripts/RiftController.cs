@@ -196,6 +196,7 @@ public sealed class RiftController : MonoBehaviour {
     #region Rift Volatility Attacks and Effects
     private void BoardClear() {
 		maestro.PlayAnnouncementBoardClear();
+        maestro.PlayRiftTPK();
         Invoke("TurnOffBoardClear", 10f);
         go_boardClear.SetActive(true);
         go_screenshake.SetActive(true);
@@ -250,6 +251,7 @@ public sealed class RiftController : MonoBehaviour {
 	}
 
     public void ActivateRune(Vector3 position) {
+        Maestro.Instance.PlayNecromancerRuneSpawn();
 	    for (int i = 0; i < go_runes.Length; i++) {
 			if (!(go_runes[i].activeSelf)) {
 
@@ -368,6 +370,7 @@ public sealed class RiftController : MonoBehaviour {
                 go_spell.transform.localScale = new Vector3(f_projectileSize, f_projectileSize, f_projectileSize);
                 go_spell.GetComponent<Rigidbody>().velocity = go_playerReferences[array[i]].transform.position.normalized * Constants.RiftStats.C_VolatilityDeathboltSpeed;
                 go_spell.transform.forward = -1 * (go_spell.GetComponent<Rigidbody>().velocity.normalized);
+                Maestro.Instance.PlayRiftDeathBolt();
                 break;
             }
         }

@@ -444,7 +444,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 2
       time: 0
-      value: 1
+      value: 0
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -578,6 +578,9 @@ MonoBehaviour:
   - {fileID: 8300000, guid: fa4b2b6ed928215478fae7f2d59eed0a, type: 3}
   ac_necromancer_spawn: {fileID: 8300000, guid: c6d9dc244284c9244b881347db691b68,
     type: 3}
+  ac_necromancer_rune: {fileID: 8300000, guid: b48524e9b01a83d46b06798264f1ccd0, type: 3}
+  ac_necromancer_portal: {fileID: 8300000, guid: c12944e63d8ec6c4991e8476fb5bb4b2,
+    type: 3}
   f_necromancer: 2.5
   ac_heavy_skeleton_footstep:
   - {fileID: 8300000, guid: 08b59131094447c41b23d2dec35b9297, type: 3}
@@ -602,6 +605,9 @@ MonoBehaviour:
   ac_rift_roar:
   - {fileID: 8300000, guid: cb4b62437215de043b324e01e7c471dd, type: 3}
   - {fileID: 8300000, guid: 5083c149ea08c8d40903a54d5185b411, type: 3}
+  ac_rift_death: {fileID: 8300000, guid: 56227d404f6ea4540b1159d6ac8d9afe, type: 3}
+  ac_rift_tpk: {fileID: 8300000, guid: 86af7c235257e8a44913f60597ed8207, type: 3}
+  ac_rift_deathBolt: {fileID: 8300000, guid: 3052da32425d339469b822b131531d02, type: 3}
   ac_bgm:
   - {fileID: 8300000, guid: 47e186769e328864eb374d5205e1e732, type: 3}
   - {fileID: 8300000, guid: a519ba7522ac5ed45ae2228bce33ea1a, type: 3}

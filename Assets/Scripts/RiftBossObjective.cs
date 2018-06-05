@@ -26,6 +26,7 @@ public class RiftBossObjective : Objective {
     public void UpdateRiftBossHealth(float f) {
         calligrapher.UpdateRiftBossHealthUI(e_color, f);
         if (f <= 0) {
+            Maestro.Instance.PlayRiftDie();
             StartCoroutine(DelayCompleteforExplosion());
         }
 		else if (f <= Constants.ObjectiveStats.C_RiftBossMaxHealth * .1f) {

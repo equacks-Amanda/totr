@@ -26,7 +26,7 @@ public class RiftBossController : SpellTarget {
                 anim.updateMode = AnimatorUpdateMode.UnscaledTime;
                 anim.SetTrigger("deathTrigger");
                 go_explode.SetActive(true);
-                StartCoroutine(DoDissolveRift());
+                //StartCoroutine(DoDissolveRift());
                 Time.timeScale = 0;
 
             }
@@ -50,6 +50,7 @@ public class RiftBossController : SpellTarget {
     }
     
     private void SpawnRunes() {
+        Maestro.Instance.PlayNecromancerRuneSpawn();
         foreach (GameObject runes in go_runes) {
             if (!runes.activeSelf) {
                 runes.SetActive(true);
@@ -59,6 +60,7 @@ public class RiftBossController : SpellTarget {
     }
 
     private void FireDeathBolts() {
+        Maestro.Instance.PlayRiftDeathBolt();
         riftController.FireDeathBolts(gameObject.transform, e_color);
         //go_ForceField.SetActive(false);
         //Invoke("TurnOnForceField", Constants.ObjectiveStats.C_ForceFieldCooldown);

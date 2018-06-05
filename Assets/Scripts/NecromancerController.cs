@@ -124,6 +124,7 @@ public class NecromancerController : EnemyController {
 
 	protected override void EnterStateBreakout() {
 		base.EnterStateBreakout();
+		maestro.PlayNecromancerPortal();
 		float z = Random.Range(-1.0f*(Constants.EnemyStats.C_MapBoundryZAxis-4.0f), (Constants.EnemyStats.C_MapBoundryZAxis-4.0f));
 		float x = Random.Range(5.0f, (Constants.EnemyStats.C_MapBoundryXAxis-5.0f));
 		if (transform.position.x < 0) {
