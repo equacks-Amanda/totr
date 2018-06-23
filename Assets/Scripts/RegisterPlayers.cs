@@ -24,10 +24,7 @@ public class RegisterPlayers : SceneLoader {
     [SerializeField] private SkinnedMeshRenderer[] smr_outfits; //4 units
     [SerializeField] private Material[] mat_outfitRed;
     [SerializeField] private Material[] mat_outfitBlue;
-    //[SerializeField] private Text txt_p1Message;
-    //[SerializeField] private Text txt_p2Message;
-    //[SerializeField] private Text txt_p3Message;
-    //[SerializeField] private Text txt_p4Message;
+
     [SerializeField] private GameObject go_go;
     [SerializeField] private GameObject go_paramMenu;
     //ART ADDITION
@@ -340,12 +337,12 @@ public class RegisterPlayers : SceneLoader {
             if (p_player4.GetButtonDown("UISubmit") && !b_p4Ready) {
                 if (e_p4Color == Constants.Global.Color.RED && i_numRed < 2) {
                     i_numRed++;
-                    controllerIcons[3].SwapImage(sp_teamSunIcon, Color.green, Color.yellow, 1f);
+                    controllerIcons[3].SwapImage(sp_teamSunIcon, Color.white, Color.white, 1f);
                     b_p4Ready = true;
                 }
                 else if (e_p4Color == Constants.Global.Color.BLUE && i_numBlue < 2) {
                     i_numBlue++;
-                    controllerIcons[3].SwapImage(sp_teamMoonIcon, Color.blue, Color.green, 1f);
+                    controllerIcons[3].SwapImage(sp_teamMoonIcon, Color.white, Color.white, 1f);
                     b_p4Ready = true;
                 }
             }

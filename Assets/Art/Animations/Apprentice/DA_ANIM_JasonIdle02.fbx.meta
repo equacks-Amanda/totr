@@ -3,7 +3,7 @@ guid: 4861c2b3ac16a4a8ead5851256232221
 timeCreated: 1527277615
 licenseType: Free
 ModelImporter:
-  serializedVersion: 21
+  serializedVersion: 22
   fileIDToRecycleName:
     100000: Apprentice
     100002: Apprentice_Rig
@@ -159,10 +159,42 @@ ModelImporter:
     13700000: Apprentice
     13700002: Outfit_1
     13700004: Wand
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Apprentice_01_Outfit1_LowLowPoly_2
+    second: {fileID: 2100000, guid: 2425d9ad1ddf25044948ce26385eefb9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Apprentice_01_lambert2
+    second: {fileID: 2100000, guid: 4ae0e321abf20024ba96aed55ce20bd2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Apprentice_01_lambert3
+    second: {fileID: 2100000, guid: 2788c7be2f592b64996a7e8907525bcb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: WandCrystalMaterial
+    second: {fileID: 2100000, guid: fd562b46c0b2e4042bc692ed316d3bdc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: WandHandleMaterial
+    second: {fileID: 2100000, guid: 154eb2f5674ce2f428607611872fc871, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: WandTopTexture
+    second: {fileID: 2100000, guid: 9177e8a871d15644e90f77c0550f7065, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
     materialSearch: 1
+    materialLocation: 0
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
@@ -172,7 +204,7 @@ ModelImporter:
     rigImportErrors: 
     rigImportWarnings: "Avatar Rig Configuration mis-match. Inbetween bone rotation
       in configuration does not match rotation in animation file:\n\t'Spine_jB_4'
-      : rotation error = 2.320797 deg\n\t'Neck_jB_2' : rotation error = 9.353491 deg\n"
+      : rotation error = 2.320797 deg\n\t'Neck_jB_2' : rotation error = 9.353495 deg\n"
     animationImportErrors: 
     animationImportWarnings: "\nClip 'Take 001' has import animation warnings that
       might lower retargeting quality:\nNote: Activate translation DOF on avatar to
@@ -181,6 +213,7 @@ ModelImporter:
       humanoid transforms and has rotation animation that will be discarded.\n"
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
     animationCompression: 3
     animationRotationError: 0.5
     animationPositionError: 0.5
@@ -202,13 +235,13 @@ ModelImporter:
       hasAdditiveReferencePose: 0
       loopTime: 1
       loopBlend: 1
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
       loopBlendPositionXZ: 1
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
+      keepOriginalOrientation: 1
+      keepOriginalPositionY: 0
       keepOriginalPositionXZ: 0
-      heightFromFeet: 0
+      heightFromFeet: 1
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
